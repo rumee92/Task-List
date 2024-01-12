@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no" />
+<meta property="og:title" content="올리브영 메인" />
+<!-- 사이트 명 -->
+<meta property="og:url" content="http://" />
+<!-- 사이트 URL -->
+<meta property="og:image" content="" />
+<!-- 대표 이미지 URL -->
+<meta property="og:description" content="" />
+<!-- 사이트 설명 -->
+<title>PC : 쇼케이스</title>
+<link rel="stylesheet" href="http://www.oliveyoung.co.kr/pc-static-root/css/global.css" />
+<link rel="stylesheet" href="http://www.oliveyoung.co.kr/pc-static-root/css/common.css" />
+<link rel="stylesheet" href="http://www.oliveyoung.co.kr/pc-static-root/css/board.css" />
+<link rel="stylesheet" href="http://www.oliveyoung.co.kr/pc-static-root/css/contents.css" />
+<link rel="stylesheet" href="http://www.oliveyoung.co.kr/pc-static-root/css/event.css" />
+<script  src="http://www.oliveyoung.co.kr/pc-static-root/js/common/publish/jquery-1.9.1.min.js"></script>
+<script src="http://www.oliveyoung.co.kr/pc-static-root/js/common/publish/prefixfree.min.js"></script>
+<script src="http://www.oliveyoung.co.kr/pc-static-root/js/common/publish/slick.min.js"></script>
+<script src="http://www.oliveyoung.co.kr/pc-static-root/js/common/publish/common.js"></script>
+<script src="https://image.oliveyoung.co.kr/uploads/contents/OYEvt/lib/Swiper_6.3.4.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="/pc-static-root/js/html5shiv.js"></script>
+<![endif]-->
+
+<!--  +++++   퍼블리싱 HTML 화면 인클루드를 위한 소스     ++++     -->
+<script>
+$(document).ready( function() {
+	$("#headInd").load("/pc-static-root/html/common/header.html");
+	$("#footInd").load("/pc-static-root/html/common/footer.html");
+});
+</script>
+<!--  +++++   퍼블리싱 HTML 화면 인클루드를 위한 소스     ++++     -->
+</head>
+<body>
+<div id="Wrapper">
+	<div id="headInd">header인클루드</div>
+	<!-- PC Contents -->
+	<div id="Container" class="contEditor">
+		<div class="event_tit_box"><h1>이벤트 <span>다양한 이벤트를 한눈에 확인하세요</span></h1></div>
+		<div class="event_cont_wrap">
+			<div class="event_title_box ">
+				<span class="evt_flag online">온라인몰단독</span>
+				<p class="event_name">쇼케이스</p>
+				<p class="event_date">18.00.00- 18.00.00</p>
+				<div class="event_share_link">
+					<a href="javascript:;" class="link_social kakao">카카오스토리 공유하기</a>
+					<a href="javascript:;" class="link_social facebook">페이스북 공유하기</a>
+					<a href="javascript:;" class="link_social url">URL 공유하기</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- ckEditor 등록 -->
+		<link rel="stylesheet" href="https://image.oliveyoung.co.kr/uploads/contents/OYEvt/lib/aos.css">
+		<link href="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/20showCase_pc.css" rel="stylesheet">
+    
+    <input id="servants" type="hidden" value="aos,videoTag,videoTag">
+    
+    <input id="videoTagElementId1" type="hidden" value="oyVideo1">
+    <input id="videoTagSrc1" type="hidden" value="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/video1.mp4">
+    <input id="videoTagAttr1" type="hidden" value="autoplay loop muted playsinline">
+    
+    <input id="videoTagElementId2" type="hidden" value="oyVideo2">
+    <input id="videoTagSrc2" type="hidden" value="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/video2.mp4">
+    <input id="videoTagAttr2" type="hidden" value="autoplay loop muted playsinline">
+    
+    <input id="aosDataAttriObj" class="aosAttriObj" name='data-aos' type="hidden" value="{fadeIn: 'fade', fadeUp: 'fade-up', fadeDown: 'fade-down', fadeRight: 'fade-right', fadeLeft: 'fade-left'}"/>
+    <input id="aosOptions" type="hidden" value="{duration: 700, once: false}"/>
+    <input id="aosLoadDelayTime" type="hidden" value="500">
+    <input class="aosAttriObj" name='data-aos-delay' type="hidden" value="{d100: '100', d150: '150', d200: '200', d250: '250', d300: '300', d400: '400', d500: '500', d750: '750', d1000: '1000'}" />
+    <input class="aosAttriObj" name='data-aos-duration' type="hidden" value="{quick: '0'}">
+    
+    <div class="planshop-swiper-initiator" style="display: none;">
+      <input type="hidden" name="options" value="{
+        swiperTarget: '.benefitSlide',
+        swiperOption: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            speed:3000,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: '.swiper-pagination.evtPag',
+            clickable: true
+          }
+        },
+        libraryName : 'swiper'
+      }">
+    </div>
+    
+    <div class="planshop-swiper-initiator" style="display: none;">
+      <input type="hidden" name="options" value="{
+        swiperTarget: '.couponSlide',
+        swiperOption: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          speed: 1000,
+          pagination: {
+            el: '.swiper-pagination.evtPag',
+            clickable: true
+          }
+        },
+        libraryName : 'swiper'
+      }">
+    </div>
+    
+    <div class="planshop-swiper-initiator" style="display: none;">
+      <input type="hidden" name="options" value="{
+        swiperTarget: '.evtCont5_slide',
+        swiperOption: {
+          slidesPerView: 1.17,
+          spaceBetween: 0,
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            speed:3000,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: '.swiper-pagination.evtCont5Pag',
+            clickable: true
+          }
+        },
+        libraryName : 'swiper'
+      }">
+    </div>
+    
+    <div class="planshop-swiper-initiator" style="display: none;">
+      <input type="hidden" name="options" value="{
+        swiperTarget: '.evtCont9_slide',
+        swiperOption: {
+          slidesPerView: 1.1,
+          spaceBetween: 0,
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            speed:3000,
+            disableOnInteraction: false
+          }
+        },
+        libraryName : 'swiper'
+      }">
+    </div>
+    
+    <div class="planshop-swiper-initiator" style="display: none;">
+      <input type="hidden" name="options" value="{
+        swiperTarget: '.evtCont10_slide1',
+        swiperOption: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            speed:3000,
+            disableOnInteraction: false
+          }
+        },
+        libraryName : 'swiper'
+      }">
+    </div>
+    
+    <div class="planshop-swiper-initiator" style="display: none;">
+      <input type="hidden" name="options" value="{
+        swiperTarget: '.evtCont10_slide2',
+        swiperOption: {
+          slidesPerView: 1.24,
+          spaceBetween: 10,
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            speed:3000,
+            disableOnInteraction: false
+          }
+        },
+        libraryName : 'swiper'
+      }">
+    </div>
+    
+    
+    <div class="oyEvent_wrap">
+      <div class="evtCont evtCont1">
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont1.jpg" alt="">
+        </div>
+        <div class="evtVideo">
+          <div class="videoBox" id="oyVideo1">&nbsp;</div>
+          <div class="evtSoundBtnBox">
+            <button class="evtSoundBtn" data-focus="on">&nbsp;</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont2">
+        <div class="oyblind">
+          <h4>SHOWCASE IS</h4>
+          <p>
+            지금까지 어디에서도 선보인 적 없는
+            브랜드의 신상 아이템을 최초 공개합니다.
+            단 이틀! 오직 일소 쇼케이스 기간에만
+            만날 수 있는 특별한 혜택을 놓치지 마세요.
+          </p>
+          <p>23.11.20 - 11.21</p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont2.jpg" alt="">
+        </div>
+      </div>
+      
+      <div class="evtBenefitWrap">
+        <div class="evtCont evtBenefit">
+          <div class="oyblind">
+            <ul>
+              <li>
+                <h4>
+                  <span>BENEFIT1 쇼케이스 단독</span>
+                  ONLY SHOWCASE
+                </h4>
+                <p>쇼케이스 기간 동안 슈퍼 멜팅 세범 소프트너를 특별한 구성에 만나보세요.</p>
+                <p>일소 슈퍼 멜팅 세범 소프트너 150ml 단독 기획 (+솜 40매 증정) 21% 16,500원</p>
+              </li>
+              <li>
+                <h4>
+                  <span>BENEFIT2 구매 이벤트</span>
+                  SURPRISE GIFT
+                </h4>
+                <p>행사기간 내 슈퍼 멜팅 세범 소프트너 온라인 구매 시 선착순으로 로운 포토카드를 드려요.</p>
+                <p>선착순 5,000명 로운 포토카드 2종 증정 <span>*오프라인 매장 구매 건 제외</span></p>
+              </li>
+              <li>
+                <h4>
+                  <span>BENEFIT3 리뷰 이벤트</span>
+                  SPECIAL GIFT
+                </h4>
+                <p>행사기간 내 일소 슈퍼 멜팅 세범 소프트너 구매 후 리뷰 이벤트 응모 시 올리브영 기프트카드를 드려요.</p>
+                <p>올리브영 오프라인 매장 혹은 온라인에서 구매 시 응모 가능</p>
+              </li>
+              <li>
+                <h4>
+                  <span>BENEFIT1 구매 이벤트</span>
+                  SPECIAL GIFT
+                </h4>
+                <p>일소 쇼케이스 행사기간 내 구매왕 1명을 추첨하여 일소 15만원 상당 모공라인 스페셜 제품 키트를 드려요.</p>
+                <p>모공라인 스페셜 제품 키트 증정</p>
+              </li>
+            </ul>
+          </div>
+          <div class="benefitSlide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/benefit_slide1_1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/benefit_slide1_2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/benefit_slide1_3.jpg" alt="">
+                <div class="buttonBox">
+                  <a href="javascript:common.link.commonMoveUrl('event/getEventDetail.do?evtNo=00000000021053');"><span class="oyblind">이벤트 바로가기</span></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/benefit_slide1_4.jpg" alt="">
+              </div>
+            </div>
+            <div class="swiper-pagination evtPag">&nbsp;</div>
+          </div>
+          <div class="couponSlide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide coupon1">
+                <div class="couponImgBox">&nbsp;</div>
+              </div>
+              <div class="swiper-slide coupon2">
+                <div class="couponImgBox">&nbsp;</div>
+              </div>
+            </div>
+            <div class="swiper-pagination evtPag">&nbsp;</div>
+          </div>
+          <div class="imgBox">
+            <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/benefit3_pc.jpg" alt="">
+          </div>
+          <div class="buttonBox">
+            <div class="evtBtn btnNotice">
+              <a href="javascript:void(0);" onclick="planshop.eventDetail.eventShowLayer('eventNotice1');"><span class="oyblind">꼭 알아두세요</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont3">
+        <div class="oyblind">
+          <p>
+            피지 분비가 왕성한
+            여름이 지난 가을,
+            겨울에는 피지 관리에 소홀하게 되죠.
+            모공의 크기는 커지고 늘어나
+            피부 컨디션이
+            점점 떨어져요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont3.jpg" alt="">
+        </div>
+        <div class="deco1">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont3_img1.png" alt="">
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont4">
+        <div class="oyblind">
+          <h4>Recharge your skin 매끄로운 코, 일소밖에</h4>
+          <p>New Pore Solution with 로운</p>
+          <p>
+            일소와 로운이 제안하는
+            모공 솔루션으로
+            모공은 비우고
+            피부 컨디션은 충전해요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont4.jpg" alt="">
+        </div>
+        <div class="aos scrollAni1 fadeUp">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont4_txt.png" alt="">
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont5">
+        <div class="oyblind">
+          <h4>Solution #1 피지연화제 슈퍼 멜팅 세범 소프트너</h4>
+          <p>
+            말랑했던 피지가 딱딱하게 굳어 돌피지가 되면
+            모공을 넓히고 탄력을 떨어트려요.
+            일소는 모공 손상을 줄이기 위해
+            피지를 짜거나 뽑는 방식 대신, 부드럽게 녹여
+            모공 밖으로 배출하는 관리법을 제안합니다.
+          </p>
+          <p>
+            돌피지를 억지로 뽑거나
+            짜지 않아 피부에
+            자극을 줄일 수 있죠.
+          </p>
+          <p>
+            자연스럽게 피지가 배출되어
+            스케일링한 듯 개운하고
+            깨끗한 모공을 만들어 줘요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_1.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_2.jpg" alt="">
+        </div>
+        <div class="evtCont5_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_slide1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_slide2.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-pagination evtCont5Pag">&nbsp;</div>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_3.jpg" alt="">
+        </div>
+        <div class="aos scrollAni1 fadeUp">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_txt1.png" alt="">
+        </div>
+        <div class="aos scrollAni2 fadeRight">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_txt2.png" alt="">
+        </div>
+        <div class="aos scrollAni3 fadeLeft d200">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont5_txt3.png" alt="">
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont6">
+        <div class="oyblind">
+          <p>일소 코팩의 노하우를 담은</p>
+          <ul>
+            <li>Sebum Remove Complex</li>
+            <li>각질 제거 식물성 성분 & 효소</li>
+            <li>pH 알칼리 처방</li>
+            <li>Calming Complex</li>
+          </ul>
+          <p>
+            일소 코팩의 인기만큼 코 외에도
+            피지가 있는 부위에 사용하고 싶다는
+            요청이 많았죠. 슈퍼 멜팅 세법
+            소프트너는 코, 이마, 턱 어디든
+            사용할 수 있어요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont6_1.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont6_2.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont6_3.jpg" alt="">
+        </div>
+        <div class="aos scrollAni1 fadeUp">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont6_txt1.png" alt="">
+        </div>
+        <div class="aos scrollAni2 fadeUp d100">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont6_txt2.png" alt="">
+        </div>
+        <div class="aos scrollAni3 fadeUp d200">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont6_txt3.png" alt="">
+        </div>
+        <div class="aos scrollAni4 fadeUp d300">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont6_txt4.png" alt="">
+        </div>
+        <div class="buttonBox">
+          <div class="evtBtn moveLink1">
+            <a href="javascript:common.link.commonMoveUrl('goods/getGoodsDetail.do?goodsNo=A000000192568');">
+              <span class="oyblind">일소 슈퍼 멜팅 세범 소프트너 150ml</span>
+            </a>
+          </div>
+          <div class="evtBtn moveLink2">
+            <a href="javascript:common.link.commonMoveUrl('goods/getGoodsDetail.do?goodsNo=A000000192568');">
+              <span class="oyblind">일소 슈퍼 멜팅 세범 소프트너 150ml</span>
+            </a>
+            <a class="OYCart" href="javascript:void(0);" onclick="mayflyQueen.registCart(this, 'A000000192568')">
+              <span class="oyblind">장바구니 담기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont7">
+        <div class="oyblind">
+          <h4>How to</h4>
+          <p>사용 방법은 간단해요.</p>
+          <ol>
+            <li>따뜻한 물로 모공을 열어준 후</li>
+            <li>내용물을 화장솜에 충분히 적셔 피지가 고민인 부위에 올리기.</li>
+            <li>10-15분 후 배출된 피지 제거.</li>
+          </ol>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont7.jpg" alt="">
+        </div>
+        <div class="howToBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont7_img.png" alt="">
+          <div class="videoBox" id="oyVideo2">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont8">
+        <div class="oyblind">
+          <p>
+            뾰족한 캡 스타일로
+            양조절이 편하고
+            얼굴에 솜을 올린 후에도
+            추가 토출이 간편해요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont8.jpg" alt="">
+        </div>
+        <div class="svgBox">
+          <svg class="svgwave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="_레이어_2" x="0px" y="0px" viewBox="0 0 750 1150" style="enable-background:new 0 0 750 1150;" xml:space="preserve">
+            <path id="wavepath" class="st1" d="M89.2,54.2c0,0-13.7,84.4,16.6,151.9s78.8,112.8,145.4,141.2c66.7,28.4,150,43.6,204.2,76.3  s116,75.2,151.9,149.2s41.3,138.3,31.8,180.4s-23.4,83.1-58.2,124.9s-121,88.5-208.7,86c-87.7-2.5-133.2-29.3-157.7-42.1  S126,855.2,90.1,777"/>
+            <text text-anchor="middle">
+              <textPath class="my-text" href="#wavepath" startOffset="80%">
+                <!-- <animate attributeName="startOffset" from="80%" to="48%" begin="start()" dur="1s" repeatCount="0"></animate> -->
+               SUPER MELTING SEBUM SOFTENER
+              </textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="deco1">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont8_img1.png" alt="">
+        </div>
+        <div class="deco2">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont8_img2.png" alt="">
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont9">
+        <div class="oyblind">
+          <p>
+            TIP
+            일소 딥 클린 마스터와 함께 사용하면
+            피지를 더욱 효과적으로 제거할 수 있어요.
+          </p>
+          <p>
+            주 1회 케어로
+            <em>매끄로운 코, 부드로운 피부</em> 완성해요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont9_1.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont9_2.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont9_3.gif" alt="">
+        </div>
+        <div class="evtCont9_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont9_slide1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont9_slide2.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont10">
+        <div class="oyblind">
+          <p>
+            일소하면 빼놓을 수 없는
+            코팩과 클렌징 오일도
+            특별한 혜택으로 만나요.
+          </p>
+          <h4>Solution #2 네추럴 마일드 클리어 노우즈 팩 5매입</h4>
+          <p>
+            블랙헤드엔 일소라는 공식을 얻게 해준
+            모공 케어 베스트. 일소만의 코팩 원단으로
+            15분 동안 코에 밀착 시켜도
+            에센스가 마르지 않죠.
+          </p>
+          <p>
+            피지를 비우고, 모공을 쪼이는
+            두 가지 스텝으로 블랙헤드를
+            순하게 녹여 제거한 후 모공 수렴,
+            진정까지 도와줍니다.
+          </p>
+          <ol>
+            <li>
+              STEP1
+              바이오셀룰로오스 시트가
+              코에 빈틈 없이 쫀쫀하게 밀착돼요.
+              숨겨진 블랙헤드까지 배출할 수 있죠.
+            </li>
+            <li>
+              STEP2
+              두 번째 시트로 모공을 쪼여주는 것까지
+              잊지 마세요. 모공 수렴은 물론,
+              진정과 보습에 효과적이에요.
+            </li>
+          </ol>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_1.jpg" alt="">
+        </div>
+        <div class="evtCont10_slide1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_slide1_1.jpg" alt="">
+              <div class="buttonBox">
+                <div class="evtBtn moveLink1">
+                  <a href="javascript:common.link.commonMoveUrl('goods/getGoodsDetail.do?goodsNo=A000000171820');">
+                    <span class="oyblind">일소 네추럴 마일드 클리어 노우즈 팩</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide2">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_slide1_2.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_2.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_3.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_4.jpg" alt="">
+        </div>
+        <div class="evtCont10_slide2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_slide2_1.png" alt="">
+            </div>
+            <div class="swiper-slide slide2">
+              <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_slide2_2.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="aos scrollAni1 fadeRight">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_txt1.png" alt="">
+        </div>
+        <div class="aos scrollAni2 fadeLeft">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_txt2.png" alt="">
+        </div>
+        <div class="aos scrollAni3 fadeUp">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont10_txt3.png" alt="">
+        </div>
+        <div class="buttonBox">
+          <div class="evtBtn moveLink2">
+            <a href="javascript:common.link.commonMoveUrl('goods/getGoodsDetail.do?goodsNo=A000000171820');">
+              <span class="oyblind">일소 네추럴 마일드 클리어 노우즈 팩</span>
+            </a>
+            <a class="OYCart" href="javascript:void(0);" onclick="mayflyQueen.registCart(this, 'A000000171820')">
+              <span class="oyblind">장바구니 담기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="evtCont evtCont11">
+        <div class="oyblind">
+          <h4>Solution #3 네추럴 마일드 클렌징 오일 200ml</h4>
+          <p>
+            깊은 블랙헤드를 코팩으로 제거하는 것도
+            중요하지만 딱딱한 피지가 쌓이지 않도록
+            클렌징 단계에서 매일 관리해요.
+            
+            일소 클렌징 오일은 참깨 오일과
+            피지 특허 성분으로 메이크업은 기본, 피지,
+            미세먼지, 각질까지 저자극으로 지워내요.
+          </p>
+          <p>
+            워터리한 오일 제형 덕분에
+            가볍고 산뜻하게 마무리돼요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_1.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_2.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_3.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_4.jpg" alt="">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_5.jpg" alt="">
+        </div>
+        <div class="aos deco1" data-aos>
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_txt1.png" alt="">
+        </div>
+        <div class="aos deco2" data-aos>
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_txt2.png" alt="">
+        </div>
+        <div class="aos scrollAni1 fadeUp">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_txt3.png" alt="">
+        </div>
+        <div class="aos deco3" data-aos>
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_txt4.png" alt="">
+        </div>
+        <div class="aos deco4" data-aos>
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_txt5.png" alt="">
+        </div>
+        <div class="aos scrollAni2 fadeUp">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_txt6.png" alt="">
+        </div>
+        <div class="aos scrollAni3 fadeUp d200">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/cont11_txt7.png" alt="">
+        </div>
+        <div class="buttonBox">
+          <div class="evtBtn moveLink1">
+            <a href="javascript:common.link.commonMoveUrl('goods/getGoodsDetail.do?goodsNo=A000000189174');">
+              <span class="oyblind">일소 네추럴 마일드 클렌징 오일 200ml</span>
+            </a>
+            <a class="OYCart" href="javascript:void(0);" onclick="mayflyQueen.registCart(this, 'A000000189174')">
+              <span class="oyblind">장바구니 담기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="evtCont evtBrand">
+        <div class="oyblind">
+          <p>
+            블랙헤드의 명가 일소로
+            자극은 덜고 효과는 확실하게
+            모공 케어 시작해요.
+          </p>
+        </div>
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/brand.jpg" alt="일소 BRAND SHOP">
+        </div>
+        <div class="aos scrollAni1 fadeUp">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/brand_logo.png" alt="">
+        </div>
+        <div class="deco">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/brand_img.png" alt="">
+        </div>
+        <div class="buttonBox">
+          <a class="btnMove" href="javascript:common.link.commonMoveUrl('display/getBrandShopDetail.do?onlBrndCd=A004935');"><span class="oyblind">일소 BRAND SHOP</span></a>
+        </div>
+      </div>
+      
+      <div class="evtCont evtCredit">
+        <div class="imgBox">
+          <img src="//image.oliveyoung.co.kr/uploads/contents/202311/20showCase/credit.jpg" alt="">
+        </div>
+      </div>
+      
+      
+      <!-- 레이어 팝업 -->
+      <div id="eventDimLayer">&nbsp;</div>
+      <!-- 유의사항 팝업 -->
+      <div class="eventLayer popNotice" id="eventNotice1">
+        <div class="inner eventNotice2">
+          <h6>꼭 알아두세요!</h6>
+          <a href="javascript:void(0);" class="close eventHideLayer"><span class="oyblind">닫기</span></a>
+          <div class="conts_inner">
+            <ul>
+              <li>쿠폰 발급 및 사용 기간 : 2023년 11월 20일(월) ~ 11월 21일(목)</li>
+              <li>발급 조건 : 기간 내 ID당 1회 발급 및 사용(발급된 쿠폰은 마이페이지 > 쿠폰 메뉴에서 확인 가능)</li>
+              <li>일소 2만원 이상 구매 시 적용 가능(최대 2천원 할인)</li>
+              <li>일소 4만원 이상 구매 시 적용 가능(최대 3천원 할인)</li>
+              <li>일부 상품과 증정품은 온라인몰에서만 진행되며, 매장별 취급 상품과 할인 가격, 증정 행사가 다를 수 있음</li>
+              <li>쿠폰은 사용 기간 내 미사용시 재발급 불가</li>
+              <li>다른 장바구니 쿠폰과 중복 사용 불가</li>
+              <li>최종 결제 금액 기준으로 조건 충족 시 사용 가능</li>
+              <li>쿠폰 사용 후 주문 전체 취소할 경우 쿠폰 재발급 불가</li>
+              <li>임직원은 쿠폰 사용 불가</li>
+              <li>행사 이벤트는 올리브영 온라인몰 사정에 의해 사전 고지 없이 변경 및 중단될 수 있음</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+		<!-- //ckEditor 등록 -->
+
+
+	</div>
+	<!-- //PC Contents -->
+	<div id="footInd">footer인클루드</div>
+</div>
+
+
+
+<!-- [D] 쇼케이스 스크립트 -->
+<script>
+  $(function(){
+    // 영상 사운드 컨트롤
+    var muteFlag = true;
+    
+    $('.evtSoundBtnBox .evtSoundBtn').on('click', function(e) {
+      // var bgmElement = document.querySelector('#oyVideo1 video');
+      var bgmElement = $(this).parent().siblings('.videoBox').find('video')[0];
+      var buttonTarget = e.currentTarget;
+      $(this).toggleClass("is-active");
+      
+      if (buttonTarget.classList.contains('is-active')) {
+        if (bgmElement.classList.contains('video')) { // video
+          bgmElement.muted = false;
+        } else {
+          bgmElement.muted = false;
+          bgmElement.play();
+        }
+        buttonTarget.classList.add('is-active');
+      } else {
+        if (bgmElement.classList.contains('video')) { // video
+          bgmElement.muted = true;
+        } else {
+          bgmElement.muted = true;
+          bgmElement.pause();
+        }
+        buttonTarget.classList.remove('is-active');
+      }
+    });
+    
+    // 비디오 영역 벗어나면 영상 사운드 mute 처리
+    const scrollMuteVideo = () => {
+      window.addEventListener('scroll', () => {
+        const $evtSoundBtnBoxes = document.querySelectorAll('.evtSoundBtnBox');
+        const $muteButtons = [];
+        const $videos = [];
+        const scrollTop = window.scrollY;
+        const scrollBottom = window.scrollY + window.innerHeight;
+        
+        $evtSoundBtnBoxes.forEach(($evtSoundBtnBox, index) => {
+          const $videoBox = $evtSoundBtnBox.previousElementSibling;
+          $muteButtons[index] = $evtSoundBtnBox.querySelector('.evtSoundBtn');
+          $videos[index] = $videoBox.querySelector('video');
+        });
+        
+        $videos.forEach(($video, index) => {
+          if ( $video ) {
+            const videoTop = $video.getBoundingClientRect().top + window.scrollY;
+            const videoBottom = videoTop + $video.getBoundingClientRect().height;
+            
+            if (scrollTop > videoBottom || scrollBottom < videoTop) {
+              $video.muted = true;
+              $muteButtons[index].classList.remove('is-active');
+            }
+          }
+        });
+      });
+    }
+    
+    scrollMuteVideo();
+  });
+  
+  
+  
+  // evtCont8 애니매이션
+  const svg = document.querySelector('svg.svgwave');
+  const textPath = document.querySelector('svg text textPath');
+  
+  function rollingAnimation(target) {
+    // create the <animation> element
+    const animation = document.createElementNS(
+      'http://www.w3.org/2000/svg', 'animate');
+    // set its attributes
+    animation.setAttributeNS(null, 'attributeName', 'startOffset');
+    animation.setAttributeNS(null, 'begin', 'indefinite');
+    animation.setAttributeNS(null, 'from', '-20%');
+    animation.setAttributeNS(null, 'to', '50%');
+    animation.setAttributeNS(null, 'dur', '1.2s');
+    animation.setAttributeNS(null, 'repeatCount', '1');
+    animation.setAttributeNS(null, 'fill', 'freeze');
+    // link the animation to the target
+    target.appendChild(animation);
+    animation.beginElement();
+  }
+  
+  window.addEventListener('scroll', () => {
+    const evtCont8 = document.querySelector('.evtCont8');
+    
+    if (evtCont8.getBoundingClientRect().top - window.innerHeight/3 < 0) {
+      if (document.querySelectorAll('svg animate').length < 1) {
+        rollingAnimation(textPath);
+        svg.classList.add('active');
+      }
+    } else {
+      if (document.querySelectorAll('svg animate').length > 0) {
+        document.querySelector('svg animate').remove();
+        svg.classList.remove('active');
+      }
+    }
+  });
+</script>
+<!-- [D] //쇼케이스 스크립트 -->
+
+
+
+
+
+
+<script>
+var planshop = planshop || {};
+	planshop.eventDetail = planshop.eventDetail || {
+	//이벤트 팝업 레이어 열기 (공통)
+	eventShowLayer : function(obj) {
+		var layObj = document.getElementById(obj);
+		var layDim = document.getElementById('eventDimLayer');
+		layDim.style.display = 'block';
+		layObj.style.display = 'block';
+		var layObjWidth = layObj.clientWidth  / 2;
+		var layObjHeight = layObj.clientHeight  / 2;
+		layObj.style.marginLeft = "-" + layObjWidth +"px";
+		layObj.style.marginTop = "-" + layObjHeight +"px";
+	},
+	//이벤트 팝업 레이어 닫기 (공통)
+	eventHideLayer : function(strData) {
+		$('.eventLayer').hide();
+		$('#eventDimLayer').hide();
+	}
+}
+$(".eventHideLayer").click(function(){
+	planshop.eventDetail.eventHideLayer();
+});
+</script>
+<!-- 서번트확인용 -->
+<script src="https://www.oliveyoung.co.kr/pc-static-root/js/common/common.js"></script>
+<script src="https://www.oliveyoung.co.kr/pc-static-root/js/planshop/mayfly-queen.js"></script>
+<script src="../../../../js/planshop/planshop-swiper-loader.js"></script>
+<script>
+	planshop.swiperLoader.loadSwiper();
+</script>
+<!-- //서번트확인용 -->
+</body>
+</html>

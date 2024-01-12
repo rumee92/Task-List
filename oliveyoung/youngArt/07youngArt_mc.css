@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* 레이어 */
+#eventDimLayer,
+#eventDimLayer2{position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:998;display:none}
+.eventLayer{position:fixed;top:50%;left:0;display:none;z-index:999;width:100%}
+.eventLayer .inner{width:92%;margin:0 auto;position:relative}
+.eventLayer .inner.non_bg{background:none}
+
+/* 레이어:close */
+.eventLayer .inner .close{display:block;position:absolute;top:25px;right:20px;width:15px;height:15px;font-size:0}
+.eventLayer .inner .close:before,.eventLayer .inner .close:after{content:'';position:absolute;width:20px;height:2px;left:50%;top:50%;border-radius:4px;background:#000}
+.eventLayer .inner .close:before{transform:translate(-50%,-50%) rotate(-45deg)}
+.eventLayer .inner .close:after{transform:translate(-50%,-50%) rotate(45deg)}
+
+/* 레이어 : close circle */
+.eventLayer .inner.non_bg .close{top:-28px;right:-20px;width:55px;height:55px;background:#000;border-radius:50%}
+.eventLayer .inner.non_bg .close:before,.eventLayer .inner.non_bg .close:after{width:2px;height:26px;background:#fff}
+
+/* 레이어:공지사항 */
+.eventNotice2{padding:20px 20px}
+.eventNotice2 h6{padding:0 0 5px 5px;border-bottom:1px solid #474747;color:#000;font-size:16px;line-height:30px}
+.eventNotice2 ul{margin:5px 0 0 0!important}
+.eventNotice2 ul li{position:relative;padding:0 0 2px 10px;color:#676767;font-size:12px;line-height:18px;letter-spacing:0}
+.eventNotice2 ul li:before{content:'-';position:absolute;top:0;left:0}
+.eventNotice2 .info_tit{margin:15px auto 0px;font-size:13px;color:#1e1e1e;font-weight:bold}
+
+/* 팝업닫기 공통 */
+@media screen and (max-width:320px){
+	.eventLayer .conts_inner{overflow-y:auto;max-height:280px;}
+}
+
+/* 비디오 사운드 컨트롤러 */
+.evtSoundBtnBox {width:32px;height:32px;border-radius:50%;z-index:1;background:transparent;}
+.evtSoundBtnBox .evtSoundBtn {position:absolute;bottom:5.33vw;left:5.33vw;width:32px;height:32px;border-radius:50%;background:url('//image.oliveyoung.co.kr/uploads/contents/202311/07youngArt/btn_sound_off.png') no-repeat center / 100% auto;}
+.evtSoundBtnBox .evtSoundBtn.is-active {background:url('//image.oliveyoung.co.kr/uploads/contents/202311/07youngArt/btn_sound_on.png') no-repeat center / 100% auto;}
+
+/* event 공통 */
+.oyblind{display:none;overflow:hidden;position:absolute;top:0;left:0;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;padding:0;border:0}
+.oyEvent_wrap{overflow:hidden;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none !important}
+.oyEvent_wrap .evtCont,
+.oyEvent_wrap .evtVisual{position:relative;width:100%}
+.oyEvent_wrap a{display:block;height:100%}
+.oyEvent_wrap .evtBtn{display:block;position:absolute;left:50%;width:60%;transform:translateX(-50%)}
+.oyEvent_wrap img {display:block;}
+
+/* young&art 공통 */
+.oyEvent_wrap .OYSlide{overflow:hidden}
+.oyEvent_wrap .swiper-wrapper{display:-webkit-box}
+.oyEvent_wrap .swiper-slide{position:relative}
+.oyEvent_wrap .aos {position:absolute;}
+.oyEvent_wrap video {display:block;width:100%;height:100%;}
+.oyEvent_wrap .marqueeBox {position:relative;overflow:hidden;}
+
+/* young&art */
+.evtVisual .scrollAni1 {top:3.2%;right:5%;width:75.6vw;z-index:5;}
+.evtCont1 .scrollAni1 {top:26%;left:23.2%;width:52.8vw;}
+.evtCont2 {height:177.7vw;overflow:hidden;}
+.evtCont2 .videoBox {position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.evtCont2 .videoBox video {object-fit:cover;height:177.7vw;}
+.evtCont4 .buttonBox .popList ul {display:flex;flex-wrap:wrap;justify-content:space-between;position:absolute;top:21%;left:50%;transform:translateX(-50%);width:96%;height:64%;}
+.evtCont4 .buttonBox .popList ul li {width:32.6%;height:32.3%;}
+.evtCont5 .scrollAni1 {top:27.5%;right:7.5%;width:39.73%;}
+.evtCont6 {background-color:#f6f6f6;}
+.evtCont7 {background-color:#fff;}
+.evtCont8 {background-color:#f6f6f6;}
+.evtCont8 .fadeList {position:relative;width:84%;height:120vw;margin:0 auto;overflow:hidden;}
+.evtCont8 .fadeList li {position:absolute;top:0;left:0;width:100%;height:auto;animation:fadeAnim 8s ease-in-out infinite;}
+.evtCont8 .fadeList li:nth-child(1) {z-index:2}
+.evtCont8 .fadeList li:nth-child(2) {animation-delay:4s;-webkit-animation-delay:4s;z-index:1}
+.evtCont9 {background-color:#fff;}
+.evtCont9 .gif {width:84% !important;margin:0 auto;}
+.evtCont9 .videoBox {width:84% !important;margin:0 auto;height:133.6vw;}
+.evtCont9 .videoBox video {object-fit:cover;}
+.evtCont10 .evtbtnShare {width:74%;height:5.2%;bottom:12%;}
+.evtCont10 .btnMove {width:74%;height:5.2%;bottom:6%;}
+
+/*
+	가로 스크롤 영역 세팅 - 시안에 맞춰서 계산 후 넣기
+	stickyBox 높이값 계산법 : (scrollImg width - window width + stickyCont height + stickyContOut height) / 7.5vw
+	scrollProgressBar : 배경색 변경
+*/
+.oyEvent_wrap .stickyBox,
+.oyEvent_wrap .stickyBox .stickyCont {-webkit-overflow-scrolling:touch;}
+.oyEvent_wrap .stickyBox .stickyCont {-webkit-transform:translateZ(0);-webkit-backface-visibility:hidden;}
+.oyEvent_wrap .stickyBox .stickyCont .scrollImg {display:flex;flex-wrap:nowrap;will-change:transform;}
+.oyEvent_wrap .stickyBox .scrollProgressBox {margin:8vw 8vw 0 8vw;background-color:#e5e5e5;border-radius:15px;overflow:hidden;}
+.oyEvent_wrap .stickyBox .scrollProgressBox .scrollProgressBar {width:0;height:1.333vw;background-color:#c69e73;border-radius:15px;}
+.evtCont6 .stickyBox {height:1045.867vw !important;}
+.evtCont6 .stickyBox .stickyCont .scrollImg {width:512.867vw !important;}
+.evtCont7 .stickyBox {height:1197.6vw !important;}
+.evtCont7 .stickyBox .stickyCont .scrollImg {width:573.333vw !important;}
+.evtCont8 .stickyBox {height:1410.667vw !important;}
+.evtCont8 .stickyBox .stickyCont .scrollImg {width:540.667vw !important;}
+.evtCont9 .stickyBox {height:882.933vw !important;}
+.evtCont9 .stickyBox .stickyCont .scrollImg {width:568.8vw !important;}
+
+/* 이벤트 페이지 */
+.evtPageCont1 .fadeList {width:86.67%;height:86.67vw;overflow:hidden;position:absolute;bottom:4.9%;left:50%;transform:translateX(-50%);}
+.evtPageCont1 .fadeList li {position:absolute;top:0;left:0;width:100%;height:auto;animation:fadeAnim 8s ease-in-out infinite;}
+.evtPageCont1 .fadeList li:nth-child(1) {z-index:2}
+.evtPageCont1 .fadeList li:nth-child(1) img {transform:scale(1.015);}
+.evtPageCont1 .fadeList li:nth-child(2) {animation-delay:4s;-webkit-animation-delay:4s;z-index:1}
+.evtPageCont1 .absImg {width:86.667%;position:absolute;bottom:4.9%;left:50%;transform:translateX(-50%);}
+.evtPageCont3 .buttonBox .btnDraw {position:absolute;top:0;left:50%;transform:translateX(-50%);width:73.338vw;height:14.66667vw;background:url('//image.oliveyoung.co.kr/uploads/contents/202311/07youngArt/evt_btn.png') no-repeat center top / 100%;}
+.evtPageCont3 .buttonBox .btnDraw.off {background:url('//image.oliveyoung.co.kr/uploads/contents/202311/07youngArt/evt_btn_off.png') no-repeat center top / cover;}
+.evtPageCont3 .buttonBox .btnMove {position:absolute;top:35%;left:50%;transform:translateX(-50%);width:73.333vw;height:14.66667vw;}
+
+/* 팝업 공통부분 재선언 */
+.eventLayer .inner.imgPop {width:84%;}
+.eventLayer .inner.imgPop .evtPopImg {width:100%;max-height:90vh;overflow-y:auto;background-color:transparent}
+.eventLayer .inner.imgPop .close {top:-2%;right:-2%;width:7.467vw;height:7.467vw;border-radius:50%;background-color:#fff;}
+.eventLayer .inner.imgPop .close:before,
+.eventLayer .inner.imgPop .close:after {width:14px;height:1px;}
+
+/* 키프레임 */
+@keyframes fadeAnim {
+	33% {opacity:1}
+	50% {opacity:0}
+	84% {opacity:0}
+	100% {opacity:1}
+}

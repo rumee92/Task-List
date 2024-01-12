@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* 레이어 */
+#eventDimLayer,
+#eventDimLayer2{position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);z-index:998;display:none}
+.eventLayer{position:fixed;top:50%;left:0;display:none;z-index:999;width:100%}
+.eventLayer .inner{width:92%;margin:0 auto;position:relative}
+.eventLayer .inner.non_bg{background:none}
+
+/* 레이어:close */
+.eventLayer .inner .close{display:block;position:absolute;top:25px;right:20px;width:15px;height:15px;font-size:0}
+.eventLayer .inner .close:before,.eventLayer .inner .close:after{content:'';position:absolute;width:20px;height:2px;left:50%;top:50%;border-radius:4px;background:#000}
+.eventLayer .inner .close:before{transform:translate(-50%,-50%) rotate(-45deg)}
+.eventLayer .inner .close:after{transform:translate(-50%,-50%) rotate(45deg)}
+
+/* 레이어 :close circle */
+.eventLayer .inner.non_bg .close{top:-28px;right:-20px;width:55px;height:55px;background:#000;border-radius:50%}
+.eventLayer .inner.non_bg .close:before,.eventLayer .inner.non_bg .close:after{width:2px;height:26px;background:#fff}
+
+/* 레이어:공지사항 */
+.eventNotice2{padding:20px 20px}
+.eventNotice2 h6{padding:0 0 5px 5px;border-bottom:1px solid #474747;color:#000;font-size:16px;line-height:30px}
+.eventNotice2 ul{margin:5px 0 0 0!important}
+.eventNotice2 ul li{position:relative;padding:0 0 2px 10px;color:#676767;font-size:12px;line-height:18px;letter-spacing:0}
+.eventNotice2 ul li:before{content:'-';position:absolute;top:0;left:0}
+.eventNotice2 ul .last {padding: 0 0 2px 10px}
+.eventNotice2 ul .last:before {content: '*'}
+.eventNotice2 .info_tit{margin:15px auto 0px;font-size:13px;color:#1e1e1e;font-weight:bold}
+
+/* 팝업닫기 공통 */
+@media screen and (max-width:320px){
+	.eventLayer .conts_inner{overflow-y:auto;max-height:280px}
+}
+
+/* 이벤트 공통 */
+.oyblind{overflow:hidden;position:absolute;top:0;left:0;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;padding:0;border:0}
+.oyEvent_wrap{overflow:hidden;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none !important;}
+.oyEvent_wrap .aos{position:absolute !important;}
+.oyEvent_wrap .evtCont{position:relative;width:100%}
+.oyEvent_wrap .evtCont [class~='OYCart']{position:absolute;top:0;left:auto;right:0;width:16%;height:100%;z-index:10;transform:none}
+.oyEvent_wrap .imgBox {position: relative;}
+.oyEvent_wrap img {display: block; width: 100%;}
+.oyEvent_wrap [class^=videoBox]{font-size:0}
+.oyEvent_wrap [class^=videoBox] video {width: 100%; height: 100%;object-fit: cover; display: block; border: 0;}
+.oyEvent_wrap a{display:block;height:100%}
+.oyEvent_wrap .evtBtn, .oyEvent_wrap .evtAos, .oyEvent_wrap .evtItem {position: absolute;}
+.oyEvent_wrap .swiper-wrapper{display:-webkit-box}
+.oyEvent_wrap .swiper-slide{position:relative}
+
+
+/* 라이브관 1주년 프로모션 */
+.evtVisual .videoBox {position:absolute;top:0;left:0;}
+.evtVisual .videoBox video {width:100%;height:154.667vw;}
+.evtCont2 {padding-bottom:17.6vw;background-color:#292929;}
+.evtCont2 .evtTabWrap {width:91.733%;margin:0 auto;}
+.evtCont2 .evtTabWrap .evtTab {position:relative;display:flex;width:100%;height:16.4vw;}
+.evtCont2 .evtTabWrap .evtTab.fixed {position:fixed;top:0;left:50%;transform:translateX(-50%);width:91.733%;z-index:5;}
+.evtCont2 .evtTabWrap .evtTab .imgBox {position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;}
+.evtCont2 .evtTabWrap .evtTab .imgBox img {position:absolute;top:0;left:0;width:100%;height:100%;display:none;}
+.evtCont2 .evtTabWrap .evtTab .imgBox img.on {display:block;}
+.evtCont2 .evtTabWrap .evtTab .tabItem {position:relative;flex:0 0 25%;width:25%;z-index:2;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon {display:none;position:relative;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon.on {display:block;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .buttonBox {position:absolute;left:50%;transform:translateX(-50%);bottom:16.267vw;width:73.33vw;height:14.67vw;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .videoBox1 {position:absolute;top:26.93vw;left:50%;transform:translateX(-50%);width:74%;overflow:hidden;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .videoBox1::after {content:'';position:absolute;top:0;left:0;width:100%;height:100%;transform:scale(1.003);background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/phone_frame.png') no-repeat center top / cover;overflow:hidden;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .videoBox1 video {transform:scale(1.005);}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .videoBox2 {position:absolute;top:37.067vw;left:50%;transform:translateX(-50%);width:88vw;overflow:hidden;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .videoBox2 video {transform:scale(1.007);}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .videoBox3 {position:absolute;top:103.067vw;left:50%;transform:translateX(-50%);width:88vw;overflow:hidden;}
+.evtCont2 .evtTabWrap .evtTabConBox .tabCon .videoBox3 video {transform:scale(1.005);}
+.evtCont3 {width:100%;padding-bottom:16vw;background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/cont3_bg.jpg') no-repeat center top / cover;}
+.evtCont3::after {content:'';position:absolute;top:0;left:0;width:100%;padding-top:calc((2547/750)*100%);z-index:-1;}
+.evtCont3 .giftWrap .contTit {width:54.267vw;margin:0 auto;padding-top:16vw;}
+.evtCont3 .giftWrap .evtGiftBox {position:relative;width:62.933vw;height:12.933vw;margin:6.933vw auto 0 auto;background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/gift_box_count.png') no-repeat center top / cover;}
+.evtCont3 .giftWrap .evtGiftBox .evtGiftNum {position:absolute;top:50%;transform:translateY(-50%);right:8vw;font-size:4.53vw;font-weight:600;color:#292929;}
+.evtCont3 .giftWrap .evtSlideBox {width:100%;padding:8.53vw 4vw 0 4vw;box-sizing:border-box;}
+.evtCont3 .giftWrap .evtSlideBox .evtSlide {overflow:visible !important;}
+.evtCont3 .giftWrap .evtSlideBox .evtSlide .swiper-slide {position:relative;}
+.evtCont3 .giftWrap .evtSlideBox .evtSlide .swiper-slide.soldout::after {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/gift_soldout.png') no-repeat center top / cover;z-index:2;}
+.evtCont3 .giftWrap .evtSlideBox .evtSlide .swiper-slide .btnExchange {position:absolute;left:0;bottom:0;width:100%;height:14.67vw;}
+.evtCont3 .giftWrap .evtSlideBox .evtSlide .swiper-slide .btnExchange button {display:block;width:100%;height:100%;}
+.evtCont3 .missionWrap .contTit {width:28vw;padding-top:16.267vw;margin:0 auto;}
+.evtCont3 .missionWrap .missionProgressBox {position:relative;width:90.667vw;height:36.4vw;background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/progress_bg.png') no-repeat center top / cover;margin:0 auto;}
+.evtCont3 .missionWrap .missionProgressBox .missionProgress {position:absolute;top:20vw;left:50%;transform:translateX(-50%);display:flex;gap:0 1px;width:82.4vw;height:2vw;background-color:#fff;border-radius:4px;overflow:hidden;}
+.evtCont3 .missionWrap .missionProgressBox .missionProgress .item {flex:1 1 auto;background-color:#dadada;}
+.evtCont3 .missionWrap .missionProgressBox .missionProgress .item.active {background-color:#87c557;}
+.evtCont3 .missionWrap .missionProgressBox .missionTxt {position:absolute;top:27.2vw;left:50%;transform:translateX(-50%);width:53.067vw;height:4.267vw;background-image:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/progress_txt.png');background-repeat:no-repeat;background-size:100% auto;background-position:0 0;}
+.evtCont3 .missionWrap .missionProgressBox .missionTxt.m_before {background-position:0 0;}
+.evtCont3 .missionWrap .missionProgressBox .missionTxt.m_ing {background-position:0 50%;}
+.evtCont3 .missionWrap .missionProgressBox .missionTxt.m_complate {background-position:0 100%;}
+.evtCont3 .missionWrap .missionListBox {width:90.667vw;margin:0 auto;padding-top:6.667vw;}
+.evtCont3 .missionWrap .missionListBox .missionList .listItem {position:relative;margin-top:2.667vw;}
+.evtCont3 .missionWrap .missionListBox .missionList .listItem .evtChkIcon {position:absolute;top:50%;transform:translateY(-50%);left:4.8vw;width:4.8vw;height:4.8vw;border-radius:50%;background-color:#dadad9;}
+.evtCont3 .missionWrap .missionListBox .missionList .listItem .evtChkIcon .evtChk {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:2.933vw;height:2.933vw;background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/evtChkIcon.png') no-repeat center top / cover;}
+.evtCont3 .missionWrap .missionListBox .missionList .listItem .evtChkIcon.active {background-color:#87c557;}
+.evtCont3 .missionWrap .missionListBox .missionList .listItem .evtChkIcon.active .evtChk {animation:chk 0.5s forwards;}
+.evtCont3 .missionWrap .missionListBox .missionList .listItem .evtGiftIcon {position:absolute;top:50%;transform:translateY(-50%);right:5.33vw;width:6vw;height:6.133vw;background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/evtGiftIcon.png') no-repeat center top / cover;}
+.evtCont3 .missionWrap .missionListBox .missionList .listItem .evtGiftIcon.active {background:url('//image.oliveyoung.co.kr/uploads/contents/202312/13oyLive1stEvent/evtGiftIcon_on.png') no-repeat center top / cover;animation:tossing 2s infinite;}
+.evtCont3 .myApply {position:static;width:73.33vw;margin:0 auto;padding-top:13.733vw;}
+.evtCont3 .popNotice {position:static;width:28.267vw;margin:0 auto;padding-top:7.2vw;}
+
+
+@keyframes tossing {
+	0% {
+		transform:translateY(-50%) rotate(-4deg);
+	}
+	50% {
+		transform:translateY(-50%) rotate(4deg);
+	}
+	100% {
+		transform:translateY(-50%) rotate(-4deg);
+	}
+}
+
+@keyframes chk {
+	30% {
+		transform:translate(-50%, -50%) scale(0.4);
+	}
+	100% {
+		transform:translate(-50%, -50%) scale(1);
+	}
+}
+
+
+
+/* 팝업 공통부분 재선언 */
+.eventLayer .inner.eventNotice2 h6 {color:#000;}
+#popMyApply h6 {text-align:center !important;font-size:4.8vw !important;line-height:1;padding-bottom:5.33vw !important;}
+#popMyApply .eventNotice2 {padding:24px 20px 17px !important;}
+#popMyApply .close {top:26px !important;}
+#popMyApply .myApplyList {padding:0 3.467vw;box-sizing:border-box;}
+#popMyApply .myApplyList .myItem {display:flex;padding:5.33vw 0;border-bottom:1px solid #b4b4b4;}
+#popMyApply .myApplyList .myItem:last-child {border-bottom:none;}
+#popMyApply .myApplyList .myItem > div {text-align:center;font-size:4vw !important;}
+#popMyApply .myApplyList .myItem .evtKey {flex:0 0 70%;padding-left:4vw;color:#000;font-weight:600;text-align:left !important;}
+#popMyApply .myApplyList .myItem .evtValue {flex:1 1 auto;color:#8fb65f;font-weight:700;}
+

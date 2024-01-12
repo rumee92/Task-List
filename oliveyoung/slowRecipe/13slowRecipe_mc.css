@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* event 공통 */
+.evtCont{position:relative;width:100%}
+.evtCont a{display:block;width:100%;height:100%}
+.oyblind{overflow:hidden;position:absolute;top:0;left:0;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;padding:0;border:0}
+.oyEvent_wrap{overflow:hidden}
+.oyEvent_wrap img {display:block;}
+.oyEvent_wrap .evtBtn{display:block;position:absolute;}
+
+/* 슬로우 레시피 공통*/
+.oyEvent_wrap .imgBoxWrap {position: relative;}
+.oyEvent_wrap .imgBox {position: relative;}
+.oyEvent_wrap .aos{position:absolute !important; z-index: 5;}
+.oyEvent_wrap .videoBox video{width:100%; height:100%; outline: none; border: 0; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; object-fit:cover; overflow: hidden;}
+
+/* fadeList */
+.oyEvent_wrap .fadeList{overflow:hidden;position:relative;width:100%}
+.oyEvent_wrap .fadeList li {position:absolute;top:0;left:0;width:100%;height:auto;animation:fadeAnim1 8s ease-in-out infinite;-webkit-animation:fadeAnim1 8s ease-in-out infinite}
+.oyEvent_wrap .fadeList li:nth-child(1) {z-index:2}
+.oyEvent_wrap .fadeList li:nth-child(2) {animation-delay:4s;-webkit-animation-delay:4s;z-index:1}
+/*.oyEvent_wrap .fadeList li{position:absolute;top:0;left:0;width:100%;height:auto;animation:fadeAnim2 9s ease-in-out infinite;-webkit-animation:fadeAnim2 9s ease-in-out infinite}*/
+/*.oyEvent_wrap .fadeList li:nth-child(1){z-index:2;animation-delay:4.5s;-webkit-animation-delay:4.5s;}*/
+/*.oyEvent_wrap .fadeList li:nth-child(2){z-index:1;}*/
+
+
+/* 슬로우 레시피 */
+.oyEvent_wrap .evtVisual .scrollAni1 {top:37.8%;left:3.8%;width:52%;}
+.oyEvent_wrap .evtVisual .scrollAni2 {bottom:20%;left:6%;width:15.733%;}
+.oyEvent_wrap .evtVisual .visualMoveWrap {position:absolute;display:flex;flex-wrap:wrap;width:88%;height:8%;top:62%;left:50%;transform:translateX(-50%);}
+.oyEvent_wrap .evtVisual .visualMoveWrap > div {position:static;flex:0 0 16.6%;width:16%;height:100%;}
+.oyEvent_wrap .evtCont1 .scrollAni1 {top:31%;left:52%;width:2.67%;}
+.oyEvent_wrap .evtCont1 .scrollAni2 {top:26%;left:52%;width:2.67%;}
+.oyEvent_wrap .evtCont1 .scrollAni3 {top:29%;left:41%;width:24.267%;}
+.oyEvent_wrap .evtCont1 .evtAni1 {position:absolute;bottom:15.8%;left:12.2%;width:69.3%;clip-path:inset(0 100% 0 0);animation:evtAni1 3.5s ease-in-out infinite;}
+.oyEvent_wrap .evtCont2 .scrollAni1 {top:16.9%;left:7.8%;width:37.067%;}
+.oyEvent_wrap .evtCont2 .scrollAni2 {top:31.6%;right:35%;width:8%;}
+.oyEvent_wrap .evtCont2 .evtLinkWrap {position:absolute;display:flex;flex-wrap:wrap;width:85%;height:38%;top:59.5%;left:50%;transform:translateX(-50%);}
+.oyEvent_wrap .evtCont2 .evtLinkWrap .moveLink {position:static;flex:0 0 50%;width:50%;height:20%;margin-top:20%;}
+.oyEvent_wrap .evtCont3 .fadeList {height:132.67vw;}
+.oyEvent_wrap .evtCont3 .evtTxt {position:absolute;top:26%;right:9%;width:24.533%;z-index:5;}
+.oyEvent_wrap .evtCont3 .scrollAni1 {top:29.3%;right:20.2%;width:2.67%;height:32%;}
+.oyEvent_wrap .evtCont3 .evtArr1 {position:absolute;bottom:0;}
+.oyEvent_wrap .evtCont3 .evtArr2 {position:absolute;bottom:21%;}
+.oyEvent_wrap .evtCont3 .evtArr3 {position:absolute;bottom:42%;}
+.oyEvent_wrap .evtCont3 .evtArr4 {position:absolute;bottom:71.5%;}
+.oyEvent_wrap .evtCont3 .evtArr5 {position:absolute;bottom:92%;}
+.oyEvent_wrap .evtCont4 .scrollAni1 {top:24%;right:5.2%;width:34.93%;}
+.oyEvent_wrap .evtCont4 .scrollAni2 {top:38.9%;left:9.6%;width:43.2%;}
+.oyEvent_wrap .evtCont5 .scrollAni1 {top:21.8%;left:19.5%;width:67.2%;}
+.oyEvent_wrap .evtCont5 .scrollAni2 {top:36.1%;left:19.5%;width:67.2%;}
+.oyEvent_wrap .evtCont5 .scrollAni3 {top:47.8%;left:19.5%;width:67.2%;}
+.oyEvent_wrap .evtCont5 .scrollAni4 {top:58.8%;left:19.5%;width:67.2%;}
+
+
+
+/* keyframes */
+@keyframes fadeAnim1 {
+	33% {opacity:1}
+	50% {opacity:0}
+	84% {opacity:0}
+	100% {opacity:1}
+}
+
+@keyframes fadeAnim2 {
+	40% {opacity:1; filter:blur(0); transform: scale(1);}
+	50% {opacity:0; filter:blur(20px); transform: scale(1.1);}
+	90% {opacity:0; filter:blur(20px); transform: scale(1.1);}
+	100% {opacity:1; filter:blur(0); transform: scale(1);}
+}
+
+@keyframes evtAni1 {
+	50% {clip-path: inset(0 0 0 0);}
+	100% {clip-path: inset(0 0 0 100%);}
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<meta property="og:title" content="올리브영 모바일 메인" />
+<!-- 사이트 명 -->
+<meta property="og:url" content="http://" />
+<!-- 사이트 URL -->
+<meta property="og:image" content="" />
+<!-- 대표 이미지 URL -->
+<meta property="og:description" content="" />
+<!-- 사이트 설명 -->
+<title>MC : 프로필 등록 이벤트</title>
+<link rel="stylesheet" href="https://m.oliveyoung.co.kr/mc-static-root/css/style.css" />
+<script src="https://image.oliveyoung.co.kr/mc-static-root/js/common/publish/jquery-1.9.1.min.js"></script>
+<script src="https://image.oliveyoung.co.kr/mc-static-root/js/common/publish/content_ui.js"></script>
+<script src="https://image.oliveyoung.co.kr/uploads/contents/OYEvt/lib/Swiper_6.3.4.min.js"></script>
+<!--  +++++   퍼블리싱 HTML 화면 인클루드를 위한 소스     ++++     -->
+<script>
+	$(document).ready( function() {
+		$("#headInd").load("/mc-static-root/html/common/header.html");
+		$("#footInd").load("/mc-static-root/html/common/footer.html");
+	});
+</script>
+<!--  +++++   퍼블리싱 HTML 화면 인클루드를 위한 소스     ++++     -->
+</head>
+<body>
+<div class="mWrapper">
+	<!-- #mHeader -->
+	<div id="mHeader" class="sHeader">
+        <h2 class="tit" id="subTitle">이벤트 상세보기</h2>
+        <button type="button" class="btnBack" id="sHeaderBackBtn" data-ref-clickid="other">Back Button</button>
+        <div class="top_utill">
+            <button type="button" class="basket" id="headerBasket" data-ref-clickid="other">장바구니 <span class="cnt" style="display: block;">2</span></button>
+        </div>
+    </div>
+	<!-- //#mHeader -->
+	<!-- #mContainer -->
+	<div id="mContainer" class="contEditor">
+		<!-- top Title -->
+		<div id="titConts">
+			<h2 class="tit">프로필 등록 이벤트</h2>
+			<button type="button" id="backBtn">Back Button</button>
+		</div>
+		<!-- //top Title -->
+		<!-- mobile Contents -->
+		<div id="mContents">
+			<div class="eventView">
+				<div class="titBox">
+					<span class="evt_flag flag3">온라인몰단독</span>
+					<span>2018.00.00- 2018.00.00</span>
+					<h3>프로필 등록 이벤트</h3>
+					<button type="button" class="btnShare">공유하기</button>
+				</div>
+				<div class="txtBox">
+
+					
+					<!-- ckEditor 등록 -->
+					<link href="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/01oyProfileEvent_mc.css" rel="stylesheet">
+
+					<input id="servants" type="hidden" value="swipe">
+          
+          <input type="hidden" id="swipeSelector" value=".evtSlideBox .evtSlide">
+          <input type="hidden" id="swipeOptions" value="{
+						speed: 800,
+						initialSlide: 0,
+						pagination: {
+							el: '.evtPage',
+							clickable:true
+						},
+						slidesPerView: 'auto',
+						observer: true,
+						observeParents: true
+					}">
+          <input type="hidden" id="swipeDelay" value="500">
+
+
+					<div class="oyEvent_wrap">
+						<div class="evtVisual">
+							<div class="oyblind">
+                <p>
+                  MY올영 프로필 꾸미기 + +
+                  프로필 만들고 즉시 할인쿠폰 받자!
+                </p>
+                <h4>MY올영 프로필 꾸미기 MY OLIVE PROFILE</h4>
+              </div>
+							<div class="imgBox">
+                <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/visual.jpg" alt="">
+							</div>
+						</div>
+						<div class="evtContainer">
+							<div class="evtCont evtCont1">
+								<div class="oyblind">
+                  <h4>MY OLIVE PROFILE</h4>
+                  <p>나의 프로필을 꾸미기만 해도<em>할인 쿠폰 즉시 지급</em> (선착순 / 총 10만명)</p>
+                  <p>장바구니 쿠폰 <strong>15%</strong></p>
+                  <p>
+                    APP 1만원 이상 구매 시, 최대 3천원 할인
+                    처음으로 프로필을 모두 등록하면 할인쿠폰 지급!
+                  </p>
+                </div>
+								<div class="imgBox">
+                  <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/cont1.jpg" alt="">
+								</div>
+                <div class="evtCouponBox"> <!-- [D] 쿠폰 다운 후 .off 클래스 추가 -->
+                  <a href="javascript:void(0);"><span class="oyblind">장바구니 쿠폰 15%</span></a>
+                </div>
+								<div class="buttonBox">
+									<div class="evtBtn evtBtn_profile">
+                    <a href="javascript:common.link.commonMoveUrl('mypage/getMySkinCondition.do');"><span class="oyblind">프로필 등록하기</span></a>
+									</div>
+                  <div class="evtBtn evtBtn_coupon">
+                    <a href="javascript:void(0);"><span class="oyblind">쿠폰 다운 받기</span></a>
+                  </div>
+                  <div class="evtBtn evtBtn_notice">
+                    <a href="javascript:void(0);" onclick="mevent.detail.eventShowLayScroll('eventNotice1');"><span class="oyblind">꼭 알아두세요</span></a>
+                  </div>
+								</div>
+							</div>
+              
+              <div class="evtCont evtCont2">
+                <!-- [D] 로그인 전 노출 영역 -->
+                <div class="evtNoLogin">
+                  <a href="javascript:common.link.commonMoveUrl('mypage/getMySkinCondition.do');">
+                    <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/no_login.png" alt="로그인 후 프로필 등록 현황을 확인해주세요">
+                  </a>
+                </div>
+                <!-- // [D] 로그인 전 노출 영역 -->
+                
+                <!-- [D] 로그인 후 노출 영역 -->
+                <div class="evtLogin">
+                  <div class="profileStateBox">
+                    <p class="evtTxt1"><span class="evtUserName">여섯글자네요</span>님의 프로필 등록 현황</p>
+                    <div class="evtState">
+                      <!-- [D] 등록 현황 활성화시 evtItem에 클래스 on 추가 -->
+                      <div class="evtStateList">
+                        <div class="evtItem evtItem1 on"><span class="oyblind">프로필 닉네임 등록</span></div>
+                        <div class="evtItem evtItem2"><span class="oyblind">프로필 사진 등록</span></div>
+                        <div class="evtItem evtItem3"><span class="oyblind">자기소개 문구 등록</span></div>
+                        <div class="evtItem evtItem4 on"><span class="oyblind">피부타입 등록</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // [D] 로그인 후 노출 영역 -->
+              </div>
+              
+              <div class="evtCont evtCont3">
+                <div class="oyblind">
+                  <h4>HOV TO</h4>
+                  <p>
+                    프로필 첫 등록하면 무조건 지급!
+                    지금바로 할인구폰 받는 방법
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>STEP.1</strong>
+                      <p>
+                        탭바에서 셔터를 찾은 후
+                        <em>내 프로필을 눌러주세요.</em>
+                      </p>
+                    </li>
+                    <li>
+                      <strong>STEP.2</strong>
+                      <p>
+                        프로필 사진, 닉네임,
+                        자기소개 문구, 피부 컨디션을
+                        <em>모두 등록해 주세요.</em>
+                      </p>
+                    </li>
+                    <li>
+                      <strong>STEP.3</strong>
+                      <p>
+                        <em>프로필을 공개 설정</em>하고
+                        셔터에서 소통해보세요!
+                      </p>
+                    </li>
+                  </ul>
+                  <h5>프로필을 모두 등록하면</h5>
+                  <ol>
+                    <li>
+                      나와 같은 <em>피부톤과 타입</em>을 가진 사람이
+                      나를 <em>팔로우</em>하고
+                      ’셔터’에서 서로 <em>소통</em>할수 있어요
+                    </li>
+                    <li>
+                      <em>탑리뷰어</em> 선정 확률이 올라가요!
+                    </li>
+                  </ol>
+                </div>
+                <div class="imgBox">
+                  <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/cont2_1.jpg" alt="">
+                  <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/cont2_2.jpg" alt="">
+                  <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/cont2_3.jpg" alt="">
+                </div>
+                <div class="evtSlideBox">
+                  <div class="evtSlide">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide slide1">
+                        <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/step1.gif" alt="">
+                      </div>
+                      <div class="swiper-slide slide2">
+                        <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/step2.gif" alt="">
+                      </div>
+                      <div class="swiper-slide slide3">
+                        <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/step3.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination evtPage">&nbsp;</div>
+                </div>
+              </div>
+              
+							<div class="evtCont evtBanner">
+								<a href="javascript:common.link.commonMoveUrl('mtn/shutter');">
+									<img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/bnr1.jpg" alt="셔터에서 나와 맞는 사람을 찾아보세요">
+								</a>
+							</div>
+              
+              <div class="evtCont evtBanner">
+                <a href="javascript:common.link.commonMoveUrl('planshop/getPlanShopDetail.do?dispCatNo=500000102970001');">
+                  <img src="//image.oliveyoung.co.kr/uploads/contents/202311/01oyProfileEvent/bnr2.jpg" alt="포토리뷰 쓰고 쿠폰 받기">
+                </a>
+              </div>
+						</div>
+					</div>
+          
+          <!--레이어 팝업-->
+          <div id="eventDimLayer">&nbsp;</div>
+          <!-- 유의사항 팝업 -->
+          <div class="eventLayer popNotice" id="eventNotice1">
+            <div class="inner eventNotice2">
+              <h6>꼭 알아두세요</h6>
+              <a href="javascript:void(0);" class="close eventHideLayer"><span class="oyblind">닫기</span></a>
+              <div class="conts_inner">
+                <ul>
+                  <li>행사 기간: 11/13~11/30</li>
+                  <li>쿠폰 사용기간 : 11/13~11/30 (ID 당 1회, 온라인몰 APP에서 사용 가능하며 기간 내 미 사용 시 별도 안내 없이 소멸되어 재발급 불가. 타 장바구니 쿠폰과 중복 적용 되지 않음)</li>
+                  <li>쿠폰 발급 대상 : 행사 기간 내, 처음으로 프로필을 모두 등록한 고객. 풀프로필 기등록 고객 제외 (풀프로필 등록 조건 4종 : 프로필 사진, 닉네임, 자기소개 문구, 피부 컨디션)</li>
+                  <li>쿠폰 사용 후 주문 전체 취소의 경우 쿠폰 사용기간 내 재발급 (부분 취소 및 부분 반품 예외)되며, 주문취소 처리가 지연되어 쿠폰 사용기간 지난 건에 대해서는 추가발급 및 추가사용 불가</li>
+                  <li>발급된 쿠폰은 ‘마이페이지 > 쿠폰’ 메뉴에서 확인 가능</li>
+                  <li>부적절한 방법으로 참여 시 당첨 취소</li>
+                  <li>쿠폰은 이벤트 진행 중 상황에 따라 변경될 수 있음</li>
+                  <li>해당 이벤트는 올리브영 온라인몰 사정에 의해 예고없이 변경/중단될 수 있음</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+					<!-- //ckEditor 등록 -->
+
+
+				</div>
+			</div>
+		</div>
+		<!-- //mobile Contents -->
+	</div>
+	<!-- //#mContainer -->
+	<!-- #mFooter -->
+	<div id="mFooter" class="type_renewal">
+		<div class="footer">
+			<ul class="footer_util_list">
+				<li class="footer_util_item">
+					<a href="tel:1522-0882" class="link_util type_call">온라인몰 콜센터</a>
+				</li>
+				<li class="footer_util_item">
+					<a href="tel:1577-4887" class="link_util type_call">매장 콜센터</a>
+
+				</li>
+				<li class="footer_util_item">
+					<a href="javascript:common.link.moveCounselListPage(true);" class="link_util">1:1문의</a>
+				</li>
+				<li class="footer_util_item">
+					<a href="javascript:common.link.moveCounselMain()" class="link_util">고객센터</a>
+				</li>
+			</ul>
+			<div class="footer_info">
+				<!-- [D] 클릭 시 기존과 동일하게 open class 토글 -->
+				<h4 class="ftit"><button type="button" class="acoHead">씨제이올리브영(주)</button></h4>
+				<div class="acoCont">
+					<dl class="info_list">
+						<dt class="info_title">대표이사</dt>
+						<dd class="info_desc">구창근</dd>
+						<dt class="info_title">사업자 등록번호</dt>
+						<dd class="info_desc">809-81-01574</dd>
+						<dt class="info_title">호스팅 사업자</dt>
+						<dd class="info_desc">CJ올리브네트웍스</dd>
+						<dt class="info_title">통신판매업신고번호</dt>
+						<dd class="info_desc">2019-서울용산-1428</dd>
+						<dt class="info_title">이메일</dt>
+						<dd class="info_desc"><a href="mailto:oliveweb@cj.net" class="link_info">oliveweb@cj.net</a></dd>
+						<dt class="info_title">고객센터</dt>
+						<dd class="info_desc">
+							온라인몰 <a href="tel:1522-0882" class="link_info">1522-0882</a><br>
+							매장 <a href="tel:1577-4887" class="link_info">1577-4887</a></dd>
+						<dt class="info_title">주소</dt>
+						<dd class="info_desc">(04323)서울특별시 용산구 한강대로<br>372, 24층(동자동, KDB타워)</dd>
+					</dl>
+					<ul class="mlist2v-menu">
+						<li><a href="javascript:common.link.openFtcBizInfo();" title="페이지 이동">사업자 정보 확인</a></li>
+						<li><a href="javascript:common.link.openEscrowPopup('https://m.oliveyoung.co.kr/mc-static-root/html/etc/escrowPopup.html');" title="페이지 이동">하나은행 구매안전 서비스</a></li>
+						<li><a href="javascript:common.oyLayerOpen('cyberAuditPop');" title="페이지 이동">사이버감사실</a></li>
+					</ul>
+					<p class="copy">© 올리브영 <span>&nbsp;ALL RIGHTS RESERVED</span></p>
+				</div>
+			</div>
+			<ul class="mlist-sns">
+				<li class="instagram"><a href="javascript:common.app.callOpenBrowser('https://www.instagram.com/oliveyoung_official/');" title="새창 열림">인스타그램</a></li>
+				<li class="facebook"><a href="javascript:common.app.callOpenBrowser('https://www.facebook.com/OLIVEYOUNG');" title="새창 열림">페이스북</a></li>
+				<li class="kakao"><a href="javascript:common.app.callOpenBrowser('http://plus.kakao.com/friend/@' + common.app.fixedEncodeURIComponent('올리브영'));" title="새창 열림">카카오톡 플러스 친구</a></li>
+				<li class="youtube"><a href="javascript:common.app.callOpenBrowser('https://www.youtube.com/user/cjoliveyoung/');" title="새창 열림">유튜브</a></li>
+			</ul>
+			<ul class="mlist4v-menu">
+				<li id="footerLoginArea"><a href="javascript:common.link.moveLoginPage('','','Y');" id="login" title="페이지 이동" fromattr="common.js">로그인</a></li>
+				<li><a href="javascript:common.link.callTermsPage();" title="페이지 이동">이용약관</a></li>
+				<li><a href="javascript:common.link.callPrivacyPage();" title="페이지 이동" class="text_bold">개인정보처리방침</a></li>
+				<li><a href="javascript:common.link.callYouthProtectionPage();" title="페이지 이동">청소년보호방침</a></li>
+				<li><a href="javascript:common.link.callLegalFooterPage();" title="페이지 이동">법적고지</a></li>
+			</ul>
+			<!-- [D] MW에서만 노출되는 영역 -->
+			<div class="footer_btn_area">
+				<a href="javascript:common.link.openAppDownloadPage();" class="link">APP 다운로드</a>
+			</div>
+			<!-- //[D] MW에서만 노출되는 영역 -->
+		</div>
+	</div>
+	<!-- //#mFooter -->
+</div>
+
+
+<!-- [D] 프로필 등록 이벤트 스크립트 -->
+<script>
+  // 닉네임 5자 노출
+  $(document).ready(function () {
+    $('.profileStateBox .evtUserName').each(function () {
+      var evtUserName = $(this).text();
+      if (evtUserName.length > 5) {
+        $(this).text(evtUserName.substring(0, 5) + "...");
+      }
+    });
+  });
+</script>
+<!-- // [D] 프로필 등록 이벤트 스크립트 -->
+
+
+<script>
+  // onclick="mevent.detail.eventShowLayScroll()" 사용
+  
+  var mevent = mevent || {};
+  mevent.detail = mevent.detail || {
+    
+    // 레이어 노출
+    eventShowLayer : function(obj) {
+      var layObj = document.getElementById(obj);
+      var layDim = document.getElementById("eventDimLayer");
+      layDim.style.display = "block";
+      layObj.style.display = "block";
+      var layObjHeight = layObj.clientHeight / 2;
+      layObj.style.marginTop = "-" + layObjHeight + "px";
+    },
+    eventShowLayScroll : function(obj) {
+      var _winHeight = $(window).height(),
+        _layObj = $("#" + obj),
+        _layObjHeight = _layObj.height(),
+        _layObjTop = _layObj.height() / 2,
+        _layDim = $("#eventDimLayer");
+      if (_layObjHeight >= _winHeight) {
+        var _layObjInner = _layObj.find(".conts_inner");
+        var _layObjInHeight = _winHeight - 180;
+        _layObjInner.css({ "max-height": _layObjInHeight });
+        _layObjTop = $("#" + obj).height() / 2;
+      }
+      _layDim.show();
+      _layObj.css({ "margin-top": -_layObjTop }).show();
+    },
+    
+    // 레이어 숨김
+    eventCloseLayer : function(){
+      $(".eventLayer").hide();
+      $("#eventDimLayer").hide();
+    }
+  }
+  
+  $(".eventHideLayer").click(function(){
+    mevent.detail.eventCloseLayer();
+  });
+</script>
+
+
+
+<!-- 서번트확인용 -->
+<script src="https://www.oliveyoung.co.kr/mc-static-root/js/common/common.js"></script>
+<script src="https://www.oliveyoung.co.kr/mc-static-root/js/planshop/mayfly-queen.js"></script>
+<script src="../../../../js/planshop/planshop-swiper-loader.js"></script>
+<script>
+	mplanshop.swiperLoader.loadSwiper();
+</script>
+<!-- //서번트확인용 -->
+
+</body>
+</html>

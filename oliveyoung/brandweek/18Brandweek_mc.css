@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+/* 레이어 */
+#eventDimLayer,
+#eventDimLayer2{position:fixed;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.6);z-index:998;display:none}
+.eventLayer{position:fixed;top:50%;left:0;display:none;z-index:999;width:100%}
+.eventLayer .inner{width:92%;margin:0 auto;position:relative}
+.eventLayer .inner.non_bg{background:none}
+.eventLayer .conts_inner{max-height:380px;overflow-y:scroll}
+
+/* 레이어:close */
+.eventLayer .inner .close{display:block;position:absolute;top:25px;right:20px;width:15px;height:15px;font-size:0}
+.eventLayer .inner .close:before,.eventLayer .inner .close:after{content:'';position:absolute;width:20px;height:2px;left:50%;top:50%;border-radius:4px;background:#000}
+.eventLayer .inner .close:before{transform:translate(-50%,-50%) rotate(-45deg)}
+.eventLayer .inner .close:after{transform:translate(-50%,-50%) rotate(45deg)}
+
+/* 레이어 : close circle */
+.eventLayer .inner.non_bg .close{top:-28px;right:-20px;width:55px;height:55px;background:#000;border-radius:50%}
+.eventLayer .inner.non_bg .close:before,.eventLayer .inner.non_bg .close:after{width:2px;height:26px;background:#fff}
+
+/* 레이어:공지사항 */
+.eventNotice2{padding:20px 20px}
+.eventNotice2 h6{padding:0 0 5px 5px;border-bottom:1px solid #474747;color:#000;font-size:16px;line-height:30px}
+.eventNotice2 ul{margin:5px 0 0 0!important}
+.eventNotice2 ul li{position:relative;padding:0 0 2px 10px;color:#676767;font-size:12px;line-height:18px;letter-spacing:0}
+.eventNotice2 ul li:before{content:'-';position:absolute;top:0;left:0}
+.eventNotice2 .info_tit{margin:15px auto 0px;font-size:13px;color:#1e1e1e;font-weight:bold}
+
+/* 팝업닫기 공통 */
+@media screen and (max-width:320px){
+	.eventLayer .conts_inner{overflow-y:auto;max-height:280px}
+}
+
+/* 추가 수정 */
+.oyEvent_wrap .evtCont > .OYBenefit {position:relative;}
+.oyEvent_wrap .evtCont > [class*='OYCont'] {position:relative;}
+
+
+/* event 공통 */
+.oyblind{overflow:hidden;position:absolute;top:0;left:0;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;padding:0;border:0}
+.oyEvent_wrap{overflow:hidden;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none !important;background-color:#fff;}
+.oyEvent_wrap .evtCont{position:relative;width:100%; z-index: 1;}
+.oyEvent_wrap .evtBtn{display:block;position:absolute;z-index:10;}
+.oyEvent_wrap button{border:0 none;background:transparent}
+.oyEvent_wrap a{display:block;height:100%;font-size:0;}
+.oyEvent_wrap img{display:block;width:100%;}
+.eventLayer img{width:100%;display:block;}
+.oyEvent_wrap .swiper-wrapper{display:-webkit-box}
+.oyEvent_wrap .swiper-slide{position:relative; width:100%;}
+.oyEvent_wrap .aos{position:absolute;}
+.oyEvent_wrap .evtCont [class~='OYCart']{position:absolute;top:0;left:auto;right:0;width:16%;height:100%;z-index:10;transform:none}
+
+/* fadeList */
+.oyEvent_wrap .fadeList{overflow:hidden;position:relative;width:100%}
+.oyEvent_wrap .fadeList li{position:absolute;top:0;left:0;width:100%;height:auto;}
+.oyEvent_wrap .fadeList li{animation:fadeAnim 6s ease-in-out infinite;}
+.oyEvent_wrap .fadeList li:nth-child(1){z-index:2;}
+.oyEvent_wrap .fadeList li:nth-child(2){animation-delay:3s;z-index:1;}
+
+
+/* 브랜드 위크 플러스 예지미인 */
+.OYBenefit1 .btnCoupon {bottom:16.5%;left:50%;transform:translateX(-50%);width:92vw;height:40vw;z-index:1;background-image:url('//image.oliveyoung.co.kr/uploads/contents/202312/18Brandweek/coupon.png');background-repeat:no-repeat;background-position:center;background-size:cover;overflow:hidden;}
+.OYBenefit1 .btnCoupon.off {background-image:url('//image.oliveyoung.co.kr/uploads/contents/202312/18Brandweek/coupon_on.png');}
+.OYBenefit1 .btnNotice {bottom:0;left:50%;transform:translateX(-50%);width:50%;height:12%;}
+.OYBenefit2 .btnNotice {bottom:5%;left:50%;transform:translateX(-50%);width:50%;height:10%;}
+.evtVisual1 .deco1 {position:absolute;bottom:3.5%;left:50%;transform:translateX(-50%);width:75.74%;z-index:2;}
+.evtVisual1 .visualTextBox .molangBox .textEff {position:absolute;top:56.6%;z-index:2;}
+.evtVisual1 .visualTextBox .molangBox .textEff img {width:auto !important;height:17.33vw;}
+.evtVisual1 .visualTextBox .molangBox .textEff1 {left:24.5%;}
+.evtVisual1 .visualTextBox .molangBox .textEff2 {left:36.5%;}
+.evtVisual1 .visualTextBox .molangBox .textEff3 {left:44.6%;}
+.evtVisual1 .visualTextBox .molangBox .textEff4 {left:51.7%;}
+.evtVisual1 .visualTextBox .molangBox .textEff5 {left:61.5%;}
+.evtVisual1 .visualTextBox .molangBox .textEff6 {left:69.1%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff {position:absolute;top:67.5%;z-index:2;}
+.evtVisual1 .visualTextBox .yejiBox .textEff img {width:auto !important;height:18.4vw;}
+.evtVisual1 .visualTextBox .yejiBox .textEff1 {left:12%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff2 {left:23.7%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff3 {left:33.8%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff4 {left:43.7%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff5 {left:51%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff6 {left:64.3%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff7 {left:69.4%;}
+.evtVisual1 .visualTextBox .yejiBox .textEff8 {left:75.6%;}
+.evtVisual1 .visualTextBox .molangBox .textEff1.ani.on {animation:visualTextAni 2s 1 forwards;}
+.evtVisual1 .visualTextBox .molangBox .textEff3.ani.on {animation:visualTextAni2 2s 1 forwards;}
+.evtVisual1 .visualTextBox .molangBox .textEff4.ani.on {animation:visualTextAni 2s 1 forwards;}
+.evtVisual1 .visualTextBox .molangBox .textEff6.ani.on {animation:visualTextAni2 2s 1 forwards;}
+.evtVisual1 .visualTextBox .yejiBox .textEff1.ani.on {animation:visualTextAni 2s 1 forwards;}
+.evtVisual1 .visualTextBox .yejiBox .textEff3.ani.on {animation:visualTextAni2 2s 1 forwards;}
+.evtVisual1 .visualTextBox .yejiBox .textEff6.ani.on {animation:visualTextAni 2s 1 forwards;}
+.evtVisual1 .visualTextBox .yejiBox .textEff8.ani.on {animation:visualTextAni2 2s 1 forwards;}
+.OYCont1 .imgBox2 {position:relative;overflow:hidden;}
+.OYCont1 .evtAni1 {top:3.4%;right:8%;width:39.47%;}
+.OYCont1 .evtAni2 {top:36%;left:7.3%;width:35.07%;}
+.OYCont1 .evtAni3 {bottom:3.6%;left:9.3%;width:48.4%;}
+.OYCont1 .evtAni4 {top:13.2%;right:-6%;width:99%;animation:swing 2s infinite;}
+.OYCont1 .evtAni5 {top:48%;left:9%;width:66.53%;}
+.OYCont2 .evtAni1 {top:2.2%;left:2.7%;width:36.4%;animation:swing 2s infinite;}
+.OYCont2 .evtAni2 {top:1.65%;right:0;width:60.27%;animation:swing2 2s infinite;}
+.OYCont2 .evtAni3 {top:28.4%;left:0;width:62.53%;animation:swing 2s 0.5s infinite;}
+.OYCont2 .evtAni4 {top:7.8%;left:59.8%;width:4.4%;height:2%;}
+.OYCont2 .evtAni4 .heart1 {bottom:0;}
+.OYCont2 .evtAni4 .heart2 {top:34%;}
+.OYCont2 .evtAni4 .heart3 {top:0;}
+.OYCont2 .evtAni5 {top:6.7%;right:6.8%;width:15.33%;}
+.OYCont2 .evtAni6 {top:56.5%;right:4%;width:40%;}
+.OYCont2 .evtAni7 {bottom:5.1%;left:4.67%;width:45.73%;}
+.OYCont2 .evtAni8 {bottom:26%;right:6.7%;width:62.4%;}
+.OYCont2 .evtAni8.aos-animate {animation:clipLeft 2s forwards;}
+.OYCont3 .deco1 {position:absolute;top:39.6%;right:21.73%;width:28%;z-index:2;}
+.OYCont3 .evtAni1 {top:52.5%;right:0;width:16%;}
+.OYCont3 .evtAni2 {top:58.7%;right:10%;width:17.73%;}
+.OYCont3 .evtAni3 {top:63%;right:0;width:19.87%;}
+.OYCont3 .linkItem1 {width:92%;height:11.2%;bottom:19%;left:50%;transform:translateX(-50%);}
+.OYCont3 .linkItem2 {width:92%;height:11.2%;bottom:6.5%;left:50%;transform:translateX(-50%);}
+.OYCont4 .evtAni1 {top:18.2%;right:4%;width:37.2%;}
+.OYCont4 .evtAni2 {top:45.3%;left:4%;width:56.8%;}
+.OYCont4 .evtAni3 {bottom:8.6%;right:4%;width:47.87%;}
+.OYCont4 .evtAni4 {top:5.5%;left:61%;width:16.4%;animation:swing 2s infinite;}
+.OYCont4 .evtAni5 {top:56.2%;left:3%;width:23.2%;}
+.OYCont4 .evtAni6 {top:56.2%;left:66%;width:14.67%;}
+.OYCont4 .evtAni6.aos-animate {animation:clipLeft 1s forwards;}
+.OYCont5 .evtAni1 {top:13.2%;left:0;width:38.13%;}
+.OYCont5 .evtAni2 {top:43.2%;right:0;width:37.6%;animation:scale 1.8s infinite;}
+.OYCont5 .evtAni3 {bottom:10%;left:4%;width:51.07%;}
+.OYCont6 .cont6Slide .swiper-slide {margin-left:-1px;}
+.OYCont6 .linkItem1 {width:92%;height:11.7%;bottom:6.5%;left:50%;transform:translateX(-50%);}
+.OYCont6 .deco1 {position:absolute;top:46.4%;right:21.73%;width:28%;z-index:2;}
+.OYCont7 .evtAni1 {top:3.2%;right:0;width:56.67%;animation:swing 1.5s infinite;z-index:3;}
+.OYCont7 .evtAni2 {bottom:21.5%;left:6%;width:20%;animation:swing 1.5s infinite;}
+.OYCont7 .evtAni3 {bottom:7.2%;left:3%;width:25.33%;animation:swing2 1.5s infinite;}
+.OYCont7 .deco1 {position:absolute;top:29%;right:12%;width:31.6%;z-index:3;}
+.OYCont7 .deco2 {position:absolute;top:39.1%;right:4%;width:50.13%;z-index:3;}
+.OYCont7 .fadeList {position:absolute;top:8.3%;left:0;width:67.2%;height:100.8vw;}
+.OYCont8 .evtAni1 {top:19.5%;right:0;width:34%;}
+.OYCont8 .evtAni2 {top:37.2%;left:4%;width:54.67%;}
+.OYCont8 .evtAni3 {top:56.4%;left:9.5%;width:30%;}
+.OYCont8 .evtAni4 {top:71.3%;left:1%;width:45.87%;}
+.OYCont9 .evtAni1 {top:35%;right:8%;width:35.73%;}
+.OYCont9 .linkItem1 {width:62%;height:34%;top:9.8%;left:50%;transform:translateX(-50%);}
+.OYCont9 .linkItem2 {width:92%;height:12.5%;bottom:6.8%;left:50%;transform:translateX(-50%);}
+.OYCont10 .evtAni1 {bottom:10%;left:20%;width:60.27%;}
+.OYBrand .brandEff {position:absolute;top:49.8%;}
+.OYBrand .brandEff img {width:auto !important;height:15.07vw;}
+.OYBrand .brandEff.brandEff1 {left:19%;animation:brandTextAni 1.2s infinite;}
+.OYBrand .brandEff.brandEff2 {left:29%;}
+.OYBrand .brandEff.brandEff3 {left:37%;animation:brandTextAni2 1.2s infinite;}
+.OYBrand .brandEff.brandEff4 {left:45.3%;}
+.OYBrand .brandEff.brandEff5 {left:51.3%;animation:brandTextAni 1.2s infinite;}
+.OYBrand .brandEff.brandEff6 {left:62%;animation:brandTextAni2 1.2s infinite;}
+.OYBrand .brandEff.brandEff7 {left:66%;}
+.OYBrand .brandEff.brandEff8 {left:71%;animation:brandTextAni 1.2s infinite;}
+.OYBrand .linkItem1 {width:60%;height:7%;bottom:8.5%;left:50%;transform:translateX(-50%);}
+
+
+/* 팝업 공통부분 재선언 */
+.eventNotice2 h6{color:#98a651;}
+.eventLayer .inner .close{display:block;position:absolute;top:20px;right:15px;width:25px;height:25px;}
+
+
+
+/* keyframes */
+@keyframes swing {
+	0% {transform:rotate(0);}
+	50% {transform:rotate(-3deg);}
+	100% {transform:rotate(0);}
+}
+
+@keyframes swing2 {
+	0% {transform:rotate(0);}
+	50% {transform:rotate(3deg);}
+	100% {transform:rotate(0);}
+}
+
+@keyframes brandTextAni {
+	0% {transform:rotate(0);}
+	50% {transform:rotate(-8deg);}
+	100% {transform:rotate(0);}
+}
+
+@keyframes brandTextAni2 {
+	0% {transform:rotate(0);}
+	50% {transform:rotate(8deg);}
+	100% {transform:rotate(0);}
+}
+
+@keyframes visualTextAni {
+	0% {transform:rotate(0deg);}
+	25% {transform:rotate(8deg);}
+	50% {transform:rotate(0deg);}
+	75% {transform:rotate(8deg);}
+	100% {transform:rotate(0deg);}
+}
+
+@keyframes visualTextAni2 {
+	0% {transform:rotate(0deg);}
+	25% {transform:rotate(-8deg);}
+	50% {transform:rotate(0deg);}
+	75% {transform:rotate(-8deg);}
+	100% {transform:rotate(0deg);}
+}
+
+@keyframes clipLeft {
+	0% {clip-path:inset(0 100% 0 0);}
+	70% {clip-path:inset(0);}
+	100% {clip-path:inset(0);}
+}
+
+@keyframes clipUp {
+	0% {clip-path:inset(100% 0 0 0);}
+	70% {clip-path:inset(0);}
+	100% {clip-path:inset(0);}
+}
+
+@keyframes scale {
+	0% {transform:scale(1);}
+	50% {transform:scale(1.05);}
+	100% {transform:scale(1);}
+}
+
+@keyframes fadeAnim {
+	33% {opacity:1}
+	50% {opacity:0}
+	84% {opacity:0}
+	100% {opacity:1}
+}
