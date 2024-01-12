@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+/*************** 티뮤지엄용 css ***************/
+
+/* 제주 티뮤지엄 페이지 - 상단영역 공통 */
+.cdj_renew.teaMuseum .top_wrap {display: flex; justify-content: center; align-items: center; position: relative; height: 474px; background: url("/kr/ko/static_cdj/images/museum/top_banner_mo.jpg") no-repeat center center/cover;}
+.cdj_renew.teaMuseum .top_wrap::before {z-index: 0; content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45);}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap {z-index: 1; position: relative; text-align: center;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .page_tit {font-size: 30px; font-weight: 500; color: #fff; margin-bottom: 40px;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap {margin-bottom: 30px;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn {display: block; width: 250px; height: 48px; line-height: 48px; font-size: 15px; font-weight: 500; color: #fff; box-sizing: border-box; border: 1px solid #fff; border-radius: 4px;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn:first-child {margin-bottom: 10px;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn.on {color: #333; background: #fff;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn > span {display: inline-block; padding-right: 15px; line-height: 1; background: url("/kr/ko/static_cdj/images/museum/top_btn_arr.png") no-repeat right center; background-size: 5px auto;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn.on > span {background: url("/kr/ko/static_cdj/images/museum/top_btn_arr_on.png") no-repeat right center;}
+.cdj_renew.teaMuseum .top_wrap .top_con_wrap .noti_txt {font-size: 14px; color: #BDBDBD;}
+
+/* 제주 티뮤지엄 페이지 공통 */
+.cdj_renew.teaMuseum .con_wrap {margin-top: 15px;}
+.cdj_renew.teaMuseum .page_con_tit {font-size: 18px; font-weight: 500; padding: 14px 0; line-height: 1;}
+.cdj_renew.teaMuseum .my_tab.fixed {z-index: 1; position: fixed; top: 48px; left: 0; width: 100%; background: #fff;}
+.cdj_renew.teaMuseum .my_tab .my_tab_inner .my_tab_list {border-top: 1px solid #E6E6E6;}
+.cdj_renew.teaMuseum .info_wrap .each_info {display: block; padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid #F6F6F6;}
+.cdj_renew.teaMuseum .info_wrap .each_info:last-child {margin-bottom: 0; padding-bottom: 0; border-bottom: none;}
+.cdj_renew.teaMuseum .info_wrap .each_info .info_tit {margin-bottom: 8px; font-size: 16px; font-weight: 500;}
+.cdj_renew.teaMuseum .info_wrap .each_info .info_sub_tit {margin-bottom: 5px; font-size: 14px; font-weight: 500;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .inner_box {margin-bottom: 20px;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .inner_box:last-child {margin-bottom: 0;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list01 > li {position: relative; padding-left: 9px; font-size: 14px; letter-spacing: -.05em; line-height: 1.6;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list01 > li::before {content: ""; display: block; position: absolute; top: 7.5px; left: 0; width: 3px; height: 3px; border-radius: 50%; background: #666666;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list01 > li .line_thru {display: inline-block; text-decoration: line-through;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list02 > li {position: relative; padding-left: 9px; font-size: 13px; letter-spacing: -.05em; line-height: 1.6; color: #999;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list02 > li::before {content: ""; display: block; position: absolute; top: 7.5px; left: 0; width: 3px; height: 3px; border-radius: 50%; background: #BDBDBD;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li {position: relative; padding-left: 9px; font-size: 13px; letter-spacing: -.05em; line-height: 1.6; margin-bottom: 7px;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li:last-child {margin-bottom: 0;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li::before {content: ""; display: block; position: absolute; top: 7.5px; left: 0; width: 3px; height: 3px; border-radius: 50%; background: #666666;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li .inner_txt {font-size: 13px; margin-top: 3px; color: #999;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li .pc_only {display: none;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .text {margin-bottom: 6px; font-size: 14px;}
+.cdj_renew.teaMuseum .info_wrap .each_info .dsc .text:last-child {margin-bottom: 0;}
+
+
+/* 제주 티뮤지엄 - 티스톤 - 프로그램 영역 */
+.cdj_renew.teaMuseum .program_wrap .each_prgm.on {display: block;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm {display: none;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap {padding: 30px 0 40px 0; margin-bottom: 40px; border-bottom: 1px solid #DDDDDD;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .img_box.pc {display: none;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .img_box img {display: block; width: 100%;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box {display: block; margin-top: 20px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .info_box .prgm_name {font-size: 16px; font-weight: 500; margin-bottom: 10px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .info_box .prgm_detail {font-size: 13px; color: #666; line-height: 1.6; word-break: keep-all; margin-bottom: 15px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .info_box .prgm_cost .cost {display: inline-block; font-size: 18px; font-weight: 500;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .info_box .prgm_cost .cost .num {display: inline-block; margin-right: 5px; font-size: 22px; font-weight: 500; vertical-align: middle; color: #333333;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .info_box .prgm_cost .personnel {display: inline-block; font-size: 17px; color: #666666; margin-left: 5px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .btn_box .rsrv_btn {display: block; margin-top: 30px; height: 48px; font-size: 15px; font-weight: 500; line-height: 48px; border-radius: 4px; background: #6C801A; border: 1px solid #6C801A; box-sizing: border-box; color: #fff; text-align: center;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .tea_class_banner {margin-bottom: 30px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .tea_class_banner img {width: 100%;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .tea_class_banner .banner_pc {display: none; height: 150px; background: #ECECEA;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .tea_class_banner .banner_pc img {display: block; max-width: 1200px; margin-left: auto; margin-right: auto;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap {margin-bottom: 40px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box {display: block;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list {margin-bottom: 20px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list:last-child {margin-bottom: 0;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .img_box.pc {display: none;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .img_box img {width: 100%;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box {padding: 24px 24px 24px 20px; background: #F6F6F6; word-break: keep-all;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .num {width: 24px; height: 24px; margin-bottom: 12px; line-height: 24px; text-align: center; background: #333; border-radius: 50%;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .num > span {display: inline-block; margin-left: .04em; font-size: 13px; color: #fff; line-height: 1; letter-spacing: .04em;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .prcd_name {margin-bottom: 5px; font-size: 16px; font-weight: 500;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .prcd_sub_name {font-size: 14px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .noti_txt {margin-top: 8px; font-size: 13px; color: #FD5C5C;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .dot_list {margin-top: 8px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .dot_list > li {position: relative; padding-left: 9px; margin-bottom: 5px; font-size: 13px; color: #666666; word-break: break-word;}
+/* .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .dot_list > li br {display: none;} */
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .dot_list > li:last-child {margin-bottom: 0;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .dot_list > li::before {content: ""; display: block; position: absolute; top: 7px; left: 0; width: 3px; height: 3px; background: #BDBDBD; border-radius: 50%;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm.premium_class  .procedure_wrap .list_box .each_list .text_box .prcd_sub_name {margin-bottom: 5px;}
+.cdj_renew.teaMuseum .program_wrap .each_prgm.premium_class  .procedure_wrap .list_box .each_list .text_box .prcd_sub_name:last-child {margin-bottom: 0;}
+
+/* 제주 티뮤지엄 - 티스톤 - 유의사항 영역 */
+.cdj_renew.teaMuseum .attention_wrap {max-width: 1200px; margin-left: auto; margin-right: auto; margin-top: 60px; padding: 24px 20px; background: #F6F6F6;}
+.cdj_renew.teaMuseum .attention_wrap .con_box {padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #DDDDDD;}
+.cdj_renew.teaMuseum .attention_wrap .con_box:last-child {padding-bottom: 0; margin-bottom: 0; border-bottom: none;}
+.cdj_renew.teaMuseum .attention_wrap .con_box .attention_tit {font-size: 14px; font-weight: 500; margin-bottom: 10px;}
+.cdj_renew.teaMuseum .attention_wrap .con_box .attention_tit .tel {display: inline-block; padding-left: 16px; margin-left: 10px; color: #333; background: url("/kr/ko/static_cdj/images/museum/teastone/tel_ico.png") no-repeat left center; background-size: 12px auto;}
+.cdj_renew.teaMuseum .attention_wrap .con_box .con_list > li {position: relative; padding-left: 9px; font-size: 13px; color: #999; margin-bottom: 5px;}
+.cdj_renew.teaMuseum .attention_wrap .con_box .con_list > li:last-child {margin-bottom: 0;}
+.cdj_renew.teaMuseum .attention_wrap .con_box .con_list > li::before {content: ""; display: block; position: absolute; top: 7px; left: 0; width: 3px; height: 3px; background: #BDBDBD; border-radius: 50%;}
+
+
+
+
+/* 제주 티뮤지엄 - 맵 */
+.cdj_renew.teaMuseum .map_wrap {padding: 30px 0 60px 0; margin-bottom: 40px; border-bottom: 1px solid #DDDDDD;}
+.cdj_renew.teaMuseum .map_wrap .each_map.on {display: block;}
+.cdj_renew.teaMuseum .map_wrap .each_map {display: none;}
+.cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap {margin-bottom: 20px;}
+.cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img img {width: 100%;}
+.cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.mo img {display: block; max-width: 450px; margin: 0 auto;}
+.cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc {display: none;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box {display: block;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li {display: flex; align-items: center; height: 52px; margin-bottom: 8px; background: #F6F6F6; border: 1px solid #DDDDDD; border-radius: 4px; box-sizing: border-box; transition: all 0.3s;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li:last-child {margin-bottom: 0;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li > button {display: flex; align-items: center; width: 100%; height: 100%; padding-left: 16px; font-size: 15px; font-weight: 500; text-align: left; transition: all 0.3s;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li > button .num {display: inline-block; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; margin-right: 8px; font-size: 11px; background: #333333; color: #FFFFFF; text-align: center; letter-spacing: 0; transition: all 0.3s;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li.on {background: #fff; border-color: #6C801A;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li.on > button {color: #6C801A;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li.on > button .num {background: #6C801A;}
+/* .cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li:hover {background: #fff; border-color: #6C801A; transition: all 0.3s;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li:hover > button {color: #6C801A; transition: all 0.3s;}
+.cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li:hover > button .num {background: #6C801A; transition: all 0.3s;} */
+
+/* 팝업 */
+.cdj_renew.teaMuseum .layer_popup_wrap.cdj_renew.type01 .layer_box_new .top_box {padding-bottom: 15px; margin-bottom: 25px; border-bottom: 2px solid #333;}
+.cdj_renew.teaMuseum .layer_popup_wrap.cdj_renew.type01 .layer_box_new .layer_tit {display: inline-block; padding-bottom: 0; margin-right: 8px; border-bottom: none;}
+.cdj_renew.teaMuseum .layer_popup_wrap.cdj_renew.type01 .layer_box_new .lyr_sub_tit {display: inline-block; font-size: 14px; color: #999999;}
+.cdj_renew.teaMuseum .layer_popup_wrap.cdj_renew.type01 .layer_box_new .content_box .img_box {margin-bottom: 20px;}
+.cdj_renew.teaMuseum .layer_popup_wrap.cdj_renew.type01 .layer_box_new .content_box .text_box > p {font-size: 14px; color:#666666; line-height: 1.57; word-break: break-word;}
+
+
+
+
+
+@media all and (min-width: 768px) {
+    /* 제주 티뮤지엄 페이지 - 상단영역 공통 */
+    .cdj_renew.teaMuseum .top_wrap {background: url("/kr/ko/static_cdj/images/museum/top_banner_pc.jpg") no-repeat center center/cover;}
+    .cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn {margin-left: auto; margin-right: auto;}
+    .cdj_renew.teaMuseum .top_wrap .top_con_wrap .noti_txt br.m_only {display: none;}
+
+    /* 제주 티뮤지엄 - 티스톤 - 프로그램 영역 */
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .img_box.pc {display: block;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .img_box.mo {display: none;}
+}
+
+@media all and (min-width: 1024px) {
+    /* 제주 티뮤지엄 페이지 - 상단영역 공통 */
+    .cdj_renew.teaMuseum .top_wrap {height: 500px;}
+    .cdj_renew.teaMuseum .top_wrap .top_con_wrap .page_tit {font-size: 40px; margin-bottom: 50px;}
+    .cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn {display: inline-block;}
+    .cdj_renew.teaMuseum .top_wrap .top_con_wrap .btn_wrap .go_btn:first-child {margin-bottom: 0; margin-right: 8px;}
+
+    /* 제주 티뮤지엄 페이지 공통 */
+    .cdj_renew.teaMuseum .page_con_tit {font-size: 28px;padding: 30px 0;}
+    .cdj_renew.teaMuseum .my_tab .my_tab_inner .my_tab_list {border-top: 2px solid #555555;}
+    .cdj_renew.teaMuseum .info_wrap .each_info {display: flex; align-items: baseline;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .info_tit {flex: 0 0 100px; margin-bottom: 0px; font-size: 18px;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .info_sub_tit {margin-bottom: 10px; font-size: 15px;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list01 > li {font-size: 15px; letter-spacing: -.03em;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list01 > li::before {top: 9.5px;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .dsc .text {margin-bottom: 10px; font-size: 15px;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li {font-size: 15px;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li .inner_txt {font-size: 15px;}
+    .cdj_renew.teaMuseum .info_wrap .each_info .dsc .dot_list03 > li .pc_only {display: block;}
+
+
+    /* 제주 티뮤지엄 - 티스톤 - 프로그램 영역 */
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap {padding: 30px 0 60px 0; margin-bottom: 60px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box {display: flex; justify-content: space-between; align-items: center; margin-top: 30px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .info_box .prgm_name {font-size: 20px; margin-bottom: 7px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .info_box .prgm_detail {font-size: 14px; margin-bottom: 10px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .btn_box .rsrv_btn {width: 230px; margin-top: 0; transition: all 0.3s;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .reservation_wrap .text_box .btn_box .rsrv_btn:hover {background: none; color: #6C801A; transition: all 0.3s;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .tea_class_banner {margin-bottom: 40px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .tea_class_banner .banner_pc {display: block; height: auto;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .tea_class_banner .banner_mo {display: none;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap {margin-bottom: 60px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box {display: flex; flex-wrap: wrap;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list {display: flex; flex: 0 0 49%; width: 49%; margin-bottom: 0;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list:nth-child(odd) {margin-right: 2%;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list:nth-child(1),
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list:nth-child(2) {margin-bottom: 2%;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .img_box {flex: 0 0 50%; width: 50%;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .img_box.pc {display: block;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .img_box.mo {display: none;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box {flex: 0 0 50%; width: 50%; padding: 6% 2% 0 3%;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm.tea_lounge .procedure_wrap .list_box .each_list:nth-child(3) .text_box {padding: 6% 0 0 3%;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm.tea_lounge .procedure_wrap .list_box .each_list:nth-child(3) .text_box .dot_list > li {word-break: keep-all;}
+
+
+    /* 제주 티뮤지엄 - 맵 */
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap {margin-bottom: 25px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.mo {display: none;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc {display: block; position: relative;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc .hover_noti_txt {position: absolute; top: 20px; right: 20px; width: 270px; height: 32px; line-height: 32px; text-align: center; background: rgba(0,0,0,0.5); border-radius: 4px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc .hover_noti_txt span {display: inline-block; padding-left: 19px; font-size: 13px; color: #fff; background: url("/kr/ko/static_cdj/images/museum/map/icon_mouse.png") no-repeat left center;}
+    /* .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li {} */
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li > button {position: absolute; width: 30px; height: 40px; font-size: 15px; color: #FFFFFF; background: url("/kr/ko/static_cdj/images/museum/map/map_pin.png") no-repeat center center/cover; text-align: center; box-sizing: border-box;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li > button span {display: inline-block; vertical-align: super; letter-spacing: 0;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li.on > button {width: 34px; height: 49px; font-size: 16px; color: #FFFFFF; background: url("/kr/ko/static_cdj/images/museum/map/map_pin_on.png") no-repeat center center/cover; text-align: center; box-sizing: border-box;
+        -webkit-animation: floatCloud 0.5s ease-in infinite alternate;
+        -moz-animation: floatCloud 0.5s ease-in infinite alternate;
+        -ms-animation: floatCloud 0.5s ease-in infinite alternate;
+        -o-animation: floatCloud 0.5s ease-in infinite alternate;
+        animation: floatCloud 0.5s ease-in infinite alternate;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(1) > button {left: 41%; top: 2%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(2) > button {left: 33%; top: 30%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(3) > button {left: 31%; bottom: 50%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(4) > button {left: 42%; bottom: 46%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(5) > button {left: 39%; bottom: 38%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(6) > button {left: 59%; top: 17%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(1) > button {left: 38%; bottom: 20%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(2) > button {left: 18.5%; top: 17%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(3) > button {left: 35.5%; top: 14.5%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(4) > button {left: 49%; top: 14%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(5) > button {left: 55%; top: 15%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(6) > button {right: 13%; bottom: 36.5%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(7) > button {right: 19.5%; bottom: 22%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(8) > button {left: 5%; top: 38.5%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(9) > button:nth-child(1) {right: 29.5%; top: 3.5%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(9) > button:nth-child(2) {right: 39.3%; bottom: 2.5%; top: auto;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(10) > button {left: 28%; top: 9%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box {display: flex; flex-wrap: wrap;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li {width: 33%; margin-right: 0.5%; margin-bottom: 0.5%;}
+    .cdj_renew.teaMuseum .map_wrap .each_map .spot_list_wrap .list_box > li:nth-child(3n) {margin-right: 0;}
+
+    /* 팝업 */
+    .cdj_renew.teaMuseum .layer_popup_wrap.cdj_renew.type01 .layer_box_new {max-width: 430px; width: 430px;}
+
+}
+
+@media all and (min-width: 1280px) {
+    /* 제주 티뮤지엄 페이지 공통 */
+    .cdj_renew.teaMuseum .my_tab.fixed {top: 80px;}
+
+    /* 제주 티뮤지엄 - 티스톤 - 프로그램 영역 */
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list {display: flex; flex: 0 0 585px; width: 585px; margin-bottom: 0;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list:nth-child(odd) {margin-right: 30px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list:nth-child(1),
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list:nth-child(2) {margin-bottom: 30px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .img_box {flex: 0 0 293px; width: 293px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box {flex: 0 0 292px; width: 292px; padding: 59px 27px 0 27px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .prcd_name {font-size: 18px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm .procedure_wrap .list_box .each_list .text_box .prcd_sub_name {font-size: 15px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm.premium_class .procedure_wrap .list_box .each_list .text_box {padding: 27px 27px 0 27px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm.premium_class .procedure_wrap .list_box .each_list .text_box .prcd_sub_name {margin-bottom: 8px;}
+    .cdj_renew.teaMuseum .program_wrap .each_prgm.tea_lounge .procedure_wrap .list_box .each_list .text_box {padding: 25px 25px 0 25px;}
+
+
+
+    /* 제주 티뮤지엄 - 맵 */
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(1) > button {left: 497px; top: 24px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(2) > button {left: 390px; top: 240px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(3) > button {left: 375px; bottom: 391px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(4) > button {left: 500px; bottom: 365px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(5) > button {left: 462px; bottom: 307px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.museum_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(6) > button {left: 715px; top: 147px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(1) > button {left: 457px; bottom: 173px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(2) > button {left: 222px; top: 140px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(3) > button {left: 425px; top: 121px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(4) > button {left: 588px; top: 117px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(5) > button {left: 660px; top: 128px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(6) > button {right: 153px; bottom: 311px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(7) > button {right: 231px; bottom: 190px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(8) > button {left: 60px; top: 330px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(9) > button:nth-child(1) {right: 354px; top: 28px;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(9) > button:nth-child(2) {right: 470px; bottom: 24px; top: auto;}
+    .cdj_renew.teaMuseum .map_wrap .each_map.osulloc_map .map_img_wrap .map_img.pc .map_pin_wrap .pin_list > li:nth-child(10) > button {left: 335px; top: 85px;}
+}
+
+
+
+/* keyframe */
+@-webkit-keyframes floatCloud {
+    0% {
+      -webkit-transform: translate3d(0, 0%, 0);
+      -moz-transform: translate3d(0, 0%, 0);
+      -ms-transform: translate3d(0, 0%, 0);
+      -o-transform: translate3d(0, 0%, 0);
+      transform: translate3d(0, 0%, 0); }
+    100% {
+      -webkit-transform: translate3d(0, 15%, 0);
+      -moz-transform: translate3d(0, 15%, 0);
+      -ms-transform: translate3d(0, 15%, 0);
+      -o-transform: translate3d(0, 15%, 0);
+      transform: translate3d(0, 15%, 0); } }
+  @-moz-keyframes floatCloud {
+    0% {
+      -webkit-transform: translate3d(0, 0%, 0);
+      -moz-transform: translate3d(0, 0%, 0);
+      -ms-transform: translate3d(0, 0%, 0);
+      -o-transform: translate3d(0, 0%, 0);
+      transform: translate3d(0, 0%, 0); }
+    100% {
+      -webkit-transform: translate3d(0, 15%, 0);
+      -moz-transform: translate3d(0, 15%, 0);
+      -ms-transform: translate3d(0, 15%, 0);
+      -o-transform: translate3d(0, 15%, 0);
+      transform: translate3d(0, 15%, 0); } }
+  @-ms-keyframes floatCloud {
+    0% {
+      -webkit-transform: translate3d(0, 0%, 0);
+      -moz-transform: translate3d(0, 0%, 0);
+      -ms-transform: translate3d(0, 0%, 0);
+      -o-transform: translate3d(0, 0%, 0);
+      transform: translate3d(0, 0%, 0); }
+    100% {
+      -webkit-transform: translate3d(0, 15%, 0);
+      -moz-transform: translate3d(0, 15%, 0);
+      -ms-transform: translate3d(0, 15%, 0);
+      -o-transform: translate3d(0, 15%, 0);
+      transform: translate3d(0, 15%, 0); } }
+  @-o-keyframes floatCloud {
+    0% {
+      -webkit-transform: translate3d(0, 0%, 0);
+      -moz-transform: translate3d(0, 0%, 0);
+      -ms-transform: translate3d(0, 0%, 0);
+      -o-transform: translate3d(0, 0%, 0);
+      transform: translate3d(0, 0%, 0); }
+    100% {
+      -webkit-transform: translate3d(0, 15%, 0);
+      -moz-transform: translate3d(0, 15%, 0);
+      -ms-transform: translate3d(0, 15%, 0);
+      -o-transform: translate3d(0, 15%, 0);
+      transform: translate3d(0, 15%, 0); } }
+  @keyframes floatCloud {
+    0% {
+      -webkit-transform: translate3d(0, 0%, 0);
+      -moz-transform: translate3d(0, 0%, 0);
+      -ms-transform: translate3d(0, 0%, 0);
+      -o-transform: translate3d(0, 0%, 0);
+      transform: translate3d(0, 0%, 0); }
+    100% {
+      -webkit-transform: translate3d(0, 15%, 0);
+      -moz-transform: translate3d(0, 15%, 0);
+      -ms-transform: translate3d(0, 15%, 0);
+      -o-transform: translate3d(0, 15%, 0);
+      transform: translate3d(0, 15%, 0); } }

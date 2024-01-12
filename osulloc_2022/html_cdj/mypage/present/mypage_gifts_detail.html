@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 선물함 자세히보기 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">선물 배송 정보</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		<section class="section">
+			<div class="my_giftsD_top">
+				<div class="inner_box">
+					<div class="text_box">
+						<h3 class="tit_txt">박루리님으로 부터 <br class="moBlock">선물이 도착하였습니다.</h3>
+						<!-- 선물취소 상태일때 노출됨 -->
+						<h3 class="tit_txt">박루리님으로 부터 <br class="moBlock">받은 선물이 취소되었습니다.</h3>
+					</div>
+					<div class="gifts_msg_card">
+						<div class="card_img_box">
+							<div class="card_img">
+								<div class="gifts_msg_card_img">
+									<img src="/kr/ko/static_cdj/images/mypage/gifts_card01.png" alt="선물 메세지 카드">
+								</div>
+							</div>
+							<div class="card_msg">
+								루리야 생일 축하해~!<br>오늘 행복한 하루 보내!!!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section my_section">
+			<div class="w1200">
+				<div class="gifts_confirm">
+					<h3 class="my_sub_tit">선물상품 확인</h3>
+					<div class="prd_list_box">
+						<ul class="prd_list">
+							<!-- case01 - 상품준비 / 배송중 / 구매확정 일때 : S-->
+							<li class="item case01">
+								<div class="prd_info">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/gifts_confirm.png" alt=""></div>
+									<div class="text_box">
+										<p class="prd_name">베스트 티 컬렉션 3종</p>
+										<p class="count">1개</p>
+										<!-- state - 상태에 따라 워딩 변경 되야 함 -->
+										<p class="state">
+											<span>상품준비</span>
+											<span>배송중</span>
+											<span>구매확정</span>
+										</p>
+									</div>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="g_btn" onclick="">제품 상세보기</button>
+								</div>
+							</li>
+							<!-- case01 - 상품준비 / 배송중 / 구매확정 일때 : E-->
+							
+							
+							<!-- case02 - 배송완료 일때 : S-->
+							<li class="item case02">
+								<div class="prd_info">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/gifts_confirm.png" alt=""></div>
+									<div class="text_box">
+										<p class="prd_name">베스트 티 컬렉션 3종</p>
+										<p class="count">1개</p>
+										<p class="state">
+											<span>배송완료</span>
+										</p>
+									</div>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="g_btn" onclick="">제품 상세보기</button>
+									<button type="button" class="g_btn" onclick="">구매확정</button>
+								</div>
+							</li>
+							<!-- case02 - 배송완료 일때 : E-->
+							
+							
+							<!-- case03 - 선물거절 일때 : S-->
+							<li class="item case03">
+								<div class="prd_info">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/gifts_confirm.png" alt=""></div>
+									<div class="text_box">
+										<p class="prd_name">베스트 티 컬렉션 3종</p>
+										<p class="count">1개</p>
+										<p class="state">
+											<span>선물거절</span>
+										</p>
+									</div>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="g_btn" onclick="">제품 상세보기</button>
+								</div>
+							</li>
+							<!-- case03 - 선물거절 일때 : E-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="gifts_deli_info">
+				<div class="inner_box">
+					<h3 class="my_sub_tit">
+						배송 정보
+						<!-- 선물취소 상태에서는 버튼 미노출 -->
+						<button type="button" class="deli_search_btn" onclick="">배송조회</button>
+					</h3>
+					<table class="table_delivery_info">
+						<caption>배송 정보</caption>
+						<colgroup>
+							<col style="width:100px;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row" class="tr_tit">받는 분</th>
+								<td>
+									<p class="td_text"><span class="name">오설록</span><span class="phone_num">010-5555-6666</span></p>
+									<p class="td_text">[08506] 서울특별시 금천구 가산동 371-50 (가산동) 705호</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="tr_tit">배송 요청사항</th>
+								<td>
+									<p class="td_text">배송전에 미리 연락주세요</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="w1200">
+				<div class="my_gifts_detail_btn">
+					<button type="button" class="btn01" onclick="">목록보기</button>
+					<button type="button" class="btn02" onclick="">선물하러 가기</button>
+				</div>
+			</div>
+		</section>
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 선물함 자세히보기 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

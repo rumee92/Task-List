@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('reviewBlockLayerPopup');" class="btn btnSizeL btnColorW btnTypeB"><span>리뷰 신고/차단 레이어</span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		
+		<!-- 리뷰 신고/차단 레이어 -->
+		<div id="reviewBlockLayerPopup" class="lyPopArea fullType reviewBlockPopup">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose()"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">신고/차단하기</div>
+					
+					<div class="conWrap">
+						<div class="tabType tabType1 length2 switch" id="blockTab"><!-- id = 공통 VIEW CLASS -->
+							<ul>
+								<li><a href="#blockTab1" class="current"><span>게시물 신고/차단</span></a></li>
+								<li><a href="#blockTab2"><span>작성자 신고/차단</span></a></li>
+							</ul>
+						</div>
+						
+						<!-- 게시물 신고차단 컨텐츠 -->
+						<div class="blockTab fc88 fs12 lh18" id="blockTab1">
+							<div class="tabCon tabCon1">
+								<!-- 신고하기 -->
+								<div class="box1">
+									<div class="chkBox">
+										<span class="inp_radio">
+											<input type="radio" name="reviewReportBlock" id="reviewReportBlock1" title="신고하기" checked>
+											<label for="reviewReportBlock1">신고하기</label>
+										</span>
+									</div>
+									<div class="selBox mgt16">
+										<div class="inp_select2 pdtSelect">
+											<div class="selectBox">
+												<button class="title" type="button">신고 사유를 선택하세요.</button>
+												<ul class="selList">
+													<li>
+														<input type="radio" value="1" class="option" id="reviewReportList1" name="reviewReportList">
+														<label for="reviewReportList1">상품과 무관한 이미지/내용</label>
+													</li>
+													<li>
+														<input type="radio" value="2" class="option" id="reviewReportList2" name="reviewReportList">
+														<label for="reviewReportList2">비방, 욕설, 음란 내용</label>
+													</li>
+													<li>
+														<input type="radio" value="3" class="option" id="reviewReportList3" name="reviewReportList">
+														<label for="reviewReportList3">이미지 도용 등 초상권, 저작권 침해</label>
+													</li>
+													<li>
+														<input type="radio" value="4" class="option" id="reviewReportList4" name="reviewReportList">
+														<label for="reviewReportList4">게시글 도배</label>
+													</li>
+													<li>
+														<input type="radio" value="5" class="option" id="reviewReportList5" name="reviewReportList">
+														<label for="reviewReportList5">개인정보 노출 위험</label>
+													</li>
+													<li>
+														<input type="radio" value="6" class="option" id="reviewReportList6" name="reviewReportList">
+														<label for="reviewReportList6">기타(직접 입력)</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="inp_wrap mgt8 selfInput">
+											<div class="inp_textArea">
+												<textarea placeholder="위 신고 항목에 포함되지 않는 신고 사유와 내용을 적어주세요."></textarea>
+												<span class="charCnt">(<em>0</em>/글자 수 제한없음)</span>
+											</div>
+										</div>
+									</div>
+									<p class="desc mgt8">
+										*신고해 주신 내용은 관리자 검토 후 내부 정책에 의거 조치가 진행됩니다. 타당한 이유 없이 허위 신고 시, 신고자에 대한 활동 제한이 가해질 수 있으니 신고 전에 신중히 재고해 주시기를 바랍니다.
+									</p>
+								</div>
+								<!-- //신고하기 -->
+								
+								<!-- 차단하기 -->
+								<div class="box2">
+									<div class="chkBox">
+										<span class="inp_radio">
+											<input type="radio" name="reviewReportBlock" id="reviewReportBlock2" title="차단하기">
+											<label for="reviewReportBlock2">치단하기</label>
+										</span>
+									</div>
+									<div class="blockCheckBox">
+										<div class="inp_wrap">
+											<span class="inp_check">
+												<input type="checkbox" name="reviewBlock" id="reviewBlock1" disabled>
+												<label for="reviewBlock1">게시물 바로 차단하기</label>
+											</span>
+										</div>
+										<p class="desc mgt8">
+											*게시물 차단 시, 해당 게시물은 회원님에게 더 이상 노출되지 않으며, 차단 후에는 다시 취소하실 수 없습니다.
+										</p>
+									</div>
+								</div>
+								<!-- //차단하기 -->
+							</div>
+						</div>
+						<!-- //게시물 신고차단 컨텐츠 -->
+						
+						<!-- 작성자 신고차단 탭 -->
+						<div class="blockTab fc88 fs12" id="blockTab2" style="display:none;">
+							<div class="tabCon tabCon2">
+								<!-- 신고하기 -->
+								<div class="box1">
+									<div class="chkBox">
+										<span class="inp_radio">
+											<input type="radio" name="writerReportBlock" id="writerReportBlock1" title="신고하기" checked>
+											<label for="writerReportBlock1">신고하기</label>
+										</span>
+									</div>
+									<div class="selBox mgt16">
+										<div class="inp_select2 pdtSelect">
+											<div class="selectBox">
+												<button class="title" type="button">신고 사유를 선택하세요.</button>
+												<ul class="selList">
+													<li>
+														<input type="radio" value="1" class="option" id="writerReportList1" name="writerReportList">
+														<label for="writerReportList1">상품과 무관한 이미지/내용</label>
+													</li>
+													<li>
+														<input type="radio" value="2" class="option" id="writerReportList2" name="writerReportList">
+														<label for="writerReportList2">비방, 욕설, 음란 내용</label>
+													</li>
+													<li>
+														<input type="radio" value="3" class="option" id="writerReportList3" name="writerReportList">
+														<label for="writerReportList3">이미지 도용 등 초상권, 저작권 침해</label>
+													</li>
+													<li>
+														<input type="radio" value="4" class="option" id="writerReportList4" name="writerReportList">
+														<label for="writerReportList4">게시글 도배</label>
+													</li>
+													<li>
+														<input type="radio" value="5" class="option" id="writerReportList5" name="writerReportList">
+														<label for="writerReportList5">개인정보 노출 위험</label>
+													</li>
+													<li>
+														<input type="radio" value="6" class="option" id="writerReportList6" name="writerReportList">
+														<label for="writerReportList6">기타(직접 입력)</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="inp_wrap mgt8 selfInput">
+											<div class="inp_textArea">
+												<textarea placeholder="위 신고 항목에 포함되지 않는 신고 사유와 내용을 적어주세요."></textarea>
+												<span class="charCnt">(<em>0</em>/글자 수 제한없음)</span>
+											</div>
+										</div>
+									</div>
+									<p class="desc mgt8">
+										*신고해 주신 내용은 관리자 검토 후 내부 정책에 의거 조치가 진행됩니다. 타당한 이유 없이 허위 신고 시, 신고자에 대한 활동 제한이 가해질 수 있으니 신고 전에 신중히 재고해 주시기를 바랍니다.
+									</p>
+								</div>
+								<!-- //신고하기 -->
+								
+								<!-- 차단하기 -->
+								<div class="box2">
+									<div class="chkBox">
+										<span class="inp_radio">
+											<input type="radio" name="writerReportBlock" id="writerReportBlock2" title="차단하기">
+											<label for="writerReportBlock2">치단하기</label>
+										</span>
+									</div>
+									<div class="blockCheckBox">
+										<div class="inp_wrap">
+											<span class="inp_check">
+												<input type="checkbox" name="writerBlock" id="writerBlock1" disabled>
+												<label for="writerBlock1">작성자 바로 차단하기</label>
+											</span>
+										</div>
+										<p class="desc mgt8">
+											*작성자 차단 시, 해당 게시물 내 작성자가 쓴 모든 게시물은 더 이상 노출되지 않으며, 차단 후에는 다시 취소하실 수 없습니다.
+										</p>
+									</div>
+								</div>
+								<!-- //차단하기 -->
+							</div>
+						</div>
+						<!-- //작성자 신고차단 탭 -->
+					</div>
+				</div>
+				<div class="btn_wrap colType fixed">
+					<a href="#" onclick="layerPopClose()" class="btn btnSizeL btnColorW btnTypeB"><span>취소</span></a>
+					<a href="#" class="btn btnSizeL btnColorB btnTypeB"><span>확인</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- //리뷰 신고/차단 레이어 -->
+		
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>

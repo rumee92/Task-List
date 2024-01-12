@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+<!-- header include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+<!-- CDJ 개선 선물받기 최초 화면 : S -->
+<main class="main cdj_renew receive_present_wrap first">
+	<!-- 타이틀 : S -->
+	<section class="section page_tit_box">
+		<div class="container03 shop_inner">
+			<h2 class="page_tit pd_rnl">선물 배송 정보</h2>
+		</div>
+	</section>
+	<!-- 타이틀 : E -->
+	
+	<form action="">
+		<!-- 컨텐츠 : S -->
+		<section class="section bgF6">
+			<div class="container03 no_gutter shop_inner">
+				<div class="sub_layout_contents">
+					<div class="content bdbN">
+						<div class="receive_header">
+							<div class="text_box">
+								<h3 class="tit_txt">
+									박루리님으로 부터 <br>선물이 도착하였습니다. 
+								</h3>
+								<p class="text01"><span class="c_ptC01">2022년 2월 16일 까지</span> 배송지를 입력해 주세요</p>
+								<p class="text02">입력 기한이 지나면 주문이 자동 취소됩니다.</p>
+							</div>
+							<div class="gifts_msg_card">
+								<div class="card_img_box">
+									<div class="card_img">
+										<div class="gifts_msg_card_img">
+											<img src="/kr/ko/static_cdj/images/present/gifts_card01.png" alt="선물 메세지 카드 1">
+										</div>
+									</div>
+									<div class="card_msg">
+										루리야 생일 축하해~!<br>오늘 행복한 하루 보내!!!
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="content bdbN">
+						<!-- 선물상품 확인  : S -->
+						<div class="accordion_layout order_prd">
+							<div class="subject_box02">
+								<div class="left"><p class="subject">선물상품 확인</p></div> 
+							</div>
+							<div class="con_box mo_full">
+								<div class="order_prd_list">
+									<div class="order_list_box">
+										<ul class="list_type_2">
+											<li class="list_item mo_full_item">
+												<div class="thumb_con">
+													<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/thumb_sample01.png" alt=""></div>
+													<div class="text_box">
+														<p class="prd_name">베스트 티 컬렉션 3종</p>
+														<div class="prd_price_amount">
+															<span class="amount">1개</span>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 선물상품 확인 : E -->
+					</div>
+
+					<!-- 버튼 : S -->
+					<div class="btn_wrap btn_typeB pd_rnl">
+						<button type="button" class="btn_w50 nonmem_address" onclick="">비회원 배송정보 입력</button>
+						<button type="button" class="btn_w50 ptBtn login_btn" onclick="">로그인 후 받기</button>
+					</div>
+					<!-- 버튼 : E -->
+
+					<!-- 비회원 배송정보 입력 : S -->
+					<div class="content nonmem_address_input">
+						<!-- 배송지 정보 : S -->
+						<div class="accordion_layout no_fold shipping_address_info">
+							<div class="subject_box delivery">
+								<div class="left"><p class="subject">배송지 정보</p></div>	
+							</div>
+							<div class="con_box">								
+								<!-- 배송지 정보 입력 : S -->
+								<div class="delivery_info2">
+									<table class="table_type_write">
+										<caption>주문고객정보</caption>
+										<colgroup>
+											<col style="width:100px;">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row" class="tr_tit">받는 분</th>
+												<td>
+													<input type="text" class="inp_text" title="이름입력" value="">
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="tr_tit">휴대전화</th>
+												<td>
+													<div class="mobile_number_box">
+														<div class="inp_selectbox">
+															<select name="" id="" class="inp_select">
+																<option value="010" selected>010</option>
+																<option value="011">011</option>
+																<option value="016">016</option>
+																<option value="017">017</option>
+																<option value="018">018</option>
+																<option value="019">019</option>
+															</select>
+														</div>
+														<span class="hyphen">-</span>
+														<input type="number" class="inp_text" title="휴대전화 입력" value="" placeholder="'-' 없이 휴대폰번호 입력">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="tr_tit vtAlign">주소</th>
+												<td>
+													<div class="address_info_box">
+														<div class="address_form">
+															<div class="form_line1">
+																<input type="text" class="inp_text" title="주소" value="">
+																<button type="button" class="address_btn" onclick="">우편번호 찾기</button>
+															</div>
+															<div class="form_line2"><input type="text" class="inp_text" title="주소" value=""></div>
+															<div class="form_line3"><input type="text" class="inp_text" title="상세주소 입력" value="" placeholder="상세주소 입력"></div>
+														</div>														
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="delivery_msg">
+										<p class="delivery_msg_tit">배송 요청사항</p>
+										<div class="inp_selectbox">
+											<select name="" id="" class="inp_select">
+												<option value="배송 요청사항 선택" selected>배송 요청사항 선택</option>
+												<option value="경비실에 맡겨주세요">경비실에 맡겨주세요</option>
+												<option value="배송전에 미리 연락주세요">배송전에 미리 연락주세요</option>
+												<option value="(최근) 문 옆 소화전 안에 넣어주세요">(최근) 문 옆 소화전 안에 넣어주세요</option>
+												<option value="(최근) 문 앞에 놔주세요">(최근) 문 앞에 놔주세요</option>
+												<option value="1">직접입력</option>
+											</select>
+										</div>
+										<div class="add_msg"><input type="text" class="inp_text" title="" value=""></div>
+									</div>
+								</div>
+								<!-- 배송지 정보 입력 : E -->
+							</div>
+						</div>
+						<!-- 배송지 정보 : E -->
+						
+						<!-- 개인정보 관련 동의 : S -->
+						<div class="privacy_wrap">
+							<div class="necessary_chk">
+								<!-- 사용자가 necessary_chk의 정보 동의 항목 중 체크 하지 않은 항목이 있을 시 item에 클래스 error 추가 -->
+								<div class="item error">
+									<div class="inp_check">
+										<input type="checkbox" id="agree1" name="agree1">
+										<label for="agree1">개인정보 수집동의에 대한 동의 (필수)</label>
+										<button type="button" class="more_view"><span class="txt">자세히 보기</span><span class="arr"></span></button>
+									</div>
+								</div>								
+								<div class="item">
+									<div class="inp_check">
+										<input type="checkbox" id="agree2" name="agree2">
+										<label for="agree2">개인정보 취급위탁 안내에 대한 동의 (필수)</label>
+										<button type="button" class="more_view"><span class="txt">자세히 보기</span><span class="arr"></span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 개인정보 관련 동의 : E -->	
+						
+						<!-- 버튼 : S -->
+						<div class="btn_typeA pd_rnl btn_wrap02">
+							<button type="button" class="btn_w100 ptBtn" onclick="">선물 받기</button>
+						</div>
+						<!-- 버튼 : E -->
+
+					</div>
+					<!-- 비회원 배송정보 입력 : E -->
+
+					<div class="content last">						
+						<div class="cancel_btn_wrap">
+							<button type="button">주문취소 요청</button>
+						</div>
+						<div class="pd_rnl">
+							<div class="notice_wrap">
+								<ul>
+									<li>입력 기한이 지나면 주문이 자동 취소됩니다.</li>
+									<li>선물 상품의 취소/교환/반품은 선물을 보내신 분이 할 수 있습니다.</li>
+									<li>선물 거절 또는 취소/반품으로 발생하는 환불금은 구매자에게 지급됩니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- 컨텐츠 : E -->
+	</form>
+
+</main>
+<!-- CDJ 개선 선물받기 최초 화면 : E -->
+
+
+
+<!-- footer include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

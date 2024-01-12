@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 티스톤 예약 - 취소신청 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">취소신청</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<section class="section">
+			<div class="my_view_top type02">
+				<div class="inner_box">
+					<div class="top_box">
+						<div class="left">
+							<p class="text01">예약 번호 <span class="num">204039597832</span></p>
+							<p class="text02">2022.04.04</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- 컨텐츠 : S -->
+		<section class="section my_section">
+			 <div class="tea_view_con cancle_form">
+				 <div class="con_box">
+					 <div class="inner_box">
+						 <div class="box01">
+							 <p class="tit">투어+그린티 1차 (09:30~10:30)</p>
+							 <ul class="list">
+								 <li class="item">예약일자 : <span class="date">2022.04.15</span></li>
+								 <li class="item">예약인원 : <span class="count">22명</span></li>
+							 </ul>
+						 </div>
+						 <div class="box03">
+							 <ul class="list">
+								 <li class="item">취소 및 환불은 강의시간으로부터 48시간 전까지만 가능합니다.</li>
+							 </ul>
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		</section>
+		
+		<section class="section my_section">
+			<div class="w1200">
+				<div class="tea_cancle_reason">
+					<h3 class="my_sub_tit fz15">취소사유</h3>
+					<div class="con_box">
+						<p class="left pcBlock">취소 사유 선택</p>
+						<div class="right">
+							<div class="form_box">
+								<div class="inp_selectbox">
+									<select name="" id="" class="inp_select">
+										<option value="" selected="">고객변심</option>
+										<option value="">일정을 잘못 선택함</option>
+										<option value="1">직접입력</option>
+									</select>
+								</div>
+								<div class="text_area">
+									<textarea name="" id="" cols="" rows="" maxlength="60" placeholder="사유를 입력해 주세요." class="tea_cancle_text_area"></textarea>
+									<div class="text_cnt"><span>0</span>/60</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="w1200">
+				<div class="tea_res_pay pay_price_info cancle_form">
+					<h3 class="my_sub_tit fz15">환불 금액</h3>
+					<div class="con_box">
+						<div class="price_info">
+							<ul class="list">
+								<li class="item">
+									<div class="top_item">
+										<p class="item_name">주문 결제 금액</p>
+										<p class="item_val">68,000원</p>
+									</div>
+									<div class="sub_item">
+										<p class="item_name">총 상품 금액</p>
+										<p class="item_val">76,000원</p>
+									</div>
+									<div class="sub_item">
+										<p class="item_name">총 할인 혜택</p>
+										<p class="item_val red">-10,000원</p>
+									</div>
+								</li>
+							</ul>
+							<div class="expected_price">
+								<p class="item_name">최종 환불 금액</p>
+								<p class="item_val">60,000<span class="unit">원</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="my_dot_box">
+						<p class="tit">유의사항</p>
+						<ul class="list">
+							<li class="item">무통장입금 결제의 경우, 취소접수완료 후 영업일기준 3일 후에 환불처리됩니다.</li>
+							<li class="item">카드사별로 실제 취소일은 상이할 수 있습니다.</li>
+						</ul>
+					</div>
+					<div class="btn_box">
+						<div class="item">
+							<button class="btn_cancle" type="button" onclick="">취소</button>
+						</div>
+						<div class="item">
+							<button class="btn_appl" type="button" onclick="">취소 신청</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 컨텐츠 : E -->
+	</main>
+	<!-- CDJ 개선 마이페이지 티스톤 예약 - 취소신청 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<?php require("../include/head.html"); ?>
+</head>
+
+<body>
+
+
+<style type="text/css">
+    html.intro {overflow-y:hidden;}
+    #preLogo {position:absolute; left:0; top:0; width:100%; height:100%; text-align:center; z-index:4;background:#1b2b3c;}
+    #preLogo img {display:inline-block;width:auto;position:relative; left:0; top:50%; margin:-47px 0 0 0;}
+    .progressbar {display:none; position:fixed; left:0; top:0; width:0%; height:4px; background:#f7ed5c; z-index:99;}
+    #littleSmIntro {position:relative; width:100%; min-height:100vh; overflow:hidden;position:relative;background:#fff url('../../resources/front/images/main/intro/bg_intro_1.jpg.jpg') center bottom no-repeat; background-size:cover; z-index:1;}
+    #littleSmIntro img {display:inline-block;width:auto;}
+    #littleSmIntro .innerBox {position:relative; width:50%; height:100%; margin:0 auto; overflow:hidden;}
+    #littleSmIntro .innerBox .inbox {position:absolute; left:50%; top:50%; width:100%; transform:translate(-50%,-50%);}
+    #littleSmIntro .innerBox .inbox .logo {width:100%; text-align:center; padding:0 0 28px 0;}
+    #littleSmIntro .innerBox .inbox .slogan {width:100%;text-align:center; padding:0 0 30px 0;}
+    #littleSmIntro .goMain {position:relative; width:100%; text-align:center; margin:30px 0 10px 0;}
+    #littleSmIntro .goMain a {display:inline-block;}
+    /* video */
+    .videoBody {width:100%; height:auto; overflow:hidden; margin:0 auto;}
+    .view_video {position:relative; width:100%; height:100%; padding-bottom:56.25%;}
+    .view_video iframe,
+    .view_video object,
+    .view_video embed {position:absolute; top:0; left:0; width:100%; height:100%;}
+    
+    @media all and (max-width:768px){
+        #littleSmIntro .innerBox {width:88%;}
+    }
+    @media all and (max-width:540px){
+        #preLogo img {width:53px; margin:-29px 0 0 0;}
+        #littleSmIntro .innerBox .inbox .logo {padding:0 0 14px 0;}
+        #littleSmIntro .innerBox .inbox .logo img {width:53px;}
+        #littleSmIntro .innerBox .inbox .slogan {padding:0 0 15px 0;}
+        #littleSmIntro .innerBox .inbox .slogan img {width:116px;}
+        #littleSmIntro .goMain {margin:15px 0 0 0;}
+        #littleSmIntro .goMain a img {width:40px;}
+    }
+</style>
+
+
+<div id="preLogo"><img src="../../resources/front/images/main/intro/img_logo.png" alt="" /></div>
+<div class="progressbar"></div>
+
+<div id="littleSmIntro">
+	<div class="innerBox">
+		<div class="inbox">
+			<div class="logo"><img src="../../resources/front/images/main/intro/img_logo_active.png" alt="" /></div>
+			<div class="slogan"><img src="../../resources/front/images/main/intro/img_intro_txt.png" alt="" /></div>
+			<div class="videoBody">
+				<div class="view_video">
+					<iframe width="100%"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  src="https://www.youtube.com/embed/sPfnn0LR7sI?version=3&vq=hd720&amp;rel=0&amp;autoplay=1&amp;showinfo=0&amp;mute=1&amp;loop=1&amp;playlist=sPfnn0LR7sI" frameborder="0"  allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<div class="goMain">
+				<a href="main.html"><img src="../../resources/front/images/main/intro/img_intro_main_go.png" alt="메인이동" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+    $(function(){
+
+        var preIntro = function(){
+            var winH = $(window).height();
+            $('#preLogo').css('height',winH);
+            $('.progressbar').animate({'width':'100%'},2000,function(){
+                $(this).fadeOut();
+                $(this).css('opacity','0');
+                $('#preLogo').fadeOut();
+                $('html').removeClass('intro');
+            });
+        }
+
+
+        var introAct = function(){
+            var winH = $(window).height();
+            //	var myH = parseInt($('.inbox').height()/1.6);
+            $('#littleSmIntro').css('height',winH);
+            //	$('.inbox').stop().animate({'margin-top':-myH},400);
+        }
+
+        $(window).on('resize', function() {
+            introAct();
+        });
+
+        $(window).on('load', function(){
+            console.log('abc');
+            introAct();
+            preIntro();
+            $('.progressbar').css('display','block');
+        });
+
+        preIntro();
+        $('html').addClass('intro');
+
+
+
+    });
+</script>
+
+</body>
+
+</html>

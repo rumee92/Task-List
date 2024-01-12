@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap" class="h_back">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0">
+		<div class="cocoProfileEdit">
+			<!-- 사진 업로드 영역 -->
+			<div class="profileImgWrap mgt40">
+				<div class="imgBox">
+					<button type="button" class="profileImgSelectBtn" onclick="showLayer('profileImgSelect');"><span class="hide">이미지선택</span></button>
+					<p class="absTag">마음에 드는 사진을 업로드하세요.</p>
+				</div>
+			</div>
+			<!-- //사진 업로드 영역 -->
+			
+			<!-- 프로필 정보 영역 -->
+			<div class="profileInfoWrap mgt30 inner_p">
+				<div class="nickNameBox">
+					<p class="tit">닉네임</p>
+					<div class="inp_wrap typeBox mgt6">
+						<div class="inp_text2"> <!-- 닉네임 수정불가 -->
+							<input type="text" name="" value="abcdefg" disabled>
+						</div>
+					</div>
+				</div>
+				<div class="myIntroBox mgt30">
+					<p class="tit">자기소개</p>
+					<div class="introBox mgt6">
+						<div class="inp_wrap">
+							<div class="inp_textArea">
+								<textarea placeholder="나만의 한 줄 소개를 입력해 주세요."></textarea>
+								<span class="charCnt">(<em>0</em>/400)</span>
+							</div>
+							<p class="error">error message</p>
+						</div>
+						<p class="helpText">20자 이상 400자 이내로 작성해 주세요</p>
+					</div>
+				</div>
+				<div class="cocoSnsBox mgt30">
+					<p class="tit">SNS 계정 및 미디어</p>
+					<ul class="list mgt6">
+						<li class="item insta">
+							<div class="itemIn">
+								<div class="icon"></div>
+								<p class="snsText">인스타그램</p>
+								<div class="chk">
+								<span class="inp_check">
+									<input type="checkbox" name="sns_check" id="sns_check1_1">
+									<label for="sns_check1_1"></label>
+								</span>
+								</div>
+							</div>
+							<div class="userText mgt6">
+								<div class="inp_wrap">
+									<div class="inp_text">
+										<label class="inp_lab" for="insta_id"></label>
+										<input type="text" name="" id="insta_id" placeholder="인스타그램 뒷자리 입력">
+									</div>
+								</div>
+								<span class="heplMsg fc88 fs11 mgt8 mgl10">http://www.instagram.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+							</div>
+						</li>
+						<li class="item blog">
+							<div class="itemIn">
+								<div class="icon"></div>
+								<p class="snsText">블로그</p>
+								<div class="chk">
+								<span class="inp_check">
+									<input type="checkbox" name="sns_check" id="sns_check1_2">
+									<label for="sns_check1_2"></label>
+								</span>
+								</div>
+							</div>
+							<div class="userText mgt6">
+								<div class="inp_wrap">
+									<div class="inp_text">
+										<label class="inp_lab" for="blog_id"></label>
+										<input type="text" name="" id="blog_id" placeholder="네이버 블로그 뒷자리 입력">
+									</div>
+								</div>
+								<span class="heplMsg fc88 fs11 mgt8 mgl10">http://blog.naver.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+							</div>
+						</li>
+						<li class="item youtube">
+							<div class="itemIn">
+								<div class="icon"></div>
+								<p class="snsText">유튜브</p>
+								<div class="chk">
+								<span class="inp_check">
+									<input type="checkbox" name="sns_check" id="sns_check1_3">
+									<label for="sns_check1_3"></label>
+								</span>
+								</div>
+							</div>
+							<div class="userText mgt6">
+								<div class="inp_wrap">
+									<div class="inp_text">
+										<label class="inp_lab" for="youtube_id"></label>
+										<input type="text" name="" id="youtube_id" placeholder="유튜브 뒷자리 입력">
+									</div>
+								</div>
+								<span class="heplMsg fc88 fs11 mgt8 mgl10">http://www.youtube.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+							</div>
+						</li>
+						<li class="item facebook">
+							<div class="itemIn">
+								<div class="icon"></div>
+								<p class="snsText">페이스북</p>
+								<div class="chk">
+								<span class="inp_check">
+									<input type="checkbox" name="sns_check" id="inp_check1_4">
+									<label for="inp_check1_4"></label>
+								</span>
+								</div>
+							</div>
+							<div class="userText mgt6">
+								<div class="inp_wrap">
+									<div class="inp_text">
+										<label class="inp_lab" for="facebook_id"></label>
+										<input type="text" name="" id="facebook_id" placeholder="페이스북 뒷자리 입력">
+									</div>
+								</div>
+								<span class="heplMsg fc88 fs11 mgt8 mgl10">http://www.facebook.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+							</div>
+						</li>
+						<li class="item urlcopy">
+							<div class="itemIn">
+								<div class="icon"></div>
+								<p class="snsText">기타</p>
+								<div class="chk">
+								<span class="inp_check">
+									<input type="checkbox" name="sns_check" id="inp_check1_5">
+									<label for="inp_check1_5"></label>
+								</span>
+								</div>
+							</div>
+							<div class="userText mgt6">
+								<div class="inp_wrap">
+									<div class="inp_text">
+										<label class="inp_lab" for="url_id"></label>
+										<input type="text" name="" id="url_id" placeholder="전체 URL 입력">
+									</div>
+								</div>
+								<span class="heplMsg fc88 fs11 mgt8 mgl10"><em class="fcR">전체 URL</em>을 입력해 주세요.</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // 프로필 정보 영역 -->
+			
+			<!-- 버튼영역 -->
+			<div class="btn_wrap mgt30 inner_p">
+				<button type="button" class="btn btnSizeL btnColorB btnTypeB"><span>등록하기</span></button>
+			</div>
+			<!-- //버튼영역 -->
+		</div>
+		
+		
+		<!-- 프로필 이미지 등록 팝업 -->
+		<div id="profileImgSelect" class="lyPopArea">
+			<div class="lyPop">
+				<div class="lyWrap noTitle">
+					<div class="lyBody">
+						<p class="tit notoB">프로필 이미지 선택</p>
+						<div class="selBox mgt12">
+							<div class="item item1">
+								<button type="button">
+									<p class="fs14 notoB">이미지 선택</p>
+									<p class="fs12 fc88">바닐라닷컴에서 지원하는 캐릭터 이미지를 사용해보세요.</p>
+								</button>
+							</div>
+							<div class="item item2">
+								<div class="btnimgFile">
+									<label for="profileImgUpload">
+										<p class="fs14 notoB">앨범에서 사진 선택</p>
+										<p class="fs12 fc88">앨범에서 사진을 업로드하세요.</p>
+									</label>
+									<input type="file" class="hide" id="profileImgUpload">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 프로필 이미지 등록 팝업 -->
+		
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>

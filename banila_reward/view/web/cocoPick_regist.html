@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/main.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/header.html'; ?>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container" class="pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('cocoPickRegistPop');" class="btn btnSizeL btnColorW btnTypeB"><span>코코픽 등록 레이어</span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		<!-- COCO PICK 등록 레이어 -->
+		<div id="cocoPickRegistPop" class="lyPopArea lyPopArea_B cocoPickRegistPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<!-- 토스트팝업 -->
+					<div class="cocoToast"></div>
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO PICK 등록</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<!-- 상단 유의사항 -->
+							<div class="introWrap">
+								<ul>
+									<li class="item">
+										<div class="desc">COCO PICK 상품은 나의 ♥(위시리스트)에서 선택하거나, 검색을 통해 최대 10개까지 등록 가능해요.</div>
+									</li>
+									<li class="item">
+										<div class="desc">COCO PICK 상품은 <em class="notoB">추가 리워드</em>가 있으니 <em class="notoB">더 널리 널리</em> 공유해 주세요.</div>
+										<div class="subDesc">(링크 공유를 통한 구매 발생 시 리워드 적립률 일반상품 5%, 코코 PICK 8%)</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //상단 유의사항 -->
+							
+							<!-- 컨텐츠 -->
+							<div class="conBox">
+								<!-- 탭영역 -->
+								<div class="tabType tabType1 length2 switch" id="cocoPickResitTab"><!-- id = 공통 VIEW CLASS -->
+									<ul>
+										<li><a href="#cocoPickResitTab1" class="current"><span>위시리스트</span></a></li>
+										<li><a href="#cocoPickResitTab2"><span>검색</span></a></li>
+									</ul>
+								</div>
+								<!-- //탭영역 -->
+								
+								<!-- 위시리스트 컨텐츠 STR -->
+								<div class="cocoPickResitTab" id="cocoPickResitTab1">
+									<div class="tabCon">
+										<div class="listIntro ta_c mgt30"><span class="fcPink">내 위시리스트(♥)</span> 목록에 있는 상품이에요.</div><!-- 리스트 있을때만 노출 -->
+										<div class="countBox mgt30">
+											<div class="item"><div>총 00개</div></div>
+											<div class="item">COCO PICK 추가 가능 개수 <em class="num notoB fc22">3</em></div>
+										</div>
+										<div class="wishListBox">
+											<!-- 리스트 없을때 -->
+											<div class="noList mgt80">
+												<div class="noWishList">
+													<div>
+														나의 위시 상품을 저장하고,<br>COCO PICK으로 등록해 보세요.
+														<span>COCO님이 PICK한 상품에 한해<br>친구가 링크 통해 구매 시, 추가 리워드를 드려요.</span>
+													</div>
+													<a href="#" class="btn_txt"><span>바닐라닷컴 전체상품 보러 가기</span></a>
+												</div>
+												<div class="wishInfo">
+													<div class="titInfo">유의사항</div>
+													<ul class="dotInfo">
+														<li>바닐라닷컴 내 상품리스트 또는 상품 상세페이지에서 ♥를 누르면
+															위시리스트에 등록됩니다.</li>
+														<li>나의 위시리스트는 마이페이지에서 확인 가능합니다.</li>
+													</ul>
+												</div>
+											</div>
+											<!-- //리스트 없을때 -->
+											
+											<!-- 리스트 있을때 -->
+											<div class="cocoPdtList2 mgt15">
+												<ul>
+													<!-- listItem 반복 -->
+													<li class="listItem">
+														<div class="item">
+															<div class="left">
+																<div class="chkBox">
+															<span class="inp_check2">
+																<input type="checkbox" name="cocoWishRegistList" id="wish_list1">
+																<label for="wish_list1"></label>
+															</span>
+																</div>
+															</div>
+															<div class="right">
+																<div class="imgBox">
+																	<img src="/static/front/resources/web/images/socialSelling/prd_img5.jpg" alt="">
+																</div>
+																<div class="textBox">
+																	<div class="brand">비바이바닐라</div>
+																	<div class="prdName">글로우 베일 틴트-VGRD02 딥 헤이지</div>
+																	<div class="badgeBox mgt5">
+																		<span class="badge coco">COCO PICK 기등록된 상품</span>
+																		<span class="badge noReward">리워드 미적립 상품</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="listItem">
+														<div class="item">
+															<div class="left">
+																<div class="chkBox">
+															<span class="inp_check2">
+																<input type="checkbox" name="cocoWishRegistList" id="wish_list2">
+																<label for="wish_list2"></label>
+															</span>
+																</div>
+															</div>
+															<div class="right">
+																<div class="imgBox">
+																	<img src="/static/front/resources/web/images/socialSelling/prd_img7.jpg" alt="">
+																</div>
+																<div class="textBox">
+																	<div class="brand">비바이바닐라</div>
+																	<div class="prdName">글로우 베일 틴트-VGRD02 딥 헤이지</div>
+																	<div class="badgeBox mgt5">
+																		<span class="badge coco">COCO PICK 기등록된 상품</span>
+																		<span class="badge noReward">리워드 미적립 상품</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="listItem">
+														<div class="item">
+															<div class="left">
+																<div class="chkBox">
+															<span class="inp_check2">
+																<input type="checkbox" name="cocoWishRegistList" id="wish_list3">
+																<label for="wish_list3"></label>
+															</span>
+																</div>
+															</div>
+															<div class="right">
+																<div class="imgBox">
+																	<img src="/static/front/resources/web/images/socialSelling/prd_img8.jpg" alt="">
+																</div>
+																<div class="textBox">
+																	<div class="brand">비바이바닐라</div>
+																	<div class="prdName">미스 플라워 앤 미스터 허니 프로폴리스 리쥬비네이팅 크림 70ml</div>
+																	<div class="badgeBox mgt5">
+																		<span class="badge coco">COCO PICK 기등록된 상품</span>
+																		<span class="badge noReward">리워드 미적립 상품</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!-- //리스트 있을때 -->
+											
+										</div>
+									</div>
+								</div>
+								<!-- //위시리스트 컨텐츠 END -->
+								
+								
+								
+								<!-- 검색 컨텐츠 STR -->
+								<div class="cocoPickResitTab" id="cocoPickResitTab2" style="display:none;">
+									<div class="tabCon">
+										<div class="listIntro ta_c mgt30">내 위시리스트에 없는 바닐라닷컴 추천상품은<br>검색을 통해 <span class="fcPink">COCO PICK</span>으로 등록해 보세요.</div>
+										<div class="inp_wrap searchBox mgt15">
+											<div class="inp_text searchType2">
+												<input type="text" name="" id="inp_text" title="상품 검색" placeholder="검색어를 입력해 주세요.">
+												<button type="button" class="btn_clear"><span>clear</span></button>
+												<button type="button" class="btn_search"><span>search</span></button>
+											</div>
+										</div>
+										<div class="countBox mgt30">
+											<div class="item"><div>총 00개</div></div>
+											<div class="item">COCO PICK 추가 가능 개수 <em class="num notoB fc22">0</em></div>
+										</div>
+										<div class="wishSearchBox">
+											<!-- 리스트 없을때 -->
+											<div class="noSearchList">
+												<p>상품에 대한 검색 결과가 존재하지 않습니다.</p>
+											</div>
+											<!-- //리스트 없을때 -->
+											
+											<!-- 리스트 있을때 -->
+											<div class="cocoPdtList2 mgt15">
+												<ul>
+													<!-- listItem 반복 -->
+													<li class="listItem">
+														<div class="item">
+															<div class="left">
+																<div class="chkBox">
+															<span class="inp_check2">
+																<input type="checkbox" name="cocoSearchList" id="search_list1">
+																<label for="search_list1"></label>
+															</span>
+																</div>
+															</div>
+															<div class="right">
+																<div class="imgBox">
+																	<img src="/static/front/resources/web/images/socialSelling/prd_img7.jpg" alt="">
+																</div>
+																<div class="textBox">
+																	<div class="brand">비바이바닐라</div>
+																	<div class="prdName">글로우 베일 틴트-VGRD02 딥 헤이지</div>
+																	<div class="badgeBox mgt5">
+																		<span class="badge coco">COCO PICK 기등록된 상품</span>
+																		<span class="badge noReward">리워드 미적립 상품</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="listItem">
+														<div class="item">
+															<div class="left">
+																<div class="chkBox">
+															<span class="inp_check2">
+																<input type="checkbox" name="cocoSearchList" id="search_list2">
+																<label for="search_list2"></label>
+															</span>
+																</div>
+															</div>
+															<div class="right">
+																<div class="imgBox">
+																	<img src="/static/front/resources/web/images/socialSelling/prd_img5.jpg" alt="">
+																</div>
+																<div class="textBox">
+																	<div class="brand">비바이바닐라</div>
+																	<div class="prdName">글로우 베일 틴트-VGRD02 딥 헤이지</div>
+																	<div class="badgeBox mgt5">
+																		<span class="badge coco">COCO PICK 기등록된 상품</span>
+																		<span class="badge noReward">리워드 미적립 상품</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="listItem">
+														<div class="item">
+															<div class="left">
+																<div class="chkBox">
+															<span class="inp_check2">
+																<input type="checkbox" name="cocoSearchList" id="search_list3">
+																<label for="search_list3"></label>
+															</span>
+																</div>
+															</div>
+															<div class="right">
+																<div class="imgBox">
+																	<img src="/static/front/resources/web/images/socialSelling/prd_img8.jpg" alt="">
+																</div>
+																<div class="textBox">
+																	<div class="brand">비바이바닐라</div>
+																	<div class="prdName">미스 플라워 앤 미스터 허니 프로폴리스 리쥬비네이팅 크림 70ml</div>
+																	<div class="badgeBox mgt5">
+																		<span class="badge coco">COCO PICK 기등록된 상품</span>
+																		<span class="badge noReward">리워드 미적립 상품</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<!-- //리스트 있을때 -->
+										</div>
+									</div>
+								</div>
+								<!-- 검색 컨텐츠 END -->
+							</div>
+							<!-- //컨텐츠 -->
+						</div>
+					</div>
+					<div class="btn_wrap solo fixed">
+						<button type="button" onclick="showLayer('cocoPickRegistConfirm');" class="btn btnSizeL btnColorB btnRadius4"><span>등록 완료</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // COCO PICK 등록 레이어 -->
+		
+		<!-- 등록 확인 팝업 -->
+		<div id="cocoPickRegistConfirm" class="lyPopArea lyPopArea_C">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO PICK 등록 완료</div>
+					<div class="lyBody basic">
+						<div class="textBox">
+							<div class="normalText">
+								등록이 완료되었습니다. <br>등록한 COCO PICK 상품을 공유해 보세요!
+							</div>
+						</div>
+						<div class="btn_wrap solo colType">
+							<button type="button" class="btn btnSize45 btnColorB btnRadius4"><span>확인</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 등록 확인 팝업 -->
+		
+	
+	</div>
+	<!-- //container -->
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+	
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

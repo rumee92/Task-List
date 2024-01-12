@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 찻잎 포인트 - 포인트 사용 내역 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT point">
+			<div class="w1200">
+				<h2 class="page_tit">찻잎포인트</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		
+		
+		<section class="section">
+			<div class="tp_wrap">
+				<div class="inner_box">
+					<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/tea_point_icon.png" alt="보유 찻잎 포인트"></div>
+					<div class="text_box">
+						<p class="point">보유 찻잎 포인트 <span class="num">3,456P</span></p>
+						<p class="del_point">소멸 예정 찻잎포인트 <span class="num">100P</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- 탭 영역 : S -->
+		<div class="my_tab point">
+			<div class="my_tab_inner">
+				<ul class="my_tab_list tab3">
+					<li class="item">
+						<a href="#" class="link_text">포인트 안내</a>
+					</li>
+					<li class="item on">
+						<a href="#" class="link_text">포인트 사용내역</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link_text">포인트 교환</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 탭 영역 : E -->
+		
+		<!-- 기간 sort 영역 : S -->
+		<div class="my_term_sort">
+			<div class="w1200">
+				<div class="term_inner">
+					<div class="btn_box btn2">
+						<button type="button" class="term_btn" onclick="">최근 1개월</button>
+						<button type="button" class="term_btn open" onclick="">기간조회</button>
+					</div>
+					<!-- 기간 선택 셀렉트 박스 - 1년치 노출 -->
+					<div class="sel_box">
+						<div class="inp_selectbox">
+							<select name="" id="" class="inp_select">
+								<option value="" selected="">기간 선택</option>
+								<option value="">2022년 02월</option>
+								<option value="">2022년 01월</option>
+								<option value="">2021년 12월</option>
+								<option value="">2021년 11월</option>
+								<option value="">2021년 10월</option>
+								<option value="">2021년 09월</option>
+								<option value="">2021년 08월</option>
+								<option value="">2021년 07월</option>
+								<option value="">2021년 06월</option>
+								<option value="">2021년 05월</option>
+								<option value="">2021년 04월</option>
+								<option value="">2021년 03월</option>
+								<option value="">2021년 02월</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 기간 sort 영역 : E -->
+		
+		
+		<section class="section">
+			<div class="w1200">
+				<div class="tp_use_wrap">
+					<p class="total">총 <span class="numb">123</span> 건</p>
+					<ul class="tp_use_list">
+						
+						<!-- 포인트 사용일때 : S -->
+						<li class="item minus">
+							<div class="item_box1">
+								<div class="text_box1">
+									<p class="text_1">2022.03.30</p>
+									<p class="text_2">사용</p>
+								</div>
+								<div class="text_box2">
+									<p class="text_1">[구매] 베스트 티 컬렉션(피라미드 10입) 외 3종</p>
+								</div>
+							</div>
+							<div class="item_box2">-300P</div>
+						</li>
+						<!-- 포인트 사용일때 : E -->
+						
+						<!-- 포인트 적립일때 : S -->
+						<li class="item plus">
+							<div class="item_box1">
+								<div class="text_box1">
+									<p class="text_1">2022.03.30</p>
+									<p class="text_2">적립</p>
+								</div>
+								<div class="text_box2">
+									<p class="text_1">[구매] 베스트 티 컬렉션(피라미드 10입) 외 3종</p>
+									<p class="text_2">소멸 예정일 : 2024.03.30</p>
+								</div>
+							</div>
+							<div class="item_box2">+34,500P</div>
+						</li>
+						<!-- 포인트 적립일때 : E -->
+						
+						<!-- 포인트 환불일때 : S -->
+						<li class="item minus">
+							<div class="item_box1">
+								<div class="text_box1">
+									<p class="text_1">2022.03.30</p>
+									<p class="text_2">환불</p>
+								</div>
+								<div class="text_box2">
+									<p class="text_1">상품구매 취소</p>
+								</div>
+							</div>
+							<div class="item_box2">-300P</div>
+						</li>
+						<!-- 포인트 환불일때 : E -->
+					</ul>
+				</div>
+				
+				
+				<!-- pagination : S -->
+				<div id="pagination" class="newPagination for-mobile">
+					<span class="btn btn-home is-disabled">페이지 처음으로</span>
+					<span class="btn btn-prev is-disabled">이전 페이지</span>
+					<a href="#" class="num on" data-track-name="1 페이지 이동">1</a>
+					<a href="#" class="num" data-track-name="2 페이지 이동">2</a>
+					<span class="btn btn-next is-disabled">다음 페이지</span>
+					<span class="btn btn-end is-disabled">페이지 끝으로</span>
+				</div>
+				<!-- pagination : E -->
+			</div>
+		</section>
+		
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 찻잎 포인트 - 포인트 사용 내역 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

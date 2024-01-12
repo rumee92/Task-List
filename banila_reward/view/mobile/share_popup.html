@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('cocoShare');" class="btn btnSizeL btnColorW btnTypeB"><span>COCO 프로필 기등록자 case</span></button><br>
+		<button type="button" onclick="showLayer('cocoShareNoProfile');" class="btn btnSizeL btnColorW btnTypeB"><span>COCO 프로필 미등록자 case</span></button><br>
+		<button type="button" onclick="showLayer('cocoShareNoLogin');" class="btn btnSizeL btnColorW btnTypeB"><span>비 로그인 case</span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		
+		<!-- COCO 프로필 기등록자 -->
+		<div id="cocoShare" class="lyPopArea cocoSharePopup">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="tit">다양한 바닐라닷컴 소식과<br>상품들을 공유해 보세요</div>
+							<div class="shareBox">
+								<div class="linkShare coco on">
+									<div class="radioBox">
+										<span class="inp_radio">
+											<input type="radio" name="cocoShareButton" id="cocoShareButton1_1" title="COCO 전용 링크 복사하기" checked>
+											<label for="cocoShareButton1_1">COCO 전용 링크 복사하기</label>
+											<span class="absTxt">바닐라닷컴 리워드 프로그램</span>
+										</span>
+									</div>
+									<div class="conBox">
+										<div class="box box1">
+											<p class="desc">공유한 링크를 통해 구매가 발생하면,<br><em class="notoB">최대 8%</em>의 리워드를 받아요!</p>
+										</div>
+										<div class="box box2">
+											<p class="desc">공유한 링크를 통해 구매가 발생하면,<br><em class="notoB">최대 8%</em>의 리워드를 받아요!<br>링크를 복사하고 더 많은 곳에 널리 공유해 주세요~</p>
+											<div class="btn_wrap">
+												<button type="button" onclick="showLayer('cocoShareCopy')" class="btn btnSizeM btnColorB btnTypeB"><span>링크 복사하기</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="linkShare normal">
+									<div class="radioBox">
+										<span class="inp_radio">
+											<input type="radio" name="cocoShareButton" id="cocoShareButton2_1" title="일반 링크 공유하기">
+											<label for="cocoShareButton2_1">일반 링크 공유하기</label>
+										</span>
+									</div>
+									<div class="conBox">
+										<div class="box box1">
+											<p class="desc">공유할 채널을 선택해 주세요. (리워드 적립 제외)</p>
+											<div class="shareBtn">
+												<div class="flexBox">
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_twitter.png" alt="트위터 공유"></button>
+													</div>
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_kakao.png" alt="카카오 공유"></button>
+													</div>
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_url.png" alt="url 공유"></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 링크 복사 완료 팝업 -->
+		<div id="cocoShareCopy" class="lyPopArea cocoSharePopup copy">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="tit">COCO 전용 링크가 복사되었습니다.</div>
+							<div class="copyBox">
+								<p class="text">널리 널리 <em class="fcPink">공유</em>하고, 적립되는 <em class="fcPink">리워드</em>를 확인하세요.</p>
+								<div class="copyLink">
+									<div class="link">https://www.banila.com/coco/link/123d2edw2323</div>
+								</div>
+								<div class="chkList">
+									<p class="titInfo">유의사항</p>
+									<p class="desc">SNS 및 영상 채널에 공유링크 업로드 시, 콘텐츠에 반드시 별도의 광고문구를 표기해 주세요!</p>
+									<ul class="dotInfo">
+										<li class="fcPink">*이 포스팅은 바닐라닷컴 리워드 프로그램 활동의 일환으로, 링크를 통해 발생한 수익에 대해 일정액의 수수료를 제공 받습니다.</li>
+										<li>영상의 경우, 눈에 띄는 곳에 <em class="fcPink">*유료 광고 포함 및 광고문구</em> 표시 </li>
+									</ul>
+								</div>
+								<div class="btn_wrap">
+									<button type="button" onclick="" class="btn btnSizeM btnColorB btnTypeB"><span>확인</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 링크 복사 완료 팝업 -->
+		<!-- //COCO 프로필 기등록자 -->
+		
+		
+		<!-- COCO 프로필 미등록자 -->
+		<div id="cocoShareNoProfile" class="lyPopArea cocoSharePopup noProfile">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="tit">다양한 바닐라닷컴 소식과<br>상품들을 공유해 보세요</div>
+							<div class="shareBox">
+								<div class="linkShare coco on">
+									<div class="radioBox">
+										<span class="inp_radio">
+											<input type="radio" name="cocoShareButton" id="cocoShareButton1_2" title="COCO 전용 링크 복사하기" checked>
+											<label for="cocoShareButton1_2">COCO 전용 링크 복사하기</label>
+											<span class="absTxt">바닐라닷컴 리워드 프로그램</span>
+										</span>
+									</div>
+									<div class="conBox">
+										<div class="box box1">
+											<p class="desc">공유한 링크를 통해 구매가 발생하면,<br><em class="notoB">최대 8%</em>의 리워드를 받아요!</p>
+										</div>
+										<div class="box box2">
+											<p class="desc">공유한 링크를 통해 구매가 발생하면,<br><em class="notoB">최대 8%</em>의 리워드를 받아요!<br><em class="notoB">바닐라닷컴의 찐팬 COCO가 되어 활동해 보세요!</em></p>
+											<div class="btn_wrap">
+												<button type="button" onclick="" class="btn btnSizeM btnTypeB"><span>COCO 등록하기</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="linkShare normal">
+									<div class="radioBox">
+										<span class="inp_radio">
+											<input type="radio" name="cocoShareButton" id="cocoShareButton2_2" title="일반 링크 공유하기">
+											<label for="cocoShareButton2_2">일반 링크 공유하기</label>
+										</span>
+									</div>
+									<div class="conBox">
+										<div class="box box1">
+											<p class="desc">공유할 채널을 선택해 주세요. (리워드 적립 제외)</p>
+											<div class="shareBtn">
+												<div class="flexBox">
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_twitter.png" alt="트위터 공유"></button>
+													</div>
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_kakao.png" alt="카카오 공유"></button>
+													</div>
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_url.png" alt="url 공유"></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //COCO 프로필 미등록자 -->
+		
+		
+		<!-- 비 로그인 -->
+		<div id="cocoShareNoLogin" class="lyPopArea cocoSharePopup noLogin">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="tit">다양한 바닐라닷컴 소식과<br>상품들을 공유해 보세요</div>
+							<div class="shareBox">
+								<div class="linkShare coco on">
+									<div class="radioBox">
+										<span class="inp_radio">
+											<input type="radio" name="cocoShareButton" id="cocoShareButton1_3" title="COCO 전용 링크 복사하기" checked>
+											<label for="cocoShareButton1_3">COCO 전용 링크 복사하기</label>
+											<span class="absTxt">바닐라닷컴 리워드 프로그램</span>
+										</span>
+									</div>
+									<div class="conBox">
+										<div class="box box1">
+											<p class="desc">공유한 링크를 통해 구매가 발생하면,<br><em class="notoB">최대 8%</em>의 리워드를 받아요!</p>
+											<a href="#" class="btn_txt">리워드 프로그램 알아보기</a>
+										</div>
+										<div class="box box2">
+											<p class="desc">공유한 링크를 통해 구매가 발생하면,<br><em class="notoB">최대 8%</em>의 리워드를 받아요!</p>
+											<a href="#" class="btn_txt">리워드 프로그램 알아보기</a>
+											<div class="btn_wrap">
+												<button type="button" onclick="" class="btn btnSizeM btnColorB btnTypeB"><span>로그인 후 참여하기</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="linkShare normal">
+									<div class="radioBox">
+										<span class="inp_radio">
+											<input type="radio" name="cocoShareButton" id="cocoShareButton2_3" title="일반 링크 공유하기">
+											<label for="cocoShareButton2_3">일반 링크 공유하기</label>
+										</span>
+									</div>
+									<div class="conBox">
+										<div class="box box1">
+											<p class="desc">공유할 채널을 선택해 주세요. (리워드 적립 제외)</p>
+											<div class="shareBtn">
+												<div class="flexBox">
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_twitter.png" alt="트위터 공유"></button>
+													</div>
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_kakao.png" alt="카카오 공유"></button>
+													</div>
+													<div class="item">
+														<button type="button"><img src="/static/front/resources/mobile/images/socialSelling/icon_share_url.png" alt="url 공유"></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //비 로그인 -->
+		
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>

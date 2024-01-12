@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* fonts - 아리따 돋움 */
+@font-face {
+  font-family: 'ad';
+  font-style: normal;
+  font-weight: 200;
+  src:url(/kr/ko/static_cdj/fonts/AritaDotumThin.woff2) format('woff2'),
+  url(/kr/ko/static_cdj/fonts/AritaDotumThin.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'ad';
+  font-style: normal;
+  font-weight: 300;
+  src:url(/kr/ko/static_cdj/fonts/AritaDotumLight.woff2) format('woff2'),
+  url(/kr/ko/static_cdj/fonts/AritaDotumLight.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'ad';
+  font-style: normal;
+  font-weight: 400;
+  src:url(/kr/ko/static_cdj/fonts/AritaDotumMedium.woff2) format('woff2'),
+  url(/kr/ko/static_cdj/fonts/AritaDotumMedium.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'ad';
+  font-style: normal;
+  font-weight: 500;
+  src:url(/kr/ko/static_cdj/fonts/AritaDotumSemiBold.woff2) format('woff2'),
+  url(/kr/ko/static_cdj/fonts/AritaDotumSemiBold.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'ad';
+  font-style: normal;
+  font-weight: 600;
+  src:url(/kr/ko/static_cdj/fonts/AritaDotumBold.woff2) format('woff2'),
+  url(/kr/ko/static_cdj/fonts/AritaDotumBold.woff) format('woff')
+}

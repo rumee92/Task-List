@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 찜하기 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">찜하기</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		
+		<!-- 찜한 상품이 없을 때 노출 : S -->
+		<section class="section my_no_noList w120">
+			<div class="w1200">
+				<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/no_wish_list.png" alt="찜한 상품이 없습니다."></div>
+				<div class="text_box">
+					<p class="text_1">찜한 상품이 없습니다.</p>
+					<p class="text_2">오설록 베스트 상품을 확인해보세요!</p>
+				</div>
+				<div class="btn_box">
+					<button type="button" class="btn_link" onclick="">베스트 상품 보러가기</button>
+				</div>
+			</div>
+		</section>
+		<!-- 찜한 상품이 없을 때 노출 : E -->
+		
+		<div class="my_wish_wrap">
+			<section class="section my_wish_top">
+				<div class="inner_box">
+					<p class="wish_msg">찜하기는 60일간 보관됩니다.</p>
+					<div class="wish_chk">
+						<div class="left_box">
+							<div class="inp_check">
+								<input type="checkbox" id="selCartAll" name="selCartAll">
+								<label for="selCartAll">전체선택</label>
+							</div>
+						</div>
+						<div class="right_box">
+							<button type="button" class="del_btn" title="품절 삭제" onclick="">품절 삭제</button>
+							<button type="button" class="del_btn" title="선택 삭제" onclick="">선택 삭제</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="section">
+				<div class="w1200">
+					<div class="wish_sort">
+						<div class="inp_selectbox">
+							<select name="" id="" class="inp_select">
+								<option value="할인율순" selected="">할인율순</option>
+								<option value="낮은 가격 순">낮은 가격 순</option>
+								<option value="높은 가격 순">높은 가격 순</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="section">
+				<div class="w1200">
+					<div class="prd_list_type1 my_wish_list">
+						<div class="item">
+							<div class="prd_thumb">
+								<a href="#">
+									<!-- 기본 썸네일 prd_thumb_default -->
+									<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/mypage/my_main_prd01.png" alt="">
+									<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+									<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/mypage/my_main_prd_over.png" alt="">
+								</a>
+								<div class="hover_icon">
+									<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+								</div>
+								<div class="chk_box">
+									<div class="inp_check">
+										<!-- 비활성화시엔 input에 disabled속성 추가 -->
+										<input type="checkbox" id="selMyWish1" name="selMyWish" disabled>
+										<label for="selMyWish1"></label>
+									</div>
+								</div>
+							</div>
+							<div class="prd_desc">
+								<div class="prd_info">
+									<p class="prd_name">
+										<a href="#">녹차 밀크 스프레드 200g</a>
+									</p>
+									<div class="prd_price">
+										<p class="price_origin">8,500원</p>
+										<div class="flex_box">
+											<p class="price_result">5,950원</p>
+											<p class="sale_percent">30%</p>
+										</div>
+									</div>
+								</div>
+								<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+								<div class="prd_tag">
+									<span class="tag t_soldOut">일시품절</span>
+									<span class="tag t_new">신제품</span>
+									<span class="tag t_reco">추천</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="prd_thumb">
+								<a href="#">
+									<!-- 기본 썸네일 prd_thumb_default -->
+									<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/mypage/my_main_prd01.png" alt="">
+									<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+									<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/mypage/my_main_prd_over.png" alt="">
+								</a>
+								<div class="hover_icon">
+									<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+								</div>
+								<div class="chk_box">
+									<div class="inp_check">
+										<input type="checkbox" id="selMyWish2" name="selCart">
+										<label for="selMyWish2"></label>
+									</div>
+								</div>
+							</div>
+							<div class="prd_desc">
+								<div class="prd_info">
+									<p class="prd_name">
+										<a href="#">녹차 밀크 스프레드 200g</a>
+									</p>
+									<div class="prd_price">
+										<p class="price_origin">8,500원</p>
+										<div class="flex_box">
+											<p class="price_result">5,950원</p>
+											<p class="sale_percent">30%</p>
+										</div>
+									</div>
+								</div>
+								<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+								<div class="prd_tag">
+									<span class="tag t_soldOut">일시품절</span>
+									<span class="tag t_new">신제품</span>
+									<span class="tag t_reco">추천</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="prd_thumb">
+								<a href="#">
+									<!-- 기본 썸네일 prd_thumb_default -->
+									<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/mypage/my_main_prd01.png" alt="">
+									<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+									<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/mypage/my_main_prd_over.png" alt="">
+								</a>
+								<div class="hover_icon">
+									<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+								</div>
+								<div class="chk_box">
+									<div class="inp_check">
+										<input type="checkbox" id="selMyWish3" name="selCart">
+										<label for="selMyWish3"></label>
+									</div>
+								</div>
+							</div>
+							<div class="prd_desc">
+								<div class="prd_info">
+									<p class="prd_name">
+										<a href="#">녹차 밀크 스프레드 200g</a>
+									</p>
+									<div class="prd_price">
+										<p class="price_origin">8,500원</p>
+										<div class="flex_box">
+											<p class="price_result">5,950원</p>
+											<p class="sale_percent">30%</p>
+										</div>
+									</div>
+								</div>
+								<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+								<div class="prd_tag">
+									<span class="tag t_soldOut">일시품절</span>
+									<span class="tag t_new">신제품</span>
+									<span class="tag t_reco">추천</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="prd_thumb">
+								<a href="#">
+									<!-- 기본 썸네일 prd_thumb_default -->
+									<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/mypage/my_main_prd01.png" alt="">
+									<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+									<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/mypage/my_main_prd_over.png" alt="">
+								</a>
+								<div class="hover_icon">
+									<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+								</div>
+								<div class="chk_box">
+									<div class="inp_check">
+										<input type="checkbox" id="selMyWish4" name="selCart">
+										<label for="selMyWish4"></label>
+									</div>
+								</div>
+							</div>
+							<div class="prd_desc">
+								<div class="prd_info">
+									<p class="prd_name">
+										<a href="#">녹차 밀크 스프레드 200g</a>
+									</p>
+									<div class="prd_price">
+										<p class="price_origin">8,500원</p>
+										<div class="flex_box">
+											<p class="price_result">5,950원</p>
+											<p class="sale_percent">30%</p>
+										</div>
+									</div>
+								</div>
+								<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+								<div class="prd_tag">
+									<span class="tag t_soldOut">일시품절</span>
+									<span class="tag t_new">신제품</span>
+									<span class="tag t_reco">추천</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="prd_thumb">
+								<a href="#">
+									<!-- 기본 썸네일 prd_thumb_default -->
+									<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/mypage/my_main_prd01.png" alt="">
+									<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+									<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/mypage/my_main_prd_over.png" alt="">
+								</a>
+								<div class="hover_icon">
+									<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+								</div>
+								<div class="chk_box">
+									<div class="inp_check">
+										<input type="checkbox" id="selMyWish5" name="selCart">
+										<label for="selMyWish5"></label>
+									</div>
+								</div>
+							</div>
+							<div class="prd_desc">
+								<div class="prd_info">
+									<p class="prd_name">
+										<a href="#">녹차 밀크 스프레드 200g</a>
+									</p>
+									<div class="prd_price">
+										<p class="price_origin">8,500원</p>
+										<div class="flex_box">
+											<p class="price_result">5,950원</p>
+											<p class="sale_percent">30%</p>
+										</div>
+									</div>
+								</div>
+								<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+								<div class="prd_tag">
+									<span class="tag t_soldOut">일시품절</span>
+									<span class="tag t_new">신제품</span>
+									<span class="tag t_reco">추천</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="prd_thumb">
+								<a href="#">
+									<!-- 기본 썸네일 prd_thumb_default -->
+									<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/mypage/my_main_prd01.png" alt="">
+									<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+									<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/mypage/my_main_prd_over.png" alt="">
+								</a>
+								<div class="hover_icon">
+									<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+								</div>
+								<div class="chk_box">
+									<div class="inp_check">
+										<input type="checkbox" id="selMyWish6" name="selCart">
+										<label for="selMyWish6"></label>
+									</div>
+								</div>
+							</div>
+							<div class="prd_desc">
+								<div class="prd_info">
+									<p class="prd_name">
+										<a href="#">녹차 밀크 스프레드 200g</a>
+									</p>
+									<div class="prd_price">
+										<p class="price_origin">8,500원</p>
+										<div class="flex_box">
+											<p class="price_result">5,950원</p>
+											<p class="sale_percent">30%</p>
+										</div>
+									</div>
+								</div>
+								<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+								<div class="prd_tag">
+									<span class="tag t_soldOut">일시품절</span>
+									<span class="tag t_new">신제품</span>
+									<span class="tag t_reco">추천</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<!-- pagination : S -->
+					<div id="pagination" class="newPagination for-mobile">
+						<span class="btn btn-home is-disabled">페이지 처음으로</span>
+						<span class="btn btn-prev is-disabled">이전 페이지</span>
+						<a href="#" class="num on" data-track-name="1 페이지 이동">1</a>
+						<a href="#" class="num" data-track-name="2 페이지 이동">2</a>
+						<span class="btn btn-next is-disabled">다음 페이지</span>
+						<span class="btn btn-end is-disabled">페이지 끝으로</span>
+					</div>
+					<!-- pagination : E -->
+					
+					
+					<div class="my_wish_btn_box pcBlock">
+						<button type="button" class="wish_btn" onclick="">선택 상품 장바구니 담기</button>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- 컨텐츠 : E -->
+		
+		<!-- 모바일 하단 fixed 버튼 : S -->
+		<div class="bottom_fixed_btn my_wish_cart_btn">
+			<!-- 제품을 선택한 경우 fixed_btn에 클래스 on 추가 -->
+			<button type="button" class="fixed_btn" title="선택상품 장바구니 담기" onclick="">선택상품 장바구니 담기</button>
+		</div>
+		<!-- 모바일 하단 fixed 버튼 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 찜하기 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

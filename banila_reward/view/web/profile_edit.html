@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/main.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/header.html'; ?>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container" class="pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('cocoProfileEdit');" class="btn btnSizeL btnColorW btnTypeB"><span>프로필 관리 레이어</span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		<!-- 프로필 관리 레이어 -->
+		<div id="cocoProfileEdit" class="lyPopArea lyPopArea_B cocoProfileEdit">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO 프로필 관리</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<!-- 사진 업로드 영역 -->
+							<div class="profileImgWrap mgt25">
+								<div class="imgBox">
+									<button type="button" class="profileImgSelectBtn" onclick=""><span class="hide">이미지선택</span></button>
+									<div class="absTag">마음에 드는 사진을 업로드하세요.</div>
+								</div>
+							</div>
+							<!-- //사진 업로드 영역 -->
+							
+							<!-- 프로필 정보 영역 -->
+							<div class="profileInfoWrap">
+								<div class="nickNameBox">
+									<div class="tit">닉네임</div>
+									<div class="inp_wrap typeBox mgt5">
+										<div class="inp_text2"> <!-- 닉네임 수정불가 -->
+											<input type="text" name="" value="abcdefg" disabled>
+										</div>
+									</div>
+								</div>
+								<div class="myIntroBox mgt25">
+									<div class="tit">자기소개</div>
+									<div class="introBox mgt5">
+										<div class="inp_wrap">
+											<div class="inp_textArea lengthCheck">
+												<textarea style="height:144px;" placeholder="나만의 한 줄 소개를 입력해 주세요."></textarea>
+												<div class="textarea-clone"></div>
+											</div>
+											<span class="charCnt">(<em class="fc22">0</em>/400)</span>
+										</div>
+										<div class="helpText">20자 이상 400자 이내로 작성해 주세요.</div>
+									</div>
+								</div>
+								<div class="cocoSnsBox mgt25">
+									<div class="tit">SNS 계정 및 미디어</div>
+									<ul class="list mgt10">
+										<li class="item insta">
+											<div class="itemIn">
+												<div class="icon"></div>
+												<div class="snsText">인스타그램</div>
+												<div class="chk">
+													<span class="inp_check2">
+														<input type="checkbox" name="sns_check" id="sns_check1_1">
+														<label for="sns_check1_1"></label>
+													</span>
+												</div>
+											</div>
+											<div class="userText mgt6">
+												<div class="inp_wrap">
+													<div class="inp_text">
+														<label class="inp_lab" for="insta_id"></label>
+														<input type="text" name="" id="insta_id" placeholder="인스타그램 뒷자리 입력">
+													</div>
+												</div>
+												<span class="helpMsg">http://www.instagram.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+											</div>
+										</li>
+										<li class="item blog">
+											<div class="itemIn">
+												<div class="icon"></div>
+												<div class="snsText">블로그</div>
+												<div class="chk">
+													<span class="inp_check2">
+														<input type="checkbox" name="sns_check" id="sns_check1_2">
+														<label for="sns_check1_2"></label>
+													</span>
+												</div>
+											</div>
+											<div class="userText mgt6">
+												<div class="inp_wrap">
+													<div class="inp_text">
+														<label class="inp_lab" for="blog_id"></label>
+														<input type="text" name="" id="blog_id" placeholder="네이버 블로그 뒷자리 입력">
+													</div>
+												</div>
+												<span class="helpMsg">http://blog.naver.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+											</div>
+										</li>
+										<li class="item youtube">
+											<div class="itemIn">
+												<div class="icon"></div>
+												<div class="snsText">유튜브</div>
+												<div class="chk">
+													<span class="inp_check2">
+														<input type="checkbox" name="sns_check" id="sns_check1_3">
+														<label for="sns_check1_3"></label>
+													</span>
+												</div>
+											</div>
+											<div class="userText mgt6">
+												<div class="inp_wrap">
+													<div class="inp_text">
+														<label class="inp_lab" for="youtube_id"></label>
+														<input type="text" name="" id="youtube_id" placeholder="유튜브 뒷자리 입력">
+													</div>
+												</div>
+												<span class="helpMsg">http://www.youtube.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+											</div>
+										</li>
+										<li class="item facebook">
+											<div class="itemIn">
+												<div class="icon"></div>
+												<div class="snsText">페이스북</div>
+												<div class="chk">
+													<span class="inp_check2">
+														<input type="checkbox" name="sns_check" id="inp_check1_4">
+														<label for="inp_check1_4"></label>
+													</span>
+												</div>
+											</div>
+											<div class="userText mgt6">
+												<div class="inp_wrap">
+													<div class="inp_text">
+														<label class="inp_lab" for="facebook_id"></label>
+														<input type="text" name="" id="facebook_id" placeholder="페이스북 뒷자리 입력">
+													</div>
+												</div>
+												<span class="helpMsg">http://www.facebook.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+											</div>
+										</li>
+										<li class="item urlcopy">
+											<div class="itemIn">
+												<div class="icon"></div>
+												<div class="snsText">기타</div>
+												<div class="chk">
+													<span class="inp_check2">
+														<input type="checkbox" name="sns_check" id="inp_check1_5">
+														<label for="inp_check1_5"></label>
+													</span>
+												</div>
+											</div>
+											<div class="userText mgt6">
+												<div class="inp_wrap">
+													<div class="inp_text">
+														<label class="inp_lab" for="url_id"></label>
+														<input type="text" name="" id="url_id" placeholder="전체 URL 입력">
+													</div>
+												</div>
+												<span class="helpMsg"><em class="fcR">전체 URL</em>을 입력해 주세요.</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- // 프로필 정보 영역 -->
+						</div>
+					</div>
+					<div class="btn_wrap solo fixed">
+						<button type="button" onclick="" class="btn btnSizeL btnColorB btnRadius4"><span>등록 하기</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 프로필 관리 레이어 -->
+		
+	</div>
+	<!-- //container -->
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+	
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

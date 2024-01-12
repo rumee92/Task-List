@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	
+	<!-- CDJ 개선 마이페이지 - 비밀번호 확인 : S -->
+	<main class="main cdj_renew">
+
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT pw_check_tit">
+			<div class="w1200">
+				<h2 class="page_tit">비밀번호 확인</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+
+		<!-- 컨텐츠 : S -->
+		<section class="section pw_check w1200">
+
+			<div class="top_text_box">
+				<p class="text01">
+					회원님의 소중한<br>개인 정보 보호를 위해 비밀번호를<br>한 번 더 확인하고 있습니다. 
+				</p>
+				<p class="text02">
+					공공장소에서 PC를 사용 중일 경우, 비밀번호가 타인에게<br>노출되지 않도록 주의해 주시기 바랍니다.
+				</p>
+			</div>		
+			
+			<div class="input_wrap">
+				<div class="input_box id_box">
+					<label for="id" class="ohmni-input_label label_hidden">아이디</label>
+					<input class="inp_text" name="userId" type="text" id="id" value="pwhceckId" placeholder="osulloc" disabled> <!--disabled상태-->
+				</div>
+				<div class="input_box pw_box">
+					<label for="pwcheck" class="ohmni-input_label label_hidden">비밀번호</label>
+					<input class="inp_text" name="password" type="password" id="pwcheck" placeholder="비밀번호" onkeyup="enterKey('btnCertify')">
+				</div>
+			</div>
+
+			<div class="btn_typeB btn_pop">
+				<button type="button" class="btn_w50" name="btnCancel">취소</button>
+				<button type="button" class="btn_w50 ptBtn" name="btnCertify">확인</button>
+			</div>
+
+		</section>	
+		<!-- 컨텐츠 : E -->
+
+	</main>
+	<!-- CDJ 개선 마이페이지 - 비밀번호 확인 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

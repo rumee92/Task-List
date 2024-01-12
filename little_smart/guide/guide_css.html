@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>CSS 작성 가이드 | 디지털웍스 퍼블리싱 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../resources/front/css/fonts.css">
+<!-- <link rel="stylesheet" type="text/css" href="./css/common.css"> -->
+<link rel="stylesheet" type="text/css" href="../resources/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/guide.css">
+<script type="text/javascript" src="../resources/front/js/jquery-3.5.1.min.js"></script>
+<!-- <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script> -->
+<script type="text/javascript" src="./js/ui.js"></script>
+<script type="text/javascript" src="./js/guide.js"></script>
+</head>
+<body>
+<div class="pagever">last update : <strong>2020.06.23</strong></div>
+<div class="uiwrap">
+	<div class="conP">
+		<h2>CSS 파일 정의</h2>
+		<ul class="listType1">
+			<li><em>common.css</em> : 태그 리셋 및 공통 스타일 정의</li>
+			<li><em>main.css</em> : 메인 컨텐츠 스타일 정의</li>
+			<li><em>contents.css</em> : 서브 컨텐츠 스타일 정의</li>
+		</ul>
+	</div>
+	<div class="conP">
+		<h2>주석표기</h2>
+		<h3>대분류 (Depth1)</h3>
+		<xmp>
+		/**
+		태그 초기화
+		**/
+		</xmp>
+		<h3>소분류 (Depth2)</h3>
+		<xmp>
+		/* [폰트색상] */
+		</xmp>
+	</div>
+	<div class="conP">
+		<h2>작성 규칙</h2>
+		<h3>선택자 마지막과 속성별로 띄어쓰기를 하지 않는다.</h3>
+		<xmp>
+		.inputType{display:inline-block;vertical-align:middle;}
+		</xmp>
+		<h3>문자열이 들어가는 경우 싱글쿼터('')로 감싸준다.</h3>
+		<xmp>
+		background:#fff url('/images/파일명') no-repeat left top / cover
+		</xmp>
+		<h3>작성 순서 (속성 우선 순위)</h3>
+		<ul class="listType1">
+			<li><em>ⅰ. 블럭타입 :</em> / display &nbsp;/&nbsp; overflow &nbsp;/&nbsp; position &nbsp;/&nbsp; left(right) &nbsp;/&nbsp; top(bottom) &nbsp;/&nbsp; z-index &nbsp;/&nbsp; float &nbsp;/&nbsp; clear</li>
+			<li><em>ⅱ. 레이아웃 :</em> / width &nbsp;/&nbsp; height &nbsp;/&nbsp; padding &nbsp;/&nbsp; margin &nbsp;/&nbsp; border</li>
+			<li><em>ⅲ. 정렬 :</em> / vertical-align &nbsp;/&nbsp; text-align &nbsp;/&nbsp; text-indent &nbsp;/&nbsp; text-overflow</li>
+			<li><em>ⅳ. 폰트 :</em> / font-size &nbsp;/&nbsp; font-family &nbsp;/&nbsp; font-weight &nbsp;/&nbsp; line-height &nbsp;/&nbsp; color &nbsp;/&nbsp; letter-spacing &nbsp;/&nbsp; white-space &nbsp;/&nbsp; word-break &nbsp;/&nbsp; word-wrap</li>
+			<li><em>ⅴ. 디자인 :</em> / background &nbsp;/&nbsp; background-size &nbsp;/&nbsp; outline &nbsp;/&nbsp; opacity &nbsp;/&nbsp; cursor</li>
+			<li><em>ⅵ. css3 :</em> / border-radius &nbsp;/&nbsp; box-shadow &nbsp;/&nbsp; box-sizing &nbsp;/&nbsp; transition &nbsp;/&nbsp; transform &nbsp;/&nbsp; animation &nbsp;/&nbsp; gradient</li>
+		</ul>
+		<h3>CSS3속성 정의 방법</h3>
+		<p>
+			CSS3속성은 벤더프리픽스와 함께 한 줄로 작성하며, 속성별로 줄바꿈한다. <br />
+			벤더프리픽스는 webkit, moz, ms, o 순서로 나열
+		</p>
+		<xmp>
+		-webkit-transition:all 3ms ease;-moz-transition:all 3ms ease;-ms-transition:all 3ms ease;-o-transition:all 3ms ease;transition:all 3ms ease;
+		-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1);
+		</xmp>
+		<h3>복수 선택자 정의</h3>
+		<p>
+			복수 선택자를 선택하여 적용할 경우 ,(콤마)이후 줄바꿈으로 정렬한다.
+		</p>
+		<xmp>
+		.paging span.first,
+		.paging span.prev,
+		.paging span.next,
+		.paging span.last
+		</xmp>
+	</div>
+	<div class="conP">
+		<h2>유의사항</h2>
+		<ul class="listType1">
+			<li>공통 클래스의 사용은 변경될 여지가 적을 때 최소한으로 사용하기를 권장</li>
+			<li>레이아웃이 특정 페이지에서만 변경되는 예외 케이스가 생길 경우 div#wrap에 클래스를 추가하여 적용되도록 작업한다. <br /> div#wrap 외의 기본 레이아웃 div에는 별도의 클래스를 추가하지 않도록 한다.</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

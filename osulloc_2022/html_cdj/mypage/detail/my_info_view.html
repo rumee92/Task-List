@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	
+	<!-- CDJ 개선 마이페이지 - 회원정보 확인 : S -->
+	<main class="main cdj_renew">
+
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">회원정보 확인</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+
+		<!-- 컨텐츠 : S -->
+		<section class="section my_info_view">
+
+			<!-- 회원정보 : S -->
+			<div class="wrap wrap01">
+				<div class="w1200 accordion_layout">
+					<div class="btn_tit_box">
+						<h3 class="my_sub_tit">회원정보</h3>
+						<a href="/kr/ko/html_cdj/mypage/detail/pwcheck.html" class="tit_btn">수정</a>
+					</div>
+					<div class="inner_wrap">
+						<table class="table_delivery_info">
+							<caption>회원 정보</caption>
+							<colgroup>
+								<col style="width:90px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" class="tr_tit">이름</th>
+									<td>
+										<p class="td_text"><span class="name">박루리</span></p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="tr_tit">휴대폰 번호</th>
+									<td>
+										<p class="td_text">010-4569-7723</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="tr_tit">이메일</th>
+									<td>
+										<p class="td_text">ruri_park@osulloc.com</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 회원정보 : E -->
+
+			<!-- 배송지 정보 : S -->
+			<div class="wrap wrap02">
+				<div class="w1200 accordion_layout">
+					<div class="btn_tit_box">
+						<h3 class="my_sub_tit">배송지</h3>
+						<a href="/kr/ko/html_cdj/mypage/detail/addressbook/list.html" class="tit_btn">변경</a>  <!-- 배송지 정보가 있는 경우 -->
+						<!-- <a href="/kr/ko/html_cdj/mypage/detail/addressbook/list.html" class="tit_btn">등록</a> --> <!-- 배송지 정보가 없는 경우 -->
+					</div>						
+					<div class="inner_wrap">
+						<!-- 배송지 정보가 있는 경우 : S -->
+						<div class="delivery_info1">
+							<div class="delivery_address_list">
+								<div class="list_item">
+									<div class="text_box">
+										<p class="top"><span class="list_name">서울 내집</span> <span class="customer_name">(박루리)</span></p>
+										<p class="address">서울 금천구 가산동 371-50 (가산동) 에이스 하이엔드 타워 13차 505호</p>
+										<p class="phone_number">연락처 : 010-7979-3876</p>
+										<span class="basic_tag">기본 배송지</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 배송지 정보가 있는 경우 : E -->
+						
+						<!-- 배송지 정보가 없는 경우 : S -->
+						<!-- <div>기본 배송지를 입력해 주세요.</div> -->
+						<!-- 배송지 정보가 없는 경우 : E -->
+					</div>
+				</div>
+			</div>
+			<!-- 배송지 정보 : E -->
+
+		</section>	
+		<!-- 컨텐츠 : E -->
+
+	</main>
+	<!-- CDJ 개선 마이페이지 - 회원정보 확인 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

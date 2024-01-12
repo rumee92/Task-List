@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 주문배송조회 - 리스트 : S -->
+	<main class="main cdj_renew my_order_list_page">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">주문/배송 조회</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		
+		<!-- 기간 sort 영역 : S -->
+		<div class="my_term_sort">
+			<div class="w1200">
+				<div class="term_inner">
+					<div class="btn_box">
+						<button type="button" class="term_btn" onclick="">최근 1개월</button>
+						<button type="button" class="term_btn" onclick="">4월</button>
+						<button type="button" class="term_btn" onclick="">3월</button>
+						<button type="button" class="term_btn open" onclick="">기간조회</button>
+					</div>
+					<!-- 기간 선택 셀렉트 박스 - 1년치 노출 -->
+					<div class="sel_box">
+						<div class="inp_selectbox">
+							<select name="" id="" class="inp_select">
+								<option value="" selected="">기간 선택</option>
+								<option value="">2022년 02월</option>
+								<option value="">2022년 01월</option>
+								<option value="">2021년 12월</option>
+								<option value="">2021년 11월</option>
+								<option value="">2021년 10월</option>
+								<option value="">2021년 09월</option>
+								<option value="">2021년 08월</option>
+								<option value="">2021년 07월</option>
+								<option value="">2021년 06월</option>
+								<option value="">2021년 05월</option>
+								<option value="">2021년 04월</option>
+								<option value="">2021년 03월</option>
+								<option value="">2021년 02월</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 기간 sort 영역 : E -->
+		
+		<section class="section">
+			<div class="w1200">
+				<!-- 내역이 없을 경우 카운트 0, my_order_state 에 no_list 클래스 추가 -->
+				<ul class="my_order_state">
+					<li class="item">
+						<p class="text01">0</p>
+						<p class="text02">주문접수</p>
+					</li>
+					<li class="item">
+						<p class="text01">3</p>
+						<p class="text02">결제완료</p>
+					</li>
+					<li class="item">
+						<p class="text01">0</p>
+						<p class="text02">상품준비</p>
+					</li>
+					<li class="item">
+						<p class="text01">1</p>
+						<p class="text02">배송중</p>
+					</li>
+					<li class="item">
+						<p class="text01">5</p>
+						<p class="text02">배송완료</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		
+		<!-- 내역 없을 때 노출 : S -->
+		<section class="section my_no_noList w80">
+			<div class="w1200">
+				<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/no_list_img.png" alt="내역이 없습니다."></div>
+				<div class="text_box">
+					<p class="text_1">내역이 없습니다.</p>
+				</div>
+			</div>
+		</section>
+		<!-- 내역 없을 때 노출 : E -->
+		
+		
+		<section class="section">
+			<div class="w1200">
+				<ul class="my_order_list">
+					
+					<!-- 주문접수 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">달빛걷기 10입(피라미드)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">주문접수</p>
+								</div>
+								<div class="col">
+									<div class="btn_box">
+										<div class="item"><button class="btn_cancle" type="button" onclick="">주문취소</button></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 주문접수 상태 : E -->
+					
+					<!-- 결제완료 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">달빛걷기 10입(피라미드)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">결제완료</p>
+								</div>
+								<div class="col">
+									<div class="btn_box">
+										<div class="item"><button class="btn_cancle" type="button" onclick="">주문취소</button></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 결제완료 상태 : E -->
+					
+					<!-- 상품준비 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">달빛걷기 10입(피라미드)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">상품준비</p>
+								</div>
+								<div class="col">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 상품준비 상태 : E -->
+					
+					<!-- 배송중 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">달빛걷기 10입(피라미드)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">달빛걷기 10입(피라미드)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참 (사각)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state">배송중</p>
+								</div>
+								<div class="col">
+									<div class="btn_box">
+										<div class="item"><button class="btn_delivery" type="button" onclick="">배송조회</button></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 배송중 상태 : E -->
+					
+					<!-- 배송완료 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참 (사각)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">달빛걷기 10입(피라미드)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state">배송완료</p>
+								</div>
+								<div class="col">
+									<div class="btn_box">
+										<div class="item"><button class="btn_confirm" type="button" onclick="">구매확정</button></div>
+										<div class="item"><button class="btn_delivery" type="button" onclick="">배송조회</button></div>
+										<div class="item w50">
+											<div class="button"><button class="btn_exchange w50" type="button" onclick="">교환신청</button></div>
+											<div class="button"><button class="btn_return w50" type="button" onclick="">반품신청</button></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 배송완료 상태 : E -->
+					
+					<!-- 구매확정 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">달빛걷기 10입(피라미드)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state">구매확정</p>
+								</div>
+								<div class="col">
+									<div class="btn_box">
+										<div class="item"><button class="btn_review" type="button" onclick="">후기작성</button></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 구매확정 상태 : E -->
+					
+					<!-- 취소신청 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">취소신청</p>
+								</div>
+								<div class="col">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 취소신청 상태 : E -->
+					
+					<!-- 취소완료 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">취소완료</p>
+								</div>
+								<div class="col">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 취소완료 상태 : E -->
+					
+					<!-- 반품신청 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">반품신청</p>
+								</div>
+								<div class="col">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 반품신청 상태 : E -->
+					
+					<!-- 반품완료 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">반품완료</p>
+								</div>
+								<div class="col">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 반품완료 상태 : E -->
+					
+					<!-- 교환신청 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">교환신청</p>
+								</div>
+								<div class="col">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 교환신청 상태 : E -->
+					
+					<!-- 교환완료 상태 : S -->
+					<li class="item">
+						<div class="box">
+							<div class="box_head">
+								<div class="col">
+									<div class="info">
+										<p class="order_num">주문번호 <span class="num">234098723451405</span></p>
+										<p class="order_date">2022.04.05</p>
+									</div>
+								</div>
+								<div class="col">
+									<div class="btn_more">
+										<button type="button" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="box_con">
+								<div class="col">
+									<ul class="prd_list">
+										<li class="prd_list_item">
+											<div class="item_inner">
+												<div class="img_box">
+													<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+												</div>
+												<div class="text_box">
+													<div class="left">
+														<p class="prd_name">
+															<a href="#">영귤섬 20입(아이스티)</a>
+														</p>
+														<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+													</div>
+													<div class="right">
+														<p class="prd_price"><span class="price">525,000원</span>/<span class="count">3개</span> </p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col">
+									<p class="state gray">교환완료</p>
+								</div>
+								<div class="col">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 교환완료 상태 : E -->
+				</ul>
+				
+				<!-- pagination : S -->
+				<div id="pagination" class="newPagination for-mobile">
+					<span class="btn btn-home is-disabled">페이지 처음으로</span>
+					<span class="btn btn-prev is-disabled">이전 페이지</span>
+					<a href="/kr/ko/life/event/list/ing" class="num on" data-track-name="1 페이지 이동">1</a>
+					<a href="#" class="num" data-track-name="2 페이지 이동">2</a>
+					<span class="btn btn-next is-disabled">다음 페이지</span>
+					<span class="btn btn-end is-disabled">페이지 끝으로</span>
+				</div>
+				<!-- pagination : E -->
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="my_order_dot_box">
+				<div class="my_dot_box">
+					<p class="tit">주문/배송조회 안내</p>
+					<ul class="list">
+						<li class="item">주문취소는 주문접수, 결제완료 단계에서만 신청 가능하며 즉시 처리됩니다.</li>
+						<li class="item">주문취소처리 완료 후 환불금액은 2~3일 내 결제한 정보로 환불되며 신용카드의 경우 해당 카드회사에서 확인하실 수 있습니다.</li>
+						<li class="item">교환신청은 주문한 상품이 잘못 배송 되었거나 배송된 상품에 하자가 있을 경우 가능합니다.</li>
+						<li class="item">변심에 의한 반품/교환 시 배송비는 고객 부담입니다.</li>
+						<li class="item">취소 시 사용한 포인트는 고객님의 포인트로 환불해드리며 사용쿠폰은 복원됩니다.</li>
+						<li class="item">주문취소 시 전체취소만 가능합니다. 부분취소를 원하시면 주문을 취소하고 다시 주문해주세요.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 주문배송조회 - 리스트 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

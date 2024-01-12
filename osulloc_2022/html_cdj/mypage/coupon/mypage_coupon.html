@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 쿠폰 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">쿠폰</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		<section class="section my_coupon_top">
+			<div class="top_inner">
+				<div class="grade_box">
+					<div class="box_inner">
+						<div class="grade_text">
+							<p class="text">회원등급</p>
+							<!-- grade_tag 등급별로 다르게 노출 -->
+							<div class="grade_tag">
+								<span class="tag_item grade_welcome">Welcome</span>
+								<span class="tag_item grade_green">Green</span>
+								<span class="tag_item grade_family">Family</span>
+								<span class="tag_item grade_vip">VIP</span>
+								<span class="tag_item grade_vvip">VVIP</span>
+							</div>
+						</div>
+						<div class="btn_box">
+							<button type="button" class="my_btn_type1" title="나의 혜택 보기" onclick="">나의 혜택 보기</button>
+						</div>
+					</div>
+				</div>
+				<div class="counter_box">
+					<div class="box_inner">
+						<div class="item">
+							<p class="text">보유쿠폰</p>
+							<p class="num">232</p>
+						</div>
+						<div class="item">
+							<p class="text">7일 이내 소멸 쿠폰</p>
+							<p class="num">10</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section my_coupon_regi">
+			<div class="w1200">
+				<div class="inner_box">
+					<div class="input_group1">
+						<input type="text" class="left" placeholder="쿠폰 번호 입력">
+						<button type="button" class="right" title="쿠폰 등록" onclick="">쿠폰 등록</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		<!-- 쿠폰 없을 때 노출 : S -->
+		<section class="section my_no_noList w80">
+			<div class="w1200">
+				<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/no_list_img.png" alt="보유중인 쿠폰이 없습니다."></div>
+				<div class="text_box">
+					<p class="text_1">보유중인 쿠폰이 없습니다.</p>
+				</div>
+			</div>
+		</section>
+		<!-- 쿠폰 없을 때 노출 : E -->
+		
+		
+		<section class="section">
+			<div class="w1200">
+				<ul class="my_coupon_list">
+					<li class="item">
+						<div class="item_inner">
+							<div class="top_box">
+								<div class="c_info">
+									<p class="dday">D-58</p>
+									<p class="tag_text">온라인전용</p>
+								</div>
+								<p class="c_tit">멤버십 신규가입 3천원 할인 쿠폰 (22년)</p>
+								<div class="c_disc">
+									<p class="disc_text">30,000원 할인</p>
+									<p class="min_price">(최소결제금액 : 20,000원)</p>
+								</div>
+							</div>
+							<div class="bottom_box">
+								<ul class="info_list">
+									<li class="text">신규가입자 쿠폰사용기간 이슈로 인한 신규 발행</li>
+									<li class="text">21.07.01 ~ 22.05.28</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="item_inner">
+							<div class="top_box">
+								<div class="c_info">
+									<!-- 유효기간 10일 남았을때 point 클래스 추가 -->
+									<p class="dday point">D-10</p>
+									<p class="tag_text">온라인전용</p>
+								</div>
+								<p class="c_tit">22년 다다일상 홈카페 3월 구독 고객 혜택</p>
+								<div class="c_disc">
+									<p class="disc_text">30% 할인</p>
+									<p class="min_price">(최소결제금액 : 5,000원)</p>
+								</div>
+							</div>
+							<div class="bottom_box">
+								<ul class="info_list">
+									<li class="text">신규가입자 쿠폰사용기간 이슈로 인한 신규 발행</li>
+									<li class="text">21.07.01 ~ 22.05.28</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					
+					<!-- 사용, 만료된 쿠폰은 item에 no_use 클래스 추가 -->
+					<li class="item no_use">
+						<div class="item_inner">
+							<div class="top_box">
+								<div class="c_info">
+									<!-- 사용, 만료 상태에 따라 사용 or 만료로 워딩 노출 -->
+									<p class="dday">만료</p>
+									<p class="tag_text">온라인전용</p>
+								</div>
+								<p class="c_tit">22년 멤버십 Welcome 10%할인</p>
+								<div class="c_disc">
+									<p class="disc_text">30,000원 할인</p>
+									<p class="min_price">(최소결제금액 : 20,000원)</p>
+								</div>
+							</div>
+							<div class="bottom_box">
+								<ul class="info_list">
+									<li class="text">신규가입자 쿠폰사용기간 이슈로 인한 신규 발행</li>
+									<li class="text">21.07.01 ~ 22.05.28</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					
+					<!-- 사용, 만료된 쿠폰은 item에 no_use 클래스 추가 -->
+					<li class="item no_use">
+						<div class="item_inner">
+							<div class="top_box">
+								<div class="c_info">
+									<!-- 사용, 만료 상태에 따라 사용 or 만료로 워딩 노출 -->
+									<p class="dday">사용</p>
+									<p class="tag_text">온라인전용</p>
+								</div>
+								<p class="c_tit">22년 멤버십 Welcome 10%할인</p>
+								<div class="c_disc">
+									<p class="disc_text">30,000원 할인</p>
+									<p class="min_price">(최소결제금액 : 20,000원)</p>
+								</div>
+							</div>
+							<div class="bottom_box">
+								<ul class="info_list">
+									<li class="text">신규가입자 쿠폰사용기간 이슈로 인한 신규 발행</li>
+									<li class="text">21.07.01 ~ 22.05.28</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				
+				<!-- pagination : S -->
+				<div id="pagination" class="newPagination for-mobile">
+					<span class="btn btn-home is-disabled">페이지 처음으로</span>
+					<span class="btn btn-prev is-disabled">이전 페이지</span>
+					<a href="#" class="num on" data-track-name="1 페이지 이동">1</a>
+					<a href="#" class="num" data-track-name="2 페이지 이동">2</a>
+					<span class="btn btn-next is-disabled">다음 페이지</span>
+					<span class="btn btn-end is-disabled">페이지 끝으로</span>
+				</div>
+				<!-- pagination : E -->
+			</div>
+		</section>
+		
+		
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 쿠폰: E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

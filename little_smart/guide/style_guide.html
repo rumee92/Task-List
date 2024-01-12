@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>스타일 가이드 | 디지털웍스 퍼블리싱 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../resources/front/css/fonts.css">
+<!-- <link rel="stylesheet" type="text/css" href="./css/common.css"> -->
+<link rel="stylesheet" type="text/css" href="../resources/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/guide.css">
+<script type="text/javascript" src="../resources/front/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="../resources/front/js/libjs.js"></script>
+<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../resources/front/js/ui.js"></script>
+<!-- <script type="text/javascript" src="./js/ui.js"></script> -->
+<script type="text/javascript" src="./js/guide.js"></script>
+</head>
+<body>
+<div id="wrap">
+<div class="pagever">last update : <strong>2020.06.23</strong></div>
+
+<div id="uiwrap" class="uiwrap">
+	<div class="uinav">
+		<a href="#font">font</a>
+        <a href="#color">color</a>
+        <a href="#button">button</a>
+        <a href="#pageing">pageing</a>
+        <a href="#pagetop">pagetop</a>
+        <a href="#form">form</a>
+		<a href="#tab">tab</a>
+		<a href="#title">title</a>
+	</div>
+
+	<div id="font" class="conP">
+		<h2>Font</h2>
+		<h3>국문 폰트</h3>
+		<p class="note">본고딕(Noto Sans KR-Regular와 Noto Sans KR-Bold)을 사용하며, 폰트 굵기는 font-wdight로 구분한다. <br /> 기본설정은 <span>{font-family:'Noto Sans KR'; font-weight:400;}</span></p>
+		<div class="txt" style="font-family:'Noto Sans KR'; font-weight:400;">
+			<p class="Medium" style="font-family:'NotoB';">Noto Sans Korean Regular
+				<span style="font-family:'Noto Sans KR'; font-weight:400;">
+					가나다라마바사아자차카타파하<br />
+					0123456789
+				</span>
+			</p>
+			<p style="font-family:'Noto Sans KR'; font-weight:700;">Noto Sans Korean Bold
+				<span style="font-family:'Noto Sans KR'; font-weight:700;">
+					가나다라마바사아자차카타파하<br />
+					0123456789
+				</span>
+			</p>
+		</div>
+		<h3>영문 폰트</h3>
+		<p class="note">Nunito를 사용하며, 폰트 굵기는 ExtraBold를 사용한다. <br />기본설정은 <span>{font-family:'Nunito'; font-weight:800;}</span></p>
+		<div class="txt">
+			<p style="font-family:'Nunito'; font-weight:800;">
+                Nunito - 'ExtraBold' <br />
+				<span style="font-family:'Nunito'; font-weight:800;">
+					ABCDEFGHIJKLMNOPQRSTUVWXYZ <br />
+					abcdefghijklmnopqrstuvwxyz <br />
+					0123456789
+				</span>
+			</p>
+		</div>
+	</div>
+	<style>
+		#conP0 .txt {padding:30px 20px; font-size:30px; line-height:30px; color:#222;}
+		#conP0 .txt p span {display:block; font-size:20px; line-height:24px;}
+		#conP0 .txt p:last-child {margin-top:20px;}
+		#conP0 .price .cost {margin-right:15px;}
+	</style>
+
+	<div id="color" class="conP">
+		<h2>Color</h2>
+        <h3>PRIMARY COLOR</h3>
+        <div class="colorbox">
+            <div class="box">#1B2B3C</div>
+            <div class="box">#000000</div>
+            <div class="box">#FFDE00</div>
+            <div class="box">#FAA633</div>
+            <div class="box">#7AC142</div>
+            <div class="box">#00AEDB</div>
+            <div class="box">#EC048D</div>
+            <div class="box">#B63C96</div>
+        </div>
+        <h3>SECONDARY COLOR</h3>
+        <div class="colorbox black">
+            <div class="box">#FFF7D3</div>
+            <div class="box">#FFE8C8</div>
+            <div class="box">#EFFFF0</div>
+            <div class="box">#EBFAFF</div>
+            <div class="box">#FFEEEE</div>
+            <div class="box">#FAF3F8</div>
+        </div>
+        <h3>TEXT COLOR</h3>
+        <div class="colorbox">
+            <div class="box">#222222</div>
+            <div class="box">#777777</div>
+            <div class="box">#999999</div>
+            <div class="box">#CCCCCC</div>
+        </div>
+	</div>
+	<style>
+        .colorbox div {display:inline-block; width:200px; height:100px; text-align:center; line-height:100px; color:#fff; margin-bottom:3px;}
+        .colorbox.black div {color:#000;}
+	</style>
+	<script>
+	$('.colorbox .box').each(function(){
+		var colorcode = $(this).text();
+		$(this).css('background',colorcode);
+	});
+    </script>
+    
+    <div id="button" class="conP">
+        <h2>Button</h2>
+        <h3>버튼</h3>
+        <button type="button" class="btn btn_default right">
+            <span class="d_iblock va_m">SEE MORE</span><em class="d_iblock va_m"></em>
+        </button>
+        <button type="button" class="btn btn_default left">
+            <em class="d_iblock va_m"></em><span class="d_iblock va_m">SEE MORE</span></em>
+        </button>
+
+        <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+                <button type="button" class="btn btn_default right">
+                    <span class="d_iblock va_m">SEE MORE</span><em class="d_iblock va_m"></em>
+                </button>
+                <button type="button" class="btn btn_default left">
+                    <em class="d_iblock va_m"></em><span class="d_iblock va_m">SEE MORE</span></em>
+                </button>
+            </xmp>
+		</div>
+    </div>
+    
+    <div id="pageing" class="conP">
+        <h2>Paging</h2>
+        <div class="pagination">
+            <button type="button" class="btn_page btn_page_str"><img src="../resources/front/images/common/paging_str.png" alt="맨처음"></button>
+            <button type="button" class="btn_page btn_page_prev"><img src="../resources/front/images/common/paging_prev.png" alt="이전"></button>
+			<ol>
+				<li class="current"><a href="#none">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+			</ol>
+			<button type="button" class="btn_page btn_page_next"><img src="../resources/front/images/common/paging_next.png" alt="다음"></button>
+			<button type="button" class="btn_page btn_page_end"><img src="../resources/front/images/common/paging_end.png" alt="맨끝"></button>
+        </div>
+	    <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+				<div class="pagination">
+					<button type="button" class="btn_page btn_page_str"><img src="../resources/front/images/common/paging_str.png" alt="맨처음"></button>
+					<button type="button" class="btn_page btn_page_prev"><img src="../resources/front/images/common/paging_prev.png" alt="이전"></button>
+					<ol>
+						<li class="current"><a href="#none">1</a></li>
+						<li><a href="#none">2</a></li>
+						<li><a href="#none">3</a></li>
+					</ol>
+					<button type="button" class="btn_page btn_page_next"><img src="../resources/front/images/common/paging_next.png" alt="다음"></button>
+					<button type="button" class="btn_page btn_page_end"><img src="../resources/front/images/common/paging_end.png" alt="맨끝"></button>
+				</div>
+			</xmp>
+		</div>
+    </div>
+
+    <div id="pagetop" class="conP">
+        <h2>Page Top</h2>
+        <div class="page_top">
+            <div class="page_visual" style="background-image:url('../resources/front/images/little_smart/page_visual.jpg');">
+                <div class="txt_box con_inner_mid">
+                    <p class="tit">little SMART</p>
+                    <p class="txt">리틀스마트는 아이를 사랑하는 마음에<br>책임을 다하는 브랜드가 되고자 합니다.</p>
+                </div>
+            </div>
+            <div class="page_navi">
+                <div class="page_navi_inner">
+                    <div class="page_navi_item on"><a href="#none">리틀스마트 소개</a></div>
+                    <div class="page_navi_item"><a href="#none">수상연혁</a></div>
+                    <div class="page_navi_item"><a href="#none">사회공헌</a></div>
+                    <div class="page_navi_item"><a href="#none">원복체험후기</a></div>
+                </div>
+            </div>
+            <div class="page_navi_blank"></div>
+        </div>
+	    <p class="note">.page_visaul에 인라인으로 background-image 경로 넣어주세요.</p>
+        <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+                <div class="page_top">
+                    <div class="page_visual" style="background-image:url('../resources/front/images/little_smart/page_visual.jpg');">
+                        <div class="txt_box con_inner_mid">
+                            <p class="tit">little SMART</p>
+                            <p class="txt">리틀스마트는 아이를 사랑하는 마음에<br>책임을 다하는 브랜드가 되고자 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="page_navi">
+                        <div class="page_navi_inner">
+                            <div class="page_navi_item on"><a href="#none">리틀스마트 소개</a></div>
+                            <div class="page_navi_item"><a href="#none">수상연혁</a></div>
+                            <div class="page_navi_item"><a href="#none">사회공헌</a></div>
+                            <div class="page_navi_item"><a href="#none">원복체험후기</a></div>
+                        </div>
+                    </div>
+                    <div class="page_navi_blank"></div>
+                </div>
+			</xmp>
+		</div>
+    </div>
+
+    <div id="form" class="conP">
+        <h2>Form</h2>
+        <h3>Input Box</h3>
+        <div class="input_box">
+            <div class="input_txt">
+                <input type="text" name="" id="" placeholder="Placeholder">
+            </div>
+        </div>
+        <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+                <div class="input_box">
+                    <div class="input_txt">
+                        <input type="text" name="" id="" placeholder="Placeholder">
+                    </div>
+                </div>
+			</xmp>
+		</div>
+        <h3>Input File</h3>
+        <div class="input_file">
+            <label for="file">
+                <div class="file_name">이미지 파일 첨부</div>
+                <div class="btn_upload">파일 첨부</div>
+            </label>
+            <input type="file" id="file" class="target">
+        </div>
+        <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+                <div class="input_file">
+                    <label for="file">
+                        <div class="file_name">이미지 파일 첨부</div>
+                        <div class="btn_upload">파일 첨부</div>
+                    </label>
+                    <input type="file" id="file" class="target">
+                </div>
+			</xmp>
+		</div>
+        <h3>Input TextArea</h3>
+        <div class="input_box">
+            <div class="input_textarea">
+                <textarea data-autoresize="" placeholder="내용을 입력해주세요." class="textArea"></textarea>
+            </div>
+        </div>
+        <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+                <div class="input_box">
+                    <div class="input_textarea">
+                        <textarea data-autoresize="" placeholder="내용을 입력해주세요." class="textArea"></textarea>
+                    </div>
+                </div>
+			</xmp>
+		</div>
+        <h3>Radiobox</h3>
+        <div class="input_radio">
+            <input type="radio" id="radio1" name="radio_type1" checked>
+            <label for="radio1">라디오버튼1</label>
+        </div>
+        <div class="input_radio">
+            <input type="radio" id="radio2" name="radio_type1">
+            <label for="radio2">라디오버튼2</label>
+        </div>
+        <div class="input_radio">
+            <input type="radio" id="radio3" name="radio_type1">
+            <label for="radio3">라디오버튼3</label>
+        </div>
+        <div class="input_radio">
+            <input type="radio" id="radio4" name="radio_type1">
+            <label for="radio4">라디오버튼4</label>
+        </div>
+        <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+                <div class="input_radio">
+                    <input type="radio" id="radio1" name="radio_type1" checked>
+                    <label for="radio1">라디오버튼1</label>
+                </div>
+                <div class="input_radio">
+                    <input type="radio" id="radio2" name="radio_type1">
+                    <label for="radio2">라디오버튼2</label>
+                </div>
+                <div class="input_radio">
+                    <input type="radio" id="radio3" name="radio_type1">
+                    <label for="radio3">라디오버튼3</label>
+                </div>
+                <div class="input_radio">
+                    <input type="radio" id="radio4" name="radio_type1">
+                    <label for="radio4">라디오버튼4</label>
+                </div>
+			</xmp>
+		</div>
+        <h3>Checkbox</h3>
+        <div class="input_check">
+            <input type="checkbox" id="check1" name="check_type1" checked>
+            <label for="check1">체크박스1</label>
+        </div>
+        <div class="input_check">
+            <input type="checkbox" id="check2" name="check_type1">
+            <label for="check2">체크박스2</label>
+        </div>
+        <div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+                <div class="input_check">
+                    <input type="checkbox" id="check1" name="check_type1" checked>
+                    <label for="check1">체크박스1</label>
+                </div>
+                <div class="input_check">
+                    <input type="checkbox" id="check2" name="check_type1">
+                    <label for="check2">체크박스2</label>
+                </div>
+			</xmp>
+		</div>
+    </div>
+	
+	<div id="tab" class="conP">
+		<h2>Tab</h2>
+		<div class="layout_tab">
+			<div class="tab_item on">SUMMER</div>
+			<div class="tab_item">WINTER</div>
+		</div>
+		<div class="tabCon_wrap">
+			<div class="tabCon1 on"></div>
+			<div class="tabCon2"></div>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+				<div class="layout_tab">
+					<div class="tab_item on">SUMMER</div>
+					<div class="tab_item">WINTER</div>
+				</div>
+				
+				<!-- 클래스 .tabCon_wrap은 유지 -->
+				<div class="tabCon_wrap">
+					<div class="tabCon1 on"></div>
+					<div class="tabCon2"></div>
+				</div>
+			</xmp>
+		</div>
+	</div>
+	<style>
+		.tabCon_wrap > div  {width:100%;height:300px;border:3px solid #eee;display:none;}
+        .tabCon_wrap > div.on {display:block;}
+        .tabCon_wrap .tabCon1 {border-color:#ffeeee;}
+        .tabCon_wrap .tabCon2 {border-color:#c6c7f7;}
+	</style>
+	
+	<div id="title" class="conP">
+		<h2>Title</h2>
+		<h3>tit_typeA (PC LOOKBOOK에 사용)</h3>
+		<div class="tit_typeA smartBL">OUTER</div>
+		<div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+				<!-- 컬러는 common.css에 만들어져있는 색상클래스 사용하시면 됩니다. -->
+				<div class="tit_typeA smartBL">OUTER</div>
+			</xmp>
+		</div>
+		
+		<h3>tit_typeB</h3>
+		<div class="tit_typeB">PRESS CENTER</div>
+		<div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+				<div class="tit_typeB">PRESS CENTER</div>
+			</xmp>
+		</div>
+		
+		<h3>section_tit</h3>
+		<div class="sec_tit">
+			<h3 class="txt">상의</h3>
+		</div>
+		<div class="moreBox">
+			<a href="#none" class="btnMore">소스보기</a>
+			<xmp class="code">
+				<div class="sec_tit">
+					<h3 class="txt">상의</h3>
+				</div>
+			</xmp>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

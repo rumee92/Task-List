@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/main.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/header.html'; ?>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container" class="pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('rewardProAgree');" class="btn btnSizeL btnColorW btnTypeB"><span>약관 및 정책동의 팝업</span></button><br>
+		<button type="button" onclick="showLayer('profileRegistPop1');" class="btn btnSizeL btnColorW btnTypeB mgt10"><span>닉네임 등록</span></button><br>
+		<button type="button" onclick="showLayer('profileRegistPop2');" class="btn btnSizeL btnColorW btnTypeB mgt10"><span>프로필 이미지 등록</span></button><br>
+		<button type="button" onclick="showLayer('profileRegistPop3');" class="btn btnSizeL btnColorW btnTypeB mgt10"><span>자기소개 등록</span></button><br>
+		<button type="button" onclick="showLayer('profileRegistPop4');" class="btn btnSizeL btnColorW btnTypeB mgt10"><span>SNS 계정 및 미디어 등록</span></button><br>
+		<button type="button" onclick="showLayer('profileRegistPop5');" class="btn btnSizeL btnColorW btnTypeB mgt10"><span>COCO 등록 완료</span></button><br>
+		<button type="button" onclick="showLayer('profileLeavePop');" class="btn btnSizeL btnColorW btnTypeB mgt10"><span>이탈 팝업</span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		
+		<!-- 약관 및 정책동의 팝업 -->
+		<div id="rewardProAgree" class="lyPopArea lyPopArea_B rewardProAgree">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">리워드 프로그램 약관 및 정책 동의</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<p>
+								바닐라닷컴 리워드 프로그램을 이용하기 위한 이용약관 및 개인정보 처리방침 내용을 확인해주세요. 아래 필수 약관에 동의 후 서비스 이용이 가능합니다.
+							</p>
+							<div class="chkBox">
+								<div class="totalAgree">
+								<span class="inp_check2">
+									<input type="checkbox" name="totalAgreeBtn" id="totalAgreeBtn">
+									<label for="totalAgreeBtn" class="notoB">모두 동의합니다.</label>
+								</span>
+									<div class="desc fcR mgt12">*필수 약관 동의 후 서비스 이용이 가능합니다.</div>
+								</div>
+								<div class="agreeItem">
+									<div>
+									<span class="inp_check2">
+										<input type="checkbox" name="inp_check" id="inp_check1_1">
+										<label for="inp_check1_1"><span class="fcR">(필수)</span> 프로그램 이용약관 동의</label>
+									</span>
+										<button type="button" onclick="showLayer('rewardProAgree_terms');" class="btn_txt">내용 보기</button>
+									</div>
+									<div>
+									<span class="inp_check2">
+										<input type="checkbox" name="inp_check" id="inp_check1_2">
+										<label for="inp_check1_2"><span class="fcR">(필수)</span> 개인정보 처리방침 동의</label>
+									</span>
+										<button type="button" onclick="showLayer('rewardProAgree_terms');" class="btn_txt">내용 보기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn_wrap colType fixed">
+						<button type="button" onclick="showLayer('profileLeavePop');" class="btn btnSizeL btnColorW btnRadius4"><span>취소</span></button>
+						<button type="button" onclick="" class="btn btnSizeL btnColorB btnRadius4"><span>확인</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="rewardProAgree_terms" class="lyPopArea lyPopArea_B rewardProAgree_terms">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">리워드 프로그램 약관 및 정책</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="tabType tabType1 length3 switch" id="guideTab"><!-- id = 공통 VIEW CLASS -->
+								<ul>
+									<li><a href="#guideTab1" class="current"><span>이용약관</span></a></li>
+									<li><a href="#guideTab2"><span>운영정책</span></a></li>
+									<li><a href="#guideTab3"><span>개인정보 처리방침</span></a></li>
+								</ul>
+							</div>
+							<div class="guideTab mgt25 fc88" id="guideTab1">
+								<div>
+									내용 - 운영관리자에 등록 후 불러옴<br>
+									바닐라닷컴 소셜셀링 프로그램은 셀러 회원의 미디어가 서비스 이용약관 또는 운영정책에 위반되는 사항이 없는지 주기적으로 확인하며, 위반사항이 확인되는 경우 이용제한 정책에 따라 셀러 회원의 서비스 이용을 일시적 또는 영구적으로 제한하고 있습니다.
+								</div>
+							</div>
+							<div class="guideTab mgt25 fc88" id="guideTab2" style="display:none;">
+								내용 - 운영관리자에 등록 후 불러옴 (운영정책)
+							</div>
+							<div class="guideTab mgt25 fc88" id="guideTab3" style="display:none;">
+								내용 - 운영관리자에 등록 후 불러옴 (개인정보 처리방침)
+							</div>
+						</div>
+					</div>
+					<div class="btn_wrap colType fixed">
+						<button type="button" onclick="showLayer('profileLeavePop');" class="btn btnSizeL btnColorW btnRadius4"><span>취소</span></button>
+						<button type="button" onclick="" class="btn btnSizeL btnColorB btnRadius4"><span>확인</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //약관 및 정책동의 팝업 -->
+		
+		
+		<!-- 프로필 등록 팝업 STR -->
+		<!-- 01 닉네임 등록 -->
+		<div id="profileRegistPop1" class="lyPopArea lyPopArea_B profileRegistPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO 등록하기</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="stepBox">
+								<span class="step on"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+							</div>
+							<div class="stepTit notoB">닉네임 등록</div>
+							<div class="stepDesc">
+								<span class="fcPink">HELLO, 이경미님</span> 🥳<br>
+								바닐라닷컴 리워드 프로그램에 참여할<br>
+								매력적인 COCO 닉네임을 같이 고민해 볼까요?
+							</div>
+							<div class="nicknameBox">
+								<div class="nickname">
+									<div class="inp_wrap">
+										<div class="inp_text">
+											<label class="inp_lab" for="inp_nickname"></label>
+											<input type="text" name="" id="inp_nickname" placeholder="닉네임을 입력하세요. 어렵다면 랜덤으로~">
+										</div>
+									</div>
+									<div class="btn_wrap">
+										<a href="#" class="btn btnSize45 btnColorW btnRadius4"><span class="notoB">랜덤 생성</span></a>
+									</div>
+								</div>
+								<!-- 에러메세지 영역 -->
+								<div class="errorMsg fcR">입력하신 닉네임은 이미 사용 중이에요.</div>
+							</div>
+							<ul class="dotInfo">
+								<li>한글/영문/숫자 가능, 최소 5자 이상 16자 이내로 입력해 주세요.</li>
+								<li class="mgt5">설정한 닉네임은 등록 후에는 변경할 수 없어요.</li>
+								<li class="mgt5">닉네임은 친구가 공유링크로 상품 구매 시 할인코드로 사용돼요.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn_wrap solo fixed">
+						<button type="button" onclick="" class="btn btnSizeL btnColorB btnRadius4 disabled"><span>닉네임 결정!</span></button><!-- 활성화시 disabled 클래스 삭제 -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 01 닉네임 등록 -->
+		
+		<!-- 02 프로필 이미지 등록 -->
+		<div id="profileRegistPop2" class="lyPopArea lyPopArea_B profileRegistPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO 등록하기</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="stepBox">
+								<span class="step"></span>
+								<span class="step on"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+							</div>
+							<div class="stepTit notoB">프로필 이미지 등록</div>
+							<div class="stepDesc">
+								<span class="fcPink">멋진 닉네임이에요.</span><br>
+								닉네임에 어울리는 프로필 이미지도<br>
+								한번 설정해 볼까요?
+							</div>
+							<div class="uploadWrap">
+								<div class="uploadBox">
+									<div class="boxItem">
+										<div class="inp_wrap">
+											<span class="inp_radio2">
+												<input type="radio" name="uploadSelect" id="uploadSelect1" title="이미지 선택">
+												<label for="uploadSelect1">이미지 선택</label>
+											</span>
+											<div class="subText">바닐라닷컴에서 지원하는 캐릭터 이미지를 사용해 보세요.</div>
+										</div>
+										<div class="conBox">
+											<div class="defaultImgWrap">
+												<div class="item on">
+													<div class="imgBox">
+														<img src="/static/front/resources/web/images/socialSelling/cocoImg_default1.png" alt="프로필 기본 이미지1">
+													</div>
+												</div>
+												<div class="item">
+													<div class="imgBox">
+														<img src="/static/front/resources/web/images/socialSelling/cocoImg_default2.png" alt="프로필 기본 이미지2">
+													</div>
+												</div>
+												<div class="item">
+													<div class="imgBox">
+														<img src="/static/front/resources/web/images/socialSelling/cocoImg_default3.png" alt="프로필 기본 이미지3">
+													</div>
+												</div>
+												<div class="item mgt6">
+													<div class="imgBox">
+														<img src="/static/front/resources/web/images/socialSelling/cocoImg_default4.png" alt="프로필 기본 이미지4">
+													</div>
+												</div>
+												<div class="item mgt6">
+													<div class="imgBox">
+														<img src="/static/front/resources/web/images/socialSelling/cocoImg_default5.png" alt="프로필 기본 이미지5">
+													</div>
+												</div>
+												<div class="item mgt6">
+													<div class="imgBox">
+														<img src="/static/front/resources/web/images/socialSelling/cocoImg_default6.png" alt="프로필 기본 이미지6">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="boxItem">
+										<div class="inp_wrap">
+											<span class="inp_radio2">
+												<input type="radio" name="uploadSelect" id="uploadSelect2" title="사진 첨부">
+												<label for="uploadSelect2">사진 첨부</label>
+												<div class="subText">사진을 직접 업로드하세요.</div>
+											</span>
+										</div>
+										<div class="conBox">
+											<!--<div class="addImgWrap">
+												&lt;!&ndash; addBtn : 이미지 업로드 버튼 &ndash;&gt;
+												<div class="addBtn">
+													<label for="profileImgUpload"></label>
+													<input type="file" class="hide" id="profileImgUpload">
+												</div>
+												&lt;!&ndash; addImg : 이미지 업로드 완료 상태 &ndash;&gt;
+												<div class="addImg">
+													<div class="item">
+														<div class="imgBox">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img1.jpg" alt="">
+														</div>
+													</div>
+												</div>
+											</div>-->
+											
+											<!-- 이미지가 등록되면 addImgWrap에 on 클래스가 붙게 해주세요 -->
+											<div class="addImgWrap">
+												<!-- addBtn : 이미지 업로드 버튼 -->
+												<div class="addBtn">
+													<label for="profileImgUpload"></label>
+													<input type="file" class="hide" id="profileImgUpload">
+												</div>
+												<!-- addImg : 이미지 업로드 완료 상태 (디폴트 none상태, addImgWrap에 on클래스 붙으면 노출) -->
+												<div class="addImg">
+													<div class="item">
+														<div class="imgBox">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img1.jpg" alt="">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="helpText mgt7">파일크기는 최대 5MB까지 업로드 가능해요</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn_wrap colType fixed">
+						<button type="button" onclick="" class="btn btnSizeL btnColorW btnRadius4"><span>이전</span></button>
+						<button type="button" onclick="" class="btn btnSizeL btnColorB btnRadius4 disabled"><span>이미지 결정!</span></button><!-- 활성화시 disabled 클래스 삭제 -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 02 프로필 이미지 등록 -->
+		
+		<!-- 03 자기소개 등록 -->
+		<div id="profileRegistPop3" class="lyPopArea lyPopArea_B profileRegistPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO 등록하기</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="stepBox">
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step on"></span>
+								<span class="step"></span>
+							</div>
+							<div class="stepTit notoB">자기소개 등록</div>
+							<div class="stepDesc">
+								<span class="fcPink">잘 어울리는 이미지예요✨</span><br>
+								이번엔 모두에게 COCO님을 소개하고<br>
+								반갑게 인사해 주세요.
+							</div>
+							<div class="introBox mgt40">
+								<div class="inp_wrap">
+									<div class="inp_textArea lengthCheck">
+										<textarea style="height:144px;" placeholder="나만의 한 줄 소개를 입력해 주세요."></textarea>
+										<div class="textarea-clone"></div>
+									</div>
+									<span class="charCnt">(<em class="fc22">0</em>/400)</span>
+								</div>
+								<div class="helpText">20자 이상 400자 이내로 작성해 주세요.</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn_wrap colType fixed">
+						<button type="button" onclick="" class="btn btnSizeL btnColorW btnRadius4"><span>이전</span></button>
+						<button type="button" onclick="" class="btn btnSizeL btnColorB btnRadius4">
+							<span>다음에 할래요~</span><!-- 자기소기 미입력시 노출 -->
+							<span>자기소개 끝!</span><!-- 자기소개 입력시 노출 -->
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 03 자기소개 등록 -->
+		
+		<!-- 04 SNS 계정 및 미디어 등록 -->
+		<div id="profileRegistPop4" class="lyPopArea lyPopArea_B profileRegistPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO 등록하기</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="stepBox">
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step"></span>
+								<span class="step on"></span>
+							</div>
+							<div class="stepTit notoB">SNS 계정 및 미디어 등록</div>
+							<div class="stepDesc">
+								바닐라닷컴 상품들을 홍보하고,<br>
+								COCO님을 알릴 수 있도록<br>
+								다양한 SNS 계정을 연결해 보는 건 어때요?
+							</div>
+							<div class="cocoSnsBox mgt25">
+								<div class="snsDesc notoB">어떤 SNS 채널들을 운영 중이신가요?</div>
+								<ul class="list mgt10">
+									<li class="item insta">
+										<div class="itemIn">
+											<div class="icon"></div>
+											<div class="snsText">인스타그램</div>
+											<div class="chk">
+										<span class="inp_check2">
+											<input type="checkbox" name="sns_check" id="sns_check1_1">
+											<label for="sns_check1_1"></label>
+										</span>
+											</div>
+										</div>
+										<div class="userText mgt6">
+											<div class="inp_wrap">
+												<div class="inp_text">
+													<label class="inp_lab" for="insta_id"></label>
+													<input type="text" name="" id="insta_id" placeholder="인스타그램 뒷자리 입력">
+												</div>
+											</div>
+											<span class="helpMsg">http://www.instagram.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+										</div>
+									</li>
+									<li class="item blog">
+										<div class="itemIn">
+											<div class="icon"></div>
+											<div class="snsText">블로그</div>
+											<div class="chk">
+										<span class="inp_check2">
+											<input type="checkbox" name="sns_check" id="sns_check1_2">
+											<label for="sns_check1_2"></label>
+										</span>
+											</div>
+										</div>
+										<div class="userText mgt6">
+											<div class="inp_wrap">
+												<div class="inp_text">
+													<label class="inp_lab" for="blog_id"></label>
+													<input type="text" name="" id="blog_id" placeholder="네이버 블로그 뒷자리 입력">
+												</div>
+											</div>
+											<span class="helpMsg">http://blog.naver.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+										</div>
+									</li>
+									<li class="item youtube">
+										<div class="itemIn">
+											<div class="icon"></div>
+											<div class="snsText">유튜브</div>
+											<div class="chk">
+										<span class="inp_check2">
+											<input type="checkbox" name="sns_check" id="sns_check1_3">
+											<label for="sns_check1_3"></label>
+										</span>
+											</div>
+										</div>
+										<div class="userText mgt6">
+											<div class="inp_wrap">
+												<div class="inp_text">
+													<label class="inp_lab" for="youtube_id"></label>
+													<input type="text" name="" id="youtube_id" placeholder="유튜브 뒷자리 입력">
+												</div>
+											</div>
+											<span class="helpMsg">http://www.youtube.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+										</div>
+									</li>
+									<li class="item facebook">
+										<div class="itemIn">
+											<div class="icon"></div>
+											<div class="snsText">페이스북</div>
+											<div class="chk">
+										<span class="inp_check2">
+											<input type="checkbox" name="sns_check" id="inp_check1_4">
+											<label for="inp_check1_4"></label>
+										</span>
+											</div>
+										</div>
+										<div class="userText mgt6">
+											<div class="inp_wrap">
+												<div class="inp_text">
+													<label class="inp_lab" for="facebook_id"></label>
+													<input type="text" name="" id="facebook_id" placeholder="페이스북 뒷자리 입력">
+												</div>
+											</div>
+											<span class="helpMsg">http://www.facebook.com/<em class="fcR">뒷자리</em>를 입력해 주세요.</span>
+										</div>
+									</li>
+									<li class="item urlcopy">
+										<div class="itemIn">
+											<div class="icon"></div>
+											<div class="snsText">기타</div>
+											<div class="chk">
+										<span class="inp_check2">
+											<input type="checkbox" name="sns_check" id="inp_check1_5">
+											<label for="inp_check1_5"></label>
+										</span>
+											</div>
+										</div>
+										<div class="userText mgt6">
+											<div class="inp_wrap">
+												<div class="inp_text">
+													<label class="inp_lab" for="url_id"></label>
+													<input type="text" name="" id="url_id" placeholder="전체 URL 입력">
+												</div>
+											</div>
+											<span class="helpMsg"><em class="fcR">전체 URL</em>을 입력해 주세요.</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="btn_wrap colType fixed">
+						<button type="button" onclick="" class="btn btnSizeL btnColorW btnRadius4"><span>이전</span></button>
+						<button type="button" onclick="" class="btn btnSizeL btnColorB btnRadius4">
+							<span>다음에 할래요~</span><!-- SNS 미입력시 노출 -->
+							<span>다 했어요!</span><!-- SNS 입력시 노출 -->
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 04 SNS 계정 및 미디어 등록 -->
+		
+		<!-- 05 COCO 등록 완료 -->
+		<div id="profileRegistPop5" class="lyPopArea lyPopArea_B profileRegistPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO 등록하기</div>
+					<div class="lyBody basic">
+						<div class="conWrap">
+							<div class="endBox">
+								<div class="textBox">
+									<p class="text1 notoB">바닐라닷컴 리워드 프로그램의</p>
+									<p class="text2 notoB mgt6"><span class="fcPink">2,302번째<br>바닐라 COCO</span>가<br>되신 것을 축하드려요!</p>
+									<p class="text3 fc88 mgt15">바닐라닷컴과 함께, 쏠쏠한 리워드 활동<br>지금 바로 시작하세요~🥳</p>
+								</div>
+								<div class="skinProfileBox">
+									<!-- 피부프로필 등록이 안되어 있는 경우 -->
+									<div class="noProfile">
+										<div class="text1 notoB fc22">잠깐! <em class="fcPink">COCO</em>님은<br>피부 프로필이 등록되어 있지 않아요.</div>
+										<div class="text2 fc88">피부 프로필 등록하고, 1000포인트부터 받고<br>리워드 활동을 시작해보는건 어떨까요~?</div>
+										<div class="btn_wrap mgt15">
+											<a href="#" class="btn btnSizeS btnColorW btnRadius4"><span>피부 프로필 등록하기</span></a>
+										</div>
+									</div>
+									
+									<!-- 피부프로필 등록되어 있는 경우 -->
+									<div class="hasProfile"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn_wrap solo fixed">
+						<button type="button" onclick="" class="btn btnSizeL btnColorP btnRadius4"><span>내 프로필 확인하기</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 05 COCO 등록 완료 -->
+		<!-- 프로필 등록 팝업 END -->
+		
+		
+		<!-- 프로필 등록 이탈 팝업 -->
+		<div id="profileLeavePop" class="lyPopArea lyPopArea_C profileLeavePop">
+			<div class="lyPop">
+				<div class="lyWrap noTitle">
+					<div class="lyBody basic">
+						<div class="textBox">
+							<div class="text1 notoB">😥 앗, 페이지를 나가시겠어요?</div>
+							<div class="smText mgt15">지금 나가시면, 그동안 입력한<br>프로필 등록 정보가 모두 사라져요...</div>
+						</div>
+						<div class="btn_wrap colType">
+							<button type="button" onclick="layerPopClose();" class="btn btnSize45 btnColorW btnRadius4"><span>마저 등록할래요!</span></button>
+							<button type="button" class="btn btnSize45 btnColorB btnRadius4"><span>그래도 나갈래요</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 프로필 등록 이탈 팝업 -->
+		
+	</div>
+	<!-- //container -->
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+	
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

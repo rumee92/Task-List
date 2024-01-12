@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	
+	<!-- CDJ 개선 마이페이지 - 회원정보 수정 : S -->
+	<main class="main cdj_renew">
+
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">회원정보 수정</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+
+		<!-- 컨텐츠 : S -->
+		<div class="my_info_mdfy">
+ 
+			<!-- 기본정보 수정 : S -->
+			<section class="section section01">
+				<div class="w1200 accordion_layout">
+					<h3 class="my_sub_tit">기본정보 수정</h3>
+					<div class="inner_wrap">
+						<div class="delivery_info2">
+							<table class="table_type_write">
+								<caption>기본정보</caption>
+								<colgroup>
+									<col style="width:100px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="tr_tit">
+											<label for="chcsNo" class="">아이디</label>
+										</th>
+										<td>
+											<div class="id_box">
+												<input class="inp_text" name="chcsNo" type="text" id="chcsNo" value="RuriRang" disabled> <!--disabled상태-->
+												<button type="button" class="ohmni-passchange pw_change">비밀번호 변경</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="tr_tit">
+											<label for="custNm" class="">이름</label>
+										</th>
+										<td>
+											<input class="inp_text" name="custNm" type="text" id="custNm" value="박루리" disabled> <!--disabled상태-->
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="tr_tit">
+											<p class="">생년월일</p>
+										</th>
+										<td>
+											<div class="birth_box">
+												<div class="left_box"><input class="inp_text" name="" type="" id="" value="1990.01.13" disabled> <!--disabled상태--></div>
+												<div class="ohmni-input-box right_box inp_radio">
+													<div class="each_s">
+														<input type="radio" id="slccCdS" name="slccCd" class="ohmni-input_radio" value="S">
+														<label for="slccCdS" class="ohmni-label whitespace">양력</label>
+													</div>
+													<div class="each_l">
+														<input type="radio" id="slccCdL" name="slccCd" class="ohmni-input_radio" value="L">
+														<label for="slccCdL" class="ohmni-label whitespace">음력</label>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="tr_tit vtAlign">이메일</th>
+										<td>
+											<div class="email_box">
+												<div class="email">
+													<input type="text" class="inp_text" title="이메일" value="RuriRang">
+													<span class="at">@</span>
+													<div class="inp_selectbox">
+														<select name="" id="" class="inp_select">
+															<option value="naver.com" checked="">naver.com</option>
+															<option value="hanmail.net">hanmail.net</option>
+															<option value="gmail.com">gmail.com</option>
+															<option value="1">직접입력</option>
+														</select>
+													</div>
+												</div>
+												<div class="add_email"><input type="text" class="inp_text" title="도메인입력" value="Osulloc.co.kr"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="tr_tit vtAlign">휴대전화</th>
+										<td>
+											<div class="mobile_number_box">
+												<div class="inp_selectbox">
+													<select name="" id="" class="inp_select" disabled="disabled" readonly="readonly">
+														<option value="010" selected="">010</option>
+														<option value="011">011</option>
+														<option value="016">016</option>
+														<option value="017">017</option>
+														<option value="018">018</option>
+														<option value="019">019</option>
+													</select>
+												</div>
+												<span class="hyphen">-</span>												
+												<input type="number" id="" class="inp_text" title="휴대전화 입력" value="90691334" max="8" maxlength="8" inputmode="numeric" pattern="[0-9]*"  disabled="disabled" readonly="readonly">
+											</div>
+											<p class="num_noti_txt">휴대전화번호 변경은 <a href="https://www.beautypoint.co.kr/my-beautypoint/account.do" target="_top" title="번호변경" class="highlight">‘여기’</a> 를 확인해 주세요.</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="tr_tit vtAlign">주소</th>
+										<td>
+											<div class="address_info_box">
+												<div class="address_form">
+													<div class="form_line1">
+														<input type="text" class="inp_text" title="주소" value="01763">
+														<button type="button" class="address_btn" onclick="">우편번호 찾기</button>
+													</div>
+													<div class="form_line2">
+														<input type="text" class="inp_text" title="주소" value="서울시 금천구 가산동 203-17">
+													</div>
+													<div class="form_line3">
+														<input type="text" class="inp_text" title="상세주소 입력" value="" placeholder="상세주소 입력">
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="btn_typeA">
+							<button type="button" class="btn_w100 ptBtn" onclick="">변경하기</button>
+						</div>
+					</div>
+				</div>
+			</section>         
+			<!-- 기본정보 수정 : E -->
+
+			
+			<!-- 부가정보 수정 : S -->
+			<section class="section section02">
+				<div class="w1200">
+					<h3 class="my_sub_tit">부가정보 수정</h3>
+					<div class="inner_wrap">
+						<div class="top_text_box">
+							<p class="text01">SNS계정 연동관리</p>
+							<p class="text02">
+								뷰티포인트 사이트에서 SNS 계정으로 로그인할 경우에도<br> 자동으로 통합회원으로 로그인 됩니다. 
+							</p>
+						</div>
+						<div class="sns_wrap">
+							<div class="each_sns naver_box">
+								<div class="ico_box"><img src="/kr/ko/static_cdj/images/mypage/sns_naver.png" alt="naver"></div>
+								<div class="txt_box">
+									<p class="txt">연결된 정보가 없습니다.</p>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="sns_btn" name="btnSnsInfo" value="NA" onclick="fncUserSnsConnect('NA')">연결하기</button>
+								</div>
+							</div>
+							<div class="each_sns fb_box">
+								<div class="ico_box"><img src="/kr/ko/static_cdj/images/mypage/sns_facebook.png" alt="facebook"></div>
+								<div class="txt_box">
+									<p class="txt">연결된 정보가 없습니다.</p>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="sns_btn" name="btnSnsInfo" value="FB" onclick="fncUserSnsConnect('FB')">연결하기</button>
+								</div>
+							</div>
+							<div class="each_sns kakao_box">
+								<div class="ico_box"><img src="/kr/ko/static_cdj/images/mypage/sns_kakao.png" alt="kakao"></div>
+								<div class="txt_box">
+									<!-- 연결된 경우 on 클래스 추가 -->
+									<p class="txt on">2022.03.22에 연결되었습니다. </p>
+								</div>
+								<div class="btn_box">
+									<!-- 연결된 경우 on 클래스 추가 -->
+									<button type="button" class="sns_btn on" name="btnSnsInfo" value="${list.snsType}" onclick="fncUserSnsDisConnect('${list.snsType}')">연동해제</button> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 부가정보 수정 : E -->
+
+			<!-- 약관동의 : S -->
+			<section class="section section03 w1200">
+				<div class="inner_wrap">
+					<div class="terms_agree inp_check">
+						<div class="each_box">
+							<input type="checkbox" name="termsAgree" id="tcatCd030" value="" class="">
+							<label for="tcatCd030" class="">
+								[선택] 개인정보 수집/이용 동의
+							</label>
+							<button type="button" class="terms_more_btn more_btn01"></button>
+						</div>
+					</div>
+					<div class="terms_agree inp_check">
+						<div class="each_box">
+							<input type="checkbox" name="termsAgree" id="privateAgreeYn" class="">
+							<label for="privateAgreeYn" class="">
+								[선택] 개인정보 제공 및 국외이전 동의
+							</label>
+						</div>
+						<ul class="inner_check_box">
+							<li>
+								<div class="chk_box disabled"></div> <!-- 체크 시 check 클래스 추가 -->
+								<span>[선택] 개인정보 제공 동의</span>
+								<button type="button" class="terms_more_btn more_btn02"></button>
+							</li>
+							<li>
+								<div class="chk_box disabled"></div> <!-- 체크 시 check 클래스 추가 -->
+								<span>[선택] 개인정보 국외이전 동의 </span>
+								<button type="button" class="terms_more_btn more_btn03"></button>
+							</li>
+						</ul>
+					</div>
+					<div class="terms_agree inp_check">
+						<div class="each_box">
+							<input type="checkbox" name="termsAgree" id="ad_agree_yn" class="">
+							<label for="ad_agree_yn" class="">
+								[선택] 광고성 정보 수신 동의
+							</label>
+						</div>						
+						<ul class="inner_check_box">
+							<li>
+								<input type="checkbox" name="termsAgree" id="smsOptiYn" value="" class="input_all">
+								<label for="smsOptiYn" class="">
+									<div class=""></div>
+									[선택] 오설록몰 SMS 수신 동의
+								</label>
+							</li>
+							<li>
+								<input type="checkbox" name="termsAgree" id="emlOptiYn" value="" class="input_all">
+								<label for="emlOptiYn" class="">
+									<div class=""></div>
+									[선택] 오설록몰 이메일 수신 동의
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- 약관동의 : E -->
+
+			<div class="btn_typeA w1200 submit_wrap">
+				<div class="inner_wrap">					
+					<button type="button" class="btn_w100 ptBtn" onclick="" name="btnUserOptiYn">수정 완료</button>
+					<button type="button" class="ohmni-ghost withdrawal">회원탈퇴</button>
+				</div>
+			</div>
+
+			<!-- 이용약관 동의 팝업: S -->
+			<section class="layer_popup_wrap cdj_renew type02 mypage_policy_pop">
+				<!-- 개인정보 수집/이용 동의 : S -->
+				<div class="layer_box_new">
+					<div class="top_box">
+						<h3 class="layer_tit">
+							개인정보 수집/이용 동의
+						</h3>
+						<button class="btn_close"></button>
+					</div>
+					<div class="con_box_wrap">					
+						<div class="con_box">
+							<p class="tit">개인정보 수집/이용 동의</p>
+							<div class="con_inner">
+								<div class="ohmni-termsbox2">
+									<ul class="indent">
+										<li>- 수집되는 개인정보의 항목 : 전화번호</li>
+										<li>- 수집 및 이용목적 : 본인 동의 시 회사 또는 제휴사의 서비스 / 사업 및 정책 / 기타 이벤트에 관한 정보 제공 및 그에 따른 경품 등 물품 배송</li>
+										<li>- 보유 및 이용기간 : 동의철회 시 혹은 회원탈퇴 시까지</li>
+									</ul>
+									<p class="ptxt">고객님께서는 개인정보 국외이전 동의에 거부할 수 있습니다. <br>다만, 거부하는 경우 할인, 마케팅, 프로모션 등의 정보를 받아볼 수 없습니다.</p>
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+				<!-- 개인정보 수집/이용 동의 : E -->
+				<!-- 개인정보 제공 동의 : S -->
+				<div class="layer_box_new">
+					<div class="top_box">
+						<h3 class="layer_tit">
+							개인정보 제공 동의
+						</h3>
+						<button class="btn_close"></button>
+					</div>
+					<div class="con_box_wrap">					
+						<div class="con_box">
+							<p class="tit">개인정보 제공 동의</p>
+							<div class="con_inner">
+								<div class="ohmni-termsbox2" style="height: auto;">
+									<ul class="indent">
+										<li class="Strong">- 개인정보를 제공받는 자 : Meta Platforms, Inc. / Google Inc.</li>
+										<li>- 제공받는 개인정보의 항목 : 이메일, 휴대전화번호</li>
+										<li class="Strong">- 제공하는 목적 : 오디언스 마케팅 수행</li>
+										<li class="Strong">- 보유 및 이용기간 : 마케팅 수행 후 14일(Meta) / 마케팅 수행 후 48시간(Google)</li>
+									</ul>
+									<p class="ptxt">고객님께서는 개인정보 제공동의에 거부할 수 있습니다. <br>거부하여도 회원가입에 불이익은 없습니다.</p>
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+				<!-- 개인정보 제공 동의 : E -->
+				<!-- 개인정보 국외이전 동의 : S -->
+				<div class="layer_box_new">
+					<div class="top_box">
+						<h3 class="layer_tit">
+							개인정보 국외이전 동의
+						</h3>
+						<button class="btn_close"></button>
+					</div>
+					<div class="con_box_wrap">					
+						<div class="con_box">
+							<p class="tit">개인정보 국외이전 동의</p>
+							<div class="con_inner">
+								<div class="ohmni-termsbox">
+									<ul class="indent">
+										<li class="Strong">- 이전 받는 자 : Meta Platforms, Inc.<span class="indentPadding">1601 Willow Road<br>Menlo Park, CA94025<br><a href="mailto:korealocalagent@support.faceboock.com" style="word-break: break-all;">korealocalagent@support.faceboock.com</a></span></li>
+										<li>- 이전되는 국가 : 미국</li>
+										<li>- 이전 항목 : 이메일, 휴대전화번호</li>
+										<li>- 이전 방법 : Facebook 마케팅툴을 통해 이메일, 휴대폰 번호를 Hash 처리한 후 이전 처리 예정</li>
+										<li class="Strong">- 이전 목적 : 페이스북 제휴 오디언스 마케팅</li>
+										<li class="Strong">- 이전시점 및 보유기간<span style="display: block; padding-left: 12px;">· 이전 시점 : 페이스북 캠페인 대상 선정 시<br>· 보유 기간 : 14일</span></li>
+									</ul>
+									<ul class="indent" style="padding-top: 10px;">
+										<li class="Strong">- 이전 받는 자 : Google Inc.<span class="indentPadding">1600 Amphitheatre Parkway Mountain View, CA 94043<br><a href="https://support.google.com/google-ads" style="word-break: break-all;">https://support.google.com/google-ads</a></span></li>
+										<li>- 이전되는 국가  : 미국</li>
+										<li>- 이전 항목 : 이메일, 휴대전화번호</li>
+										<li>- 이전 방법 : Google 마케팅 툴을 통해 Hash 처리한 후 이전</li>
+										<li class="Strong">- 이전 목적  : 구글 제휴 오디언스 마케팅</li>
+										<li class="Strong">- 이전시점 및 보유기간<span style="display: block; padding-left: 12px;">· 이전 시점 : 구글 캠페인 대상 선정 시<br>· 보유 기간 : 48시간</span></li>
+									</ul>
+									<p class="ptxt" style="color: #333;">고객님께서는 개인정보 국외이전 동의에 거부할 수 있습니다. <br>거부하여도 회원가입 시 불이익은 없습니다.</p>
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+				<!-- 개인정보 국외이전 동의 : E -->
+			</section>				
+			<!-- 이용약관 동의 팝업: E -->
+
+			<!-- 비밀번호 변경 팝업 : S -->
+			<section class="layer_popup_wrap cdj_renew type03 mypage_pwd">
+				<div class="layer_box_new">
+					<div class="top_box">
+						<h3 class="layer_tit">
+							비밀번호 변경
+						</h3>
+						<button class="btn_close"></button>
+					</div>
+					<div class="con_box_wrap">
+						<div class="con_box">
+							<div class="input_wrap">
+								<label for="oldUserPw" class="label_hidden">기존 비밀번호</label>
+								<input class="inp_text" name="oldUserPw" type="password" id="oldUserPw" placeholder="기존 비밀번호" onkeyup="enterKey('btnPwCertify')" maxlength="16"> 
+							</div>
+							<div class="input_wrap">
+								<label for="newUserPw" class="label_hidden">신규 비밀번호</label>
+								<input class="inp_text" name="newUserPw" type="password" id="newUserPw" placeholder="신규 비밀번호" onkeyup="enterKey('btnPwCertify')" maxlength="16">
+							</div>
+							<div class="input_wrap">
+								<label for="certifyUserPw" class="label_hidden">신규 비밀번호 확인</label>
+								<input class="inp_text" name="certifyUserPw" type="password" id="certifyUserPw" placeholder="신규 비밀번호 확인" onkeyup="enterKey('btnPwCertify')" maxlength="16">
+							</div>
+	
+							<p class="noti_text">
+								* 영문 대문자, 소문자, 숫자, 특수문자 중 최소 2가지 이상의<br>문자 조합 8-16자로 입력해 주세요.
+							</p>
+	
+							<div class="btn_typeA mt_30 fixed_wrap">
+								<button type="button" class="btn_w100 ptBtn fixed_btn" onclick="">수정완료</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>			
+			<!-- 비밀번호 변경 팝업 : E -->
+
+			<section class="layer_popup_wrap cdj_renew type02 with_drawal">
+				<div class="layer_box_new">
+					<div class="top_box">
+						<h3 class="layer_tit">
+							회원탈퇴
+						</h3>
+						<button class="btn_close"></button>
+					</div>
+					<div class="con_box_wrap">
+						<div class="con_box">
+							<div class="top_text_wrap">
+								<p class="text01">
+									오설록 사이트를 이용하시며<br>불편한 사항이 있으셨나요?
+								</p>
+								<p class="text02">
+									떠나시는 사유를 남겨주시면 보다 나은 오설록이<br>될 수 있도록 개선하겠습니다.
+								</p>
+							</div>
+							<div class="point_state_wrap">
+								<p class="title">내 포인트 현황</p>
+								<div class="point_box">
+									<div class="each_box beauty_box">
+										<p class="text01">잔여 뷰티포인트</p>
+										<p class="text02"><span class="num">35,000</span>P</p>
+									</div>
+									<div class="each_box tea_box">
+										<p class="text01">잔여 찻잎포인트</p>
+										<p class="text02"><span class="num">35,000</span>P</p>
+									</div>
+								</div>
+								<div class="noti_text_wrap">
+									<ul class="noti_list">
+										<li><span>잔여 포인트는 탈퇴 후 사용이 불가능 합니다.</span></li>
+										<li><span>회원탈퇴 후 모든 개인정보는 삭제 됩니다.</span></li>
+										<li><span>회원탈퇴 후 30일간 재가입이 불가합니다.</span></li>
+										<li><span>탈퇴 전, 현재 배송중인 상품 또는 포인트 교환신청 내역이 없는지 다시 한번 확인 부탁드립니다. 탈퇴 후에는 정보 복구가 불가합니다.</span></li>
+									</ul>
+								</div>
+							</div>							
+							<div class="reason_wrap">
+								<p class="title">탈퇴 사유를 선택해 주세요.</p>
+								<ul class="reason_radio_list">
+									<li>
+										<div class="inp_radio">
+											<input type="radio" id="reason4" name="reason" class="" value="004">
+											<label for="reason4">
+												<span id="reason4_txt">개인정보 유출이 우려돼서</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="inp_radio">
+											<input type="radio" id="reason1" name="reason" class="" value="001">
+											<label for="reason1">
+												<span id="reason1_txt">온라인 구매를 하지 않아서</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="inp_radio">
+											<input type="radio" id="reason2" name="reason" class="" value="002">
+											<label for="reason2">
+												<span id="reason2_txt">사이트 이용이 불편해서</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="inp_radio">
+											<input type="radio" id="reason3" name="reason" class=""" value="003">
+											<label for="reason3">
+												<span id="reason3_txt">정보가 별로 없어서</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="inp_radio">
+											<input type="radio" id="reason5" name="reason" class="" value="005">
+											<label for="reason5">
+												<span id="reason5_txt">광고 메일 및 문자가 귀찮아서</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="inp_radio">
+											<input type="radio" id="reason7" name="reason" class="" value="">
+											<label for="reason7">기타</label>
+											<div class="reson_txt_box">
+												<textarea rows="2" name="reason_txt" id="reason7" placeholder="기타 불편사항을 입력해 주세요" class="reson_txt"></textarea>
+												<div class="txtlength"><span>0</span>/30</div>
+											</div>											
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="confirm_wrap">
+								<div class="inp_check">
+									<input type="checkbox" id="last_confirm" name="" class="" value="">
+									<label for="last_confirm">
+										위 유의사항을 모두 확인하였으며, 오설록몰 회원 탈퇴에 동의합니다. 
+									</label>
+								</div>
+								<div class="pwd_check_box">
+									<p class="text">비밀번호 확인</p>
+									<input type="password" class="inp_text"  name="exitPwCheck" id="exitPwCheck" placeholder="비밀번호">
+								</div>
+							</div>
+	
+							<div class="btn_typeB mt_30">
+								<button type="button" class="btn_w50" onclick="" name="btnExitPwCheck">회원탈퇴</button>
+								<button type="submit" class="btn_w50 ptBtn" onclick="">취소</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<script type="text/javascript">
+				$(document).ready(function(){
+
+					// 레이어 팝업 open 관련 //
+
+					$pwdChangeBtn =$(".my_info_mdfy .pw_change"); //비밀번호 변경하기 버튼
+					$withDrawalBtn =$(".my_info_mdfy button.withdrawal"); //회원 탈퇴 버튼
+
+					//default
+					$(".layer_popup_wrap").hide();
+		
+					// 약관 동의 팝업 open
+					$(".terms_more_btn").each(function(i){
+						$(this).click(function(){
+							$(".mypage_policy_pop").show();
+							$(".mypage_policy_pop").children(".layer_box_new").hide();
+							$(".mypage_policy_pop").children(".layer_box_new").eq(i).show();
+						});
+					});
+					
+					// 비밀번호 변경 팝업 open					
+					$pwdChangeBtn.click(function(){
+						$(".layer_popup_wrap.mypage_pwd").show();
+						bodyScrollLock();
+					});	
+
+					
+					// 회원 탈퇴 팝업 open					
+					$withDrawalBtn.click(function(){						
+						$(".layer_popup_wrap.with_drawal").show();
+						bodyScrollLock();	
+						return false;					
+					});		
+
+					//레이어 팝업 오픈 시 body scroll 방지
+					function bodyScrollLock(){
+						var $cdjLayer = $(".layer_popup_wrap");
+
+						if($cdjLayer.is(":visible")){
+						$("body").addClass("modal_open");
+						} else {
+						$("body").removeClass("modal_open");
+						}
+					}
+		
+				});
+			</script>
+		</div>	
+		<!-- 컨텐츠 : E -->		
+
+	</main>
+	<!-- CDJ 개선 마이페이지 - 회원정보 수정 : E -->
+	
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

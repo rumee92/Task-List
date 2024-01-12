@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<?php require("../include/head.html"); ?>
+</head>
+<body>
+
+<div class="container">
+	<?php require("../include/fix_nav.html"); ?>
+	<?php require("../include/user_info.html"); ?>
+	
+	<!-- location : str -->
+	<div class="location">
+		<span class="page_node">
+			<em>고객센터</em><em class="current">1:1 이메일 문의</em>
+		</span>
+	</div>
+	<!-- location : end -->
+	
+	<div class="content_wrap">
+		<!-- sort_wrap : str -->
+		<div class="sort_wrap clear space50">
+			<form action="">
+				<div class="left_box">
+					<div class="selectbox">
+						<select name="">
+							<option value="">문의 전체</option>
+							<option value="">제품</option>
+							<option value="">매장이용관련</option>
+							<option value="">구입관련</option>
+							<option value="">홈페이지관련</option>
+							<option value="">기타</option>
+						</select>
+					</div>
+					<div class="selectbox">
+						<select name="">
+							<option value="">상태 전체</option>
+							<option value="">답변대기</option>
+							<option value="">답변완료</option>
+						</select>
+					</div>
+				</div>
+				<div class="right_box">
+					<div class="calendar">
+					<span class="date_str input_txt">
+						<input id="datepicker_str" type="text"><img class="ico_calendar" src="../../resources/admin/images/ico_calendar.png" alt="검색 시작일">
+					</span>
+						<em>~</em>
+						<span class="date_end input_txt">
+						<input id="datepicker_end" type="text"><img class="ico_calendar" src="../../resources/admin/images/ico_calendar.png" alt="검색 마지막일">
+					</span>
+					</div>
+					<div class="selectbox search_sb">
+						<select name="">
+							<option value="">전체</option>
+							<option value="">제목</option>
+							<option value="">이름</option>
+							<option value="">연락처</option>
+							<option value="">이메일</option>
+							<option value="">학교</option>
+						</select>
+					</div>
+					<div class="input_search">
+						<input type="text" placeholder="검색">
+						<a href="#" class="btn_submit" title="검색"></a>
+					</div>
+					<button type="button" class="btn btn_default btn_search">검색</button>
+				</div>
+			</form>
+		</div>
+		<!-- sort_wrap : end -->
+		
+		<!-- layout_type1 : str -->
+		<div class="layout_box layout_type1">
+			<div class="con_box space50">
+				<table class="table_type1">
+					<colgroup>
+						<col style="width:5%;">
+						<col style="width:*;">
+						<col style="width:8%;">
+						<col style="width:7%;">
+						<col style="width:10%;">
+						<col style="width:10%;">
+						<col style="width:10%;">
+						<col style="width:5%;">
+						<col style="width:7%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>NO</th>
+							<th>제목</th>
+							<th>분류</th>
+							<th>이름</th>
+							<th>연락처</th>
+							<th>구입대리점</th>
+							<th>학교</th>
+							<th>상태</th>
+							<th>등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>300</td>
+							<td>OO유치원 리틀스마트 원복 단체 구매 및 협찬 문의 드립니다.</td>
+							<td>홈페이지관련</td>
+							<td>홍길동</td>
+							<td>010-0000-0000</td>
+							<td>리틀스마트</td>
+							<td>서울초등학교</td>
+							<td class="wait">답변대기</td>
+							<td>2020.08.05</td>
+						</tr>
+						<tr>
+							<td>299</td>
+							<td>OO유치원 리틀스마트 원복 단체 구매 및 협찬 문의 드립니다.</td>
+							<td>기타</td>
+							<td>홍길동</td>
+							<td>010-0000-0000</td>
+							<td>리틀스마트</td>
+							<td>서울초등학교</td>
+							<td>답변완료</td>
+							<td>2020.08.05</td>
+						</tr>
+						<tr>
+							<td>298</td>
+							<td>OO유치원 리틀스마트 원복 단체 구매 및 협찬 문의 드립니다.</td>
+							<td>홈페이지관련</td>
+							<td>홍길동</td>
+							<td>010-0000-0000</td>
+							<td>리틀스마트</td>
+							<td>서울초등학교</td>
+							<td class="wait">답변대기</td>
+							<td>2020.08.05</td>
+						</tr>
+						<tr>
+							<td>297</td>
+							<td>OO유치원 리틀스마트 원복 단체 구매 및 협찬 문의 드립니다.</td>
+							<td>기타</td>
+							<td>홍길동</td>
+							<td>010-0000-0000</td>
+							<td>리틀스마트</td>
+							<td>서울초등학교</td>
+							<td>답변완료</td>
+							<td>2020.08.05</td>
+						</tr>
+						<tr>
+							<td>296</td>
+							<td>OO유치원 리틀스마트 원복 단체 구매 및 협찬 문의 드립니다.</td>
+							<td>홈페이지관련</td>
+							<td>홍길동</td>
+							<td>010-0000-0000</td>
+							<td>리틀스마트</td>
+							<td>서울초등학교</td>
+							<td class="wait">답변대기</td>
+							<td>2020.08.05</td>
+						</tr>
+						<tr>
+							<td>295</td>
+							<td>OO유치원 리틀스마트 원복 단체 구매 및 협찬 문의 드립니다.</td>
+							<td>기타</td>
+							<td>홍길동</td>
+							<td>010-0000-0000</td>
+							<td>리틀스마트</td>
+							<td>서울초등학교</td>
+							<td>답변완료</td>
+							<td>2020.08.05</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- layout_type1 : end -->
+		
+		<!-- pagination -->
+		<div class="pagination">
+			<button type="button" class="btn_page btn_page_str"><img src="../../resources/admin/images/btn_str.png" alt="맨 처음페이지로 가기"></button>
+			<button type="button" class="btn_page btn_page_prev"><img src="../../resources/admin/images/btn_prev.png" alt="이전"></button>
+			<ol>
+				<li class="current"><a href="#none">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">4</a></li>
+				<li><a href="#none">5</a></li>
+			</ol>
+			<button type="button" class="btn_page btn_page_next"><img src="../../resources/admin/images/btn_next.png" alt="다음"></button>
+			<button type="button" class="btn_page btn_page_end"><img src="../../resources/admin/images/btn_end.png" alt="맨 뒷페이지로 가기"></button>
+		</div>
+		<!-- pagination : end -->
+	</div>
+</div>
+
+</body>
+</html>

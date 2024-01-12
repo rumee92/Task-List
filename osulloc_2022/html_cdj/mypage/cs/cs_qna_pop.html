@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+	<div style="height: 800px;"></div>
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+
+
+	<!-- 1:1문의 주문상품조회 팝업 : S -->
+	<section class="layer_popup_wrap cdj_renew type03">
+		<div class="layer_box_new my_qna_pop">
+			<div class="top_wrap">
+				<div class="top_box">
+					<h3 class="layer_tit">
+						주문 상품 조회
+					</h3>
+					<button class="btn_close"></button>
+				</div>
+			</div>
+			
+			<div class="con_box">
+				<!-- 기간 sort 영역 : S -->
+				<div class="my_term_sort">
+					<div class="w1200">
+						<div class="term_inner">
+							<div class="btn_box">
+								<button type="button" class="term_btn" onclick="">최근 1개월</button>
+								<button type="button" class="term_btn" onclick="">4월</button>
+								<button type="button" class="term_btn" onclick="">3월</button>
+								<button type="button" class="term_btn open" onclick="">기간조회</button>
+							</div>
+							<!-- 기간 선택 셀렉트 박스 - 1년치 노출 -->
+							<div class="sel_box">
+								<div class="inp_selectbox">
+									<select name="" id="" class="inp_select">
+										<option value="" selected="">기간 선택</option>
+										<option value="">2022년 02월</option>
+										<option value="">2022년 01월</option>
+										<option value="">2021년 12월</option>
+										<option value="">2021년 11월</option>
+										<option value="">2021년 10월</option>
+										<option value="">2021년 09월</option>
+										<option value="">2021년 08월</option>
+										<option value="">2021년 07월</option>
+										<option value="">2021년 06월</option>
+										<option value="">2021년 05월</option>
+										<option value="">2021년 04월</option>
+										<option value="">2021년 03월</option>
+										<option value="">2021년 02월</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 기간 sort 영역 : E -->
+				
+				<section class="section">
+					<div class="w1200">
+						<div class="qna_prd_wrap">
+							<div class="prd_box">
+								<div class="box_top">
+									<div class="inp_radio">
+										<input type="radio" id="qnaPrdlist01" name="qnaPrdlist">
+										<label for="qnaPrdlist01"></label>
+									</div>
+									<p class="order_num">주문번호 <span class="num">23423452</span></p>
+									<p class="date">2022.04.05</p>
+								</div>
+								<div class="box_con">
+									<ul class="prd_list">
+										<li class="item">
+											<div class="inp_check">
+												<input type="checkbox" id="qnaPrd01_1" name="qnaPrd01">
+												<label for="qnaPrd01_1"></label>
+											</div>
+											<div class="img_box">
+												<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+											</div>
+											<div class="text_box">
+												<div class="left">
+													<p class="prd_name">
+														<a href="#">베스트 티 컬렉션</a>
+													</p>
+													<p class="prd_packing">유료포장 선택안함</p>
+												</div>
+												<div class="right">
+													<p class="prd_price">
+														<span class="price">25,000원</span>/<span class="count">1개</span>
+													</p>
+												</div>
+											</div>
+										</li>
+										<li class="item">
+											<div class="inp_check">
+												<input type="checkbox" id="qnaPrd01_2" name="qnaPrd01">
+												<label for="qnaPrd01_2"></label>
+											</div>
+											<div class="img_box">
+												<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+											</div>
+											<div class="text_box">
+												<div class="left">
+													<p class="prd_name">
+														<a href="#">달빛걷기 10입(피라미드)</a>
+													</p>
+													<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+												</div>
+												<div class="right">
+													<p class="prd_price">
+														<span class="price">125,000원</span>/<span class="count">5개</span>
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="prd_box">
+								<div class="box_top">
+									<div class="inp_radio">
+										<input type="radio" id="qnaPrdlist02" name="qnaPrdlist">
+										<label for="qnaPrdlist02"></label>
+									</div>
+									<p class="order_num">주문번호 <span class="num">23423452</span></p>
+									<p class="date">2022.04.05</p>
+								</div>
+								<div class="box_con">
+									<ul class="prd_list">
+										<li class="item">
+											<div class="inp_check">
+												<input type="checkbox" id="qnaPrd02_1" name="qnaPrd02">
+												<label for="qnaPrd02_1"></label>
+											</div>
+											<div class="img_box">
+												<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+											</div>
+											<div class="text_box">
+												<div class="left">
+													<p class="prd_name">
+														<a href="#">베스트 티 컬렉션</a>
+													</p>
+													<p class="prd_packing">유료포장 선택안함</p>
+												</div>
+												<div class="right">
+													<p class="prd_price">
+														<span class="price">25,000원</span>/<span class="count">1개</span>
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="prd_box">
+								<div class="box_top">
+									<div class="inp_radio">
+										<input type="radio" id="qnaPrdlist03" name="qnaPrdlist">
+										<label for="qnaPrdlist03"></label>
+									</div>
+									<p class="order_num">주문번호 <span class="num">23423452</span></p>
+									<p class="date">2022.04.05</p>
+								</div>
+								<div class="box_con">
+									<ul class="prd_list">
+										<li class="item">
+											<div class="inp_check">
+												<input type="checkbox" id="qnaPrd03_1" name="qnaPrd03">
+												<label for="qnaPrd03_1"></label>
+											</div>
+											<div class="img_box">
+												<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+											</div>
+											<div class="text_box">
+												<div class="left">
+													<p class="prd_name">
+														<a href="#">베스트 티 컬렉션</a>
+													</p>
+													<p class="prd_packing">유료포장 선택안함</p>
+												</div>
+												<div class="right">
+													<p class="prd_price">
+														<span class="price">25,000원</span>/<span class="count">1개</span>
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<div class="qna_btn_box">
+					<button type="button" class="button" title="선택" onclick=""><span>선택</span></button>
+				</div>
+				
+				<!-- 모바일 하단 fixed 버튼 -->
+				<div class="bottom_fixed_btn02">
+					<button type="button" class="fixed_btn" title="선택" onclick=""><span>선택</span></button>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- 1:1문의 주문상품조회 팝업 : E -->
+
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

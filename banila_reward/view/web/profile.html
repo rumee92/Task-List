@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/main.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/header.html'; ?>
+	<!-- //header -->
+
+	<!-- container -->
+	<!-- 코치마크 : str -->
+	<!--
+		개발 시 마크업이 노출/비노출 처리 될 수 있도록 해주세요.
+	-->
+	<div class="profileCoachMarkWrap">
+		<div class="coachMark coachMark1">
+			<img src="/static/front/resources/web/images/socialSelling/profile_coach1.jpg" alt="1.프로필을 등록해 주세요.">
+			<div class="contents">
+				<button type="button" class="btnNext"><span class="hide">다음</span></button>
+			</div>
+		</div>
+		<div class="coachMark coachMark2">
+			<img src="/static/front/resources/web/images/socialSelling/profile_coach2.jpg" alt="2.COCO PICK 상품을 등록해 보세요.">
+			<div class="contents">
+				<button type="button" class="btnPrev"><span class="hide">이전</span></button>
+				<button type="button" class="btnNext"><span class="hide">다음</span></button>
+			</div>
+		</div>
+		<div class="coachMark coachMark3">
+			<img src="/static/front/resources/web/images/socialSelling/profile_coach3.jpg" alt="3.리뷰를 관리하고 공유해 보세요.">
+			<div class="contents">
+				<button type="button" class="btnPrev"><span class="hide">이전</span></button>
+				<button type="button" class="btnEnd"><span class="hide">확인</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- 코치마크 : end -->
+
+	<div id="container" class="pdt0 pdb0 cocoProfileWrap">
+		<div class="topBg">
+			<div class="topBgIn"></div>
+		</div>
+		<div class="tabBoxWrap">
+			<div class="tabBox">
+				<div class="tabIn">
+					<ul class="tab">
+						<li class="tabItem on"><a href="#cocoPickBox"><span>COCO PICK!</span></a></li>
+						<li class="tabItem"><a href="#cocoReviewBox"><span>COCO REVIEW</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="contents">
+			<!-- cocoProfile -->
+			<div class="cocoProfile">
+				<!-- 정보 영역 : str -->
+				<div class="infoBox">
+					<div class="boxIn">
+						<!-- box1 -->
+						<div class="box1">
+							<div class="infoWrap">
+								<div class="imgBox">
+									<div class="img">
+										<img src="/static/front/resources/web/images/socialSelling/cocoImg_default1.png" alt="">
+									</div>
+									<!-- manageBtn : 본인(o) / 타인(x) -->
+									<button type="button" class="manageBtn" onclick=""><span class="hide">프로필등록/관리</span></button>
+								</div>
+								<div class="nickNameBox">
+									<p>닉네임</p>
+									<p>프로필을 등록해 주세요.</p> <!-- 프로필 미등록시 노출 -->
+								</div>
+								<div class="linkBox">
+									<p class="address">www.banila.com/coco/<span class="userNickname">은은한다람쥐160</span></p>
+									<!-- linkCopyBtn : 본인(o) / 타인(x) -->
+									<button type="button" class="linkCopyBtn" onclick="">링크 복사</button>
+								</div>
+							</div>
+						</div>
+						<!-- // box1 -->
+
+						<!-- box2 -->
+						<div class="box2">
+							<div class="userIntroWrap">
+								<div class="introText">
+									자연스러움, 편안함, 평화로움. 섬세함. 다채로움. 레드가 다 똑같은 레드가 아니듯 조금은
+									자연스러움, 편안함, 평화로움. 섬세함. 다채로움. 레드가 다 똑같은 레드가 아니듯 조금은
+									자연스러움, 편안함, 평화로움. 섬세함. 다채로움. 레드가 다 똑같은 레드가 아니듯 조금은
+									자연스러움, 편안함, 평화로움. 섬세함. 다채로움. 레드가 다 똑같은 레드가 아니듯 조금은
+								</div>
+								<a href="javascript:void(0)" class="btnTextMore">더 보기</a>
+							</div>
+							<div class="skinProfile">
+								<!-- skinTagWrap : 피부프로필 있을때 -->
+								<div class="skinTagWrap">
+									<ul class="list">
+										<li class="item">밝음</li>
+										<li class="item">복합성</li>
+										<li class="item">노란톤</li>
+										<li class="item">민감/트러블</li>
+										<li class="item">각질/개선</li>
+									</ul>
+								</div>
+								<!-- noSkinProfile : 피부프로필 없을때 -->
+								<div class="noSkinProfile">
+									<p class="desc">피부 프로필 등록하고 1,000P 적립해 보세요!</p>
+									<button type="button" class="btn_txt btnSkin"><span>피부 프로필 등록하기</span></button>
+								</div>
+							</div>
+							<div class="snsIconWrap">
+								<div class="item">
+									<a href="#">
+										<div class="itemIn">
+											<div class="snsIcon"><img src="/static/front/resources/web/images/socialSelling/icon_pro_insta.png" alt=""></div>
+											<p class="snsText">Instagram</p>
+										</div>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#">
+										<div class="itemIn">
+											<div class="snsIcon"><img src="/static/front/resources/web/images/socialSelling/icon_pro_blog.png" alt=""></div>
+											<p class="snsText">Naver blog</p>
+										</div>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#">
+										<div class="itemIn">
+											<div class="snsIcon"><img src="/static/front/resources/web/images/socialSelling/icon_pro_youtube.png" alt=""></div>
+											<p class="snsText">Youtube</p>
+										</div>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#">
+										<div class="itemIn">
+											<div class="snsIcon"><img src="/static/front/resources/web/images/socialSelling/icon_pro_facebook.png" alt=""></div>
+											<p class="snsText">Facebook</p>
+										</div>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#">
+										<div class="itemIn url">
+											<div class="snsIcon"><img src="/static/front/resources/web/images/socialSelling/icon_pro_urlcopy.png" alt=""></div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- btnWrap : 본인 프로필일 때만 노출 / 등록된 COCO PCIK이 없는 경우 노출 안함 -->
+							<div class="btnWrap">
+								<button type="button" class="btnPrdSubmit" onclick=""><span>상품 등록</span></button>
+								<button type="button" class="btnEdit" onclick=""><span>편집</span></button>
+							</div>
+						</div>
+						<!-- // box2 -->
+					</div>
+				</div>
+				<!-- //정보 영역 : end -->
+
+				<!-- 컨텐츠 영역 : str -->
+				<div class="contentsBox">
+					<div class="conIn">
+
+						<!-- coco pick : str -->
+						<div class="cocoPickBox" id="cocoPickBox">
+							<!-- coco pick title -->
+							<div class="conTit">
+								<span>
+									COCO PICK!
+
+									<!-- 툴팁 - 본인 프로필일 경우만 노출 -->
+									<button type="button" class="btnTooltip"></button>
+								</span>
+
+								<!-- 툴팁 - 본인 프로필일 경우만 노출 -->
+								<div class="toolTipCon">
+									<button type="button" class="btnClose"><span class="hide">닫기</span></button>
+									<div class="item">
+										코코 PICK 상품은 나의 ♥(위시리스트)에서 선택하거나,<br>검색을 통해 <em class="fcPink">최대 10개</em>까지 등록 가능해요.
+									</div>
+									<div class="item">
+										코코 PICK 상품은 추가 리워드가 있으니 더 널리 널리 공유해 주세요.<br>
+										<span>(링크 공유를 통한 구매 발생 시 리워드 적립률 일반상품 5%,<br><em class="fcPink">코코 PICK 8%</em>)</span>
+									</div>
+									<div class="item">
+										리워드 수익 꿀팁을 알고 싶다면?<br>
+										<a href="#" class="fcPink notoB link">코코 활동 TIP 페이지 바로가기</a>
+									</div>
+								</div>
+							</div>
+							<!-- //coco pick title -->
+
+							<div class="conWrap">
+								<!-- 본인 프로필에 등록한 COCO PICK이 없는경우 -->
+								<div class="conBox1">
+									<div class="btnSubmit">
+										<button type="button" class="button" onclick=""><span class="hide">등록</span></button>
+									</div>
+									<p class="desc">
+										나의 추천상품을 PICK하고 친구들에게 공유해 보세요. COCO PICK 상품은 <em class="fcPink">추가 리워드</em>가 있어요! 최대 10개까지 등록해 보세요~
+									</p>
+								</div>
+								<!-- //본인 프로필에 등록한 COCO PICK이 없는경우 -->
+
+								<!-- 타인 프로필에 등록한 COCO PICK이 없는경우 -->
+								<div class="conBox2">
+									<div class="descBox">
+										<p class="desc">
+											<em class="fcPink">COCO님이 COCO PICK 추천상품을 엄선하고 있어요.</em><br>
+											다음에 다시 방문해 주세요.
+										</p>
+									</div>
+								</div>
+								<!-- //타인 프로필에 등록한 COCO PICK이 없는경우 -->
+
+								<!-- 등록한 COCO PICK이 있는경우 -->
+								<div class="conBox3">
+									<ul class="listWrap">
+										<!-- li 반복 -->
+										<li class="list">
+											<!-- 230412 추가 : 기등록된 코코픽이 판매중지 상품으로 변경된 경우 item에  sellStop 클래스 추가 -->
+											<div class="item sellStop">
+												<!-- left -->
+												<div class="left">
+													<div class="prdImgBox">
+														<a href="#" class="imgLink">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img1.jpg" alt="">
+														</a>
+														<button type="button" class="btnCocoShare1"><span class="hide">공유하기</span></button> <!-- btnCocoShare1 : 본인 프로필일때 노출 -->
+													</div>
+												</div>
+												<!-- // left -->
+
+												<!-- right -->
+												<div class="right">
+													<p class="prdName">
+														<a href="#">클린 잇 제로 클렌징밤 오리지널 대용량 듀오세트(이슬로2)</a>
+													</p>
+													<div class="cocoRecoBox">
+														<div class="reco reco1">
+															<div class="tit">COCO가 강력 추천해요!</div>
+															<div class="recoCon">
+																<div class="reviewListBox">
+																	<p class="reviewCtt">
+																		“쓸수록 좋은, 이 제품을 추천해요 ✨ 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요!바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 이번에 구매하게되었어요!”
+																	</p>
+																	<a href="javascript:void(0)" class="reviewMore coco">더 보기</a>
+																</div>
+																<!-- reviewBtn : 타인 프로필일때 노출 -->
+																<div class="reviewBtn">
+																	<div class="cocoBlockBtn">
+																		<button type="button" onclick="">신고/차단</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="reco reco2 mgt10">
+															<div class="tit">COCO가 직접 사용했어요!</div>
+															<div class="recoCon">
+																<div class="reviewListBox">
+																	<ul>
+																		<li>
+																			<div class="reviewInfo">
+																				<div class="js_rating ratingS"><span>3.5</span></div>
+																				<p class="reviewDate">2022.11.04</p>
+																			</div>
+																			<p class="reviewTtl"><span class="BestIco typeCoCo">BEST</span>바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시</p>
+																			<div class="reviewBox">
+																				<div class="reviewImg">
+																					<ul>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+																					</ul>
+																				</div>
+																				<p class="reviewCtt">
+																					바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 이번에 구매하게되었어요!
+																				</p>
+																				<a href="javascript:void(0)" class="reviewMore coco">더 보기</a>
+																				<div class="userPointBox">
+																					<div class="userPoint">
+																						<span>아주 촉촉해요</span><span>보정이 잘되요</span><span>영양감이 있어요</span>
+																					</div>
+																				</div>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- reviewBtn : 타인 프로필일때 노출 -->
+																<div class="reviewBtn">
+																	<div class="cocoBlockBtn">
+																		<button type="button" onclick="">신고/차단</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="priceBox">
+														<div class="priceInfo">
+															<!-- 링크레퍼가 있는경우 -->
+															<div class="box box1">
+																<div class="boxItem1">
+																	<span class="price1">25,000원</span>
+																	<span class="price2">12,000원</span>
+																</div>
+																<div class="boxItem2">
+																	<span class="desc">COCO 추가 혜택가</span>
+																	<span class="price">25,000원</span>
+																</div>
+															</div>
+															<!-- // 링크레퍼가 있는경우 -->
+
+															<!-- 링크 레퍼가 없는 경우 [상품이 할인가인 경우] -->
+															<div class="box box2">
+																<div class="boxItem1">
+																	<span class="price1">25,000원</span>
+																</div>
+																<div class="boxItem2">
+																	<span class="desc">할인가</span>
+																	<span class="price">17,000원</span>
+																	<div class="btnTooltip">
+																		<button type="button" class="button"><span class="hide">도움말</span></button>
+																		<div class="toolTipCon">
+																			<button type="button" class="btnClose"><span class="hide">닫기</span></button>
+																			<p class="desc">COCO님이 다양한 SNS 채널에 공유한 <em class="fcPink">COCO 전용 링크</em>를 통해<br>바닐라닷컴에 들어오시면, 추가 할인을 받아 구매할 수 있어요!</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- // 링크 레퍼가 없는 경우 [상품이 할인가인 경우] -->
+
+															<!-- 링크 레퍼가 없는 경우 [상품이 판매가인 경우] -->
+															<div class="box box3">
+																<div class="boxItem2">
+																	<span class="desc">판매가</span>
+																	<span class="price">35,000원</span>
+																	<div class="btnTooltip">
+																		<button type="button" class="button"><span class="hide">도움말</span></button>
+																		<div class="toolTipCon">
+																			<button type="button" class="btnClose"><span class="hide">닫기</span></button>
+																			<p class="desc">COCO님이 다양한 SNS 채널에 공유한 <em class="fcPink">COCO 전용 링크</em>를 통해<br>바닐라닷컴에 들어오시면, 추가 할인을 받아 구매할 수 있어요!</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- // 링크 레퍼가 없는 경우 [상품이 판매가인 경우] -->
+														</div>
+														<div class="btnCart">
+															<!-- 230412 추가 : 기등록된 코코픽이 판매중지 상품으로 변경된 경우 button에  disabled 속성 추가 -->
+															<button type="button" class="button btn btnSizeL btnColorB btnTypeB" onclick="" disabled><span class="icon"></span><span>장바구니에 담기</span></button>
+														</div>
+													</div>
+
+												</div>
+												<!-- //right -->
+											</div>
+										</li>
+										<!-- //li 반복 -->
+
+										<!-- li 반복 -->
+										<li class="list">
+											<div class="item">
+												<!-- left -->
+												<div class="left">
+													<div class="prdImgBox">
+														<a href="#" class="imgLink">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img3.png" alt="">
+															<button type="button" class="btnCocoShare1"><span class="hide">공유하기</span></button> <!-- btnCocoShare1 : 본인 프로필일때 노출 -->
+														</a>
+													</div>
+												</div>
+												<!-- // left -->
+
+												<!-- right -->
+												<div class="right">
+													<p class="prdName">
+														<a href="#">클린 잇 제로 클렌징밤 오리지널 대용량 듀오세트(이슬로2)</a>
+													</p>
+													<div class="cocoRecoBox">
+														<div class="reco reco1">
+															<div class="tit">COCO가 강력 추천해요!</div>
+															<div class="recoCon">
+																<div class="reviewListBox">
+																	<p class="reviewCtt">
+																		“쓸수록 좋은, 이 제품을 추천해요 ✨ 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요!바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 되었어요! 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 이번에 구매하게되었어요!”
+																	</p>
+																	<a href="javascript:void(0)" class="reviewMore coco">더 보기</a>
+																</div>
+																<!-- reviewBtn : 타인 프로필일때 노출 -->
+																<div class="reviewBtn">
+																	<div class="cocoBlockBtn">
+																		<button type="button" onclick="">신고/차단</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="reco reco2 mgt10">
+															<div class="tit">COCO가 직접 사용했어요!</div>
+															<div class="recoCon">
+																<div class="reviewListBox">
+																	<ul>
+																		<li>
+																			<div class="reviewInfo">
+																				<div class="js_rating ratingS"><span>3.5</span></div>
+																				<p class="reviewDate">2022.11.04</p>
+																			</div>
+																			<p class="reviewTtl"><span class="BestIco typeCoCo">BEST</span>바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시</p>
+																			<div class="reviewBox">
+																				<div class="reviewImg">
+																					<ul>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+																						<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+																					</ul>
+																				</div>
+																				<p class="reviewCtt">
+																					바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 이번에 구매하게되었어요!
+																				</p>
+																				<a href="javascript:void(0)" class="reviewMore coco">더 보기</a>
+																				<div class="userPointBox">
+																					<div class="userPoint">
+																						<span>아주 촉촉해요</span><span>보정이 잘되요</span><span>영양감이 있어요</span>
+																					</div>
+																				</div>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- reviewBtn : 타인 프로필일때 노출 -->
+																<div class="reviewBtn">
+																	<div class="cocoBlockBtn">
+																		<button type="button" onclick="">신고/차단</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="priceBox">
+														<div class="priceInfo">
+															<!-- 링크레퍼가 있는경우 -->
+															<div class="box box1">
+																<div class="boxItem1">
+																	<span class="price1">25,000원</span>
+																	<span class="price2">12,000원</span>
+																</div>
+																<div class="boxItem2">
+																	<span class="desc">COCO 추가 혜택가</span>
+																	<span class="price">25,000원</span>
+																</div>
+															</div>
+															<!-- // 링크레퍼가 있는경우 -->
+
+															<!-- 링크 레퍼가 없는 경우 [상품이 할인가인 경우] -->
+															<div class="box box2">
+																<div class="boxItem1">
+																	<span class="price1">25,000원</span>
+																</div>
+																<div class="boxItem2">
+																	<span class="desc">할인가</span>
+																	<span class="price">17,000원</span>
+																</div>
+															</div>
+															<!-- // 링크 레퍼가 없는 경우 [상품이 할인가인 경우] -->
+
+															<!-- 링크 레퍼가 없는 경우 [상품이 판매가인 경우] -->
+															<div class="box box3">
+																<div class="boxItem2">
+																	<span class="desc">판매가</span>
+																	<span class="price">35,000원</span>
+																</div>
+															</div>
+															<!-- // 링크 레퍼가 없는 경우 [상품이 판매가인 경우] -->
+														</div>
+														<div class="btnCart">
+															<button type="button" class="button btn btnSizeL btnColorB btnTypeB" onclick=""><span class="icon"></span><span>장바구니에 담기</span></button>
+														</div>
+													</div>
+
+												</div>
+												<!-- //right -->
+											</div>
+										</li>
+										<!-- //li 반복 -->
+									</ul>
+								</div>
+								<!-- //등록한 COCO PICK이 있는경우 -->
+							</div>
+						</div>
+						<!-- coco pick : end -->
+
+
+						<!-- coco review : str -->
+						<div class="cocoReviewBox" id="cocoReviewBox">
+							<!-- coco review title -->
+							<div class="conTit">
+								<span>COCO REVIEW</span>
+								<!-- reviewCount : 본인 프로필 일때, 작성한 리뷰가 없는 경우 노출 -->
+								<div class="reviewCount">작성 가능한 리뷰 <span class="num">(0)</span></div>
+							</div>
+							<!-- //coco review title -->
+
+							<div class="conWrap">
+								<!-- 본인 프로필에 작성가능한 리뷰가 없는 경우 -->
+								<div class="conBox1">
+									<div class="desc">
+										<p>리뷰를 작성하고 <em class="fcPink">포인트</em>를 적립하세요.</p>
+									</div>
+									<ul class="dotInfo">
+										<li>텍스트 리뷰 <em class="fcPink">200P</em>, 포토 리뷰 <em class="fcPink">500P</em>가 적립됩니다.</li>
+										<li>베스트 리뷰 선정 시 최대 <em class="fcPink">5,000P</em>가 적립됩니다.</li>
+										<li>구매확정 후 <em class="fcPink">60일</em>이 경과하면 리뷰를 작성할 수 없습니다.</li>
+									</ul>
+								</div>
+								<!-- //본인 프로필에 작성가능한 리뷰가 없는 경우 -->
+
+								<!-- 타인 프로필에 등록한 리뷰가 없는 경우 -->
+								<div class="conBox2">
+									<div class="descBox">
+										<p class="desc">
+											<em class="fcPink">COCO님이 정성스러운 리뷰를 준비 중이에요.</em><br>
+											다음에 다시 방문해 주세요.
+										</p>
+									</div>
+								</div>
+								<!-- //타인 프로필에 등록한 리뷰가 없는 경우 -->
+
+								<!-- 본인 프로필에 등록 가능한 리뷰가 있는 경우 -->
+								<div class="conBox3 reviewConBox">
+									<div class="reviewListBox coco">
+										<ul>
+											<!-- li 반복 -->
+											<li>
+												<div class="reviewInfo">
+													<div class="reviewPoint">
+														<div class="pItem">
+															<span class="tit">최대 적립</span>
+															<span class="value">500P</span>
+														</div>
+														<div class="pItem">
+															<span class="tit">작성기한</span>
+															<span class="value">D-55</span>
+														</div>
+													</div>
+													<div class="btnReviewWrite">
+														<button type="button" class="btn btnSizeM btnColorW btnTypeB" onclick=""><span>리뷰작성</span></button>
+													</div>
+												</div>
+												<div class="reviewBox">
+													<div class="pdtBox">
+														<a href="#" class="pdtImg">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img2.jpg" alt="">
+														</a>
+														<div class="pdtTxt">
+															<p class="pdtBrand">바닐라코</p>
+															<p class="pdtName"><a href="#">클린 잇 제로 클렌징밤 오리지널 대용량 듀오세트(이슬로2)</a></p>
+															<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<!-- // li 반복 -->
+
+											<!-- li 반복 -->
+											<li>
+												<div class="reviewInfo">
+													<div class="reviewPoint">
+														<div class="pItem">
+															<span class="tit">최대 적립</span>
+															<span class="value">500P</span>
+														</div>
+														<div class="pItem">
+															<span class="tit">작성기한</span>
+															<span class="value">D-55</span>
+														</div>
+													</div>
+													<div class="btnReviewWrite">
+														<button type="button" class="btn btnSizeM btnColorW btnTypeB" onclick=""><span>리뷰작성</span></button>
+													</div>
+												</div>
+												<div class="reviewBox">
+													<div class="pdtBox">
+														<a href="#" class="pdtImg">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img1.jpg" alt="">
+														</a>
+														<div class="pdtTxt">
+															<p class="pdtBrand">바닐라코</p>
+															<p class="pdtName"><a href="#">클린 잇 제로 클렌징밤 오리지널 대용량 듀오세트(이슬로2)</a></p>
+															<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<!-- // li 반복 -->
+										</ul>
+									</div>
+									<div class="btnMoreWrap mgt40 ta_c">
+										<a class="btnMore btnSpin"><span>더보기<br><em>1 <u>/</u> <i>3</i></em></span></a>
+									</div>
+								</div>
+								<!--// 본인 프로필에 등록 가능한 리뷰가 있는 경우 -->
+
+								<!-- 등록된 리뷰가 있을 경우 -->
+								<div class="conBox4 reviewConBox">
+									<div class="reviewListBox coco">
+										<ul>
+											<!-- li 반복 -->
+											<li>
+												<div class="reviewInfo">
+													<div class="js_rating ratingM"><span>4</span></div>
+												</div>
+												<div class="reviewBox">
+													<div class="pdtBox">
+														<a href="#" class="pdtImg">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img2.jpg" alt="">
+														</a>
+														<div class="pdtTxt">
+															<p class="pdtBrand">바닐라코</p>
+															<p class="pdtName"><a href="#">클린 잇 제로 클렌징밤 오리지널 대용량 듀오세트(이슬로2)</a></p>
+															<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+														</div>
+													</div>
+													<div class="reviewCon">
+														<div class="reviewImg">
+															<ul>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+															</ul>
+														</div>
+														<p class="reviewTtl">너무 좋아요</p>
+														<p class="reviewCtt">
+															바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 이번에 구매하게되었어요!
+														</p>
+														<a href="javascript:void(0)" class="reviewMore coco">더 보기</a>
+														<div class="flexBox">
+															<div class="userPointBox">
+																<div class="userPoint">
+																	<span>아주 촉촉해요</span><span>보정이 잘되요</span><span>영양감이 있어요</span>
+																</div>
+															</div>
+															<p class="reviewDate">2022.11.04</p>
+														</div>
+														<div class="reviewBtn">
+															<!-- cocoEditBtn : 본인 프로필 -->
+															<div class="cocoEditBtn">
+																<button type="button" onclick="">수정</button>
+																<button type="button" onclick="">삭제</button>
+															</div>
+															<!-- cocoBlockBtn : 타인 프로필 -->
+															<div class="cocoBlockBtn">
+																<button type="button" onclick="">신고/차단</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<!-- // li 반복 -->
+
+											<!-- li 반복 -->
+											<li>
+												<div class="reviewInfo">
+													<div class="js_rating ratingM"><span>5</span></div>
+												</div>
+												<div class="reviewBox">
+													<div class="pdtBox">
+														<a href="#" class="pdtImg">
+															<img src="/static/front/resources/web/images/socialSelling/prd_sample_img3.png" alt="">
+														</a>
+														<div class="pdtTxt">
+															<p class="pdtBrand">바닐라코</p>
+															<p class="pdtName"><a href="#">클린 잇 제로 클렌징밤 오리지널 대용량 듀오세트(이슬로2)</a></p>
+															<p class="pdtPrice"><span class="sale">10%</span>25,200<em>원</em><span class="cost">15,000원</span></p>
+														</div>
+													</div>
+													<div class="reviewCon">
+														<div class="reviewImg">
+															<ul>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg01.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg02.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg03.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg04.jpg" alt=""></a></li>
+																<li class="imgCutting"><a href="javascript:void(0)" class="imgBox"><img src="/static/front/resources/web/images/temp/photoReviewImg05.jpg" alt=""></a></li>
+															</ul>
+														</div>
+														<p class="reviewTtl">너무 좋아요</p>
+														<p class="reviewCtt">
+															바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민했었는데, 바코에서 광고하시는 거 보니까 결국 구매하게 바닐라코 크림은 전부터 워낙 유명했어서 살까 말까 고민하였는데 이번에 구매하게되었어요!
+														</p>
+														<a href="javascript:void(0)" class="reviewMore coco">더 보기</a>
+														<div class="flexBox">
+															<div class="userPointBox">
+																<div class="userPoint">
+																	<span>아주 촉촉해요</span><span>보정이 잘되요</span><span>영양감이 있어요</span>
+																</div>
+															</div>
+															<p class="reviewDate">2022.11.04</p>
+														</div>
+														<div class="reviewBtn">
+															<!-- cocoEditBtn : 본인 프로필 -->
+															<div class="cocoEditBtn">
+																<button type="button" onclick="">수정</button>
+																<button type="button" onclick="">삭제</button>
+															</div>
+															<!-- cocoBlockBtn : 타인 프로필 -->
+															<div class="cocoBlockBtn">
+																<button type="button" onclick="">신고/차단</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<!-- // li 반복 -->
+										</ul>
+									</div>
+									<div class="btnReviewTotalView mgt40">
+										<button type="button" class="btn btnSizeM btnColorW btnTypeB"><span>COCO review 전체 보기</span></button>
+									</div>
+								</div>
+								<!-- //등록된 리뷰가 있을 경우 -->
+
+							</div>
+						</div>
+						<!-- coco review : end -->
+					</div>
+				</div>
+				<!-- //컨텐츠 영역 : end -->
+			</div>
+			<!-- //cocoProfile -->
+		</div>
+
+		<!-- 리워드 하단 배너 모음 -->
+		<div class="profileBottomBanner">
+			<div class="rewardBannerWrap contents">
+				<div class="item">
+					<a href="#" class="itemLink">
+						<div>
+							<p class="tit notoB">리워드 FAQ</p>
+							<p class="desc fc88">
+								자주 질문하는 사항들을 모아두었어요.<br>
+								원하시는 질문과 답변을 찾아보세요.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#" class="itemLink">
+						<div>
+							<p class="tit notoB">리워드 프로그램 소개</p>
+							<p class="desc fc88">
+								바닐라닷컴 리워드 프로그램을<br>
+								알기 쉽게 소개해 드려요.<br>
+								링크 공유만으로 수익을 쌓을 수 있는<br>
+								방법을 알아보세요.
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#" class="itemLink">
+						<div>
+							<p class="tit notoB">리워드 프로그램 이용 정책</p>
+							<p class="desc fc88">
+								바닐라닷컴 리워드 프로그램의 모든 것을<br>
+								알려드려요.<br>
+								프로그램 내 자세한 이용정책을 알아보세요.
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- //리워드 하단 배너 모음 -->
+	</div>
+	<!-- //container -->
+
+
+
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

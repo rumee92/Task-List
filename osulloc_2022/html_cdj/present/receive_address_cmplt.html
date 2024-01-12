@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+<!-- header include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+<!-- CDJ 개선 선물받기 - 배송지 입력 완료 : S -->
+<main class="main cdj_renew receive_present_wrap type02">
+	<!-- 타이틀 : S -->
+	<section class="section page_tit_box">
+		<div class="container03 shop_inner">
+			<h2 class="page_tit pd_rnl">선물 배송 정보</h2>
+		</div>
+	</section>
+	<!-- 타이틀 : E -->
+	
+	<form action="">
+		<!-- 컨텐츠 : S -->
+		<section class="section">
+			<div class="container03 no_gutter shop_inner">
+				<div class="sub_layout_contents bgF6">
+					<div class="content bdbN">
+						<div class="receive_header">
+							<div class="text_box">
+								<h3 class="tit_txt">
+									박루리님으로 부터 <br>선물이 도착하였습니다. 
+								</h3>
+							</div>
+							<div class="gifts_msg_card">
+								<div class="card_img_box">
+									<div class="card_img">
+										<div class="gifts_msg_card_img">
+											<img src="/kr/ko/static_cdj/images/present/gifts_card01.png" alt="선물 메세지 카드 1">
+										</div>
+									</div>
+									<div class="card_msg">
+										루리야 생일 축하해~!<br>오늘 행복한 하루 보내!!!
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="content bdbN">
+						<!-- 선물상품 확인  : S -->
+						<div class="accordion_layout no_fold order_prd">
+							<div class="subject_box">
+								<div class="left"><p class="subject">선물상품 확인</p></div> 
+							</div>
+							<div class="con_box mo_full">
+								<div class="order_prd_list">
+									<div class="order_list_box">
+										<ul class="list_type_2">
+											<li class="list_item mo_full_item">
+												<div class="thumb_con">
+													<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/thumb_sample01.png" alt=""></div>
+													<div class="text_box">
+														<p class="prd_name">베스트 티 컬렉션 3종</p>
+														<div class="prd_price_amount">
+															<span class="amount">1개</span>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 선물상품 확인 : E -->
+					</div>
+
+					<div class="content bdbN">
+
+						<!-- 배송 정보 : S -->
+						<div class="accordion_layout no_fold result_delivery_info">
+							<div class="subject_box">
+								<div class="left"><p class="subject">배송 정보</p></div>
+							</div>
+							<div class="con_box">
+								<table class="table_delivery_info">
+									<caption>배송 정보</caption>
+									<colgroup>
+										<col style="width:90px;">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row" class="tr_tit">받는 분</th>
+											<td>
+												<p class="td_text"><span class="name">오설록</span><span class="phone_num">010-5555-6666</span></p>
+												<p class="td_text">[08506] 서울특별시 금천구 가산동 371-50 (가산동) 705호</p>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" class="tr_tit">배송 요청사항</th>
+											<td>
+												<p class="td_text">집 앞에 놔주세요</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="ship_msg_box">
+								<div class="inner_box">
+									배송 중입니다. <br>
+									<!-- 배송중 상태일 때 나타나는 영역 : S -->
+									<p>XX택배(운송장 번호 : <a href="#" class="view_invoice"><span class="c_ptC01">XXXXXXXX</span></a>)</p>
+									<!-- 배송중 상태일 때 나타나는 영역 : E -->
+								</div>
+							</div>
+						</div>
+						<!-- 배송 정보 : E -->
+
+						<div class="btn_typeB pd_rnl">
+							<!-- 배송상태에 따라 활성화 분리 : S -->
+							<!-- 
+								배송지 변경 가능 단계일 때 : [배송지 정보 변경] 활성화
+								배송지 변경 가능 단계 아닐 때 : [선물함] 활성화
+							 -->
+							<button type="button" class="btn_w50" onclick="">배송지 정보 변경</button>
+							<button type="button" class="btn_w50" onclick="">선물함</button>
+							<!-- 배송상태에 따라 활성화 분리 : E -->
+							<button type="button" class="btn_w50 ptBtn" onclick="">선물하러 가기</button>
+						</div>
+
+						<div class="pd_rnl">
+							<div class="notice_wrap">
+								<ul>
+									<li>선물 상품의 취소/교환/반품은 선물을 보내신 분이 할 수 있습니다. </li>
+									<li>실시간 배송상태 조회는 운송장 번호로 확인이 가능합니다. </li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- 컨텐츠 : E -->
+	</form>
+
+</main>
+<!-- CDJ 개선 선물받기 - 배송지 입력 완료 : E -->
+
+
+
+<!-- footer include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

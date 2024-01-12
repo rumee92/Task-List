@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/*
+** function
+*/
+.function_wrap {margin-top:100px;}
+.function_wrap.web {display:block;}
+.function_wrap.mobile {display:none;}
+.function_wrap .lb_tab.mo {display:none;background:#fff;}
+@media screen and (max-width:1024px) {
+    .function_wrap {margin-top:40px;}
+    .function_wrap.web {display:none;}
+    .function_wrap.mobile {display:block;}
+    .function_wrap .lb_tab.mo {display:block;}
+}
+
+.fn_ani_area {position:relative;padding-top:56.693%;}
+.fn_ani_area .number {position:absolute;cursor:pointer;}
+.fn_ani_area .number em {display:block;position:relative;width:29px;height:29px;line-height:29px;text-align:center;font-size:16px;font-family:'Nunito','sans-serif';color:#fff;background:#888;border-radius:50%;}
+.fn_ani_area .number.on em {border:3px solid #fff;}
+.fn_ani_area .number.on:before {content:'';position:absolute;left:-4px;top:-3px;width:42px;height:42px;background:#fff;opacity:0.4;filter:alpha(opacity=40);border-radius:50%; -webkit-animation: twinkle_s 1.2s linear infinite;}
+@-webkit-keyframes twinkle_s {
+    25% {-webkit-transform: scale(1.4); transform: scale(1.4); opacity:0.1; }
+    75% {-webkit-transform: scale(0.9); transform: scale(0.9); opacity:0.6; }
+}
+.fn_ani_area.cl_summer {background:url('../images/function/ani_cl_summer.png') no-repeat center center/contain;}
+.fn_ani_area.cl_summer .number.on em {background:#32bbdf;}
+.fn_ani_area.cl_summer .num1 {left:66.3%;top:42.64%;}
+.fn_ani_area.cl_summer .num2 {left:44.88%;top:42.5%;}
+.fn_ani_area.cl_summer .num3 {left:42.99%;top:25%;}
+.fn_ani_area.cl_summer .num4 {left:38.03%;top:61.11%;}
+.fn_ani_area.cl_summer .num5 {left:64.72%;top:27.78%;}
+.fn_ani_area.cl_summer .num6 {left:66.77%;top:55.56%;}
+.fn_ani_area.cl_summer .num7 {left:38.58%;top:82.92%;}
+.fn_ani_area.cl_summer .num8 {left:34.49%;top:76.39%;}
+.fn_ani_area.cl_summer .num9 {left:64.88%;top:66.94%;}
+.fn_ani_area.cl_summer .num10 {left:32.2%;top:93.19%;}
+.fn_ani_area.cl_summer .num11 {left:46.93%;top:75.83%;}
+.fn_ani_area.cl_summer .num12 {left:45.5%;top:70%;}
+.fn_ani_area.cl_summer .num13 {left:47.5%;top:64.47%;}
+@media screen and (max-width:1024px) {
+    .fn_ani_area {margin:0 auto;padding-top:143%;}
+    .fn_ani_area .number {width:24px;height:24px;}
+    .fn_ani_area .number em {width:22px;height:22px;line-height:22px;font-size:12px;}
+    .fn_ani_area .number.on em {line-height:20px;border:2px solid #fff;}
+    .fn_ani_area .number.on:before {left:-2%;top:-2%;width:26px;height:26px;background:#fff;opacity:0.55;filter:alpha(opacity=55);}
+
+    .fn_ani_area.cl_summer {background:url('../images/function/ani_cl_summer_m.png') no-repeat center center/cover;}
+    .fn_ani_area.cl_summer .num1 {left:71.34%;top:27.27%;}
+    .fn_ani_area.cl_summer .num2 {left:40.1%;top:30.08%;}
+    .fn_ani_area.cl_summer .num3 {left:38.81%;top:19.19%;}
+    .fn_ani_area.cl_summer .num4 {left:28.18%;top:39.17%;}
+    .fn_ani_area.cl_summer .num5 {left:68.76%;top:20.2%;}
+    .fn_ani_area.cl_summer .num6 {left:73.91%;top:37.82%;}
+    .fn_ani_area.cl_summer .num7 {left:30.11%;top:54.99%;}
+    .fn_ani_area.cl_summer .num8 {left:26.25%;top:48.71%;}
+    .fn_ani_area.cl_summer .num9 {left:66.67%;top:45.45%;}
+    .fn_ani_area.cl_summer .num10 {left:21.26%;top:59.6%;}
+    .fn_ani_area.cl_summer .num11 {left:42.83%;top:48.82%;}
+    .fn_ani_area.cl_summer .num12 {left:16%;top:23%;}
+    .fn_ani_area.cl_summer .num13 {left:21.9%;top:20.86%;}
+}
+
+.fn_ani_area.cl_winter {background:url('../images/function/ani_cl_winter.png') no-repeat center center/contain;}
+.fn_ani_area.cl_winter .number.on em {background:#ef5d98;}
+
+/* 210901 수정 str */
+.fn_ani_area.cl_winter .num1 {left:46%;top:36%;}
+.fn_ani_area.cl_winter .num2 {left:63%;top:37.5%;}
+.fn_ani_area.cl_winter .num3 {left:46%;top:25.55%;}
+.fn_ani_area.cl_winter .num4 {left:34.65%;top:41.67%;}
+.fn_ani_area.cl_winter .num5 {left:40.66%;top:47.3%;}
+.fn_ani_area.cl_winter .num6 {left:56.71%;top:44.72%;}
+.fn_ani_area.cl_winter .num7 {left:35.43%;top:30.55%;}
+.fn_ani_area.cl_winter .num8 {left:46.45%;top:47.63%;}
+.fn_ani_area.cl_winter .num9 {left:33.23%;top:59.16%;}
+.fn_ani_area.cl_winter .num10 {left:55.11%;top:67.08%;}
+.fn_ani_area.cl_winter .num11 {left:61.02%;top:56.11%;}
+.fn_ani_area.cl_winter .num12 {left:41.34%;top:63.88%;}
+.fn_ani_area.cl_winter .num13 {left:40.3%;top:68.75%;}
+.fn_ani_area.cl_winter .num14 {left:59.68%;top:74.44%;}
+.fn_ani_area.cl_winter .num15 {left:62.04%;top:61.66%;}
+.fn_ani_area.cl_winter .num16 {left:63.33%;top:50%;}
+.fn_ani_area.cl_winter .num17 {left:65.77%;top:51.08%;}
+/* 210528 수정 end */
+@media screen and (max-width:1024px) {
+    .fn_ani_area.cl_winter {background:url('../images/function/ani_cl_winter_m.png') no-repeat center center/cover;}
+}
+
+.fn_ani_area.sp_summer {background:url('../images/function/ani_sp_summer.png') no-repeat center center/contain;}
+.fn_ani_area.sp_summer .number.on em {background:#1cb4a4;}
+.fn_ani_area.sp_summer .num1 {left:23%;top:79.16%;}
+.fn_ani_area.sp_summer .num2 {left:17.32%;top:44%;}
+.fn_ani_area.sp_summer .num3 {left:17.32%;top:66.25%;}
+.fn_ani_area.sp_summer .num4 {left:77.32%;top:56.94%;}
+.fn_ani_area.sp_summer .num5 {left:26.77%;top:51.38%;}
+.fn_ani_area.sp_summer .num6 {left:66.14%;top:72.9%;}
+.fn_ani_area.sp_summer .num7 {left:81.88%;top:75.7%;}
+.fn_ani_area.sp_summer .num8 {left:15.35%;top:88.88%;}
+.fn_ani_area.sp_summer .num9 {left:70.47%;top:45.27%;}
+@media screen and (max-width:1024px) {
+    .fn_ani_area.sp_summer {background:url('../images/function/ani_sp_summer_m.png') no-repeat center center/cover;}
+}
+
+.fn_ani_area.sp_winter {background:url('../images/function/ani_sp_winter.png') no-repeat center center/contain;}
+.fn_ani_area.sp_winter .number.on em {background:#faa41a;}
+/* 210528 수정 str */
+.fn_ani_area.sp_winter .num1 {left:30.24%;top:45.55%;}
+.fn_ani_area.sp_winter .num2 {left:62.76%;top:71.38%;}
+.fn_ani_area.sp_winter .num3 {left:18.26%;top:67.22%;}
+.fn_ani_area.sp_winter .num4 {left:37.32%;top:46.38%;}
+.fn_ani_area.sp_winter .num5 {left:75.75%;top:64.86%;}
+.fn_ani_area.sp_winter .num6 {left:32.67%;top:40.97%;}
+.fn_ani_area.sp_winter .num7 {left:33.07%;top:73.61%;}
+.fn_ani_area.sp_winter .num8 {left:75%;top:57%;}
+.fn_ani_area.sp_winter .num9 {left:77.87%;top:54.44%;}
+/* 210528 수정 end */
+@media screen and (max-width:1024px) {
+    .fn_ani_area.sp_winter {background:url('../images/function/ani_sp_winter_m.png') no-repeat center center/cover;}
+}
+
+.function_con {margin:80px 0 0 0;padding-bottom:20px;border-bottom: 1px solid #ebebeb;}
+.function_con .fn_sec_tit {margin:40px 0 30px 0;padding:0 0 30px 0;font-size:26px;font-weight:700;color:#1b2b3c;border-bottom: 1px solid #ebebeb;}
+.function_con .con_grid .con_grid_box .con_grid_item {width:calc( (100% - 247px)/3);margin-right:123px;margin-bottom:60px;outline:none;}
+.function_con .con_grid .con_grid_box .con_grid_item:nth-child(3n) {margin-right:0;}
+.function_con .function_item .function_box {overflow:hidden;}
+.function_con .function_item .function_box .img_box {overflow:hidden;}
+.function_con .function_item .function_box .txt_box {margin-top:20px;}
+.function_con .function_item .function_box .txt_box .tit {font-size:18px;font-weight:400;color:#1b2b3c;}
+.function_con .function_item .function_box .txt_box .tit em {display:inline-block;width:38px;height:38px;line-height:38px;margin-right:10px;text-align:center;font-size:22px;font-family:'Nunito','sans-serif';color:#fff;background:#888;border-radius:50%;}
+.function_con.cl_summer .function_item.on .function_box .txt_box .tit em {background:#32bbdf;}
+.function_con.cl_winter .function_item.on .function_box .txt_box .tit em {background:#ef5d98;}
+.function_con.sp_summer .function_item.on .function_box .txt_box .tit em {background:#1cb4a4;}
+.function_con.sp_winter .function_item.on .function_box .txt_box .tit em {background:#faa41a;}
+.function_con .function_item .function_box .txt_box .txt {padding-top:10px;line-height:1.6;font-size:16px;color:#999;display:-webkit-box;-webkit-line-clamp:2;text-overflow:ellipsis;overflow:hidden;-webkit-box-orient:vertical;word-break:keep-all;}
+.fn_noti_txt {padding:12px 0 110px 0;text-align:right;font-size:14px;color:#999;}
+@media screen and (max-width:1024px) {
+    .con_grid2 .slide_control {display:block;margin:80px 0;text-align:center;}
+    .con_grid2 .slide_control > span,
+    .con_grid2 .slide_control > button {display:inline-block;vertical-align:middle;}
+    .con_grid2 .slide_control > span {margin:0 60px;}
+    .con_grid2 .slick_paging {font-family:'Nunito','sans-serif';font-size:26px;color:#999;}
+    .con_grid2 .slick_paging em {color:#1b2b3c;}
+    .con_grid2 .slick_paging span {display:inline-block;margin:0 15px;}
+
+    .function_con {margin-top:20px;}
+    .function_con .function_item_mo {outline: none;}
+    .function_con .function_item_mo .function_box {display:table;}
+    .function_con .function_item_mo .function_box .img_box {display:table-cell;width:36.77%;vertical-align:middle;}
+    .function_con .function_item_mo .function_box .txt_box {display:table-cell;width:60.23%;padding-left:3%;vertical-align:middle;}
+    .function_con .function_item_mo .function_box .txt_box .tit {font-size:16px;font-weight:400;}
+    .function_con.cl_summer .function_item_mo .function_box .txt_box .tit {color:#32bbdf;}
+    .function_con.cl_winter .function_item_mo .function_box .txt_box .tit {color:#ef5d98;}
+    .function_con.sp_summer .function_item_mo .function_box .txt_box .tit {color:#1cb4a4;}
+    .function_con.sp_winter .function_item_mo .function_box .txt_box .tit {color:#faa41a;}
+    .function_con .function_item_mo .function_box .txt_box .tit em {display:inline-block;width:25px;height:25px;margin-right:10px;vertical-align:middle;background:#fff;}
+    .function_con .function_item_mo .function_box .txt_box .txt {padding-top:10px;line-height:1.6;font-size:13px;color:#999;}
+    .fn_noti_txt {padding:20px 0 65px 0;text-align:right;font-size:12px;color:#999;}
+}
+@media screen and (max-width:540px) {
+    .con_grid2 .slide_control {margin:40px 0;}
+    .con_grid2 .slide_control > span {margin:0 30px;}
+    .con_grid2 .slide_control > button {width:10px;}
+    .con_grid2 .slick_paging {font-size:13px;}
+    .con_grid2 .slick_paging span {margin:0 7px;}
+}
+
+
+
+
+

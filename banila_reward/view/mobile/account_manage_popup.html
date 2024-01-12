@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('accountManageBefore');" class="btn btnSizeL btnColorW btnTypeB"><span>지급 계좌 관리 (지급 계좌 등록 전) 팝업</span></button><br>
+		<button type="button" onclick="showLayer('accountManageAfter');" class="btn btnSizeL btnColorW btnTypeB"><span>지급 계좌 관리 (지급 계좌 등록 후) 팝업</span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		
+		<!-- 지급계좌관리 - 지급 계좌 등록 전 -->
+		<div id="accountManageBefore" class="lyPopArea fullType accountManagePopup before">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose()"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">지급 계좌 관리</div>
+					
+					<div class="conWrap bdTCon inner_p">
+						<div class="desc">지급받을 은행 계좌를 등록해 주세요.</div>
+						<div class="inputBox">
+							<div class="inpNameBox">
+								<div class="inpBorder">
+									<input type="text" value="이지수" readonly>
+								</div>
+							</div>
+							<div class="inpBankBox">
+								<div class="inp_select2 pdtSelect">
+									<div class="selectBox">
+										<button class="title" type="button">은행 선택</button>
+										<ul class="selList">
+											<li>
+												<input type="radio" class="option" id="bankList1" name="bankList">
+												<label for="bankList1">국민은행</label>
+											</li>
+											<li>
+												<input type="radio" class="option" id="bankList2" name="bankList">
+												<label for="bankList2">신한은행</label>
+											</li>
+											<li>
+												<input type="radio" class="option" id="bankList3" name="bankList">
+												<label for="bankList3">기업은행</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="inpAccountBox">
+								<div class="inpBorder">
+									<input type="text" placeholder="계좌번호를 입력해 주세요.">
+								</div>
+							</div>
+							<ul class="starInfo">
+								<li>명의도용 방지를 위해 회원 가입자명과 예금주명이 동일한 경우에 한해 정산 지급이 가능합니다.</li>
+							</ul>
+						</div>
+						<div class="btn_wrap mgt32">
+							<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span>계좌 등록하기</span></a>
+						</div>
+						<div class="linkBox mgt24">
+							<a href="#">리워드 프로그램 이용약관</a>
+							<a href="#">문의하기</a>
+						</div>
+						<div class="bottomInfoBox">
+							<p class="titInfo">유의사항</p>
+							<!-- 230403 워딩 수정 -->
+							<ul class="dotInfo mgt15">
+								<li>리워드 정산을 위해 개인정보를 수집하며, 관련 법령에 따라 5년간 보관합니다.</li>
+								<li>정보 입력 후 바닐라닷컴 회원을 탈퇴할 경우 등록하신 계좌 정보 (예금주, 은행명, 계좌 번호)는 삭제됩니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 지급계좌관리 - 지급 계좌 등록 전 -->
+		
+		
+		<!-- 지급계좌관리 - 지급 계좌 등록 후 -->
+		<div id="accountManageAfter" class="lyPopArea fullType accountManagePopup after">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose()"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">지급 계좌 관리</div>
+					
+					<div class="conWrap bdTCon inner_p">
+						<!-- 230403 워딩 수정 -->
+						<div class="desc">계좌정보의 변동이 있는 경우,<br>정산 신청 전 변동사항을 반드시 업데이트해 주세요.</div>
+						<div class="accountInfo mgt24">
+							<div class="item">
+								<div class="text1">예금주명</div>
+								<div class="text2">이지수</div>
+							</div>
+							<div class="item">
+								<div class="text1">계좌</div>
+								<div class="text2">국민은행 2020122*******</div>
+							</div>
+						</div>
+						<div class="btn_wrap mgt32">
+							<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span>계좌 변경하기</span></a>
+						</div>
+						<div class="linkBox mgt24">
+							<a href="#">리워드 프로그램 이용약관</a>
+							<a href="#">문의하기</a>
+						</div>
+						<div class="bottomInfoBox">
+							<p class="titInfo">유의사항</p>
+							<!-- 230403 워딩 수정 -->
+							<ul class="dotInfo mgt15">
+								<li>리워드 정산을 위해 개인정보를 수집하며, 관련 법령에 따라 5년간 보관합니다.</li>
+								<li>정보 입력 후 바닐라닷컴 회원을 탈퇴할 경우 등록하신 계좌 정보 (예금주, 은행명, 계좌 번호)는 삭제됩니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 지급계좌관리 - 지급 계좌 등록 후 -->
+		
+		
+		
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>

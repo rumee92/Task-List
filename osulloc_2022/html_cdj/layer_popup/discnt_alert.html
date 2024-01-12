@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+	<div style="height: 800px;"></div>
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+
+
+	<!-- 결제 - 상품할인 경고창 레이어팝업 : S -->
+	<section class="layer_popup_wrap cdj_renew basic">
+		<div class="layer_box_new">
+			<div class="text_box">
+				장바구니 쿠폰과 함께 사용할 수 없습니다. <br>
+				상품할인을 사용하시겠습니까?
+			</div>
+			<div class="btn_typeB btn_pop">
+				<button type="button" class="btn_w50" onclick="">취소</button>
+				<button type="button" class="btn_w50 ptBtn" onclick="">확인</button>
+			</div>
+		</div>
+	</section>
+	<!-- 결제 - 상품할인 경고창 레이어팝업 : E -->
+
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

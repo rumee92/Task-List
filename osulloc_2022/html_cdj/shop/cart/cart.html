@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 장바구니 : S -->
+	<main class="main cdj_renew shop_cart">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box">
+			<div class="container shop_inner">
+				<h2 class="page_tit">장바구니</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		<form action="">
+			<!-- 컨텐츠 : S -->
+			<section class="section bgF6">
+				<div class="container no_gutter shop_inner">
+					<div class="sub_layout">
+						<div class="sub_layout_contents">
+							<div class="content bdbN">
+								<!-- 탭 및 메세지 - 회원일때 노출(일반상품, 정기배송상품 전부) : S -->
+								<div class="cart_tab">
+									<div class="item on"><a class="text" href="">일반 상품<span class="numb adM">(3)</span></a></div>
+									<div class="item"><a class="text" href="">정기배송 상품<span class="numb adM">(22)</span></a></div>
+								</div>
+								<p class="cart_msg">장바구니에 보관된 상품은 3개월 후에 삭제 됩니다.</p>
+								<!-- 탭 및 메세지 - 회원일때 노출(일반상품, 정기배송상품 전부) : S -->
+							</div>
+							
+							<div class="content mt0">
+								<!-- 전체선택 : S -->
+								<div class="cart_chk">
+									<div class="left_box">
+										<div class="inp_check">
+											<input type="checkbox" id="selCartAll" name="selCartAll">
+											<label for="selCartAll">전체선택</label>
+										</div>
+									</div>
+									<div class="right_box">
+										<button type="button" class="del_btn" title="품절 삭제" onclick="">품절 삭제</button>
+										<button type="button" class="del_btn" title="선택 삭제" onclick="">선택 삭제</button>
+									</div>
+								</div>
+								<!-- 전체선택 : E -->
+								
+								<!-- 장바구니 리스트 : S -->
+								<ul class="list_type_1">
+									<!-- 회원 - 일반상품 : S -->
+									<li class="list_item">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selCart1" name="selCart">
+												<label for="selCart1"></label>
+											</div>
+										</div>
+										<div class="thumb_con">
+											<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/cart_list_prd_thumb01.jpg" alt=""></div>
+											<div class="text_box">
+												<p class="prd_name">신 오브 제주</p>
+												<p class="packing_state">쇼핑백동봉/포장가능</p>
+												<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+											</div>
+										</div>
+										<div class="count_price">
+											<div class="count_box">
+												<div class="counter">
+													<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+													<input type="text" class="count_result" name="" id="" value="3">
+													<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+												</div>
+											</div>
+											<div class="price_box">
+												<p class="price_origin">58,000원</p>
+												<p class="price_result">42,300원</p>
+											</div>
+										</div>
+										<div class="list_btn">
+											<button type="button" class="l_btn l_btn1" title="정기배송으로 이동" onclick="">정기배송으로 이동</button>
+											<button type="button" class="l_btn l_btn2" title="바로구매" onclick="">바로구매</button>
+										</div>
+										<div class="list_del_btn">
+											<div class="btn_close"></div>
+										</div>
+									</li>
+									<!-- 회원 - 일반상품 : E -->
+									
+									<!-- 회원 - 정기배송 상품 : S -->
+									<li class="list_item">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selCart2" name="selCart" checked>
+												<label for="selCart2"></label>
+											</div>
+										</div>
+										<div class="thumb_con">
+											<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/cart_list_prd_thumb02.jpg" alt=""></div>
+											<div class="text_box">
+												<p class="prd_name">웨딩그린티 10입(피라미드)</p>
+												<p class="packing_state">포장불가</p>
+												<p class="prd_gifts">사은품 : 페이퍼참(앵두)</p>
+											</div>
+										</div>
+										<div class="count_price">
+											<div class="count_box">
+												<div class="counter">
+													<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+													<input type="text" class="count_result" name="" id="" value="99">
+													<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+												</div>
+											</div>
+											<div class="price_box">
+												<p class="price_origin">9,563,000원</p>
+												<p class="price_result">7,500,000원</p>
+											</div>
+										</div>
+										<div class="list_btn">
+											<button type="button" class="l_btn l_btn1" title="장바구니로 이동" onclick="">장바구니로 이동</button>
+											<button type="button" class="l_btn l_btn2" title="바로구매" onclick="">바로구매</button>
+										</div>
+										<div class="list_del_btn">
+											<div class="btn_close"></div>
+										</div>
+									</li>
+									<!-- 회원 - 정기배송 상품 : E -->
+									
+									<!-- 품절 : S -->
+									<li class="list_item soldOut">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selCart3" name="selCart" disabled>
+												<label for="selCart3"></label>
+											</div>
+										</div>
+										<div class="thumb_con">
+											<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/cart_list_prd_thumb03.jpg" alt=""></div>
+											<div class="text_box">
+												<p class="prd_name">러블리 티박스</p>
+												<p class="packing_state">쇼핑백부가서비스</p>
+												<p class="soldOut_text">일시품절</p>
+											</div>
+										</div>
+										<div class="list_del_btn">
+											<div class="btn_close"></div>
+										</div>
+									</li>
+									<!-- 품절 : E -->
+									
+									<!-- 비회원 : S -->
+									<li class="list_item">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selCart4" name="selCart">
+												<label for="selCart4"></label>
+											</div>
+										</div>
+										<div class="thumb_con">
+											<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/cart_list_prd_thumb04.jpg" alt=""></div>
+											<div class="text_box">
+												<p class="prd_name">녹차 밀크 스프레드 200g</p>
+												<p class="packing_state">쇼핑백부가서비스</p>
+											</div>
+										</div>
+										<div class="count_price">
+											<div class="count_box">
+												<div class="counter">
+													<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+													<input type="text" class="count_result" name="" id="" value="3">
+													<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+												</div>
+											</div>
+											<div class="price_box">
+												<p class="price_origin">58,000원</p>
+												<p class="price_result">42,300원</p>
+											</div>
+										</div>
+										<div class="list_btn">
+											<button type="button" class="l_btn l_btn2" title="바로구매" onclick="">바로구매</button>
+										</div>
+										<div class="list_del_btn">
+											<div class="btn_close"></div>
+										</div>
+									</li>
+									<!-- 비회원 : E -->
+									
+									<!-- 장바구니가 없을때 : S -->
+									<li class="list_item no_cart">
+										장바구니에 담긴 상품이 없습니다.
+									</li>
+									<!-- 장바구니가 없을때 : E -->
+								</ul>
+								<!-- 장바구니 리스트 : E -->
+							</div>
+							
+							<div class="content mtPc40">
+								<!-- 사은품 증정 - 회원 일반상품일때 노출 : S -->
+								<div class="accordion_layout free_gift_info">
+									<div class="subject_box bt2">
+										<div class="left"><p class="subject">사은품 증정</p></div>
+										<div class="right">
+											<!-- desc의 span 부분 결제 금액에 따라 받는 사은품 갯수 가변적으로 들어가야 함 -->
+											<p class="desc">그린티 시트 마스크 2입 (증정용)외 <span>3종</span></p>
+											<div class="slide_btn"></div>
+										</div>
+									</div>
+									<div class="con_box">
+										<div class="gifts_box">
+											<div class="img_box">
+												<div class="item">
+													<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img1.jpg" alt=""></div>
+													<p class="prd_name">그린티 시트 마스크<br>2입 (증정용)</p>
+												</div>
+												<div class="item">
+													<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img2.jpg" alt=""></div>
+													<p class="prd_name">제주섬 녹차<br>아몬드볼 3입</p>
+												</div>
+												<div class="item">
+													<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img3.jpg" alt=""></div>
+													<p class="prd_name">오설록<br>삼다연제주영귤 1입</p>
+												</div>
+												<div class="item">
+													<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img4.jpg" alt=""></div>
+													<p class="prd_name">루이보스<br>카라멜베리 1입</p>
+												</div>
+											</div>
+											<div class="desc_box">
+												<ul class="list">
+													<li class="item">할인쿠폰 사용 시, 쿠폰 적용 이후 총 금액에 대한 사은품이 발송됩니다.</li>
+													<li class="item">재고 현황에 따라 사전 고지없이 사은품이 변경될 수 있습니다.</li>
+													<li class="item">베이커리 및 티웨어(다기류) 입점 상품은 해당되지 않습니다.</li>
+													<li class="item">VIP, VVIP 대상 프로모션 진행 시, 구매금액대별 사은품이 지급되지 않습니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 사은품 증정 - 회원 일반상품일때 노출 : E -->
+							</div>
+							
+							<div class="content mtPc0">
+								<!-- 결제 예상 정보 : S -->
+								<div class="shop_price_info cart_price_info">
+									<div class="price_info">
+										<ul class="list">
+											<li class="item">
+												<p class="item_name">상품 금액</p>
+												<p class="item_val prd_price">+74,000원</p>
+											</li>
+											<li class="item">
+												<p class="item_name">상품 할인</p>
+												<p class="item_val prd_sale">-10,000원</p>
+											</li>
+											<li class="item">
+												<p class="item_name">포장비</p>
+												<p class="item_val">+2,000원</p>
+											</li>
+											<li class="item">
+												<p class="item_name">부가 쇼핑백</p>
+												<p class="item_val">+100원</p>
+											</li>
+											<li class="item">
+												<p class="item_name">배송비</p>
+												<p class="item_val">+2,500원</p>
+											</li>
+										</ul>
+										<div class="expected_price">
+											<p class="item_name">결제 예상 금액</p>
+											<p class="item_val">2,560,000<span class="unit">원</span></p>
+										</div>
+										<div class="list_btn">
+											<button type="button" class="list_buy_btn" onclick="">2,560,000원 주문하기</button>
+										</div>
+									</div>
+								</div>
+								<!-- 결제 예상 정보 : E -->
+								
+								<!-- 결제 버튼 영역 : S -->
+								<div class="cart_btn_box">
+									<div class="btn_typeB">
+										<button type="button" class="btn_w50" onclick="">선택상품 주문</button>
+										<button type="button" class="btn_w50 ptBtn" onclick="">전체상품 주문</button>
+									</div>
+								</div>
+								<!-- 결제 버튼 영역 : E -->
+							</div>
+							
+							<div class="content bdbN">
+								<!-- 오늘만 이가격 배너 : S -->
+								<div class="today_price_banner">
+									<div class="top_box">
+										<p class="tit"><span class="bigT">오늘만 이 가격</span><span class="smT">오늘 하루만 이 가격으로 구매할 수 있는 상품을 지금 바로 만나보세요.</span></p>
+										<p class="time">20:38:44</p>
+									</div>
+									<div class="bottom_box">
+										<div class="img">
+											<img src="/kr/ko/static_cdj/images/shop/today_price_img.jpg" alt="">
+											<p class="sale_flag">30%</p>
+										</div>
+										<div class="text">
+											<p class="prd_name">제주순수녹차 20입(티백)</p>
+											<p class="price_origin">8,800원</p>
+											<p class="price_result">6,160원</p>
+											<button type="button" class="cart_btn" title="장바구니" onclick=""><span class="btn_text">장바구니에 담기</span></button>
+										</div>
+									</div>
+								</div>
+								<!-- 오늘만 이가격 배너 : E -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 컨텐츠 : E -->
+			
+			<!-- 모바일 하단 fixed 버튼 : S -->
+			<div class="bottom_fixed_btn">
+				<button type="button" class="fixed_btn" title="주문하기" onclick="">2,560,000원 주문하기</button>
+			</div>
+			<!-- 모바일 하단 fixed 버튼 : E -->
+		</form>
+		
+	</main>
+	<!-- CDJ 개선 장바구니 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

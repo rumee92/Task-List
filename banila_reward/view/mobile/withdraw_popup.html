@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('withdrawPopup');" class="btn btnSizeL btnColorW btnTypeB"><span>정산신청 팝업</span></button><br>
+		<button type="button" onclick="showLayer('pointConfirmPopup');" class="btn btnSizeL btnColorW btnTypeB"><span>정산 신청 내역 확인 팝업 (포인트)</span></button><br>
+		<button type="button" onclick="showLayer('cashConfirmPopup');" class="btn btnSizeL btnColorW btnTypeB"><span>정산 신청 내역 확인 팝업 (현금)</span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		
+		<!-- 정산신청 팝업 -->
+		<div id="withdrawPopup" class="lyPopArea fullType withdrawPopup">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose()"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">정산 신청</div>
+					
+					<div class="conWrap">
+						<div class="box bdTCon inner_p">
+							<div class="subTit">정산 방식</div>
+							<div class="boxCon mgt8">
+								<div class="inp_wrap">
+									<div class="inp_select borderType">
+										<select name="" id="">
+											<option value="point">멤버십 포인트 (1:1.2)</option>
+											<option value="cash">현금 (1:1)</option>
+										</select>
+									</div>
+								</div>
+								<div class="withdrawInfoBox">
+									<div class="boxItem on">
+										<p class="titInfo">유의사항</p>
+										<ul class="dotInfo">
+											<li>멤버십 포인트 정산 시, 리워드 전환 비율은 1:1.2로 상향 전환되어 정산됩니다. <span class="ptC">(전환 예시 : 1,000 리워드 > 1,200 P)</span></li>
+											<li>멤버십 포인트 정산은 바로 지급이 가능합니다.</li>
+											<li>정산 시 10(P/원) 단위는 절사합니다.</li>
+										</ul>
+									</div>
+									<div class="boxItem">
+										<p class="titInfo">유의사항</p>
+										<ul class="dotInfo">
+											<li>현금 정산 시, 리워드 전환 비율은 1:1 전환되어 정산됩니다. <br><span class="ptC">(전환 예시 : 1,000 리워드 > 1,000 원)</span></li>
+											<li>현금 정산은 최대 월 3회만 정산 가능하며, 정산 승인 완료 건에 한해 정산승인일로부터 2일 뒤 지급됩니다.</li>
+											<li>정산 시 10(P/원) 단위는 절사합니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- boxWarp -->
+						<div class="boxWrap bdTCon inner_p">
+							<!-- 포인트 정산 -->
+							<div class="boxItem on">
+								<div class="item">
+									<div class="subTit">정산 신청 리워드</div>
+									<div class="boxCon mgt10">
+										<div class="currentP">
+											<span class="desc">현재 보유</span>
+											<span class="point"><em class="num">12,000</em> 리워드</span>
+										</div>
+										<div class="rewardBox">
+											<div class="inpPoint">
+												<div class="inp_text">
+													<input type="number" name="" placeholder="최소 1,000리워드">
+												</div>
+											</div>
+											<button type="button" class="button disabled" onclick="">확인</button>
+										</div>
+										<ul class="starInfo">
+											<li>100 단위로 정산 신청이 가능합니다.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="item count">
+									<div class="subTit">정산 예정 포인트</div>
+									<div class="rewardCount">
+										<div class="noCount">정산 신청 리워드를 입력해 주세요.</div><!-- 확인버튼 미체크 or 조건 미충족시 노출 -->
+										<div class="count">1,200<span class="unit">P</span></div><!-- 확인버튼 체크 or 조건 충족시 노출 -->
+									</div>
+								</div>
+							</div>
+							<!-- // 포인트 정산 -->
+							
+							<!-- 현금 정산 -->
+							<div class="boxItem">
+								<div class="item">
+									<div class="subTit">정산 신청 리워드<span class="counting">(현금 정산 가능 횟수: <em class="notoB">1</em>/3) </span></div>
+									<div class="boxCon mgt10">
+										<div class="currentP">
+											<span class="desc">현재 보유</span>
+											<span class="point"><em class="num">12,000</em> 리워드</span>
+										</div>
+										<div class="rewardBox">
+											<div class="inpPoint">
+												<div class="inp_text">
+													<input type="number" name="" placeholder="최소 1,000리워드">
+												</div>
+											</div>
+											<button type="button" class="button disabled" onclick="">확인</button>
+										</div>
+										<ul class="starInfo">
+											<li>100 단위로 최대 50,000 리워드까지 정산 신청이 가능합니다.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="item count pdb24">
+									<div class="subTit">정산 예정 금액</div>
+									<div class="rewardCount">
+										<div class="noCount">정산 신청 리워드를 입력해 주세요.</div><!-- 확인버튼 미체크 or 조건 미충족시 노출 -->
+										<div class="count">1,200<span class="unit">원</span></div><!-- 확인버튼 체크 or 조건 충족시 노출 -->
+									</div>
+								</div>
+								<div class="item bdTCon inner_p">
+									<div class="subTit mgt24">지급 계좌 정보</div>
+									<div class="boxCon mgt8">
+										<!-- 지급 계좌 정보가 있을때 -->
+										<div class="cashAccount">
+											<div class="account">국민은행 2020122*******</div>
+											<div class="name">이지수</div>
+										</div>
+										<!-- //지급 계좌 정보가 있을때 -->
+										
+										<!-- 지급 계좌 정보가 없을때 -->
+										<div class="noCashAccount">
+											<div class="noBox">
+												<p class="desc">등록된 계좌 정보가 없습니다.</p>
+											</div>
+											<div class="btnWrap mgt16">
+												<a href="#" class="btn_txt">지급 계좌 등록하기</a>
+											</div>
+										</div>
+										<!-- //지급 계좌 정보가 없을때 -->
+									</div>
+								</div>
+							</div>
+							<!-- // 현금 정산 -->
+						</div>
+						<!-- //boxWarp -->
+					</div>
+				</div>
+				<div class="btn_wrap fixed">
+					<a href="#" class="btn btnSizeL btnColorB btnTypeB disabled"><span>정산 신청하기</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- // 정산신청 팝업 -->
+		
+		
+		<!-- 정산 신청 내역 확인 팝업 - 포인트 -->
+		<div id="pointConfirmPopup" class="lyPopArea rewardConfirmPopup">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<!-- 230403 워딩수정 -->
+					<div class="lyTit">정산 신청 내역 확인</div>
+					<div class="lyBody basic">
+						<div class="desc">정산 신청하시겠습니까?</div>
+						<div class="infoWrap">
+							<div class="info">
+								<div class="item">정산 방식 : <em class="fcPink">포인트</em></div>
+								<div class="item">정산 신청 리워드 : <em class="fcPink">1,000 리워드</em></div>
+								<div class="item">정산 예정 포인트 : <em class="fcPink">1,000P</em></div>
+							</div>
+						</div>
+						<div class="btn_wrap colType">
+							<a href="#" onclick="layerPopClose();" class="btn btnSizeM btnColorW btnTypeB"><span>취소</span></a>
+							<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span>확인</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 정산 신청 내역 확인 팝업 - 포인트 -->
+		
+		
+		<!-- 정산 신청 내역 확인 팝업 - 현금 -->
+		<div id="cashConfirmPopup" class="lyPopArea rewardConfirmPopup">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<!-- 230403 워딩수정 -->
+					<div class="lyTit">정산 신청 내역 확인</div>
+					<div class="lyBody basic">
+						<div class="desc">정산 신청하시겠습니까?</div>
+						<div class="infoWrap">
+							<div class="info">
+								<div class="item">정산 방식 : <em class="fcPink">현금</em></div>
+								<div class="item">정산 신청 리워드 : <em class="fcPink">1,000 리워드</em></div>
+								<div class="item">정산 예정 금액 : <em class="fcPink">1,000원</em></div>
+							</div>
+							<div class="accountBox">
+								<div class="account">지급 계좌 : 국민은행 2020122******* 이지수</div>
+							</div>
+						</div>
+						<div class="btn_wrap colType">
+							<a href="#" onclick="layerPopClose();" class="btn btnSizeM btnColorW btnTypeB"><span>취소</span></a>
+							<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span>확인</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 정산 신청 내역 확인 팝업 - 현금 -->
+		
+		
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>

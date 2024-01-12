@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 후기작성 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">후기 관리</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		
+		<!-- 탭 영역 : S -->
+		<div class="my_tab">
+			<div class="my_tab_inner">
+				<ul class="my_tab_list tab2">
+					<li class="item on">
+						<a href="#" class="link_text">후기 작성<span class="num">(5)</span></a>
+					</li>
+					<li class="item">
+						<a href="#" class="link_text">나의 후기<span class="num">(7)</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 탭 영역 : E -->
+		
+		<!-- 작성 가능한 후기가 없을 때 노출 : S -->
+		<section class="section my_no_noList w170">
+			<div class="w1200">
+				<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/no_review_list.png" alt="작성 가능한 후기가 없습니다."></div>
+				<div class="text_box">
+					<p class="text_1">작성 가능한 후기가 없습니다.</p>
+				</div>
+			</div>
+		</section>
+		<!-- 작성 가능한 후기가 없을 때 노출 : E -->
+		
+		<section class="section">
+			<div class="my_review_top">
+				<div class="inner_box">
+					<p class="text_1"><em class="num">5건</em>의 후기를 작성하시면</p>
+					<p class="text_2"><em class="pt">약 250의 포인트</em>를 적립 <br class="moBlock">받으실 수 있습니다.</p>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section my_section">
+			<div class="w1200">
+				<div class="rev_point_info">
+					<div class="tit">포인트 안내</div>
+					<div class="info_box">
+						<!-- MO용 -->
+						<div class="moBlock">
+							<table class="rev_info_table mo">
+								<caption>포인트 안내</caption>
+								<colgroup>
+									<col width="30%">
+									<col width="35%">
+									<col width="35%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>멤버십</th>
+										<th>일반 후기 작성 시</th>
+										<th> 포토 후기 작성 시</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="mem_grade"><span class="grade welcome">Welcome</span></div>
+										</td>
+										<td>
+											<p class="text">20P</p>
+										</td>
+										<td>
+											<p class="text pt">50P</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="mem_grade"><span class="grade green">Green</span></div>
+										</td>
+										<td>
+											<p class="text">20P</p>
+										</td>
+										<td>
+											<p class="text pt">50P</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="mem_grade"><span class="grade family">Family</span></div>
+										</td>
+										<td>
+											<p class="text">30P</p>
+										</td>
+										<td>
+											<p class="text pt">70P</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="mem_grade"><span class="grade vip">VIP</span></div>
+										</td>
+										<td>
+											<p class="text">50P</p>
+										</td>
+										<td>
+											<p class="text pt">100P</p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="mem_grade"><span class="grade vvip">VVIP</span></div>
+										</td>
+										<td>
+											<p class="text">100P</p>
+										</td>
+										<td>
+											<p class="text pt">200P</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="remark">구매 확정한 후기에 한하여 후기를 작성할 수 있습니다.</p>
+						</div>
+						
+						<!-- PC용 -->
+						<div class="pcBlock">
+							<table class="rev_info_table pc">
+								<caption>포인트 안내</caption>
+								<colgroup>
+									<col width="12%">
+									<col width="12%">
+									<col width="12%">
+									<col width="12%">
+									<col width="12%">
+									<col width="12%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>멤버십</th>
+										<td>
+											<div class="mem_grade"><span class="grade welcome">Welcome</span></div>
+										</td>
+										<td>
+											<div class="mem_grade"><span class="grade green">Green</span></div>
+										</td>
+										<td>
+											<div class="mem_grade"><span class="grade family">Family</span></div>
+										</td>
+										<td>
+											<div class="mem_grade"><span class="grade vip">VIP</span></div>
+										</td>
+										<td>
+											<div class="mem_grade"><span class="grade vvip">VVIP</span></div>
+										</td>
+									</tr>
+									<tr>
+										<th>일반 후기 작성 시</th>
+										<td>
+											<p class="text">20P</p>
+										</td>
+										<td>
+											<p class="text">20P</p>
+										</td>
+										<td>
+											<p class="text">30P</p>
+										</td>
+										<td>
+											<p class="text">50P</p>
+										</td>
+										<td>
+											<p class="text">10P</p>
+										</td>
+									</tr>
+									<tr>
+										<th>포토 후기 작성 시</th>
+										<td>
+											<p class="text pt">50P</p>
+										</td>
+										<td>
+											<p class="text pt">50P</p>
+										</td>
+										<td>
+											<p class="text pt">70P</p>
+										</td>
+										<td>
+											<p class="text pt">100P</p>
+										</td>
+										<td>
+											<p class="text pt">200P</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="remark">구매 확정한 후기에 한하여 후기를 작성할 수 있습니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section">
+			<div class="my_review_list">
+				<div class="inner_box">
+					<ul class="review_list">
+						<li class="item">
+							<div class="item_inner">
+								<div class="info_box">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></div>
+									<div class="text_box">
+										<div class="text">
+											<p class="prd_name">에브리데이 텀블러 키트</p>
+											<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+										</div>
+										<p class="order_num">주문번호<span class="dd">:</span><span class="num">23409872345</span></p>
+									</div>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="rev_write_btn">후기 작성</button>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="item_inner">
+								<div class="info_box">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></div>
+									<div class="text_box">
+										<div class="text">
+											<p class="prd_name">달빛보틀 + 찬물녹차 20입 (아이스티)</p>
+											<p class="prd_packing">무료포장</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+										</div>
+										<p class="order_num">주문번호<span class="dd">:</span><span class="num">23409872345</span></p>
+									</div>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="rev_write_btn">후기 작성</button>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="item_inner">
+								<div class="info_box">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/review_img03.png" alt=""></div>
+									<div class="text_box">
+										<div class="text">
+											<p class="prd_name">신 오브 제주</p>
+											<p class="prd_packing">유료포장 선택 안함</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+										</div>
+										<p class="order_num">주문번호<span class="dd">:</span><span class="num">23409872345</span></p>
+									</div>
+								</div>
+								<div class="btn_box">
+									<button type="button" class="rev_write_btn">후기 작성</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 후기작성 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

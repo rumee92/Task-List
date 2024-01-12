@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 보낸 선물함 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">선물함</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		
+		<!-- 탭 영역 : S -->
+		<div class="my_tab">
+			<div class="my_tab_inner">
+				<ul class="my_tab_list tab2">
+					<li class="item">
+						<a href="#" class="link_text">받은 선물함<span class="num">(5)</span></a>
+					</li>
+					<li class="item on">
+						<a href="#" class="link_text">보낸 선물함<span class="num">(7)</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 탭 영역 : E -->
+		
+		<section class="section">
+			<div class="send_gifts_top">
+				<div class="inner_box">
+					<div class="text_box">
+						<p class="text"><span class="pt">오설록이 추천하는 선물</span>을 확인해보세요</p>
+						<button class="rec_btn" title="추천선물 보러가기" onclick="">추천선물 보러가기</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- 기간 sort 영역 : S -->
+		<div class="my_term_sort">
+			<div class="w1200">
+				<div class="term_inner">
+					<div class="btn_box">
+						<button type="button" class="term_btn" onclick="">최근 1개월</button>
+						<button type="button" class="term_btn" onclick="">4월</button>
+						<button type="button" class="term_btn" onclick="">3월</button>
+						<button type="button" class="term_btn open" onclick="">기간조회</button>
+					</div>
+					<!-- 기간 선택 셀렉트 박스 - 1년치 노출 -->
+					<div class="sel_box">
+						<div class="inp_selectbox">
+							<select name="" id="" class="inp_select">
+								<option value="" selected="">기간 선택</option>
+								<option value="">2022년 02월</option>
+								<option value="">2022년 01월</option>
+								<option value="">2021년 12월</option>
+								<option value="">2021년 11월</option>
+								<option value="">2021년 10월</option>
+								<option value="">2021년 09월</option>
+								<option value="">2021년 08월</option>
+								<option value="">2021년 07월</option>
+								<option value="">2021년 06월</option>
+								<option value="">2021년 05월</option>
+								<option value="">2021년 04월</option>
+								<option value="">2021년 03월</option>
+								<option value="">2021년 02월</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 기간 sort 영역 : E -->
+		
+		
+		<!-- 선물함 내역 없을 때 노출 : S -->
+		<section class="section my_no_noList w80 sendGfits">
+			<div class="w1200">
+				<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/no_list_img.png" alt="보낸 선물 내역이 없습니다."></div>
+				<div class="text_box">
+					<p class="text_1">보낸 선물 내역이 없습니다.</p>
+					<p class="text_2">소중한 분에게 선물로 마음을 전하면 어떨까요?</p>
+				</div>
+				<div class="btn_box">
+					<button type="button" class="btn_link" onclick="">선물추천 제품 보기</button>
+				</div>
+			</div>
+		</section>
+		<!-- 선물함 내역 없을 때 노출 : E -->
+		
+		
+		<section class="section">
+			<div class="w1200">
+				<ul class="my_gifts_list">
+					<!-- 배송완료 일때 : S -->
+					<li class="list_item">
+						<div class="box01">
+							<div class="inner_box">
+								<p class="fromTo">To<span class="name">김도이</span></p>
+								<p class="date">2022.04.05</p>
+								<button type="button" class="more_btn" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+							</div>
+						</div>
+						<div class="box02">
+							<div class="inner_box">
+								<div class="img_box">
+									<a href="#"><img src="/kr/ko/static_cdj/images/mypage/gifts_prd_img03.png" alt=""></a>
+								</div>
+								<div class="text_box">
+									<div class="text_inner">
+										<p class="prd_name">
+											<a href="#">달빛걷기 10입(피라미드)</a>
+										</p>
+										<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+										<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+										<p class="prd_price">
+											<span class="price">6,500원</span> / <span class="count">1개</span>
+										</p>
+									</div>
+									<p class="order_num">주문번호 : <span class="num">23409872345</span></p>
+									<p class="state">배송완료</p>
+									<div class="btn_box">
+										<button type="button" class="gifts_btn w100" onclick="">배송조회</button>
+										<button type="button" class="gifts_btn gray" onclick="">교환신청</button>
+										<button type="button" class="gifts_btn gray" onclick="">반품신청</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 배송완료 일때 : E -->
+					
+					
+					<!-- 구매확정 일때 : S -->
+					<li class="list_item">
+						<div class="box01">
+							<div class="inner_box">
+								<p class="fromTo">To<span class="name">오로라</span></p>
+								<p class="date">2022.04.05</p>
+								<button type="button" class="more_btn" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+							</div>
+						</div>
+						<div class="box02">
+							<div class="inner_box">
+								<div class="img_box">
+									<a href="#"><img src="/kr/ko/static_cdj/images/mypage/gifts_prd_img04.png" alt=""></a>
+								</div>
+								<div class="text_box">
+									<div class="text_inner">
+										<p class="prd_name">
+											<a href="#">에브리데이 텀블러 키트</a>
+										</p>
+										<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+										<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+										<p class="prd_price">
+											<span class="price">25,500원</span> / <span class="count">13개</span>
+										</p>
+									</div>
+									<p class="order_num">주문번호 : <span class="num">23409872345</span></p>
+									<p class="state">구매확정</p>
+									<div class="btn_box">
+										<button type="button" class="gifts_btn review w100" onclick="">후기작성</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 구매확정 일때 : E -->
+					
+					
+					<!-- 상품준비 일때 : S -->
+					<li class="list_item">
+						<div class="box01">
+							<div class="inner_box">
+								<p class="fromTo">To<span class="name">오로라</span></p>
+								<p class="date">2022.04.05</p>
+								<button type="button" class="more_btn" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+							</div>
+						</div>
+						<div class="box02">
+							<div class="inner_box">
+								<div class="img_box">
+									<a href="#"><img src="/kr/ko/static_cdj/images/mypage/gifts_prd_img01.png" alt=""></a>
+								</div>
+								<div class="text_box">
+									<div class="text_inner">
+										<p class="prd_name">
+											<a href="#">에브리데이 텀블러 키트</a>
+										</p>
+										<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+										<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+										<p class="prd_price">
+											<span class="price">25,500원</span> / <span class="count">7개</span>
+										</p>
+									</div>
+									<p class="order_num">주문번호 : <span class="num">23409872345</span></p>
+									<p class="state ready">상품준비</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 상품준비 일때 : E -->
+					
+					
+					<!-- 취소완료 일때 (list_item에 noGifts 클래스 추가) : S -->
+					<li class="list_item noGifts">
+						<div class="box01">
+							<div class="inner_box">
+								<p class="fromTo">To<span class="name">베스트프렌드</span></p>
+								<p class="date">2022.04.05</p>
+								<button type="button" class="more_btn" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+							</div>
+						</div>
+						<div class="box02">
+							<div class="inner_box">
+								<div class="img_box">
+									<a href="#"><img src="/kr/ko/static_cdj/images/mypage/gifts_prd_img01.png" alt=""></a>
+								</div>
+								<div class="text_box">
+									<div class="text_inner">
+										<p class="prd_name">
+											<a href="#">프리미엄 녹차 국수 1+1</a>
+										</p>
+										<p class="prd_packing">유료포장 선택안함</p>
+										<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+										<p class="prd_price">
+											<span class="price">4,500원</span> / <span class="count">6개</span>
+										</p>
+									</div>
+									<p class="order_num">주문번호 : <span class="num">23409872345</span></p>
+									<p class="state">취소완료</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 취소완료 일때 : E -->
+					
+					
+					<!-- 주문접수 일때 : S -->
+					<li class="list_item">
+						<div class="box01">
+							<div class="inner_box">
+								<p class="fromTo">To<span class="name">겨울</span></p>
+								<p class="date">2022.04.05</p>
+								<button type="button" class="more_btn" title="자세히 보기" onclick=""><span class="pcBlock">자세히 보기</span></button>
+							</div>
+						</div>
+						<div class="box02">
+							<div class="inner_box">
+								<div class="img_box">
+									<a href="#"><img src="/kr/ko/static_cdj/images/mypage/gifts_prd_img02.png" alt=""></a>
+								</div>
+								<div class="text_box">
+									<div class="text_inner">
+										<p class="prd_name">
+											<a href="#">오설록 제주난꽃향 티 10EA (티컬렉션90)</a>
+										</p>
+										<p class="prd_packing">유료포장 선택안함</p>
+										<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+										<p class="prd_price">
+											<span class="price">4,500원</span> / <span class="count">1개</span>
+										</p>
+									</div>
+									<p class="order_num">주문번호 : <span class="num">23409872345</span></p>
+									<p class="state ready">주문접수</p>
+									<div class="btn_box">
+										<button type="button" class="gifts_btn gray w100 mb0" onclick="">주문취소</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 주문접수 일때 : E -->
+					
+				</ul>
+				
+				
+				
+				<!-- pagination : S -->
+				<div id="pagination" class="newPagination for-mobile">
+					<span class="btn btn-home is-disabled">페이지 처음으로</span>
+					<span class="btn btn-prev is-disabled">이전 페이지</span>
+					<a href="/kr/ko/life/event/list/ing" class="num on" data-track-name="1 페이지 이동">1</a>
+					<a href="#" class="num" data-track-name="2 페이지 이동">2</a>
+					<span class="btn btn-next is-disabled">다음 페이지</span>
+					<span class="btn btn-end is-disabled">페이지 끝으로</span>
+				</div>
+				<!-- pagination : E -->
+			</div>
+		</section>
+		
+		
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 보낸 선물함 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

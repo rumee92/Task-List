@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <?php require("../include/head.html"); ?>
+</head>
+
+<body>
+    <?php require("../include/skip_navi.html"); ?>
+    <?php require("../include/header.html"); ?>
+
+    <!-- container : str-->
+    <main id="container" class="container">
+        <div class="contents">
+            <!-- page_top : str -->
+            <div class="page_top">
+                <div class="page_visual" style="background-image:url('../../resources/front/images/customer/page_visual_change.jpg');">
+                    <div class="txt_box con_inner_mid">
+                        <p class="tit">CUSTOMER</p>
+                        <p class="txt">리틀스마트는 고객 만족을 위해<br>이메일 상담/답변을 받으실 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="page_navi">
+                    <div class="page_navi_inner">
+	                      <div class="page_navi_item"><a href="#none">원복관리 TIP</a></div>
+                        <div class="page_navi_item"><a href="#none">A/S</a></div>
+                        <div class="page_navi_item"><a href="#none">1:1문의</a></div>
+                        <div class="page_navi_item"><a href="#none">업무제휴문의</a></div>
+                        <div class="page_navi_item"><a href="#none">개설문의</a></div>
+                        <div class="page_navi_item on"><a href="#none">쇼룸</a></div>
+                    </div>
+                </div>
+                <div class="page_navi_blank"></div>
+            </div>
+            <!-- page_top : end -->
+
+            <!-- sr_tit : str -->
+            <div class="sr_tit con_inner_mid">
+                <div class="tit_typeB">SHOWROOM</div>
+                <select onchange="location.href='./showroom'+this.value">
+                    <option value="_2018.html">2018년도</option>
+                    <option selected>2019년도</option>
+                </select>
+            </div>
+            <!-- sr_tit : end -->
+
+            <!-- sr_con : str -->
+            <div class="sr_con con_inner_small">
+                <div class="sr_con_box">
+                    <div class="img_box"><div class="img_box_item"><img src="../../resources/front/images/customer/sr_2019_1_1.jpg" alt="리틀스마트 메인 디스플레이존"></div></div>
+                    <div class="txt_box">
+                        <div class="title">리틀스마트 메인 디스플레이존</div>
+                        <p class="txt">백월 디자인과 리틀스마트 신규 의상 디자인을 전시한 브랜드 디스플레이존<br>깔끔한 백월 디자인 및 리틀스마트 대표 의상으로 마네킹, 소품 전시를 통한 브랜드 홍보존</p>
+                    </div>
+                </div>
+                <div class="sr_con_box">
+                    <div class="img_box type_slide">
+                        <div class="img_box_item"><img src="../../resources/front/images/customer/sr_2019_2_1.jpg" alt="리틀스마트 동/하복 원복수납 & 전시존"></div>
+                        <div class="img_box_item"><img src="../../resources/front/images/customer/sr_2019_2_2.jpg" alt="리틀스마트 동/하복 원복수납 & 전시존"></div>
+                        <div class="img_box_item"><img src="../../resources/front/images/customer/sr_2019_2_3.jpg" alt="리틀스마트 동/하복 원복수납 & 전시존"></div>
+                    </div>
+                    <div class="txt_box">
+                        <div class="title">리틀스마트 동/하복 원복수납 & 전시존</div>
+                        <p class="txt">19년도 신규 의상 디자인을 볼 수 있는 곳으로, 다양한 원복 의상들을 한눈에 확인할 수 있는 디스플레이존</p>
+                    </div>
+                </div>
+                <div class="sr_con_box">
+                    <div class="img_box type_slide">
+                        <div class="img_box_item"><img src="../../resources/front/images/customer/sr_2019_3_3.jpg" alt="리틀스마트 신규 의상 수납 및 브랜드 포스터 게시존"></div>
+                        <div class="img_box_item"><img src="../../resources/front/images/customer/sr_2019_3_1.jpg" alt="리틀스마트 신규 의상 수납 및 브랜드 포스터 게시존"></div>
+                        <div class="img_box_item"><img src="../../resources/front/images/customer/sr_2019_3_2.jpg" alt="리틀스마트 신규 의상 수납 및 브랜드 포스터 게시존"></div>
+                    </div>
+                    <div class="txt_box">
+                        <div class="title">리틀스마트 신규 의상 수납 및 브랜드 포스터 게시존</div>
+                        <p class="txt">리틀스마트 신규 의상 디자인을 볼 수 있는 곳이며, 브랜드 홍보 포스터를 한눈에 볼 수 있는 디스플레이존</p>
+                    </div>
+                </div>
+            </div>
+            <!-- sr_con : end -->
+        </div>
+    </main>
+    <!-- container : end -->
+    
+    <?php require("../include/footer.html"); ?>
+</body>
+
+</html>

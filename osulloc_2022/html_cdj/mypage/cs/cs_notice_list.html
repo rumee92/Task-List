@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 공지사항 리스트 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">공지사항</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		<!-- 탭 영역 : S -->
+		<div class="my_tab">
+			<div class="my_tab_inner">
+				<ul class="my_tab_list tab3">
+					<!-- 활성된 페이지 .item에 on 클래스 추가 -->
+					<li class="item on">
+						<a href="#" class="link_text">공지사항</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link_text">이벤트 발표</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link_text">전자 공고</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 탭 영역 : E -->
+		
+		<!-- 컨텐츠 : S -->
+		<div class="my_cs_notice">
+			<section class="section">
+				<div class="w1200">
+					<div class="notice_search">
+						<div class="inner_box">
+							<div class="search">
+								<div class="box01"><input type="text" class="inp_text" placeholder="텍스트를 입력해주세요" value=""></div>
+								<div class="box02"><button type="button" class="button pcBlock" title="검색" onclick="">검색</button></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="section">
+				<div class="w1200">
+					<div class="notice_list_table">
+						<div class="table_header pcBlock">
+							<ul class="list">
+								<li class="item">번호</li>
+								<li class="item">제목</li>
+								<li class="item">등록일</li>
+							</ul>
+						</div>
+						<!-- 한 페이지 당 10개씩 노출 -->
+						<div class="table_con">
+							<ul class="list">
+								<li class="item">
+									<p class="num pcBlock">100</p>
+									<p class="subject">
+										<a class="link_text" href="#"><span class="new">NEW</span>[내용정정] 오설록 개인정보 처리방침 변경 고지</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">99</p>
+									<p class="subject">
+										<a class="link_text" href="#">[내용정정] CJ대한통운 파업 종료 및 배송지연, 정상화 종료 및 배송지연, 정상화</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">98</p>
+									<p class="subject">
+										<a class="link_text" href="#">[공지] 울릉도/강릉 지역 폭설로 인한 베이커리류 택배 지연 지연 지연 지연 지연</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">97</p>
+									<p class="subject">
+										<a class="link_text" href="#">오설록 티 크리에이터 1기 서류 합격발표 관련 안내</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">96</p>
+									<p class="subject">
+										<a class="link_text" href="#">[내용정정] 오설록 개인정보 처리방침 변경 고지</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">95</p>
+									<p class="subject">
+										<a class="link_text" href="#">[내용정정] CJ대한통운 파업 종료 및 배송지연, 정상화 종료 및 배송지연, 정상화</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">94</p>
+									<p class="subject">
+										<a class="link_text" href="#">[공지] 울릉도/강릉 지역 폭설로 인한 베이커리류 택배 지연 지연 지연 지연 지연</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">93</p>
+									<p class="subject">
+										<a class="link_text" href="#">오설록 티 크리에이터 1기 서류 합격발표 관련 안내</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">92</p>
+									<p class="subject">
+										<a class="link_text" href="#">[내용정정] 오설록 개인정보 처리방침 변경 고지</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+								<li class="item">
+									<p class="num pcBlock">91</p>
+									<p class="subject">
+										<a class="link_text" href="#">[공지] 울릉도/강릉 지역 폭설로 인한 베이커리류 택배 지연 지연 지연 지연 지연</a>
+									</p>
+									<p class="date">2022.03.11</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+			<!-- pagination : S -->
+			<div id="pagination" class="newPagination for-mobile">
+				<span class="btn btn-home is-disabled">페이지 처음으로</span>
+				<span class="btn btn-prev is-disabled">이전 페이지</span>
+				<a href="#" class="num on" data-track-name="1 페이지 이동">1</a>
+				<a href="#" class="num" data-track-name="2 페이지 이동">2</a>
+				<span class="btn btn-next is-disabled">다음 페이지</span>
+				<span class="btn btn-end is-disabled">페이지 끝으로</span>
+			</div>
+			<!-- pagination : E -->
+		</div>
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 공지사항 리스트 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

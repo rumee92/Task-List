@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+<!-- header include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+<!-- CDJ 개선 선물하기 : S -->
+<main class="main cdj_renew shop_gifts">
+	<!-- 타이틀 : S -->
+	<section class="section page_tit_box">
+		<div class="container shop_inner">
+			<h2 class="page_tit">선물하기</h2>
+		</div>
+	</section>
+	<!-- 타이틀 : E -->
+	
+	<form action="">
+		<!-- 컨텐츠 : S -->
+		<section class="section bgF6">
+			<div class="container no_gutter shop_inner">
+				<div class="sub_layout">
+					<div class="sub_layout_contents">
+						<div class="content bt2 gifts_card">
+							<div class="gifts_msg_card">
+								<div class="card_img_box">
+									<div class="top">
+										<div thumbsSlider="" class="swiper-container gifts_msg_card_thumb">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card01.png" alt="선물 메세지 카드 1"></div>
+												<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card02.png" alt="선물 메세지 카드 2"></div>
+												<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card03.png" alt="선물 메세지 카드 3"></div>
+												<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card04.png" alt="선물 메세지 카드 4"></div>
+												<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card05.png" alt="선물 메세지 카드 5"></div>
+											</div>
+										</div>
+									</div>
+									<div class="bottom">
+										<div class="card_img">
+											<div class="swiper-container gifts_msg_card_img">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card01.png" alt="선물 메세지 카드 1"></div>
+													<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card02.png" alt="선물 메세지 카드 2"></div>
+													<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card03.png" alt="선물 메세지 카드 3"></div>
+													<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card04.png" alt="선물 메세지 카드 4"></div>
+													<div class="swiper-slide"><img src="/kr/ko/static_cdj/images/present/gifts_card05.png" alt="선물 메세지 카드 5"></div>
+												</div>
+												<!--<div class="swiper-button-next"></div>
+												<div class="swiper-button-prev"></div>-->
+											</div>
+										</div>
+										<div class="card_msg">
+											<textarea name="" id="" cols="" rows="" maxlength="100" placeholder="100자 이내로 입력해 주세요." class="cart_msg_text"></textarea>
+											<div class="text_cnt"><span>0</span>/100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="content">
+							<!-- 보내는 분 : S -->
+							<div class="accordion_layout order_customer_info">
+								<div class="subject_box">
+									<div class="left"><p class="subject">보내는 분</p></div>
+									<div class="right">
+										<p class="desc"><span class="customer_name">박루리</span>/<span class="customer_phone_numb">010-4569-1134</span></p>
+										<div class="slide_btn"></div>
+									</div>
+								</div>
+								<div class="con_box">
+									<div class="customer_info">
+										<span class="float_text02 pcBlock">* 받는 분께 보여집니다.</span>
+										<table class="table_type_write">
+											<caption>보내는 분</caption>
+											<colgroup>
+												<col style="width:100px;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="tr_tit vtAlign">이름 <span class="float_text01 moBlock">* 받는 분께 보여집니다.</span></th>
+													<td>
+														<input type="text" class="inp_text" title="이름입력" value="">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="tr_tit vtAlign">이메일</th>
+													<td>
+														<div class="email_box">
+															<div class="email">
+																<input type="text" class="inp_text" title="이메일" value="">
+																<span class="at">@</span>
+																<div class="inp_selectbox">
+																	<select name="" id="" class="inp_select">
+																		<option value="naver.com" checked="">naver.com</option>
+																		<option value="hanmail.net">hanmail.net</option>
+																		<option value="gmail.com">gmail.com</option>
+																		<option value="1">직접입력</option>
+																	</select>
+																</div>
+															</div>
+															<div class="add_email"><input type="text" class="inp_text" title="도메인입력" value=""></div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="tr_tit vtAlign">휴대전화</th>
+													<td>
+														<div class="mobile_number_box">
+															<div class="inp_selectbox">
+																<select name="" id="" class="inp_select">
+																	<option value="010" selected>010</option>
+																	<option value="011">011</option>
+																	<option value="016">016</option>
+																	<option value="017">017</option>
+																	<option value="018">018</option>
+																	<option value="019">019</option>
+																</select>
+															</div>
+															<span class="hyphen">-</span>
+															<input type="number" class="inp_text" title="휴대전화 입력" value="" placeholder="'-' 없이 휴대폰번호 입력">
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- 보내는 분 : E -->
+						</div>
+						
+						<div class="content">
+							<!-- 받는 분 정보 : S -->
+							<div class="accordion_layout no_fold shipping_address_info">
+								<div class="subject_box delivery">
+									<div class="left"><p class="subject">받는 분 정보</p></div>
+								</div>
+								<div class="con_box">
+									<table class="table_type_write">
+										<caption>받는 분 정보</caption>
+										<colgroup>
+											<col style="width:100px;">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th scope="row" class="tr_tit">받는 분</th>
+												<td>
+													<input type="text" class="inp_text" title="이름입력" value="" placeholder="이름">
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="tr_tit">휴대전화</th>
+												<td>
+													<div class="mobile_number_box">
+														<div class="inp_selectbox">
+															<select name="" id="" class="inp_select">
+																<option value="010" selected>010</option>
+																<option value="011">011</option>
+																<option value="016">016</option>
+																<option value="017">017</option>
+																<option value="018">018</option>
+																<option value="019">019</option>
+															</select>
+														</div>
+														<span class="hyphen">-</span>
+														<input type="number" class="inp_text" title="휴대전화 입력" value="" placeholder="'-' 없이 휴대폰번호 입력">
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<div class="content">
+							<!-- 선물상품 확인  : S -->
+							<div class="accordion_layout no_fold gifts_list_info">
+								<div class="subject_box">
+									<div class="left"><p class="subject">선물상품 확인</p></div>
+								</div>
+								<div class="con_box mo_full">
+									<div class="order_prd_list">
+										<div class="order_list_box">
+											<ul class="list_type_2">
+												<li class="list_item mo_full_item">
+													<div class="thumb_con">
+														<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/order_list_prd_thumb01.jpg" alt=""></div>
+														<div class="text_box">
+															<p class="prd_name">베스트 티 컬렉션 3종</p>
+															<p class="packing_state">유료포장 선택안함</p>
+															<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+															<div class="prd_price_amount">
+																<span class="price">25,000원</span> / <span class="amount">1개</span>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 선물상품 확인 : E -->
+						</div>
+						
+						
+						<div class="content">
+							<!-- 할인/포인트  : S -->
+							<div class="accordion_layout sale_point_info">
+								<div class="subject_box">
+									<div class="left"><p class="subject">할인/포인트</p></div>
+									<div class="right">
+										<p class="desc">-250,000원</p>
+										<div class="slide_btn"></div>
+									</div>
+								</div>
+								<div class="con_box mo_full">
+									<div class="discount_info">
+										<div class="discount_list">
+											<div class="discount_item mo_full_item no_coupon">
+												<div class="item_tit">
+													<p class="left">상품 할인</p>
+												</div>
+												<div class="input_group1">
+													<input type="text" class="left" value="2개 상품 할인 혜택 (-150,000원)">
+													<button type="button" class="right" title="적용 취소" onclick="">적용 취소</button>
+												</div>
+											</div>
+											<!-- 쿠폰이 0장일때, no_coupon클래스 추가 및 disabled 추가 -->
+											<div class="discount_item mo_full_item no_coupon">
+												<div class="item_tit">
+													<p class="left">쿠폰</p>
+													<p class="right">보유쿠폰 <span class="count">0장</span></p>
+												</div>
+												<div class="input_group1">
+													<input type="text" class="left" disabled>
+													<button type="button" class="right" title="쿠폰 조회" onclick="" disabled>쿠폰 조회</button>
+												</div>
+											</div>
+											<div class="discount_item mo_full_item">
+												<div class="item_tit">
+													<div class="left">
+														뷰티포인트 <span class="icon_bp"><img src="/kr/ko/static_cdj/images/shop/icon_qu.png" alt=""></span>
+														<div class="bp_con_bg">
+															<ul class="bp_con">
+																<li class="item">뷰티포인트로 배송비 결제는 불가능 합니다.</li>
+																<li class="item"><span class="pt">포인트 사용 단위 10P</span> (최소 사용 포인트 10P)</li>
+																<li class="item">결제금액 기준으로 구매사은품을 받으실 수 있습니다. (실 결제금액 + 뷰티포인트 사용금액)</li>
+																<li class="item">최종 결제금액에서 포인트 결제가능 상품들의 가격비중대비 자동배분되어 결제됩니다.</li>
+															</ul>
+														</div>
+													</div>
+													<p class="right">보유포인트 <span class="count">2,000,000P</span></p>
+												</div>
+												<div class="input_group1">
+													<input type="text" class="left">
+													<button type="button" class="right" title="모두 사용" onclick="">모두 사용</button>
+												</div>
+											</div>
+										</div>
+										<div class="discount_btn mo_full_item">
+											<button type="button" class="left">할인 옵션 초기화</button>
+											<button type="button" class="right">멤버십/제휴 포인트 할인</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 할인/포인트 : E -->
+						</div>
+						
+						
+						<div class="content">
+							<!-- 결제수단  : S -->
+							<div class="accordion_layout payment_select_info">
+								<div class="subject_box on">
+									<div class="left"><p class="subject">결제 수단 선택</p></div>
+									<div class="right">
+										<p id="payment_txt" class="desc"></p>
+										<div class="slide_btn"></div>
+									</div>
+								</div>
+								<div class="con_box mo_full">
+									<div class="payment_info mo_full_item">
+										<ul class="payment_list">
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_1" value="Card">
+													<label for="payment_1">신용카드</label>
+												</div>
+											</li>
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_2" value="NAVERPAY">
+													<label for="payment_2">네이버 페이</label>
+												</div>
+											</li>
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_3" value="NEWKKOPAY">
+													<label for="payment_3">카카오 페이</label>
+												</div>
+											</li>
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_4" value="PAYCO">
+													<label for="payment_4">PAYCO</label>
+												</div>
+											</li>
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_5" value="SAMSUNGPAY">
+													<label for="payment_5">Samsung Pay</label>
+												</div>
+											</li>
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_6" value="LPAY">
+													<label for="payment_6">L.Pay</label>
+												</div>
+											</li>
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_8" value="DirectBank">
+													<label for="payment_8">계좌이체</label>
+												</div>
+											</li>
+											<li class="item">
+												<div class="box">
+													<input type="radio" name="paymentType" id="payment_9" value="HPP">
+													<label for="payment_9">휴대폰 결제</label>
+												</div>
+											</li>
+											<li class="item pcBlock"></li>
+										</ul>
+										
+										<div class="payment_con">
+											<!-- 신용카드 선택 시 : S -->
+											<div id="payment_card" class="payment_item payment_card">
+												<div class="flex_box">
+													<div class="custom_select_wrap">
+														<div class="custom_select_box" id="payment_card_select">
+															<div class="select_area">선택</div>
+															<div class="dropdown_area">
+																<ul class="dropdown_box">
+																	<li class="item">
+																		<input type="radio" id="payment_card1" name="cardDirectCode" value="">
+																		<label for="payment_card1">롯데카드</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="payment_card2" name="cardDirectCode" value="">
+																		<label for="payment_card2">신한카드</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="payment_card3" name="cardDirectCode" value="">
+																		<label for="payment_card3">KB국민카드</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="payment_card4" name="cardDirectCode" value="">
+																		<label for="payment_card4">삼성카드</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="payment_card5" name="cardDirectCode" value="">
+																		<label for="payment_card5">현대카드</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="payment_card6" name="cardDirectCode" value="">
+																		<label for="payment_card6">BC카드</label>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													
+													<div class="custom_select_wrap">
+														<div class="custom_select_box" id="installment_select">
+															<div class="select_area">할부개월을 선택해 주세요.</div>
+															<div class="dropdown_area">
+																<ul class="dropdown_box">
+																	<li class="item">
+																		<input type="radio" id="installment_1" name="cardQuota" value="">
+																		<label for="installment_1">1개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_2" name="cardQuota" value="">
+																		<label for="installment_2">2개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_3" name="cardQuota" value="">
+																		<label for="installment_3">3개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_4" name="cardQuota" value="">
+																		<label for="installment_4">4개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_5" name="cardQuota" value="">
+																		<label for="installment_5">5개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_6" name="cardQuota" value="">
+																		<label for="installment_6">6개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_7" name="cardQuota" value="">
+																		<label for="installment_7">7개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_8" name="cardQuota" value="">
+																		<label for="installment_8">8개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_9" name="cardQuota" value="">
+																		<label for="installment_9">9개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_10" name="cardQuota" value="">
+																		<label for="installment_10">10개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_11" name="cardQuota" value="">
+																		<label for="installment_11">11개월</label>
+																	</li>
+																	<li class="item">
+																		<input type="radio" id="installment_12" name="cardQuota" value="">
+																		<label for="installment_12">12개월</label>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<p class="no_interest">무이자 할부 안내 <img class="ico" src="/kr/ko/static_cdj/images/shop/link_icon2.png" alt=""></p>
+											</div>
+											<!-- 신용카드 선택 시 : E -->
+											
+											<!-- 계좌이체 선택 시 : S -->
+											<div id="payment_transfer" class="payment_item cash_receipts">
+												<div class="cash_receipts_box">
+													<p class="box_tit">현금 영수증 발행</p>
+													<div class="cash_receipts_radio">
+														<div class="inp_radio">
+															<input type="radio" id="cash_receipts_typeB_1" name="cash_receipts_typeB" value="개인소득공제용 발행">
+															<label for="cash_receipts_typeB_1">개인소득공제용</label>
+														</div>
+														<div class="inp_radio">
+															<input type="radio" id="cash_receipts_typeB_2" name="cash_receipts_typeB" value="사업자 증빙용 발행">
+															<label for="cash_receipts_typeB_2">사업자 증빙용</label>
+														</div>
+														<div class="inp_radio">
+															<input type="radio" id="cash_receipts_typeB_3" name="cash_receipts_typeB" value="현금영수증 신청 안함" checked>
+															<label for="cash_receipts_typeB_3">신청안함</label>
+														</div>
+													</div>
+												</div>
+												<div class="pay_safe_info">
+													<p class="info_tit">구매 안전 서비스 안내</p>
+													<p class="info_text">
+														오설록몰은 고객님의 안전 거래를 위해 무통장 입금 또는 실시간 계좌이체 주문에 대해 구매안전서비스(에스크로)를 자동 적용하고 있습니다.
+													</p>
+												</div>
+											</div>
+											<!-- 계좌이체 선택 시 : E -->
+										</div>
+									</div>
+									<div class="payment_chk mo_full_item">
+										<div class="inp_check">
+											<input type="checkbox" id="payment_method" name="payment_method">
+											<label for="payment_method">선택한 결제수단을 다음에도 사용</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 결제수단  : E -->
+						</div>
+						
+						<div class="no_interest_con">
+							<div class="no_interest_pop">
+								<div class="top_box">무이자 할부 안내 <button type="button" class="no_pop_close"></button></div>
+								<div class="con_box">
+									<iframe src="https://admin8.kcp.co.kr/html/popup/thismonth/html/kcp_pop_up.html" frameborder="0"></iframe>
+								</div>
+							</div>
+						</div>
+						<div class="no_interest_con_dim"></div>
+						
+						<div class="content mtPc0">
+							<!-- 결제 예상 정보 : S -->
+							<div class="shop_price_info pay_price_info">
+								<p class="pay_price_info_tit">최종 결제 금액</p>
+								<div class="price_info">
+									<ul class="list">
+										<li class="item">
+											<div class="top_item">
+												<p class="item_name">총 상품 금액</p>
+												<p class="item_val">74,000원</p>
+											</div>
+											<div class="sub_item">
+												<p class="item_name">유료포장 선택</p>
+												<p class="item_val">+2,000원</p>
+											</div>
+											<div class="sub_item">
+												<p class="item_name">쇼핑백 선택</p>
+												<p class="item_val">+100원</p>
+											</div>
+										</li>
+										<li class="item">
+											<div class="top_item">
+												<p class="item_name">총 할인 혜택</p>
+												<p class="item_val prd_sale">-10,000원</p>
+											</div>
+											<div class="sub_item">
+												<p class="item_name">상품할인</p>
+												<p class="item_val">-10,000원</p>
+											</div>
+										</li>
+										<li class="item">
+											<div class="top_item">
+												<p class="item_name">포인트 결제</p>
+												<p class="item_val prd_sale">-300원</p>
+											</div>
+											<div class="sub_item">
+												<p class="item_name">L.POINT</p>
+												<p class="item_val">-300원</p>
+											</div>
+										</li>
+										<li class="item">
+											<div class="top_item">
+												<p class="item_name">배송비</p>
+												<p class="item_val">2,500원</p>
+											</div>
+										</li>
+									</ul>
+									<div class="expected_price">
+										<p class="item_name">최종 결제 금액</p>
+										<p class="item_val">68,300<span class="unit">원</span></p>
+									</div>
+									<div class="expected_point">
+										<div class="item">
+											<p class="item_name">뷰티포인트 예상 적립</p>
+											<p class="item_val">+50,000P</p>
+										</div>
+										<div class="item">
+											<p class="item_name">오설록 몰 포인트 예상 적립</p>
+											<p class="item_val">+3,500P</p>
+										</div>
+									</div>
+									<div class="list_btn">
+										<button type="button" class="list_buy_btn" onclick="">결제하기</button>
+									</div>
+								</div>
+							</div>
+							<!-- 결제 예상 정보 : E -->
+						</div>
+						
+						<div class="content bdbN">
+							<!-- 하단 결제 및 배송 안내 : S -->
+							<div class="bottom_order_info">
+								<div class="info_top">
+									<div class="info_box1">
+										<div class="text_box">
+											<p class="text">CJ대한통운 파업 관련 배송지연 공지를 반드시 확인 해주세요.</p>
+											<a class="link" href="#none">공지사항 바로가기</a>
+										</div>
+									</div>
+								</div>
+								<!-- 사용자가 necessary_chk의 정보 동의 항목 중 체크 하지 않은 항목이 있을 시 item에 클래스 error 추가 -->
+								<div class="info_bottom">
+									<div class="info_box2">
+										<div class="necessary_chk">
+											<div class="item error">
+												<div class="inp_check">
+													<input type="checkbox" id="agree1" name="agree1">
+													<label for="agree1">위 상품의 판매조건을 명확히 확인하였으며, 구매 진행에 동의합니다. (전자상거래법 제8조 2항)</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_box3">
+										<div class="dot_text_list">
+											<ul class="list">
+												<li class="item">할인쿠폰 적용 후 총 결제 금액(배송비, 쇼핑백 환경부담금 제외)가 3만원 이상인 경우 무료 배송이 적용됩니다. (단, 티웨어는 브랜드별로 무료배송기준이 상이하오니, 제품고시정보 내의 배송안내 확인부탁드립니다.)
+												</li>
+												<li class="item">배송 정보(=수취인정보)가 동일할 경우 자동으로 합배송(1개의 송장번호) 될 수 있습니다. (반드시 제품 수령 후, 송장번호 기입하시어 1:1 상담 게시판을 통해 배송비 환불 요청해주세요.)
+													<p class="add_text">예) 2건의 주문 건 중 무료배송 주문 건과 배송료를 지불한 주문 건이 합배송되었을 경우 1건의 배송료 환불</p>
+												</li>
+												<li class="item">다수의 주문건에 쿠폰 할인을 받는 대신 배송료를 결제하는 경우, 합배송 환불에서 제외 될 수도 있습니다.
+													<p class="add_text">예) 2건의 주문 건 모두 배송료를 지불하였을 경우 1건의 배송료만 환불</p>
+													<p class="add_text">* 단, 합배송 개별 신청은 불가능합니다.</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 하단 결제 및 배송 안내 : E -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 컨텐츠 : E -->
+		
+		<!-- 모바일 하단 fixed 버튼 : S -->
+		<div class="bottom_fixed_btn">
+			<button type="button" class="fixed_btn" title="결제하기" onclick="">결제하기</button>
+		</div>
+		<!-- 모바일 하단 fixed 버튼 : E -->
+	</form>
+
+</main>
+<!-- CDJ 개선 선물하기 : E -->
+
+
+
+
+<!-- footer include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

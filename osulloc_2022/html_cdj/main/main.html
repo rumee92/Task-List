@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- CDJ 개선 메인페이지 시작 : S -->
+
+	<!-- 상단 띠배너 : S -->
+	<div class="cdj_renew">
+		<div class="main_top_banner">
+			<div class="swiper-container banner_list">
+				<div class="swiper-wrapper">
+					<!-- background-color는 관리자에서 지정 -->
+					<div class="swiper-slide item" style="background-color:#464545;"><a href="#" class="link">관리자에서 등록한 띠배너 노출 영역입니다 1</a></div>
+					<div class="swiper-slide item" style="background-color:#EF9C9E;"><a href="#" class="link">관리자에서 등록한 띠배너 노출 영역입니다 2</a></div>
+					<div class="swiper-slide item" style="background-color:#A3A752;"><a href="#" class="link">관리자에서 등록한 띠배너 노출 영역입니다 3</a></div>
+					<div class="swiper-slide item" style="background-color:#7879C8;"><a href="#" class="link">관리자에서 등록한 띠배너 노출 영역입니다 4</a></div>
+					<div class="swiper-slide item" style="background-color:#282C41;"><a href="#" class="link">관리자에서 등록한 띠배너 노출 영역입니다 5</a></div>
+					<div class="swiper-slide item" style="background-color:#EF7C43;"><a href="#" class="link">관리자에서 등록한 띠배너 노출 영역입니다 6</a></div>
+				</div>
+			</div>
+			<button class="main_top_banner_close"><img src="/kr/ko/static_cdj/images/main/icon_main_top_banner_close.png" alt="배너 닫기"></button>
+		</div>
+	</div>
+	<!-- 상단 띠배너 : E -->
+
+	
+	<!-------------------------------------------------------
+	 header include 영역 입니다. 메인은 여기에 헤더를 넣어주세요.
+	 -------------------------------------------------------->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	<main class="main cdj_renew main_contents">
+		<!-- 메인배너 : S -->
+		<section class="main_sec">
+			<div class="main_banner">
+				<div class="main_banner_slide swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">
+								<div class="img_box">
+									<img class="moBlock" src="/kr/ko/static_cdj/images/main/main_visual01_mo.jpg" alt="">
+									<img class="pcBlock" src="/kr/ko/static_cdj/images/main/main_visual01_pc.jpg" alt="">
+								</div>
+								<div class="align_box">
+									<div class="text_box">
+										<h3 class="ban_title">오설록 베이커리 뉴런칭<br> 이벤트</h3>
+										<p class="onepoint">스트로베리 그린티 케이크를 런칭 기념 혜택으로<br class="moBlock">만나보세요!</p>
+										<p class="date">03.01 - 03.20</p>
+									</div>
+									<button type="button" title="이벤트 전체보기" class="btn_event_go pcBlock" onclick="">이벤트 전체보기</button>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<div class="img_box">
+									<img class="moBlock" src="/kr/ko/static_cdj/images/main/main_visual01_mo.jpg" alt="">
+									<img class="pcBlock" src="/kr/ko/static_cdj/images/main/main_visual01_pc.jpg" alt="">
+								</div>
+								<div class="align_box">
+									<div class="text_box">
+										<h3 class="ban_title">오설록 베이커리 뉴런칭<br> 이벤트222</h3>
+										<p class="onepoint">스트로베리 그린티 케이크를 런칭 기념 혜택으로<br class="moBlock">만나보세요!</p>
+										<p class="date">03.01 - 03.20</p>
+									</div>
+									<button type="button" title="이벤트 전체보기" class="btn_event_go pcBlock" onclick="">이벤트 전체보기</button>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="align_box02">
+						<button type="button" class="swiper-button-next main_slide_next" title="이전 슬라이드"></button>
+						<button type="button" class="swiper-button-prev main_slide_prev" title=""></button>
+					</div>
+					<div class="swiper_control">
+						<div class="swiper_pagination"></div>
+						<div class="swiper_play on">
+							<button type="button" class="swiper_btn_play"><img src="/kr/ko/static_cdj/images/main/icon_btn_play.png" alt="재생"></button>
+							<button type="button" class="swiper_btn_pause"><img src="/kr/ko/static_cdj/images/main/icon_btn_pause.png" alt="일시정지"></button>
+						</div>
+						<div class="swiper_fraction">
+							<div class="count">
+								<span class="current">1</span>
+								<span class="slash">/</span>
+								<span class="total"></span>
+							</div>
+							<button type="button" class="more"><img src="/kr/ko/static_cdj/images/main/icon_banner_more.png" alt="전체보기"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 메인배너 : E -->
+		
+		
+		<!-- 메인배너 전체보기 레이어 팝업 (모바일) : S -->
+		<section class="main_banner_layer" id="main_banner_layer">
+			<div class="banner_layer_wrap">
+				<div class="banner_layer_box">
+					<div class="layer_header">
+						<h2 class="tit">전체보기</h2>
+						<button class="main_banner_layer_close" type="button" title="닫기">
+							<img src="/kr/ko/static_cdj/images/main/icon_mo_nav_close.png" alt="전체보기 닫기">
+						</button>
+					</div>
+					<div class="layer_con">
+						<div class="layer_item">
+							<a href="#">
+								<div class="img_box">
+									<img class="moBlock" src="/kr/ko/static_cdj/images/main/main_visual01_mo.jpg" alt="">
+								</div>
+								<div class="text_box">
+									<h3 class="ban_title">오설록 베이커리 뉴런칭<br> 이벤트</h3>
+									<p class="onepoint">스트로베리 그린티 케이크를 런칭 기념 혜택으로<br class="moBlock">만나보세요!</p>
+									<p class="date">03.01 - 03.20</p>
+								</div>
+							</a>
+						</div>
+						<div class="layer_item">
+							<a href="#">
+								<div class="img_box">
+									<img class="moBlock" src="/kr/ko/static_cdj/images/main/main_visual02_mo.jpg" alt="">
+								</div>
+								<div class="text_box">
+									<h3 class="ban_title">소중한 마음 전하기<br> 이벤트</h3>
+									<p class="onepoint">평소에 마음을 전하기 못한 분께 따뜻한<br class="moBlock"> 차를 선물 드리는거 어떨까요?</p>
+									<p class="date">03.01 - 03.20</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 메인배너 전체보기 레이어 팝업 (모바일) : E -->
+	
+		
+		<!-- 퀵메뉴 : S -->
+		<section class="main_sec">
+			<div class="quick_banner">
+				<div class="w1200">
+					<div class="quick_banner_slide swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/main/quick_img01.png" alt="티"></div>
+									<p class="text_box">티 제품</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/main/quick_img02.png" alt="티푸드"></div>
+									<p class="text_box">티푸드</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/main/quick_img03.png" alt="선물세트"></div>
+									<p class="text_box">선물세트</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/main/quick_img04.png" alt="정기구독"></div>
+									<p class="text_box">정기구독</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="img_box"><img src="/kr/ko/static_cdj/images/main/quick_img05.png" alt="이벤트"></div>
+									<p class="text_box">이벤트</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 퀵메뉴 : E -->
+		
+		
+		<!-- 공지사항 : S -->
+		<section class="main_sec">
+			<div class="w1200">
+				<div class="main_notice">
+					<p class="title">공지사항</p>
+					<ul class="notice_list" id="notice_list">
+						<li class="item">
+							<a href="#">설날 얼리버드 당첨자 공지</a>
+						</li>
+						<li class="item">
+							<a href="#">'뉴 베이커리 런칭 이벤트' 당첨자 공지</a>
+						</li>
+						<li class="item">
+							<a href="#">'달이 떴다고 전화를 주시다니요' 이벤트 당첨자 공지</a>
+						</li>
+					</ul>
+					<button type="button" class="notice_more_btn" title="공지사항 더보기"></button>
+				</div>
+				
+			</div>
+		</section>
+		<!-- 공지사항 : E -->
+		
+		
+		<!-- 메인 상품리스트 : S -->
+		<section class="main_sec line01">
+			<div class="main_prd_list">
+				<div class="w1200">
+					<div class="tit_box">
+						<div class="sec_tit">
+							<h3 class="text01">오늘은 어떤 차를 마셔볼까요?</h3>
+						</div>
+						<ul class="prd_tab">
+							<li class="tab_item">시즌 추천 제품</li>
+							<li class="tab_item on">이번 주 인기 제품</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="w1200_2">
+					<!-- tab_con01 : S -->
+					<div class="prd_tab_con prd_tab_con01">
+						<div class="prd_list_box">
+							<div class="prd_list_slide prd_list_slide01 swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img01.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_gift_btn" title="선물"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">녹차 밀크 스프레드 200g</a>
+												</p>
+												<div class="prd_price">
+													<p class="price_origin">8,500원</p>
+													<div class="flex_box">
+														<p class="price_result">5,950원</p>
+														<p class="sale_percent">30%</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img02.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_gift_btn" title="선물"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">달빛걷기 10입(피라미드)</a>
+												</p>
+												<div class="prd_price">
+													<div class="flex_box">
+														<p class="price_result">15,000원</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img01.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_gift_btn" title="선물"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">녹차 밀크 스프레드 200g</a>
+												</p>
+												<div class="prd_price">
+													<p class="price_origin">8,500원</p>
+													<div class="flex_box">
+														<p class="price_result">5,950원</p>
+														<p class="sale_percent">30%</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img02.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_gift_btn" title="선물"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">달빛걷기 10입(피라미드)</a>
+												</p>
+												<div class="prd_price">
+													<div class="flex_box">
+														<p class="price_result">15,000원</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img01.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_gift_btn" title="선물"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">녹차 밀크 스프레드 200g</a>
+												</p>
+												<div class="prd_price">
+													<p class="price_origin">8,500원</p>
+													<div class="flex_box">
+														<p class="price_result">5,950원</p>
+														<p class="sale_percent">30%</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img02.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_gift_btn" title="선물"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">달빛걷기 10입(피라미드)</a>
+												</p>
+												<div class="prd_price">
+													<div class="flex_box">
+														<p class="price_result">15,000원</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination prd_list_pagination"></div>
+							</div>
+							<div class="swiper-button-next main_slide_next"></div>
+							<div class="swiper-button-prev main_slide_prev"></div>
+						</div>
+						<div class="main_btn_typeA">
+							<button type="button" class="btn_A"><span>더 보기</span></button>
+						</div>
+					</div>
+					<!-- tab_con01 : E -->
+					
+					<!-- tab_con02 : S -->
+					<div class="prd_tab_con prd_tab_con02 on">
+						<div class="prd_list_box">
+							<div class="prd_list_slide prd_list_slide02 swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img05.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_wish_btn" title="위시"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">이너핏 워터플러스 30일분 (깔라망고맛+해피자몽맛)</a>
+												</p>
+												<div class="prd_price">
+													<div class="flex_box">
+														<p class="price_result">40,000원</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img03.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_wish_btn" title="위시"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">삼다연제주영귤 20입(피라미드)</a>
+												</p>
+												<div class="prd_price">
+													<p class="price_origin">8,500원</p>
+													<div class="flex_box">
+														<p class="price_result">5,950원</p>
+														<p class="sale_percent">30%</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img05.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_wish_btn" title="위시"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">이너핏 워터플러스 30일분 (깔라망고맛+해피자몽맛)</a>
+												</p>
+												<div class="prd_price">
+													<div class="flex_box">
+														<p class="price_result">40,000원</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img03.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_wish_btn" title="위시"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">삼다연제주영귤 20입(피라미드)</a>
+												</p>
+												<div class="prd_price">
+													<p class="price_origin">8,500원</p>
+													<div class="flex_box">
+														<p class="price_result">5,950원</p>
+														<p class="sale_percent">30%</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img05.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_wish_btn" title="위시"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">이너핏 워터플러스 30일분 (깔라망고맛+해피자몽맛)</a>
+												</p>
+												<div class="prd_price">
+													<div class="flex_box">
+														<p class="price_result">40,000원</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="prd_thumb">
+											<a href="#">
+												<!-- 기본 썸네일 prd_thumb_default -->
+												<img class="prd_thumb_default" src="/kr/ko/static_cdj/images/main/prd_thumb_img03.jpg" alt="">
+												<!-- 마우스 오버시 썸네일 prd_thumb_hover -->
+												<img class="prd_thumb_hover" src="/kr/ko/static_cdj/images/main/prd_thumb_img06.jpg" alt="">
+											</a>
+											<!-- 아이콘 클릭하면 prd_btn에 on 클래스 붙음 -->
+											<div class="hover_icon">
+												<button type="button" class="prd_btn prd_wish_btn" title="위시"></button>
+												<button type="button" class="prd_btn prd_cart_btn" title="장바구니"></button>
+											</div>
+										</div>
+										<div class="prd_desc">
+											<div class="prd_info">
+												<p class="prd_name">
+													<a href="#">삼다연제주영귤 20입(피라미드)</a>
+												</p>
+												<div class="prd_price">
+													<p class="price_origin">8,500원</p>
+													<div class="flex_box">
+														<p class="price_result">5,950원</p>
+														<p class="sale_percent">30%</p>
+													</div>
+												</div>
+											</div>
+											<!-- prd_tag 세종류 중 한개만 노출 됨 -->
+											<div class="prd_tag">
+												<span class="tag t_soldOut">일시품절</span>
+												<span class="tag t_new">신상품</span>
+												<span class="tag t_reco">추천</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination prd_list_pagination"></div>
+							</div>
+							<div class="swiper-button-next main_slide_next"></div>
+							<div class="swiper-button-prev main_slide_prev"></div>
+						</div>
+						<div class="main_btn_typeA">
+							<button type="button" class="btn_A"><span>더 보기</span></button>
+						</div>
+					</div>
+					<!-- tab_con02 : E -->
+				</div>
+			</div>
+		</section>
+		<!-- 메인 상품리스트 : E -->
+		
+		
+		
+		<!-- 배너 모음 : S -->
+		<section class="main_sec">
+			<div class="banner_collection">
+				<div class="w1200">
+					<div class="flex_box">
+						<div class="con_box01">
+							<!-- 오늘만 이가격 -->
+							<div class="ban_box ban_box01">
+								<a href="#">
+									<div class="img"><img src="/kr/ko/static_cdj/images/main/today_price_img.jpg" alt="오늘만 이 가격"></div>
+									<div class="text_box">
+										<div class="inner">
+											<div class="ban_tit">
+												<p class="left">오늘만 이 가격</p>
+												<p class="right">02:53:32</p>
+											</div>
+											<div class="prd_info">
+												<p class="prd_name">동백이피는곶자왈 20입(피라미드)</p>
+												<div class="price_info">
+													<div class="sale_percent">30%</div>
+													<div class="price_origin">8,880원</div>
+													<div class="price_result">6,160원</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="con_box02">
+							<!-- 출석체크 배너 -->
+							<div class="ban_box ban_box02">
+								<a href="#">
+									<div class="img"><img src="/kr/ko/static_cdj/images/main/attendance_chk_img.jpg" alt="3월 출석체크"></div>
+									<div class="text_box">
+										<p class="text01">3월 출석체크</p>
+										<div class="date_info">
+											<p class="text02">22.02.25~22.03.31</p>
+											<span class="dday_tag">D-4</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							
+							<!-- 브랜드 스토리 배너 -->
+							<div class="ban_box ban_box03">
+								<a href="#">
+									<div class="img"><img src="/kr/ko/static_cdj/images/main/brand_story_img.jpg" alt="오설록 이야기"></div>
+									<div class="text_box">
+										<p class="text01">TEA FROM JEJU</p>
+										<p class="text02">오설록 스토리</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 배너 모음 : E -->
+		
+		
+		<!-- 다다일상 정기구독 : S -->
+		<section class="main_sec">
+			<div class="dada_subscribe">
+				<div class="w1200">
+					<div class="sec_tit">
+						<h3 class="text01">다다일상 구독</h3>
+						<p class="text02">하루 한 번, 나를 만나는 시간을 가져보세요.</p>
+					</div>
+				</div>
+				<div class="w1200">
+					<div class="dada_subs_list">
+						<div class="swiper-container dada_subs_slide">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="img_box">
+											<img class="pcBlock" src="/kr/ko/static_cdj/images/main/dada_img01_pc.jpg" alt="">
+											<img class="moBlock" src="/kr/ko/static_cdj/images/main/dada_img01_mo.jpg" alt="">
+										</div>
+										<div class="desc_box desc_box01">
+											<p class="ban_tit">새롭게 만나는 차, 다다일상 베이직</p>
+											<div class="flex_box">
+												<div class="price_text">
+													<span class="smT">매월</span>
+													<span class="price">16,000원</span>
+												</div>
+												<span class="tag">배송비 Free</span>
+											</div>
+										</div>
+										<div class="hover_box">
+											<div class="inner">
+												<div class="desc_box desc_box02">
+													<p class="ban_tit">새롭게 만나는 차, 다다일상 베이직</p>
+													<div class="flex_box">
+														<div class="price_text">
+															<span class="smT">매월</span>
+															<span class="price">16,000원</span>
+														</div>
+														<span class="tag">배송비 Free</span>
+													</div>
+												</div>
+												<div class="ban_con">
+													<p class="text">
+														오설록 티 소믈리에가 매월 그달의 테마와 어울리는 차들을 선정하여 보내드립니다.<br>
+														일상의 작은 순간들을 차와 함께 새롭게 만나보세요.
+													</p>
+													<ul class="text_list">
+														<li class="item"><em class="pt">3종류 이상</em>의 다양한 티백 구성</li>
+														<li class="item"><em class="pt">2만원 이상</em> 정가 구성</li>
+														<!--<li class="item"><em class="pt">최소 9만원 이상할인</em> (1년 구독 기준)</li>-->
+													</ul>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="img_box">
+											<img class="pcBlock" src="/kr/ko/static_cdj/images/main/dada_img02_pc.jpg" alt="">
+											<img class="moBlock" src="/kr/ko/static_cdj/images/main/dada_img02_mo.jpg" alt="">
+										</div>
+										<div class="desc_box desc_box01">
+											<p class="ban_tit">다르게 만나는 차, 다다일상 홈카페</p>
+											<div class="flex_box">
+												<div class="price_text">
+													<span class="smT">매월</span>
+													<span class="price">25,000원</span>
+												</div>
+												<span class="tag">배송비 Free</span>
+											</div>
+										</div>
+										<div class="hover_box">
+											<div class="inner">
+												<div class="desc_box desc_box02">
+													<p class="ban_tit">다르게 만나는 차, 다다일상 홈카페</p>
+													<div class="flex_box">
+														<div class="price_text">
+															<span class="smT">매월</span>
+															<span class="price">25,000원</span>
+														</div>
+														<span class="tag">배송비 Free</span>
+													</div>
+												</div>
+												<div class="ban_con">
+													<p class="text">
+														매월 오설록이 티를 이용한 새로운 레시피를 소개해 드립니다.
+														다양한 레시피를 따라하면서 차를 색다르게 경험해보세요.
+													</p>
+													<ul class="text_list">
+														<li class="item"><em class="pt">3종류 이상</em>의 다양한 티백/티푸드 구성</li>
+														<li class="item"><em class="pt">3만 5천원 이상</em> 정가 구성</li>
+														<!--<li class="item"><em class="pt">최소 12만원 이상할인</em> (1년 구독 기준)</li>-->
+													</ul>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<div class="img_box">
+											<img class="pcBlock" src="/kr/ko/static_cdj/images/main/dada_img03_pc.jpg" alt="">
+											<img class="moBlock" src="/kr/ko/static_cdj/images/main/dada_img03_mo.jpg" alt="">
+										</div>
+										<div class="desc_box desc_box01">
+											<p class="ban_tit">매일 만나는 차, 정기배송</p>
+											<div class="flex_box">
+												<span class="tag">배송비 Free</span>
+											</div>
+										</div>
+										<div class="hover_box">
+											<div class="inner">
+												<div class="desc_box desc_box02">
+													<p class="ban_tit">매일 만나는 차, 정기배송</p>
+													<div class="flex_box">
+														<span class="tag">배송비 Free</span>
+													</div>
+												</div>
+												<div class="ban_con">
+													<p class="text">
+														원하는 차를 집에서 매월 편하게 받아보세요.<br>
+														오설록과 함께 편안한 티 라이프를 즐겨보세요.
+													</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="w1200">
+					<div class="main_btn_typeA">
+						<button type="button" class="btn_A"><span>다다일상 자세히 보기</span></button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 다다일상 정기구독 : E -->
+		
+		
+		<!-- 매거진 : S -->
+		<section class="main_sec line02">
+			<div class="main_magazine">
+				<div class="w1200">
+					<div class="sec_tit">
+						<h3 class="text01">차 한 잔으로 달라지는 일상</h3>
+						<p class="text02">차를 통해 달라지는 일상을 만나보세요.</p>
+					</div>
+				</div>
+				<div class="w1200_2">
+					<div class="magazine_list">
+						<div class="swiper-container magazine_slide">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide mag_typeI">
+									<div class="img_box">
+										<a href="/kr/ko/tealog/contents01"><img src="/kr/ko/static_cdj/images/main/magazine_img01.jpg" alt="차가운 것으로 따뜻한 것을 만들다"></a>
+									</div>
+									<div class="text_box">
+										<p class="text01">차가운 것으로 따뜻한 것을 만들다</p>
+										<p class="text02">철제 가구 디자이너 양윤선의 티라이프</p>
+									</div>
+								</div>
+								<div class="swiper-slide mag_typeI">
+									<div class="img_box">
+										<a href="/kr/ko/tealog/contents02"><img src="/kr/ko/static_cdj/images/main/magazine_img02.jpg" alt="주변의 모든 것이 예술이 되는 과정"></a>
+									</div>
+									<div class="text_box">
+										<p class="text01">주변의 모든 것이 예술이 되는 과정</p>
+										<p class="text02">테이핑 아티스트 박건우의 티라이프</p>
+									</div>
+								</div>
+								<div class="swiper-slide mag_typeI">
+									<div class="img_box">
+										<a href="/kr/ko/tealog/contents03"><img src="/kr/ko/static_cdj/images/main/magazine_img03.jpg" alt="잘 달리는 것보다 즐겁게 달리는 방법"></a>
+									</div>
+									<div class="text_box">
+										<p class="text01">잘 달리는 것보다 즐겁게 달리는 방법</p>
+										<p class="text02">러닝 트레이너 임소영의 티라이프</p>
+									</div>
+								</div>
+								<div class="swiper-slide mag_typeI">
+									<div class="img_box">
+										<a href="/kr/ko/tealog/contents04"><img src="/kr/ko/static_cdj/images/main/magazine_img04.jpg" alt="일과 삶 사이, 자연이라는 쉼표"></a>
+									</div>
+									<div class="text_box">
+										<p class="text01">일과 삶 사이, 자연이라는 쉼표</p>
+										<p class="text02">오지 캠퍼 강서구의 티라이프</p>
+									</div>
+								</div>
+								<div class="swiper-slide mag_typeI">
+									<div class="img_box">
+										<a href="/kr/ko/tealog/contents05"><img src="/kr/ko/static_cdj/images/main/magazine_img05.jpg" alt="온전하게 나만을 위한 채식이야기"></a>
+									</div>
+									<div class="text_box">
+										<p class="text01">온전하게 나만을 위한 채식이야기</p>
+										<p class="text02">채식 요리 연구가 신주하의 티라이프</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next main_slide_next"></div>
+						<div class="swiper-button-prev main_slide_prev"></div>
+					</div>
+				</div>
+				<div class="w1200">
+					<div class="main_btn_typeA">
+						<button type="button" class="btn_A" onclick="location.href='/kr/ko/tealog'"><span>차와 함께하는 삶 더 보기</span></button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 매거진 : E -->
+		
+		
+		<!-- 티스톤 배너 영역 : S -->
+		<section class="main_sec">
+			<div class="main_teastone_banner">
+				<div class="w1200">
+					<img class="pcBlock" src="/kr/ko/static_cdj/images/main/teastone_banner_pc.jpg" alt="제주 티뮤지엄 티스톤 예약하기">
+					<img class="moBlock" src="/kr/ko/static_cdj/images/main/teastone_banner_mo.jpg" alt="제주 티뮤지엄 티스톤 예약하기">
+					<div class="text_box">
+						<p class="text">제주 티뮤지엄 티스톤</p>
+						<button class="resv_btn" type="button" title="예약하기" onclick="">예약하기</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 티스톤 배너 영역 : E -->
+	</main>
+	
+	<!-- CDJ 개선 메인페이지 시작 : E -->
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

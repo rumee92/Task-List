@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0 myRewardList">
+		<div class="inner_p mgt20">
+			<div class="tabType tabType1 length2">
+				<ul>
+					<li><a href="#" class="current"><span>리워드 내역</span></a></li>
+					<li><a href="#"><span>리워드 정산 내역</span></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="currentReward">
+			<div class="infoWrap">
+				<div class="box1">
+					<div class="left notoB">
+						<p class="tit">현재 보유 리워드</p>
+						<p class="count fcPink"><em class="num">13,200</em> 리워드</p>
+					</div>
+					<div class="right">
+						<button type="button" class="btn_txt">지급계좌 관리</button>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="item">
+						<p class="tit fc88">총 적립 리워드</p>
+						<p class="count notoB"><em class="num">15,800</em> 리워드</p>
+					</div>
+					<div class="item">
+						<p class="tit fc88">총 차감 리워드</p>
+						<p class="count notoB"><em class="num">2,500</em> 리워드</p>
+					</div>
+				</div>
+				<div class="inner_p">
+					<div class="btn_wrap">
+						<button type="button" class="btn btnSizeM btnColorB btnTypeB"><span>출금 신청하기</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="mgt10 inner_p pdb20">
+				<ul class="dotInfo">
+					<li class="mgt10">리워드는 구매확정일로부터 3일 뒤에 적립됩니다.</li>
+					<li class="mgt10">리워드는 포인트 1000원, 현금 10000원부터 100원 단위로 정산이 가능합니다.</li>
+					<li class="mgt10">현금 정산은 월1회 출금신청이 가능합니다.</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 리워드 내역 리스트 -->
+		<div class="listWrap bdTCon">
+			<div class="dateFilter inner_p mgt15">
+				<div class="tabType tabType1 length4 no_link">
+					<ul>
+						<li><a href="#" class="current"><span>1개월</span></a></li>
+						<li><a href="#"><span>3개월</span></a></li>
+						<li><a href="#"><span>6개월</span></a></li>
+						<li><a href="#"><span>12개월</span></a></li>
+					</ul>
+				</div>
+				<div class="inp_wrap inp_date mgt15">
+					<div class="inp_text">
+						<label for="cartNumberSearch_date1">시작 일자</label>
+						<input type="date" name="cartNumberSearch_date1" id="cartNumberSearch_date1">
+					</div>
+					<span class="hyphen">~</span>
+					<div class="inp_text">
+						<label for="cartNumberSearch_date2">종료 일자</label>
+						<input type="date" name="cartNumberSearch_date2" id="cartNumberSearch_date2">
+					</div>
+					<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span class="fs13">검색</span></a>
+				</div>
+			</div>
+			<div class="listBox mgt15">
+				<div class="tabType tabType2 inner_p">
+					<ul>
+						<li><a href="javascript:void(0);" class="current">전체</a></li>
+						<li><a href="javascript:void(0);">적립</a></li>
+						<li><a href="javascript:void(0);">차감</a></li>
+					</ul>
+				</div>
+				<div class="listCon mgt15 inner_p">
+					<ul>
+						<!-- 차감 -->
+						<li class="item">
+							<div class="left">
+								<p class="stateTag">차감</p>
+								<div class="infoBox">
+									<p class="desc">2022-12-19</p>
+									<p class="tit notoB">관리자 차감</p>
+									<p class="desc">시스템 오류</p>
+								</div>
+							</div>
+							<div class="right">
+								<p class="count notoB"><em class="num">-1,000</em> 리워드</p>
+							</div>
+						</li>
+						
+						<!-- 적립 : item에 plus 클래스 추가-->
+						<li class="item plus">
+							<div class="left">
+								<p class="stateTag">적립</p>
+								<div class="infoBox">
+									<p class="desc">2022-12-19</p>
+									<p class="tit notoB">관리자 적립</p>
+									<p class="desc">이벤트 적립</p>
+								</div>
+							</div>
+							<div class="right">
+								<p class="count notoB"><em class="num">+500</em> 리워드</p>
+							</div>
+						</li>
+						
+						<!-- 적립 : item에 plus 클래스 추가-->
+						<li class="item plus">
+							<div class="left">
+								<p class="stateTag">적립</p>
+								<div class="infoBox">
+									<p class="desc">2022-12-19</p>
+									<p class="tit notoB">구매 리워드</p>
+								</div>
+							</div>
+							<div class="right">
+								<p class="count notoB"><em class="num">+2,500</em> 리워드</p>
+							</div>
+						</li>
+					</ul>
+					<div class="btn_wrap mgt20">
+						<a href="#" class="btnMore"><span>더 보기 1<em>/99</em></span></a>
+					</div>
+				</div>
+				
+				<!-- 230405 추가 : 내역 없을때 노출 -->
+				<div class="noList mgt15">
+					<div class="desc">리워드 적립 내역이 없습니다.</div>
+				</div>
+				<!-- //내역 없을때 노출 -->
+			</div>
+		</div>
+		<!-- //리워드 내역 리스트 -->
+		
+		<!-- 리워드 하단 배너 모음 -->
+		<div class="rewardBannerWrap mgt30 inner_p">
+			<div class="item">
+				<a href="#" class="itemLink">
+					<p class="tit notoB">리워드 FAQ</p>
+					<p class="desc mgt5 fc88">
+						자주 질문하는 사항들을 모아두었어요.<br>
+						원하시는 질문과 답변을 찾아보세요.
+					</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="itemLink">
+					<p class="tit notoB">리워드 프로그램 소개</p>
+					<p class="desc mgt5 fc88">
+						바닐라닷컴 리워드 프로그램을 알기 쉽게 소개해 드려요.<br>
+						링크 공유만으로 수익을 쌓을 수 있는 방법을 알아보세요.
+					</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="itemLink">
+					<p class="tit notoB">리워드 프로그램 이용 정책</p>
+					<p class="desc mgt5 fc88">
+						바닐라닷컴 리워드 프로그램의 모든 것을 알려드려요.<br>
+						프로그램 내 자세한 이용정책을 알아보세요.
+					</p>
+				</a>
+			</div>
+		</div>
+		<!-- // 리워드 하단 배너 모음 -->
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>

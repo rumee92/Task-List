@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+	<div style="height: 800px;"></div>
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+
+
+	<!-- 결제하기 - 쿠폰(LG)선택 레이어팝업 : S -->
+	<section class="layer_popup_wrap cdj_renew type01">
+		<div class="layer_box_new coupon_layer lg">
+			<h4 class="layer_tit">쿠폰 선택</h4>			
+			<button class="btn_close"></button>
+			<ul class="coupon_list inp_radio">
+				<li>
+					<div class="check_wrap">
+						<input type="radio" name="coupon_list" id="no_coupon">
+						<label for="no_coupon">쿠폰 선택 안함</label>
+					</div>
+				</li>
+				<li>
+					<div class="check_wrap">
+						<input type="radio" name="coupon_list" id="coupon-0">
+						<label for="coupon-0">LG U+ 제휴할인 -20%/ 최소 금액 40,000원 </label>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- 결제하기 - 쿠폰(LG)선택 레이어팝업 : E -->
+
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

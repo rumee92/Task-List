@@ -1,0 +1,1061 @@
+/**
+리워드 프로그램
+ **/
+
+/* 리워드 프로그램 공통 */
+.fcR {color:#ff5b5d;}
+.inp_check2 {display:inline-block;position:relative;min-height:26px;vertical-align:top;}
+.inp_check2 input {position:absolute;left:-100000px;top:0;}
+.inp_check2 label {position:relative;display:block;padding-left:31px;font-size:14px;line-height:25px;color:#222;}
+.inp_check2 label:before {content: '';position:absolute;left:0;top:0;width:25px;height:25px;background:url('/static/front/resources/web/images/socialSelling/inp_check2.png') no-repeat left center / 25px auto;}
+.inp_check2 input:disabled + label {cursor:not-allowed;}
+.inp_check2 input:checked + label:before {background-position:0 top;}
+.inp_check2 input:disabled + label:before {background-position:0 center;}
+.inp_radio2 {display:inline-block;position:relative;min-height:26px;vertical-align:middle;}
+.inp_radio2 input {position:absolute;left:-5000px;top:0;}
+.inp_radio2 label {position:relative;display:block;padding-left:31px;font-size:12px;line-height:25px;color:#222;}
+.inp_radio2 label:before {content:'';position:absolute;left:0;top:0;width:25px;height:25px;background: url('/static/front/resources/web/images/socialSelling/inp_radio2.png') no-repeat left bottom / 25px auto;}
+.inp_radio2 input:disabled + label {cursor: not-allowed;}
+.inp_radio2 input:checked + label:before {background-position: 0 top;}
+.inp_radio2 input:disabled + label:before {background-position: 0 bottom;}
+.btnSize45 {height:45px;line-height:43px;font-size:14px;}
+.btnRadius4 {border-radius:4px;}
+.absTag {position:absolute;white-space:nowrap;background-color:#FF65AF;color:#fff;padding:4px 8px 3px 8px;border-radius:15px;font-size:11px;line-height:14px;}
+.absTag::after {content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border-bottom:6px solid transparent;border-top:5px solid #FF65AF;border-left:6px solid transparent;border-right:6px solid transparent;}
+
+.lyPopArea.lyPopArea_B .lyPop {border-radius:12px;width:442px;height:780px;overflow:hidden;}
+.lyPopArea.lyPopArea_B .lyTit {font-size:18px;font-weight:600;letter-spacing:-0.01em;padding:18px 0 18px 0;}
+.lyPopArea.lyPopArea_B .lyClose {top:13px;right:12px;}
+.lyPopArea.lyPopArea_B .lyBody {overflow-y:auto;padding:0;height:602px;}
+.lyPopArea.lyPopArea_B .lyBody::-webkit-scrollbar {width:5px;}
+.lyPopArea.lyPopArea_B .lyBody::-webkit-scrollbar-thumb {background-color:#BFBFBF;border-radius:5px;}
+.lyPopArea.lyPopArea_B .lyBody::-webkit-scrollbar-track{background-color:#fff;}
+.lyPopArea.lyPopArea_B .lyBody .conWrap {padding:40px 40px 0 40px;}
+.lyPopArea.lyPopArea_B .lyPop .btn_wrap.fixed {position:absolute;bottom:0;left:0;padding:28px 40px 40px 40px;margin-top:0;background:linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 18.75%, #FFFFFF 100%);border-radius:0 0 12px 12px;}
+.lyPopArea.lyPopArea_B .btn_wrap.colType,
+.lyPopArea.lyPopArea_B .btn_wrap.solo {width:100%;box-sizing:border-box;}
+.lyPopArea.lyPopArea_B .btn_wrap.colType .btn {margin:0 0 0 4px;width:calc(50% - 4px);font-weight:600;}
+.lyPopArea.lyPopArea_B .btn_wrap.colType .btn:nth-child(odd) {margin:0 4px 0 0 !important;}
+.lyPopArea.lyPopArea_B .btn_wrap.solo .btn {width:100%;font-weight:600;}
+.lyPopArea.lyPopArea_C .lyPop {border-radius:6px;width:336px;}
+.lyPopArea.lyPopArea_C .lyTit {padding:14px 0 12px 0;margin:0 15px;font-size:16px;line-height:24px;text-align:left;}
+.lyPopArea.lyPopArea_C .lyClose {right:15px;top:17px;width:15px;height:15px;}
+.lyPopArea.lyPopArea_C .lyBody {padding:26px 15px 15px 15px;text-align:center;}
+.lyPopArea.lyPopArea_C .lyWrap.noTitle .lyBody {padding-top:50px;}
+.lyPopArea.lyPopArea_C .btn_wrap {margin-top:35px;}
+.lyPopArea.lyPopArea_C .normalText {text-align:center;font-size:13px;line-height:21px;letter-spacing:-0.01em;}
+.lyPopArea.lyPopArea_C .btn_wrap.colType,
+.lyPopArea.lyPopArea_C .btn_wrap.solo {width:100%;box-sizing:border-box;}
+.lyPopArea.lyPopArea_C .btn_wrap.colType .btn {margin:0 0 0 3px;width:calc(50% - 3px);font-weight:600;}
+.lyPopArea.lyPopArea_C .btn_wrap.colType .btn:nth-child(odd) {margin:0 3px 0 0;}
+.lyPopArea.lyPopArea_C .btn_wrap.solo .btn {width:100%;font-weight:600;}
+.lyPopArea.lyPopArea_C .smText {font-size:12px;line-height:18px;color:#888;letter-spacing:-0.01em;}
+
+.introWrap {background-color:#f3f3f3;padding-top:16px;padding-bottom:16px;}
+.introWrap .item {position:relative;word-break:keep-all;padding-left:48px;padding-right:40px;}
+.introWrap .item + .item {margin-top:4px;}
+.introWrap .item::before {content:'';position:absolute;top:6px;left:40px;width:2px;height:2px;border-radius:50%;background-color:#222;}
+.introWrap .item .desc {font-size:11px;line-height:15px;}
+.introWrap .item .subDesc {font-size:10px;color:#888;line-height:15px;}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes updownCenter {
+    0% {
+        transform: translate(-50%, 0);
+    }
+    100% {
+        transform: translate(-50%, 5px);
+    }
+}
+
+@keyframes leftRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes leftRightCenter {
+    0% {
+        transform: translate(0, 50%);
+    }
+    100% {
+        transform: translate(3px, 50%);
+    }
+}
+
+/* 프로필 등록 - 리워드 프로그램 이용약관 */
+.rewardProAgree .lyBody.basic p {text-align:left;letter-spacing:-0.01em;font-size:13px;line-height:21px;margin-top:8px;}
+.rewardProAgree .inp_check label {padding-left:43px;}
+.rewardProAgree .lyBody .chkBox {margin-top:48px;}
+.rewardProAgree .lyBody .chkBox .totalAgree {padding-bottom:24px;border-bottom:1px solid #f3f3f3;}
+.rewardProAgree .lyBody .chkBox .totalAgree .inp_check2 label {font-size:16px;line-height:24px;letter-spacing:-0.01em;}
+.rewardProAgree .lyBody .chkBox .agreeItem {margin-top:18px;}
+.rewardProAgree .lyBody .chkBox .agreeItem > div {display:flex;justify-content:space-between;}
+.rewardProAgree .lyBody .chkBox .agreeItem > div + div {margin-top:12px;}
+.rewardProAgree .lyBody .chkBox .agreeItem > div .inp_check2 label {font-size:12px;line-height:25px;}
+.rewardProAgree .lyBody .chkBox .agreeItem .btn_txt {font-size:12px;letter-spacing:-0.01em;line-height:18px;}
+.rewardProAgree .lyBody .chkBox .agreeItem .btn_txt::before {bottom:3px;}
+.rewardProAgree .lyBody .chkBox .agreeItem .btn_txt::after {bottom:4px;}
+.rewardProAgree .lyBody .desc {font-size:11px;line-height:15px;margin-top:6px;}
+.rewardProAgree_terms.lyPopArea_B .lyBody .conWrap {padding:20px 40px 0 40px;}
+.rewardProAgree_terms .tabType1 ul:before {border:none;background:#f3f3f3;}
+.rewardProAgree_terms .tabType1 a {font-size:12px;color:#888;}
+.rewardProAgree_terms .tabType1 a.current,
+.rewardProAgree_terms .tabType1 a:hover {font-weight:700;color:#222;}
+.rewardProAgree_terms .guideTab {font-size:12px;line-height:18px;}
+
+/* 프로필 등록 - 등록팝업 */
+.profileRegistPop .stepBox {display:flex;}
+.profileRegistPop .stepBox .step {flex:0 0 6px;height:6px;border-radius:50%;background-color:#e8e8e8;}
+.profileRegistPop .stepBox .step + .step {margin-left:5px;}
+.profileRegistPop .stepBox .step.on {background-color:#ff65af;}
+.profileRegistPop .stepTit {margin-top:24px;margin-bottom:8px;font-size:20px;line-height:28px;letter-spacing:-0.01em;}
+.profileRegistPop .stepDesc {color:#888;font-size:15px;line-height:24px;letter-spacing:-0.01em;}
+.profileRegistPop .nickname {display:flex;margin-top:74px;}
+.profileRegistPop .nickname .inp_wrap {flex:1 1 auto;width:1%;}
+.profileRegistPop .nickname .inp_wrap .inp_text input {height:45px;line-height:45px;border:none;border-bottom:1px solid #ebebeb;border-radius:0;padding:0 8px;text-indent:0;}
+.profileRegistPop .nickname .inp_wrap .inp_text input::placeholder {color:#888;font-weight:400;font-size:13px;letter-spacing:-0.01em;}
+.profileRegistPop .nickname .inp_wrap .inp_text input:focus {border-color:#222;}
+.profileRegistPop .nickname .btn_wrap {flex:0 0 80px;margin-left:8px;margin-top:0;}
+.profileRegistPop .nickname .btn_wrap .btn {width:80px;}
+.profileRegistPop .errorMsg {font-size:11px;}
+.profileRegistPop .dotInfo {padding:16px;background-color:#f8f8f8;border-radius:4px;margin-top:24px;}
+.profileRegistPop .dotInfo li {font-size:12px;color:#979797;line-height:18px;}
+.profileRegistPop .dotInfo li:before {top:7px;}
+.profileRegistPop .uploadWrap {margin-top:15px;}
+.profileRegistPop .uploadWrap .uploadBox .boxItem:nth-child(1) {padding-bottom:25px;}
+.profileRegistPop .uploadWrap .uploadBox .boxItem:nth-child(2) {padding-top:25px;border-top:1px solid #f3f3f3;}
+.profileRegistPop .uploadWrap .uploadBox .boxItem .conBox {display:none;}
+.profileRegistPop .uploadWrap .uploadBox .boxItem.on .conBox {display:block;}
+.profileRegistPop .uploadBox .inp_wrap .subText {font-size:12px;line-height:18px;letter-spacing:-0.02em;color:#888;padding-left:31px;}
+.profileRegistPop .uploadBox .defaultImgWrap {display:flex;flex-wrap:wrap;margin-top:30px;padding:16px 30px;justify-content:space-between;border-radius:6px;border:1px solid #ebebeb;}
+.profileRegistPop .uploadBox .defaultImgWrap .item {flex:0 0 88px;border-radius:50%;padding:2px;position:relative;cursor:pointer;}
+.profileRegistPop .uploadBox .defaultImgWrap .item.on {background-color:#222;}
+.profileRegistPop .uploadBox .defaultImgWrap .item.on::after {content:'';position:absolute;top:67px;right:4px;width:18px;height:18px;background:url('/static/front/resources/web/images/socialSelling/cocoImg_check.png') no-repeat center / 18px auto;}
+.profileRegistPop .uploadBox .defaultImgWrap .item .imgBox {border-radius:50%;overflow:hidden;padding:2px;background-color:#fff;}
+.profileRegistPop .uploadBox .defaultImgWrap .item .imgBox img {border-radius:50%;width:100%;height:auto;}
+.profileRegistPop .uploadBox .addImgWrap {margin-top:15px;position:relative;}
+.profileRegistPop .uploadBox .addImgWrap .addBtn label {display:block;width:100%;height:140px;border-radius:6px;background-color:#f8f8f8;position:relative;}
+.profileRegistPop .uploadBox .addImgWrap .addBtn label::after {content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;background:url('/static/front/resources/web/images/socialSelling/btn_profile_img.png') no-repeat center / 42px auto;}
+.profileRegistPop .uploadBox .addImgWrap .addImg {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:none;}
+.profileRegistPop .uploadBox .addImgWrap.on .addImg {display:block;}
+.profileRegistPop .uploadBox .addImgWrap .addImg .item {border-radius:50%;padding:2px;position:relative;background-color:#222;width:88px;}
+.profileRegistPop .uploadBox .addImgWrap .addImg .item::after {content:'';position:absolute;top:67px;right:4px;width:18px;height:18px;background:url('/static/front/resources/web/images/socialSelling/cocoImg_check.png') no-repeat center / 18px auto;}
+.profileRegistPop .uploadBox .addImgWrap .addImg .item .imgBox {border-radius:50%;overflow:hidden;padding:2px;background-color:#fff;}
+.profileRegistPop .uploadBox .addImgWrap .addImg .item .imgBox img {border-radius:50%;width:100%;height:auto;}
+.profileRegistPop .helpText {margin-top:10px;font-size:12px;color:#979797;position:relative;padding-left:7px;}
+.profileRegistPop .helpText::before {content:'';position:absolute;left:0;top:12px;width:2px;height:2px;background:#888;border-radius:1px;}
+.profileRegistPop .introBox .inp_textArea.lengthCheck + .charCnt {text-align:right;margin:-30px 15px 0 0;line-height:20px;}
+.profileRegistPop .endBox {padding-top:34px;}
+.profileRegistPop .endBox .textBox p {text-align:left;color:#222;}
+.profileRegistPop .endBox .textBox .text1 {font-size:16px;line-height:24px;letter-spacing:-0.01em;}
+.profileRegistPop .endBox .textBox .text2 {font-size:24px;line-height:32px;letter-spacing:-0.01em;}
+.profileRegistPop .endBox .textBox .text3 {font-size:15px;line-height:21px;}
+.profileRegistPop .skinProfileBox .noProfile {position:relative;padding:42px 40px 50px 40px;margin-top:36px;border-radius:2px;background-color:#f8f8f8;text-align:center;}
+.profileRegistPop .skinProfileBox .noProfile::before {content:'';position:absolute;top:-60px;right:24px;width:96px;height:98px;background:url('/static/front/resources/web/images/socialSelling/graphic_profile_goal.png') no-repeat left top / 96px auto;}
+.profileRegistPop .skinProfileBox .noProfile .text1 {padding-top:34px;font-size:14px;line-height:21px;background:url('/static/front/resources/web/images/socialSelling/icon_hands.png') no-repeat center top / 28px auto;}
+.profileRegistPop .skinProfileBox .noProfile .text2 {font-size:11px;line-height:15px;margin-top:8px;}
+.profileRegistPop .skinProfileBox .noProfile p {text-align:left;}
+.profileRegistPop .skinProfileBox .noProfile .btn_wrap .btn {width:100%;font-size:12px;}
+.profileRegistPop .skinProfileBox .hasProfile {position:absolute;bottom:155px;right:40px;width:133px;height:139px;background:url('/static/front/resources/web/images/socialSelling/graphic_profile_goal2.png') no-repeat left top / 133px auto;}
+.cocoSnsBox .snsDesc {font-size:16px;line-height:24px;}
+.cocoSnsBox .item {padding:10px 12px;background-color:#f8f8f8;border:1px solid #f8f8f8;border-radius:2px;transition:border 0.2s ease-in-out;box-sizing:border-box;}
+.cocoSnsBox .item + .item {margin-top:4px;}
+.cocoSnsBox .item .itemIn {display:flex;align-items:center;position:relative;}
+.cocoSnsBox .item .icon {width:40px;height:40px;margin-right:6px;}
+.cocoSnsBox .item.insta .icon {background:url('/static/front/resources/web/images/socialSelling/icon_instagram.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.blog .icon {background:url('/static/front/resources/web/images/socialSelling/icon_blog.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.youtube .icon {background:url('/static/front/resources/web/images/socialSelling/icon_youtube.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.facebook .icon {background:url('/static/front/resources/web/images/socialSelling/icon_facebook.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.urlcopy .icon {background:url('/static/front/resources/web/images/socialSelling/icon_etc.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item .snsText {font-size:13px;color:#bfbfbf;}
+.cocoSnsBox .item .chk {position:absolute;top:50%;right:0;transform:translateY(-50%);}
+.cocoSnsBox .item .userText {display:none;}
+.cocoSnsBox .item .userText .helpMsg {font-size:11px;line-height:15px;margin-top:8px;padding-left:9px;color:#888;}
+.cocoSnsBox .item .userText .heplMsg {font-size:11px;line-height:15px;margin-top:8px;padding-left:9px;color:#888;margin-left:0 !important;}
+.cocoSnsBox .item .inp_text input {border:none;border-bottom:1px solid #ebebeb;border-radius:0;height:45px;line-height:45px;text-indent:0;padding:0 9px;}
+.cocoSnsBox .item .inp_text input:focus {border-color:#222;}
+.cocoSnsBox .item .inp_text input::placeholder {color:#888;font-size:13px;}
+.cocoSnsBox .item.check {background-color:#fff;border:1px solid #ff65af;padding:12px 12px 20px 12px;}
+.cocoSnsBox .item.check.insta .icon {background:url('/static/front/resources/web/images/socialSelling/icon_instagram_on.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.check.blog .icon {background:url('/static/front/resources/web/images/socialSelling/icon_blog_on.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.check.youtube .icon {background:url('/static/front/resources/web/images/socialSelling/icon_youtube_on.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.check.facebook .icon {background:url('/static/front/resources/web/images/socialSelling/icon_facebook_on.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.check.urlcopy .icon {background:url('/static/front/resources/web/images/socialSelling/icon_etc_on.png') no-repeat left center / 40px auto;}
+.cocoSnsBox .item.check .snsText {color:#222;font-weight:600;}
+.profileLeavePop .textBox .text1 {font-size:18px;line-height:25px;}
+
+/* 프로필 관리 */
+.cocoProfileEdit .profileImgWrap {padding-bottom:30px;border-bottom:1px solid #f3f3f3;margin-left:-40px;margin-right:-40px;}
+.cocoProfileEdit .profileImgWrap .imgBox {position:relative;width:85px;height:85px;margin:0 auto;background:url('/static/front/resources/web/images/socialSelling/cocoImg_default1.png') no-repeat center / 85px auto;border-radius:50%;}
+.cocoProfileEdit .profileImgWrap .imgBox .profileImgSelectBtn {position:absolute;bottom:0;right:0;width:30px;height:30px;background:url('/static/front/resources/web/images/socialSelling/icon_profile_img_edit.png') no-repeat center / 30px auto;}
+.cocoProfileEdit .profileImgWrap .imgBox .absTag {top:-30px;left:50%;transform:translateX(-50%);}
+.cocoProfileEdit .profileInfoWrap {margin-top:24px;}
+.cocoProfileEdit.lyPopArea .lyBody.basic p {text-align:left;color:#222;font-size:13px;}
+.cocoProfileEdit .profileInfoWrap .tit {font-size:13px;line-height:22px;letter-spacing:-0.01em;}
+.cocoProfileEdit .profileInfoWrap .nickNameBox .inp_wrap.typeBox input {border:1px solid #ebebeb;border-radius:6px;width:100%;height:50px;line-height:50px;padding:0 16px;box-sizing:border-box;color:#bfbfbf;}
+.cocoProfileEdit .profileInfoWrap .inp_textArea.lengthCheck + .charCnt {text-align:right;margin:-30px 15px 0 0;line-height:20px;}
+.cocoProfileEdit.lyPopArea .lyBody.basic p.helpText {font-size:12px;color:#979797;text-align:left;}
+.cocoProfileEdit .profileInfoWrap .helpText {margin-top:10px;font-size:12px;color:#979797;position:relative;padding-left:7px;}
+.cocoProfileEdit .profileInfoWrap .helpText::before {content:'';position:absolute;left:0;top:12px;width:2px;height:2px;background:#888;border-radius:1px;}
+.profileRegistPop.editPage .uploadWrap {margin-top:0;}
+
+/* coco pick 편집 */
+.cocoPickEditPop.lyPopArea.lyPopArea_B .lyBody .conWrap {padding:0;}
+.cocoPdtList1 .listItem {position:relative;padding:35px 20px 32px;}
+.cocoPdtList1 .listItem + .listItem {border-top:9px solid #f3f3f3;}
+.cocoPdtList1 .listItem:last-child {border-bottom:9px solid #f3f3f3;}
+.cocoPdtList1 .listItem .item {display:flex;align-items:center;}
+.cocoPdtList1 .listItem .item .left {flex:0 0 32px;}
+.cocoPdtList1 .listItem .item .right {padding-left:12px;display:flex;flex:1 1 auto;width:1%;}
+.cocoPdtList1 .listItem .item .btnBox button {display:block;width:32px;height:32px;padding:8px;border-radius:4px;border:1px solid #f3f3f3;}
+.cocoPdtList1 .listItem .item .btnBox button.btnUp {background:url('/static/front/resources/web/images/socialSelling/icon_up.png') no-repeat center / 16px auto;}
+.cocoPdtList1 .listItem .item .btnBox button.btnDown {background:url('/static/front/resources/web/images/socialSelling/icon_down.png') no-repeat center / 16px auto;margin-top:4px;}
+.cocoPdtList1 .listItem .item .imgBox {flex:0 0 90px;height:90px;position:relative;background-color:#f3f3f3;}
+.cocoPdtList1 .listItem .item .imgBox img {width:100%;}
+.cocoPdtList1 .listItem .item .imgBox .countTag {position:absolute;top:0;left:0;width:22px;height:22px;border-radius:0 0 2px 0;background-color:#222;color:#fff;font-size:11px;text-align:center;letter-spacing:-0.01em;line-height:22px;}
+.cocoPdtList1 .listItem .item .textBox {flex:1 1 auto;width:1%;padding-left:12px;}
+.cocoPdtList1 .listItem .item .textBox .brand {font-size:11px;color:#888;line-height:15px;text-align:left;}
+.cocoPdtList1 .listItem .item .textBox .prdName {font-size:12px;color:#222;line-height:18px;margin-top:2px;text-align:left;}
+.cocoPdtList1 .listItem .item .textBox .commentText {margin-top:3px;}
+.cocoPdtList1 .listItem .item .textBox .commentText .text {font-size:12px;color:#ff65af;line-height:18px;margin-top:3px;position:static;text-align:left;padding:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cocoPdtList1 .listItem .item .textBox .commentText .commentEditBtn {font-size:11px;line-height:14px;letter-spacing:-0.01em;padding:0 0 0 16px;margin-top:2px;width:55px;height:20px;border-radius:99px;border:1px solid #e8e8e8;background:url('/static/front/resources/web/images/socialSelling/icon_commentEdit.png') no-repeat 6px center / 16px auto;}
+.cocoPdtList1 .listItem .deleteBtn {display:block;position:absolute;right:11px;top:11px;width:16px;height:16px;background:url('/static/front/resources/web/images/socialSelling/btn_close.png') no-repeat center center / 16px auto;}
+.cocoCommentEditPop .desc {font-size:13px;}
+.cocoCommentEditPop .selfInput {display:none;}
+.cocoCommentEditPop .inp_select {height:45px;}
+.cocoCommentEditPop .inp_select .title {height:45px;line-height:45px;font-size:13px;background:transparent url('/static/front/resources/web/images/socialSelling/inp_select2.png') no-repeat right 7px / 26px auto;}
+.cocoCommentEditPop .inp_select.open .title {background-position:right -22px;}
+.cocoCommentEditPop .inp_select .selList li label {line-height:32px;font-size:13px;}
+.cocoCommentEditPop .inp_textArea.lengthCheck + .charCnt {text-align:right;margin:-30px 15px 0 0;line-height:20px;}
+.cocoCommentEditPop .inp_textArea.lengthCheck + .charCnt em {color:#222;}
+.cocoCommentEditPop .inp_textArea textarea::placeholder {color:#888;font-size:13px;}
+
+/* coco pick 등록 */
+.cocoPickRegistPop.lyPopArea.lyPopArea_B .lyWrap {position:relative;height:100%;}
+.cocoPickRegistPop.lyPopArea.lyPopArea_B .lyBody .conWrap {padding:0;}
+.cocoPickRegistPop .conBox {padding:16px 40px 0 40px;}
+/*.cocoPickRegistPop .tabCon {padding-top:30px;}*/
+.cocoPickRegistPop .tabType1 ul:before {border:none;background:#f3f3f3;}
+.cocoPickRegistPop .tabType1 a {font-size:12px;color:#888;}
+.cocoPickRegistPop .tabType1 a.current,
+.cocoPickRegistPop .tabType1 a:hover {font-weight:700;color:#222;}
+.cocoPickRegistPop .guideTab {font-size:12px;line-height:18px;}
+.cocoPickRegistPop .tabCon .listIntro {font-size:13px;line-height:21px;}
+.cocoPickRegistPop .tabCon .countBox {display:flex;justify-content:space-between;align-content:center;}
+.cocoPickRegistPop .tabCon .countBox .item {font-size:11px;color:#888;line-height:21px;}
+.cocoPickRegistPop .tabCon .countBox .item .num {font-size:14px;line-height:21px;}
+.cocoPickRegistPop .tabCon .noWishList {background-color:#fff;padding:32px 0 40px;text-align:center;background:url('/static/front/resources/mobile/images/mypage/bg_noWish.png') no-repeat center top / 21px auto;}
+.cocoPickRegistPop .tabCon .noWishList > div {font-size:18px;line-height:25px;text-align:center;font-weight:600;}
+.cocoPickRegistPop .tabCon .noWishList > div span {display:block;margin-top:12px;font-size:12px;font-weight:400;line-height:18px;color:#888;}
+.cocoPickRegistPop .tabCon .noWishList .btn_txt {display:inline-block;margin-top:16px;font-size:12px;line-height:18px;}
+.cocoPickRegistPop .tabCon .wishInfo {border-top:1px solid #F3F3F3;padding:27px 4px 0 4px;margin-top:100px;}
+.cocoPickRegistPop .tabCon .wishInfo .titInfo {font-size:13px;line-height:20px;background:url('/static/front/resources/web/images/order/ico_exclamation.png') no-repeat left center / 14px auto;padding-left:18px;}
+.cocoPickRegistPop .tabCon .wishInfo .dotInfo {margin-top:2px;}
+.cocoPickRegistPop .tabCon .wishInfo .dotInfo li {font-size:11px;line-height:15px;word-break:keep-all;margin-top:5px;}
+.cocoPickRegistPop .tabCon .searchBox .inp_text input {height:40px;line-height:40px;font-size:13px;}
+.cocoPickRegistPop .tabCon .searchBox .inp_text input::placeholder {color:#888;font-size:13px;}
+.cocoPickRegistPop .tabCon .noSearchList {background-color:#fff;padding:34px 0;}
+.cocoPickRegistPop .tabCon .noSearchList p {padding-top:63px;font-size:12px;font-weight:400;line-height:18px;color:#888;text-align:center;background:url('/static/front/resources/web/images/socialSelling/icon_exclamation.png') no-repeat center top / 48px auto;}
+.cocoPdtList2 .listItem {position:relative;padding:16px 0;}
+.cocoPdtList2 .listItem + .listItem {border-top:1px solid #f3f3f3;}
+.cocoPdtList2 .listItem:first-child {border-top:1px solid #f3f3f3;}
+.cocoPdtList2 .listItem:last-child {border-bottom:1px solid #f3f3f3;}
+.cocoPdtList2 .listItem .item {display:flex;align-items:center;}
+.cocoPdtList2 .listItem .item .left {flex:0 0 32px;}
+.cocoPdtList2 .listItem .item .right {padding-left:3px;display:flex;flex:1 1 auto;width:1%;}
+.cocoPdtList2 .listItem .item .btnBox button {display:block;width:32px;height:32px;padding:8px;border-radius:4px;border:1px solid #f3f3f3;}
+.cocoPdtList2 .listItem .item .imgBox {flex:0 0 90px;position:relative;}
+.cocoPdtList2 .listItem .item .imgBox img {width:100%;}
+.cocoPdtList2 .listItem .item .textBox {flex:1 1 auto;width:1%;padding-left:14px;}
+.cocoPdtList2 .listItem .item .textBox .brand {font-size:11px;color:#888;line-height:15px;}
+.cocoPdtList2 .listItem .item .textBox .prdName {font-size:12px;color:#222;line-height:18px;margin-top:2px;}
+.cocoPdtList2 .listItem .item .textBox .badge {display:inline-block;font-size:11px;line-height:15px;padding:2px 10px;border-radius:99px;box-sizing:border-box;}
+.cocoPdtList2 .listItem .item .textBox .badge + .badge {margin-top:4px;}
+.cocoPdtList2 .listItem .item .textBox .badge.noReward {color:#888;background-color:#fafafa;border:1px solid #ebebeb;letter-spacing:-0.01em;}
+.cocoPdtList2 .listItem .item .textBox .badge.noReward::before {content:'';display:inline-block;width:15px;height:16px;background:url('/static/front/resources/web/images/socialSelling/icon_noReward.png') no-repeat left -1px / 15px auto;margin-right:4px;vertical-align:middle;}
+.cocoPdtList2 .listItem .item .textBox .badge.coco {color:#ff65af;background-color:rgba(255, 101, 175, 0.07);border:1px solid rgba(255, 101, 175, 0.3);letter-spacing:-0.01em;}
+.cocoPdtList2 .listItem .item .textBox .badge.coco::before {content:'';display:inline-block;width:16px;height:16px;background:url('/static/front/resources/web/images/socialSelling/icon_crown.png') no-repeat left -1px / 16px auto;margin-right:2px;vertical-align:middle;}
+.cocoToast {width:342px;height:30px;line-height:30px;position:absolute;bottom:110px;left:50%;transform:translateX(-50%);background-color:rgba(0, 0, 0, 0.7);color:#fff;text-align:center;font-size:12px;font-weight:600;border-radius:4px;z-index:10;display:none;}
+
+/* 리워드 프로그램 소개 배너, 팝업 */
+.rewardProBanner .bnrSlide {width:100%;overflow:hidden;}
+.rewardProBanner .bnrSlide.pdtSlide {height:auto;max-height:470px;overflow:hidden;}
+.rewardProBanner.lyPopArea .lyPop {max-width:360px;overflow:hidden;border:none;}
+.rewardProBanner .bnrSlide .item .box {padding-bottom:25px;}
+.rewardProBanner .bnrSlide .item .textBox {padding-top:50px;text-align:center;box-sizing:border-box;}
+.rewardProBanner .bnrSlide .item .textBox .bigT {font-size:26px;line-height:36px;letter-spacing:-0.02em;font-weight:600;}
+.rewardProBanner .bnrSlide .item .textBox .middleT {font-size:18px;line-height:28px;letter-spacing:-0.02em;}
+.rewardProBanner .bnrSlide .item .textBox .smallT {font-size:14px;line-height:21px;letter-spacing:-0.01em;color:#a2a2a2;}
+.rewardProBanner .bnrSlide .item .textBox .flex {display:flex;align-items:center;justify-content:center;}
+.rewardProBanner .bnrSlide .item .textBox .btn_txt {display:inline-block;color:#a2a2a2;font-size:14px;line-height:26px;letter-spacing:-0.02em;}
+.rewardProBanner .bnrSlide .item .textBox .btn_txt::after {background-color:#a2a2a2;bottom:3px;}
+.rewardProBanner .bnrSlide .item .textBox .btn_txt::before {bottom:2px;}
+.rewardProBanner .bnrSlide .item .imgBox {width:221px;margin:28px auto 0;}
+.rewardProBanner .bnrSlide .item.one .textBox {position:relative;text-align:left;padding-left:30px;z-index:3;}
+.rewardProBanner .bnrSlide .item.one .textBox .bigT {font-size:30px;line-height:40px;}
+.rewardProBanner .bnrSlide .item.one .textBox .middleT {font-size:16px;line-height:26px;}
+.rewardProBanner .bnrSlide .item.one .textBox .smallT {color:#222;}
+.rewardProBanner .bnrSlide .item.one .textBox .button {display:inline-block;padding:6px 30px;margin-top:24px;font-size:14px;line-height:24px;color:#fff;letter-spacing:-0.01em;background:linear-gradient(90deg, #FF65AF 0%, #FF6E6E 100%);border-radius:150px;box-sizing:border-box;}
+.rewardProBanner .bnrSlide .item.one .imgBox {width:236px;margin-top:-95px;padding-left:82px;}
+.rewardProBanner .bnrSlide .item.four .bigT .flex::after {content:'';display:inline-flex;width:28px;height:28px;background:url('/static/front/resources/mobile/images/socialSelling/icon_money.png') no-repeat center center / 28px auto;}
+.rewardProBanner .bnrSlide .item.six .middleT .flex::after {content:'';display:inline-flex;width:25px;height:25px;background:url('/static/front/resources/mobile/images/socialSelling/icon_bag.jpg') no-repeat center center / 25px auto;}
+.rewardProBanner .bnrSlide .item.six .imgBox {width:211px;margin-top:15px;}
+.rewardProBanner.lyPopArea.fullType .lyPop > .btn_wrap {padding:0;}
+.rewardProBanner .btn_wrap {display:flex;justify-content:space-between;padding:0 20px;margin-top:0;height:52px;line-height:52px;background:#F3F3F3;box-sizing:border-box;}
+.rewardProBanner .btn_wrap button {font-size:13px;letter-spacing:-0.01em;color:#888;}
+.rewardProBanner .btn_wrap button.black {color:#222;font-weight:500;}
+.rewardProBanner .btn_wrap2 {display:none;}
+.rewardProBanner .btn_wrap2 .button {display:block;width:100%;height:52px;line-height:52px;font-size:13px;letter-spacing:-0.02em;box-sizing:border-box;color:#fff;font-weight:500;background-color:#ff65af;}
+.rewardProBanner.lyPopArea .lyClose {width:34px;height:33px;top:15px;right:15px;background:url('/static/front/resources/web/images/socialSelling/bnr_close.png') no-repeat center center / 100%;}
+.rewardProBanner .bnrSlide .slick-arrow {position:absolute;top:50%;width:40px;height:40px;border:1px solid #E8E8E8;box-shadow:0px 4px 9px rgba(0, 0, 0, 0.1);background:#FFFFFF url('/static/front/resources/web/images/socialSelling/icon_arrP.png') no-repeat center;box-sizing:border-box;border-radius:50%;font-size:0;z-index:5;}
+.rewardProBanner .bnrSlide .slick-prev {left:18px;}
+.rewardProBanner .bnrSlide .slick-next {right:18px;transform: scaleX(-1);}
+.rewardProBanner .bnrSlide .slick-dots {text-align:center;position:absolute;bottom:0;left:50%;transform:translateX(-50%);}
+.rewardProBanner .bnrSlide .slick-dots li {display:inline-block;width:8px;height:8px;border-radius:50%;background-color:#ebebeb;margin:0 5px;text-indent:-9999px;}
+.rewardProBanner .bnrSlide .slick-dots li.slick-active {background-color:#ff65af;}
+.rewardProBannerPopup.lyPopArea .lyPop {max-width:360px;overflow:hidden;border:none;}
+.rewardProBannerPopup.lyPopArea .lyClose {top:15px;right:15px;}
+.rewardProBannerPopup .conWrap img {max-width:100%;}
+.rewardProBannerPopup .conWrap .textBox {position:absolute;top:50px;left:20px;}
+.rewardProBannerPopup .conWrap .textBox .roundText {display:inline-block;padding:6px 16px;font-size:15px;line-height:22px;color:#fff;background:linear-gradient(to right, #FF65AF 0%,#FF6E6E 100%);border-radius:36px;}
+.rewardProBannerPopup .conWrap .textBox .desc {padding-left:16px;margin-top:12px;font-size:21px;line-height:33px;letter-spacing:-0.04em;}
+.rewardProBannerPopup .conWrap .textBox .desc em {color:#F23992 !important;}
+.rewardProBannerPopup .btn_wrap {display:flex;justify-content:space-between;padding:15px 20px;margin-top:0;background:#000;}
+.rewardProBannerPopup .btn_wrap button {font-size:13px;line-height:22px;letter-spacing:-0.01em;color:#fff;}
+.rewardProBannerPopup .btn_wrap button:first-child {color:#bfbfbf;}
+
+/* 신고/차단 버틑 */
+.cocoBlockBtn button {font-size:11px;line-height:15px;color:#888;letter-spacing:-0.01em;}
+.cocoEditBtn {display:flex;align-items:center;}
+.cocoEditBtn button {font-size:11px;line-height:15px;color:#888;letter-spacing:-0.01em;}
+.cocoEditBtn button:nth-child(2)::before {content:'';display:inline-flex;width:1px;height:10px;background-color:#e8e8e8;margin-left:6px;margin-right:6px;}
+
+/* 리뷰 더보기 */
+.reviewListBox .reviewMore.coco {position:relative;bottom:initial;right:initial;font-size:11px;padding-right:15px;line-height:15px;}
+.reviewListBox .reviewMore.coco::after {content:'';position:absolute;width:12px;height:7px;background:url('/static/front/resources/web/images/socialSelling/icon_arr_more.png') no-repeat left top / 12px auto;}
+.reviewListBox .reviewMore.coco.on:after {content:'';position:absolute;width:12px;height:7px;background:url('/static/front/resources/web/images/socialSelling/icon_arr_more.png') no-repeat left bottom / 12px auto;}
+
+/* 프로필 */
+.coachMark-opened {overflow:hidden;}
+.profileCoachMarkWrap {position:absolute;top:0;left:0;z-index:1100;height:100vh;overflow:hidden;width:100%;min-width:1200px;background-color:rgba(0,0,0,.6);}
+.profileCoachMarkWrap.none {display:none;}
+.profileCoachMarkWrap .coachMark {display:none;width:100%;position:relative;}
+.profileCoachMarkWrap .coachMark img {display:block;position:absolute;top:0;left:50%;transform:translateX(-50%);}
+.profileCoachMarkWrap .coachMark .contents {position:relative;height:100vh;}
+.profileCoachMarkWrap .coachMark button {display:block;width:74px;height:40px;position:absolute;}
+.profileCoachMarkWrap .coachMark1 .btnNext {top:480px;left:248px;}
+.profileCoachMarkWrap .coachMark2 .btnPrev {top:353px;right:122px;}
+.profileCoachMarkWrap .coachMark2 .btnNext {top:353px;right:40px;}
+.profileCoachMarkWrap .coachMark3 .btnPrev {top:692px;left:550px;}
+.profileCoachMarkWrap .coachMark3 .btnEnd {top:692px;left:632px;}
+
+.cocoProfileWrap .topBg {width:100%;height:72px;background:linear-gradient(90deg, #FF65AF 0%, #FF6E6E 100%);}
+.cocoProfileWrap .topBg .topBgIn {width:100%;height:72px;background:url('/static/front/resources/web/images/socialSelling/profileTopBg.jpg') no-repeat center;}
+.cocoProfileWrap .tabBoxWrap {width:100%;height:64px;}
+.cocoProfileWrap .tabBoxWrap .tabBox {border-bottom:1px solid #e8e8e8;padding-top:30px;background-color:#fff;width:100%;}
+.cocoProfileWrap .tabBoxWrap .tabBox .tabIn {width:1200px;margin:0 auto;padding:0 20px;}
+.cocoProfileWrap .tabBoxWrap .tabBox .tabIn .tab {display:flex;padding-left:382px;}
+.cocoProfileWrap .tabBoxWrap .tabBox .tab .tabItem {font-size:16px;line-height:30px;letter-spacing:-0.02em;}
+.cocoProfileWrap .tabBoxWrap .tabBox .tab .tabItem + .tabItem {padding-left:24px;}
+.cocoProfileWrap .tabBoxWrap .tabBox .tab .tabItem span {display:inline-block;}
+.cocoProfileWrap .tabBoxWrap .tabBox .tab .tabItem.on {font-weight:600;}
+.cocoProfileWrap .tabBoxWrap .tabBox .tab .tabItem.on span {border-bottom:3px solid #222;}
+.cocoProfileWrap .tabBoxWrap .tabBox.fixed {position:fixed;top:50px;left:0;z-index:3;}
+.cocoProfile {position:relative;display:flex;align-items:flex-start;margin-bottom:100px;}
+.cocoProfile .infoBox {width:330px;border-radius:4px;border:1px solid #e8e8e8;background-color:#fff;position:relative;top:-114px;left:0;z-index:5;}
+.cocoProfile .infoBox.floating {position:sticky;top:74px;left:0;}
+.cocoProfile .infoBox .boxIn {position:relative;z-index:2;}
+.cocoProfile .infoBox .box1 {padding-top:32px;padding-bottom:17px;}
+.cocoProfile .infoBox .box1 .infoWrap .imgBox {position:relative;width:84px;margin:0 auto;}
+.cocoProfile .infoBox .box1 .infoWrap .imgBox .img {width:84px;height:84px;border-radius:50%;overflow:hidden;}
+.cocoProfile .infoBox .box1 .infoWrap .imgBox .img img {width:100%;}
+.cocoProfile .infoBox .box1 .infoWrap .imgBox .manageBtn{position:absolute;bottom:0;right:-11px;width:36px;height:35px;background:url('/static/front/resources/web/images/socialSelling/icon_profile_edit.png') no-repeat center / 36px auto;}
+.cocoProfile .infoBox .box1 .infoWrap .nickNameBox {font-size:16px;line-height:24px;letter-spacing:-0.01em;text-align:center;font-weight:600;margin-top:10px;}
+.cocoProfile .infoBox .box1 .infoWrap .linkBox {text-align:center;}
+.cocoProfile .infoBox .box1 .infoWrap .linkBox .address {display:inline-block;vertical-align:middle;font-size:12px;line-height:22px;color:#888;}
+.cocoProfile .infoBox .box1 .infoWrap .linkBox .linkCopyBtn {display:inline-block;vertical-align:middle;height:22px;padding:0 10px 0 23px;font-size:11px;line-height:22px;border-radius:99px;background-color:#f3f3f3;text-align:center;margin-left:5px;position:relative;color:#666;}
+.cocoProfile .infoBox .box1 .infoWrap .linkBox .linkCopyBtn::before {content:'';position:absolute;top:50%;left:6px;transform:translateY(-50%);width:16px;height:16px;vertical-align:middle;background:url('/static/front/resources/web/images/socialSelling/icon_link.png') no-repeat center / 16px auto;}
+.cocoProfile .infoBox .box2 {padding-top:16px;padding-bottom:40px;border-top:1px solid #e8e8e8;}
+.cocoProfile .infoBox .box2 .userIntroWrap {padding:0 20px;text-align:center;margin-bottom:12px;}
+.cocoProfile .infoBox .box2 .userIntroWrap .introText {font-size:13px;line-height:21px;letter-spacing:-0.01em;text-align:center;word-break:keep-all;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word;}
+.cocoProfile .infoBox .box2 .userIntroWrap .introText.on {overflow:visible;display:block;text-overflow:initial;}
+.cocoProfile .infoBox .box2 .userIntroWrap .btnTextMore {font-size:11px;line-height:15px;color:#666;display:none;}
+.cocoProfile .infoBox .box2 .userIntroWrap .btnTextMore::after {content:'';display:inline-block;width:12px;height:7px;background:url('/static/front/resources/web/images/socialSelling/btn_textMore.png') no-repeat center / 12px auto;margin-left:3px;}
+.cocoProfile .infoBox .box2 .userIntroWrap .btnTextMore.on::after {transform:rotate(180deg);}
+.cocoProfile .infoBox .box2 .skinTagWrap {padding:0 20px;}
+.cocoProfile .infoBox .box2 .skinTagWrap .list {display:flex;justify-content:center;flex-wrap:wrap;}
+.cocoProfile .infoBox .box2 .skinTagWrap .list .item {padding:0 9px;height:24px;font-size:11px;color:#888;line-height:24px;border-radius:24px;background-color:#f8f8f8;margin-top:3px;}
+.cocoProfile .infoBox .box2 .skinTagWrap .list .item + .item {margin-left:3px;}
+.cocoProfile .infoBox .box2 .noSkinProfile {margin:0 15px;padding:16px 0;border-radius:4px;background-color:#f8f8f8;text-align:center;}
+.cocoProfile .infoBox .box2 .noSkinProfile .desc {font-size:11px;line-height:15px;text-align:center;color:#666;}
+.cocoProfile .infoBox .box2 .noSkinProfile .btnSkin {display:block;margin:5px auto 0 auto;font-size:12px;letter-spacing:-0.01em;}
+.cocoProfile .infoBox .box2 .snsIconWrap {display:flex;justify-content:center;margin-top:10px;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item {padding:0 4px;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item .itemIn {padding:6px;border-radius:32px;background-color:#222;display:flex;justify-content:center;align-items:center;box-sizing:border-box;transition:background-color .3s ease-in-out;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item .itemIn .snsIcon {width:20px;height:20px;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item .itemIn .snsText {display:none;font-size:11px;letter-spacing:-0.01em;padding-left:6px;color:#fff;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item .itemIn.on {padding:6px 14px;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item .itemIn.url.on {padding:6px 40px;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item .itemIn.on .snsText {display:block;}
+.cocoProfile .infoBox .box2 .snsIconWrap .item:hover .itemIn {background-color:#FF65AF;}
+.cocoProfile .infoBox .box2 .btnWrap {margin-top:32px;}
+.cocoProfile .infoBox .box2 .btnWrap button {display:block;width:266px;height:48px;margin:0 auto;line-height:47px;border-radius:99px;font-size:12px;}
+.cocoProfile .infoBox .box2 .btnWrap .btnPrdSubmit {border:1px solid #222;display:flex;align-items:center;justify-content:center;}
+.cocoProfile .infoBox .box2 .btnWrap .btnPrdSubmit::before {content:'';display:block;width:0;height:15px;background:url('/static/front/resources/web/images/socialSelling/btnPrdSubmit_icon.png') no-repeat center;margin-right:4px;transition:all .3s ease-in-out;}
+.cocoProfile .infoBox .box2 .btnWrap .btnPrdSubmit:hover::before {width:15px;}
+.cocoProfile .infoBox .box2 .btnWrap .btnEdit {background-color:#f3f3f3;margin-top:10px;transition:all .3s ease-in-out;}
+.cocoProfile .infoBox .box2 .btnWrap .btnEdit:hover {background-color:#e8e8e8;}
+.cocoProfile .contentsBox {padding-left:52px;flex:1 1 auto;width:1%;}
+.cocoProfile .conTit {padding:52px 0 24px;font-size:22px;line-height:26px;letter-spacing:-0.015em;font-weight:600;display:flex;justify-content:space-between;align-items:center;position:relative;}
+.cocoProfile .cocoPickBox {padding-bottom:48px;}
+.cocoProfile .cocoPickBox .conTit .btnTooltip {display:inline-block;width:16px;height:17px;background:url('/static/front/resources/web/images/socialSelling/icon_chelp.png') no-repeat top left / 16px auto;margin-top:-5px;}
+.cocoProfile .cocoPickBox .conTit .toolTipCon {position:absolute;top:86px;left:0;width:345px;padding:24px 16px;background-color:#fff;border:1px solid #E8E8E8;box-shadow:0px 4px 8px rgba(0, 0, 0, 0.08);border-radius:6px;box-sizing:border-box;display:none;z-index:1;}
+.cocoProfile .cocoPickBox .conTit .toolTipCon .item {font-size:11px;line-height:15px;letter-spacing:-0.015em;padding-left:5px;text-indent:-5px;font-weight:400;}
+.cocoProfile .cocoPickBox .conTit .toolTipCon .item + .item {margin-top:6px;}
+.cocoProfile .cocoPickBox .conTit .toolTipCon .item::before {content:'-';}
+.cocoProfile .cocoPickBox .conTit .toolTipCon .item span {color:#888;display:inline-block;margin-top:4px;text-indent:initial;}
+.cocoProfile .cocoPickBox .conTit .toolTipCon .item .link {display:inline-block;text-decoration:underline;text-underline-position:under;margin-top:4px;padding-left:5px;}
+.cocoProfile .cocoPickBox .conTit .toolTipCon .item .link::after {content:'';display:inline-block;width:4px;height:8px;background:url('/static/front/resources/web/images/socialSelling/icon_cArrow.png') no-repeat center / 4px auto;margin-left:3px;}
+.cocoProfile .cocoPickBox .conTit .toolTipCon .btnClose {display:block;position:absolute;z-index:10;right:8px;top:8px;width:16px;height:16px;background:url('/static/front/resources/mobile/images/common/btn_close.png') no-repeat center center / 16px;}
+.cocoProfile .cocoPickBox .conBox1 .btnSubmit {height:210px;background-color:#f8f8f8;border-radius:4px;display:flex;align-items:center;justify-content:center;}
+.cocoProfile .cocoPickBox .conBox1 .desc {font-size:11px;line-height:15px;color:#888;padding-top:10px;padding-left:10px;}
+.cocoProfile .cocoPickBox .conBox1 .btnSubmit .button::after {content:'';display:block;width:38px;height:38px;background:url('/static/front/resources/web/images/socialSelling/icon_cplus.png') no-repeat center / 38px auto;transition:transform .3s ease-in-out;}
+.cocoProfile .cocoPickBox .conBox1 .btnSubmit .button:hover::after {transform:rotate(45deg);}
+.cocoProfile .cocoPickBox .conBox2 .descBox {height:210px;background-color:#fff;border:1px solid #e8e8e8;border-radius:4px;display:flex;align-items:center;justify-content:center;}
+.cocoProfile .cocoPickBox .conBox2 .descBox .desc {font-size:12px;line-height:18px;text-align:center;color:#888;}
+.cocoProfile .cocoPickBox .conBox3 .list + .list {border-top:1px solid #e8e8e8;}
+.cocoProfile .cocoPickBox .conBox3 .list:last-child {border-bottom:1px solid #e8e8e8;}
+.cocoProfile .cocoPickBox .conBox3 .list .item {display:flex;padding:40px 0;}
+.cocoProfile .cocoPickBox .conBox3 .list:first-child .item {padding-top:0;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .left {flex:0 0 356px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .right {flex:1 1 auto;width:1%;padding-left:20px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .prdImgBox {position:relative;width:356px;background-color:#f3f3f3;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .prdImgBox .imgLink {overflow:hidden;display:block;height:454px;line-height:454px;font-size:0;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .prdImgBox .imgLink img {display:inline;vertical-align:middle;margin-left:50%;transform:translateX(-50%);height:100%;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .prdImgBox .btnCocoShare1 {position:absolute;right:16px;bottom:16px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .prdName {font-size:18px;line-height:26px;letter-spacing:-0.01em;font-weight:600;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox {margin-top:12px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco .tit {width:138px;height:21px;line-height:21px;text-align:center;color:#fff;font-size:11px;border-radius:4px 4px 0px 0px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco .recoCon {border-radius:0px 4px 4px 4px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco1 .tit {background-color:#ff65af;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco2 .tit {background-color:#666;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco1 .recoCon {padding:14px;background-color:#FFF4F9;border:1px solid #FFE3F1;position:relative;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco1 .recoCon .reviewBtn {position:absolute;right:10px;bottom:10px;line-height:1;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco1 .recoCon .reviewBtn button {font-size:11px;line-height:15px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco2 .recoCon {padding:14px;background-color:#F8F8F8;border:1px solid #EBEBEB;position:relative;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox .reviewCtt {margin-bottom:0;font-size:13px;line-height:22px;letter-spacing:-0.01em;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco1 .reviewListBox .reviewCtt.heightOn {height:22px !important;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco2 .reviewListBox .reviewCtt.heightOn {height:36px !important;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco1 .reviewListBox .reviewCtt {color:#ff65af;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco2 .reviewListBox .reviewCtt {color:#888;font-size:12px;line-height:18px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox > ul > li {padding:0;border-bottom:none;font-size:initial;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox .reviewInfo {display:flex;width:auto;padding:0;font-size:initial;justify-content:space-between;align-items:center;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox .reviewDate {font-size:11px;line-height:15px;color:#bfbfbf;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox .reviewTtl {margin-top:6px;margin-bottom:8px;font-size:14px;line-height:21px;letter-spacing:-0.01em;font-weight:600;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox .reviewBox {display:block;width:auto;padding:0;font-size:initial;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox .userInfo {margin-top:0;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reviewListBox .reviewImg .imgCutting {width:60px;padding-top:60px;margin-bottom:8px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .reviewListBox .userPointBox {margin-top:8px;padding:0;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .reviewListBox .userPoint span {background-color:#eee;border:none;color:#888;font-size:11px;height:23px;line-height:23px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco2 .recoCon .reviewBtn {position:absolute;right:10px;bottom:10px;line-height:1;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .cocoRecoBox .reco.reco2 .recoCon .reviewBtn button {font-size:11px;line-height:15px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox {display:flex;justify-content:space-between;align-items:center;padding-top:16px;position:relative;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .btnCart .button {display:flex;align-items:center;justify-content:center;width:210px;height:48px;line-height:47px;border-radius:48px;font-size:12px;font-weight:600;color:#fff;letter-spacing:-0.01em;background-color:#222;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .btnCart .button .icon {display:block;width:24px;height:24px;background:url('/static/front/resources/mobile/images/socialSelling/icon_cocoCart.png') no-repeat center / 24px auto;margin-right:4px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem1,
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 {display:flex;align-items:center;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem1 .price1 {font-size:11px;line-height:15px;font-weight:600;text-decoration:line-through;color:#bfbfbf;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem1 .price2 {font-size:12px;line-height:18px;font-weight:600;color:#bfbfbf;padding-left:4px;margin-top:-2px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 .desc {font-size:14px;font-weight:600;color:#ff65af;letter-spacing:-0.02em;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 .price {font-size:18px;font-weight:600;color:#ff65af;padding-left:4px;letter-spacing:-0.02em;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 .btnTooltip {position:relative;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 .btnTooltip .button {display:block;width:15px;height:15px;background:url('/static/front/resources/web/images/socialSelling/icon_chelp2.png') no-repeat center / 15px auto;margin-left:4px;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 .btnTooltip .toolTipCon {position:absolute;white-space:nowrap;top:22px;left:-111px;width:331px;height:64px;background:url('/static/front/resources/web/images/socialSelling/cocoPrice_tooltip_bg.png') no-repeat center / contain;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 .btnTooltip .toolTipCon .desc {font-size:11px;padding:22px 0 0 12px;line-height:15px;letter-spacing:-0.01em;color:#fff;font-weight:400;}
+.cocoProfile .cocoPickBox .conBox3 .list .item .priceBox .box .boxItem2 .btnTooltip .toolTipCon .btnClose {display:block;position:absolute;z-index:10;right:8px;top:20px;width:16px;height:17px;background:url('/static/front/resources/web/images/socialSelling/icon_close_w.png') no-repeat center center / 16px;}
+.cocoProfile .cocoReviewBox .conTit .reviewCount {font-size:11px;line-height:15px;letter-spacing:-0.01em;font-weight:400;}
+.cocoProfile .cocoReviewBox .conTit .reviewCount .num {font-size:12px;line-height:18px;font-weight:600;}
+.cocoProfile .cocoReviewBox .conBox1 .desc {display:flex;justify-content:center;align-items:center;width:100%;height:210px;background-color:#f8f8f8;border-radius:4px;}
+.cocoProfile .cocoReviewBox .conBox1 .desc p {font-size:12px;color:#888;letter-spacing:-0.01em;}
+.cocoProfile .cocoReviewBox .conBox1 .dotInfo {padding-top:10px;padding-left:10px;}
+.cocoProfile .cocoReviewBox .conBox1 .dotInfo li {margin-top:2px;font-size:11px;line-height:15px;}
+.cocoProfile .cocoReviewBox .conBox1 .dotInfo li::before {width:2px;height:2px;background:#bfbfbf;}
+.cocoProfile .cocoReviewBox .conBox2 .descBox {height:210px;background-color:#fff;border:1px solid #e8e8e8;border-radius:4px;display:flex;align-items:center;justify-content:center;}
+.cocoProfile .cocoReviewBox .conBox2 .descBox .desc {font-size:12px;line-height:18px;text-align:center;color:#888;}
+.reviewListBox.coco > ul > li {padding:40px 0 40px 22px;position:relative;}
+.reviewListBox.coco .reviewInfo {width:19%;}
+.reviewListBox.coco .reviewBox {width:76%;}
+.reviewListBox.coco .reviewBox .pdtBox {position:relative;z-index:1;padding:14px;background:#f8f8f8;display:flex;}
+.reviewListBox.coco .reviewBox .pdtImg {flex:0 0 82px;padding-right:12px;}
+.reviewListBox.coco .reviewBox .pdtImg img {width:100%;display:block;}
+.product_best .reviewList .pdtTxt {display:inline-block;margin-left:10px;vertical-align:middle;width:calc(100% - 100px);}
+.reviewListBox.coco .reviewBox .pdtTxt {flex:1 1 auto;width:1%;}
+.reviewListBox.coco .reviewBox .pdtBrand {font-size:12px;line-height:18px;color:#888;}
+.reviewListBox.coco .reviewBox .pdtName {line-height:21px;font-size:13px;color:#222;}
+.reviewListBox.coco .reviewBox .pdtPrice {position:relative;padding-top:4px;font-weight:600;font-size:13px;line-height:21px;}
+.reviewListBox.coco .reviewBox .pdtPrice .sale {display:inline-block;margin-right:4px;color:#FF5B5D;font-size:13px;line-height:21px;}
+.reviewListBox.coco .reviewBox .pdtPrice .cost {position:relative;display:inline-block;padding:0 3px;margin-left:4px;font-size:12px;line-height:18px;font-weight:400;color:#888;}
+.reviewListBox.coco .reviewBox .pdtPrice .cost:after {content:'';position:absolute;left:0;top:50%;width:100%;height:1px;background:#888;}
+.reviewListBox.coco .reviewBox .reviewCon {padding-top:20px;}
+.reviewListBox.coco .reviewBox .reviewCon .reviewTtl {font-size:16px;line-height:25px;margin-bottom:8px;font-weight:600;}
+.reviewListBox.coco .reviewBox .reviewCon .reviewCtt {font-size:14px;line-height:21px;margin-bottom:2px;}
+.reviewListBox.coco .reviewBox .reviewCon .reviewCtt.heightOn {height:42px !important;}
+.reviewListBox.coco .reviewBox .reviewCon .reviewMore.coco {font-size:13px;line-height:21px;padding-right:17px;}
+.reviewListBox.coco .reviewBox .flexBox {padding-top:20px;display:flex;align-items:center;justify-content:space-between;}
+.reviewListBox.coco .reviewBox .flexBox .userPoint span {padding:0 9px;height:29px;line-height:28px;}
+.reviewListBox.coco .reviewBox .reviewDate {color:#bfbfbf;}
+.reviewListBox.coco .reviewBox .reviewBtn {position:absolute;right:0;bottom:-30px;}
+.reviewListBox.coco .reviewBox .reviewBtn .cocoBlockBtn {position:static;}
+.cocoProfile .cocoReviewBox .conBox3 {border-top:2px solid #222;}
+.cocoProfile .cocoReviewBox .conBox3 .reviewListBox .reviewInfo {vertical-align:bottom;}
+.cocoProfile .cocoReviewBox .conBox3 .reviewPoint .pItem {display:flex;justify-content:space-between;align-items:center;}
+.cocoProfile .cocoReviewBox .conBox3 .reviewPoint .pItem .tit {font-size:12px;line-height:18px;font-weight:600;color:#222;}
+.cocoProfile .cocoReviewBox .conBox3 .reviewPoint .pItem .value {font-size:12px;line-height:18px;font-weight:600;color:#ff65af;text-align:right;}
+.cocoProfile .cocoReviewBox .conBox3 .reviewPoint .pItem + .pItem {margin-top:6px;}
+.cocoProfile .cocoReviewBox .conBox3 .btnReviewWrite .btn {display:block;width:100%;margin-top:15px;}
+.cocoProfile .cocoReviewBox .conBox4 {border-top:2px solid #222;}
+.cocoProfile .cocoReviewBox .conBox4 .reviewListBox .reviewInfo {padding-top:15px;}
+.cocoProfile .cocoReviewBox .conBox4 .btnReviewTotalView .btn {display:block;width:220px;margin-left:auto;margin-right:auto;}
+.cocoProfileWrap .profileBottomBanner {border-top:1px solid #e8e8e8;padding:60px 0;}
+
+.profileBlockPop.lyPopArea_C .lyBody {padding:26px 23px 32px;}
+.profileBlockPop.lyPopArea.lyPopArea_C .normalText {font-size:12px;line-height:18px;}
+.profileBlockPop.lyPopArea_C .lyBody.basic .btnTerms {display:inline-block;margin-top:16px;margin-left:70px;margin-right:70px;}
+.profileBlockPop.lyPopArea_C .lyBody.basic .btnTerms span {text-decoration:underline;text-underline-position:under;}
+
+.cocoProfile .cocoPickBox .conBox3 .list .item.sellStop .prdImgBox::after {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6) url('/static/front/resources/web/images/socialSelling/sellStop_txt.png') no-repeat center / 138px;z-index:2;}
+.cocoProfile .cocoPickBox .conBox3 .list .item.sellStop .priceBox .btnCart .button {background-color:#bfbfbf;cursor:not-allowed;}
+.cocoProfile .cocoPickBox .conBox3 .list .item.sellStop .priceBox .btnCart .button:before,
+.cocoProfile .cocoPickBox .conBox3 .list .item.sellStop .priceBox .btnCart .button:after {background:#bfbfbf;}
+
+/* 신고/차단 버틑 */
+.cocoBlockBtn button {font-size:13px;line-height:21px;color:#888;letter-spacing:-0.01em;}
+.cocoEditBtn {display:flex;align-items:center;}
+.cocoEditBtn button {font-size:13px;line-height:21px;color:#888;letter-spacing:-0.01em;}
+.cocoEditBtn button:nth-child(2)::before {content:'';display:inline-flex;width:1px;height:10px;background-color:#ccc;margin-left:10px;margin-right:10px;}
+
+/* 리워드 하단 배너모음 */
+.rewardBannerWrap {display:flex;justify-content:center;}
+.rewardBannerWrap .item {flex:0 0 310px;height:143px;}
+.rewardBannerWrap .item:nth-child(1) {background:url('/static/front/resources/web/images/socialSelling/icon_reward_faq.png') no-repeat right+20px center / 40px;}
+.rewardBannerWrap .item:nth-child(2) {background:url('/static/front/resources/web/images/socialSelling/icon_reward_pro_intro.png') no-repeat right+20px center / 40px;}
+.rewardBannerWrap .item:nth-child(3) {background:url('/static/front/resources/web/images/socialSelling/icon_reward_policy.png') no-repeat right+20px center / 40px;}
+.rewardBannerWrap .item + .item {margin-left:10px;}
+.rewardBannerWrap .item .itemLink {display:flex;width:100%;height:100%;padding:0 20px;border:1px solid #ebebeb;border-radius:4px;box-sizing:border-box;align-items:center;}
+.rewardBannerWrap .item .tit {font-size:15px;line-height:24px;}
+.rewardBannerWrap .item .desc {font-size:12px;line-height:18px;padding-top:7px;}
+
+/* 코코 리뷰 */
+.cocoReviewWrap .searchBox {width:300px;padding-top:80px;padding-bottom:24px;margin-left:auto;}
+.cocoReviewWrap .searchBox .inp_text.searchType2 input {border-bottom:1px solid #222;padding-left:8px;}
+.cocoReviewWrap .searchBox input::placeholder {font-size:13px;color:#888;font-weight:400;letter-spacing:-0.01em;}
+.cocoReviewWrap .titleBox {display:flex;justify-content:space-between;align-items:center;padding-bottom:24px;}
+.cocoReviewWrap .titleBox .tit {font-size:22px;line-height:26px;font-weight:600;letter-spacing:-0.01em;}
+.cocoReviewWrap .titleBox .sorting a {font-size:13px;line-height:21px;color:#888;}
+.cocoReviewWrap .titleBox .sorting a.on {color:#222;font-weight:500;}
+.cocoReviewWrap .listBox {border-top:2px solid #222;padding-bottom:46px;}
+.cocoReviewWrap .listBox .reviewListBox.coco > ul > li {padding:40px 0 40px 50px;}
+.cocoReviewWrap .listBox .reviewListBox.coco .reviewInfo {width:17%;padding-top:15px;}
+.cocoReviewWrap .listBox .reviewListBox.coco .reviewBox {width:78%;}
+.cocoReviewWrap .listBox .reviewListBox.coco .reviewBox .cocoBlockBtn {position:static;}
+.cocoReviewWrap .cocoReviewBottomBanner {padding:54px 0 60px;}
+
+/* 리뷰 신고,차단 레이어 */
+.reviewBlockPopup.lyPopArea.lyPopArea_B .lyBody .conWrap {padding:24px 40px 0 40px;}
+.reviewBlockPopup .tabType1 ul:before {border:none;background-color:#f3f3f3;}
+.reviewBlockPopup .tabType1 a {font-size:12px;}
+.reviewBlockPopup .tabType1 a.current,
+.reviewBlockPopup .tabType1 a:hover {font-weight:600;}
+.reviewBlockPopup .blockTab {padding-top:24px;}
+.reviewBlockPopup .blockTab .tabCon .box1 {padding-bottom:24px;}
+.reviewBlockPopup .blockTab .tabCon .box2 {border-top:1px solid #f3f3f3;padding-top:24px;}
+.reviewBlockPopup .blockTab .tabCon .chkBox .inp_radio label:before {content:'';position:absolute;left:0;top:-2px;width:25px;height:25px;background:url('/static/front/resources/web/images/socialSelling/icon_radio.png') no-repeat left bottom / 25px auto;}
+.reviewBlockPopup .blockTab .tabCon .chkBox .inp_radio input[type="radio"]:checked + label:before {background-position:0 top;}
+.reviewBlockPopup .blockTab .tabCon .inp_select2 .selList li:first-child {border-top:1px solid #ebebeb;}
+.reviewBlockPopup .blockTab .tabCon .inp_select2.pdtSelect .selList li input[type="radio"]:checked + label {background-color:#fff;}
+.reviewBlockPopup .blockTab .tabCon .inp_select2.pdtSelect .selList li label {line-height:32px;}
+.reviewBlockPopup .blockTab .tabCon .inp_select {height:45px;margin-top:16px;}
+.reviewBlockPopup .blockTab .tabCon .inp_select.disabled .selectBox {background-color:#fff;}
+.reviewBlockPopup .blockTab .tabCon .inp_select .title {height:45px;line-height:45px;font-size:13px;background:transparent url('/static/front/resources/web/images/socialSelling/inp_select2.png') no-repeat right 7px / 26px auto;}
+.reviewBlockPopup .blockTab .tabCon .inp_select.open .title {background-position:right -22px;}
+.reviewBlockPopup .blockTab .tabCon .inp_select .selList {padding-bottom:10px;}
+.reviewBlockPopup .blockTab .tabCon .inp_select .selList li label {line-height:32px;font-size:13px;}
+.reviewBlockPopup .blockTab .tabCon .selfInput {display:none;margin-top:8px;}
+.reviewBlockPopup .blockTab .tabCon .selfInput textarea::placeholder {font-size:13px;color:#888;}
+.reviewBlockPopup .blockTab .tabCon .selfInput .textarea {word-break:keep-all;}
+.reviewBlockPopup .blockTab .tabCon .selfInput .inp_textArea.lengthCheck + .charCnt {text-align:right;margin:-30px 15px 0 0;line-height:20px;font-size:12px;}
+.reviewBlockPopup .blockTab .tabCon .desc {font-size:11px;line-height:15px;color:#bfbfbf;padding:8px 8px 0 8px;letter-spacing:-0.01em;word-break:keep-all;text-align:left;}
+.reviewBlockPopup .blockTab .tabCon .blockCheckBox {margin-top:16px;padding:16px;border-radius:4px;border:1px solid #e8e8e8;}
+.reviewBlockPopup .blockTab .tabCon .blockCheckBox.select {border:1px solid #222;}
+.reviewBlockPopup .blockTab .tabCon .blockCheckBox .desc {padding:8px 0 0 0;}
+.reviewBlockPopup .blockTab .tabCon .inp_check2 label {font-size:12px;}
+.reviewBlockPopup .blockTab .tabCon .inp_check input:disabled + label:before {background-position:0 center;}
+
+/* 리워드 프로그램 소개 페이지 */
+.rewardPageWrap .section.sec1 {display:flex;align-items:center;justify-content:flex-start;height:500px;background:url('/static/front/resources/web/images/socialSelling/bg_rewardPage_sec1.png'), linear-gradient(180deg, #FFCFDA 0%, #FFE9EE 56.25%);background-repeat: no-repeat, no-repeat;background-position:center, center;background-size:auto, 100%;}
+.rewardPageWrap .section.sec2 {padding:100px 0;background:#F6F6F6;}
+.rewardPageWrap .section.sec3 {padding:100px 0;background:#fff;}
+.rewardPageWrap .section.sec4 {padding:100px 0;background:#F6F6F6;}
+.rewardPageWrap .section.sec5 {padding:100px 0;background:#fff;}
+.rewardPageWrap .section.sec6 {padding:30px 0 120px;background:#F6F6F6;}
+.rewardPageWrap .section .inner_p {padding:0;}
+.rewardPageWrap .section .contents {width:1000px;padding:0;margin-top:50px;}
+.rewardPageWrap .section.sec1 .contents {margin-top:0;}
+.rewardPageWrap .section.sec3 .contents {margin-top:30px;}
+.rewardPageWrap .section.sec6 .contents {margin-top:0;}
+.rewardPageWrap .section .secTit {text-align:center;}
+.rewardPageWrap .section.sec1 .secTit {width:345px;padding-left:100px;}
+.rewardPageWrap .section .secTit .text1 {font-size:18px;line-height:22px;font-weight:600;font-family:'Montserrat', sans-serif;}
+.rewardPageWrap .section.sec4 .secTit .text1 {font-family:'noto','맑은고딕',sans-serif;}
+.rewardPageWrap .section .secTit .text2 {margin-top:14px;font-size:38px;line-height:38px;font-weight:600;letter-spacing:-0.01em;}
+.rewardPageWrap .section .secTit .text3 {font-size:15px;line-height:21px;color:#888;font-weight:500;}
+.rewardPageWrap .section .secTit .text4 {font-size:32px;line-height:38px;font-weight:700;}
+.rewardPageWrap .section .secTit .logo {margin-top:22px;}
+.rewardPageWrap .section .secTit .logo img {width:100%;}
+.rewardPageWrap .section .secTit .m_text1 {font-size:22px;line-height:22px;letter-spacing: -0.02em;color:#72465B;}
+.rewardPageWrap .section .secTit .m_text2 {margin-top:15px;font-size:50px;line-height:46px;font-weight:700;}
+.rewardPageWrap .section .secTit .m_text3 {margin-top:19px;font-size:16px;line-height:26px;color:#444;}
+.rewardPageWrap .section .conBox {display:flex;align-items:center;height:280px;margin-top:14px;font-size:19px;line-height:28px;font-weight:700;background:#FFFFFF;box-shadow:0 10px 20px rgba(48, 48, 48, 0.05);border-radius:8px;}
+.rewardPageWrap .section .conBox em {display:block;font-size:36px;line-height:28px;margin-bottom:9px;font-family:'Montserrat', sans-serif;font-weight:700;}
+.rewardPageWrap .section .conBox1 {justify-content:start;padding:0 140px;margin-top:0;background:#fff url('/static/front/resources/web/images/socialSelling/bg_conBox1.png') no-repeat right+85px top+35px / auto;}
+.rewardPageWrap .section .conBox2 {justify-content:end;padding:0 135px;background:#fff url('/static/front/resources/web/images/socialSelling/bg_conBox2.png') no-repeat left+70px top+18px / auto;}
+.rewardPageWrap .section .rewardProgram_guide {max-width:871px;margin:0 auto;width:100%;text-align:center;}
+.rewardPageWrap .section .rewardProgram_guide img {max-width:100%;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots {position:absolute;top:0;left:157px;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots li {position:relative;float:left;height:48px;background:transparent;box-sizing:border-box;font-size:0;cursor:pointer;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots li:nth-child(1) {width:98px;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots li:nth-child(2) {width:139px;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots li:nth-child(3) {width:126px;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots li:nth-child(4) {width:98px;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots li:nth-child(5) {width:94px;}
+.rewardPageWrap .section .rewardProgram_guide .slick-dots li button {position:absolute;top:0;left:-100%;display:none;}
+.rewardPageWrap .section .tipWrap {display:flex;justify-content:center;gap:20px;}
+.rewardPageWrap .section .tipWrap li {width:235px;height:360px;padding:20px;background:#FFFFFF;box-shadow: 0px 10px 20px rgba(48, 48, 48, 0.05);border-radius:8px;box-sizing:border-box;}
+.rewardPageWrap .section .tipWrap .tip:nth-child(1) {background:#fff url('/static/front/resources/web/images/socialSelling/icon_rewardProgram_tip1.png') no-repeat right+5px bottom+20px / 110px auto;}
+.rewardPageWrap .section .tipWrap .tip:nth-child(2) {background:#fff url('/static/front/resources/web/images/socialSelling/icon_rewardProgram_tip2.png') no-repeat right+20px bottom+20px / 110px auto;}
+.rewardPageWrap .section .tipWrap .tip:nth-child(3) {background:#fff url('/static/front/resources/web/images/socialSelling/icon_rewardProgram_tip3.png') no-repeat right+10px bottom+20px / 110px auto;}
+.rewardPageWrap .section .tipWrap .tip:nth-child(4) {background:#fff url('/static/front/resources/web/images/socialSelling/icon_rewardProgram_tip4.png') no-repeat right+17px bottom+20px / 110px auto;}
+.rewardPageWrap .section .tipWrap .tip .tip_num {font-family:'Montserrat', sans-serif;font-size:34px;line-height:41px;font-weight:700;color:#222;opacity:0.1;}
+.rewardPageWrap .section .tipWrap .tip dl dt {margin-top:3px;font-size:17px;line-height:24px;font-weight:600;letter-spacing:-0.01em;}
+.rewardPageWrap .section .tipWrap .tip dl dd {margin-top:10px;font-size:13px;line-height:22px;color:#777;letter-spacing:-0.01em;}
+.rewardPageWrap .section .acco_box {margin-top:50px;}
+.rewardPageWrap .section .acco_box .list .item_box {border-bottom:1px solid rgba(34, 34, 34, 0.05);}
+.rewardPageWrap .section .acco_box .list .item_box.on {border-bottom:none;}
+.rewardPageWrap .section .acco_box .list .item_box .q_box {padding:30px 0;display:flex;align-items:center;cursor:pointer;position:relative}
+.rewardPageWrap .section .acco_box .list .item_box .q_box::after {content:'';position:absolute;top:40px;right:0;width:13px;height:7px;background:url('/static/front/resources/web/images/socialSelling/icon_qna_arrow.png') no-repeat center;}
+.rewardPageWrap .section .acco_box .list .item_box .q_box.on::after {transform:rotate(180deg);opacity:0.4;}
+.rewardPageWrap .section .acco_box .list .item_box .q_box .icon {font-size:18px;line-height:24px;font-weight:600;letter-spacing:-0.01em;color:#FF65AF;}
+.rewardPageWrap .section .acco_box .list .item_box .q_box .text {padding-left:8px;font-size:18px;font-weight:600;line-height:26px;letter-spacing:-0.01em;}
+.rewardPageWrap .section .acco_box .list .item_box .a_box {padding:20px 18px;background-color:#f8f8f8;border-radius:4px;display:none;}
+.rewardPageWrap .section .acco_box .list .item_box .a_box > div {display:flex;align-items:flex-start;}
+.rewardPageWrap .section .acco_box .list .item_box .a_box .icon {font-size:20px;line-height:24px;font-weight:600;letter-spacing:-0.01em;color:#c8c8c8;}
+.rewardPageWrap .section .acco_box .list .item_box .a_box .text {padding-left:14px;font-size:15px;line-height:24px;letter-spacing:-0.01em;color:#888;word-break:keep-all;}
+.rewardPageWrap .section .btnFaq {display:inline-block;width:300px;height:48px;font-size:16px;line-height:47px;font-weight:400;}
+.rewardPageWrap .section .notiTit {font-size:15px;line-height:24px;color:#666;font-weight:500;}
+.rewardPageWrap .section .notiConts p,
+.rewardPageWrap .section .notiConts ul li {font-size:13px;line-height:22px;color:#888;}
+.rewardPageWrap .section .notiConts p {position:relative;padding-left:11px;margin-top:13px;}
+.rewardPageWrap .section .notiConts p::after {content:'';display:block;position:absolute;top:8px;left:0;width:3px;height:3px;border-radius:100%;background:#888;}
+.rewardPageWrap .section .notiConts ul {margin-top:5px;}
+.rewardPageWrap .section .notiConts ul li {position:relative;padding-left:11px;margin-top:5px;}
+.rewardPageWrap .section .notiConts ul li:first-child {margin-top:0;}
+.rewardPageWrap .section .notiConts ul li::after {content:'';display:block;position:absolute;top:8px;left:0;width:4px;height:1px;background:#BFBFBF;}
+.rewardPageWrap .btnWrap {position:fixed;width:100%;bottom:0;left:0;z-index:100;background:#222;color:#fff;}
+.rewardPageWrap .btnWrap .contents {display:flex;justify-content:space-between;align-items:center;width:1100px;height:60px;padding:0;}
+.rewardPageWrap .btnWrap .left p {font-size:14px;line-height:24px;font-weight:700;}
+.rewardPageWrap .btnWrap .right button.btn_share {display:block;width:40px;height:40px;position:relative;background:#FFFFFF;box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.1);border-radius:4px;}
+.rewardPageWrap .btnWrap .right button.btn_share::after {content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;background:url('/static/front/resources/mobile/images/socialSelling/icon_cocoShare.png') no-repeat center center / 26px auto;}
+.rewardPageWrap .btnWrap .right {display:flex;gap:6px;}
+.rewardPageWrap .btnWrap .right button {position:relative;display:block;text-align:center;font-size:16px;font-weight:600;color:#fff;background: linear-gradient(90deg, #FF65AF 0%, #FF6E6E 100%);border-radius:6px;}
+.rewardPageWrap .btnWrap .bubble {position:absolute;top:-32px;left:50%;width:112px;height:22px;transform:translateX(-50%);font-size:11px;line-height:22px;color:#fff;background:#FF65AF;box-shadow:0px 2px 12px rgba(0, 0, 0, 0.12);border-radius:50px;font-weight:400;animation:updownCenter 1s ease-in-out infinite alternate;}
+.rewardPageWrap .btnWrap .bubble::after {content:'';display:block;position:absolute;bottom:-5px;left:50%;width:10px;height:10px;background:#FF65AF;transform:translateX(-50%) rotate(45deg);}
+.rewardPageWrap .btnWrap .right button:nth-child(2) {padding:0 58px;}
+.rewardPageWrap .rewardBannerWrap .item {flex:0 0 496px;height:115px;}
+.rewardPageWrap .rewardBannerWrap .item:nth-child(1) {background:url('/static/front/resources/web/images/socialSelling/icon_reward_faq.png') no-repeat right+20px center / 48px;}
+.rewardPageWrap .rewardBannerWrap .item:nth-child(2) {background:url('/static/front/resources/web/images/socialSelling/icon_reward_policy.png') no-repeat right+20px center / 48px;}
+.rewardPageWrap .rewardBannerWrap .item .tit {font-size:17px;line-height:21px;}
+.rewardPageWrap .rewardBannerWrap .item .desc {font-size:13px;line-height:22px;}
+
+/* 공유 레이어 */
+.cocoSharePopup.lyPopArea .lyPop {padding:40px 15px;}
+.cocoSharePopup.lyPopArea.copy .lyPop {padding:40px 15px 15px 15px;}
+.cocoSharePopup.lyPopArea .lyBody {padding:0;}
+.cocoSharePopup.lyPopArea.lyPopArea_C .lyBody {padding:0;text-align:left;}
+.cocoSharePopup .tit {font-size:18px;line-height:25px;text-align:center;font-weight:600;letter-spacing:-0.01em;}
+.cocoSharePopup .shareBox {margin-top:16px;}
+.cocoSharePopup .shareBox .linkShare {padding:16px;border-radius:4px;border:1px solid #f3f3f3;}
+.cocoSharePopup .shareBox .linkShare .radioBox .inp_radio2 {position:relative;}
+.cocoSharePopup .shareBox .linkShare .radioBox .inp_radio2 label {padding-left:31px;}
+.cocoSharePopup .shareBox .linkShare .radioBox .inp_radio2 input[type="radio"]:checked + label {font-weight:600;}
+.cocoSharePopup .shareBox .linkShare .radioBox .inp_radio2 input[type="radio"]:checked + label:before {background-position:0 top;}
+.cocoSharePopup .shareBox .linkShare .radioBox .inp_radio2 .absTxt {position:absolute;top:-24px;left:30px;font-size:9px;color:#fff;height:19px;line-height:19px;padding:0 7px;
+    background-color:#ff65af;border-radius:19px;font-weight:500;animation:updown 1s ease-in-out infinite alternate;}
+.cocoSharePopup .shareBox .linkShare .radioBox .inp_radio2 .absTxt::after {content:'';position:absolute;top:100%;left:12px;width:7px;height:4px;background:url('/static/front/resources/mobile/images/socialSelling/arr_pink1.png') no-repeat left top / 7px auto;}
+.cocoSharePopup .shareBox .linkShare .conBox .box {display:none;margin-top:6px;}
+.cocoSharePopup .shareBox .linkShare .conBox .box .desc {padding-left:31px;font-size:11px;line-height:15px;text-align:left;color:#222;}
+.cocoSharePopup .shareBox .linkShare .conBox .box .btn_wrap {margin-top:16px;}
+.cocoSharePopup .shareBox .linkShare .conBox .box .btn_wrap .btn {width:100%;}
+.cocoSharePopup .shareBox .linkShare .conBox .box .shareBtn {margin-top:16px;}
+.cocoSharePopup .shareBox .linkShare .conBox .box .shareBtn .flexBox {display:flex;justify-content:center;}
+.cocoSharePopup .shareBox .linkShare .conBox .box .shareBtn .flexBox .item {flex:0 0 50px;padding:0 16px;}
+.cocoSharePopup .shareBox .linkShare .conBox .box .shareBtn .flexBox .item img {width:100%;}
+.cocoSharePopup .shareBox .linkShare.coco .conBox .box1 {display:block;}
+.cocoSharePopup .shareBox .linkShare.normal {margin-top:8px;}
+.cocoSharePopup .shareBox .linkShare.on {border:1px solid #222;}
+.cocoSharePopup .shareBox .linkShare.coco.on .conBox .box1 {display:none;}
+.cocoSharePopup .shareBox .linkShare.coco.on .conBox .box2 {display:block;}
+.cocoSharePopup .shareBox .linkShare.normal.on .conBox .box1 {display:block;}
+.cocoSharePopup .copyBox {margin-top:8px;}
+.cocoSharePopup .copyBox .text {font-size:12px;line-height:18px;color:#222 !important;text-align:center;padding:0;position:static;letter-spacing:-0.01em;}
+.cocoSharePopup .copyBox .copyLink {padding:28px 15px;margin-top:16px;border-radius:4px;background-color:#f3f3f3;text-align:center;}
+.cocoSharePopup .copyBox .copyLink .link {color:#888;font-size:11px;line-height:15px;letter-spacing:-0.01em;word-break:break-all;}
+.cocoSharePopup .copyBox .chkList {margin-top:16px;}
+.cocoSharePopup .copyBox .chkList .titInfo {font-size:11px;line-height:15px;text-align:left !important;background:none;padding-left:0;font-weight:600;}
+.cocoSharePopup .copyBox .chkList .desc {margin-top:4px;color:#888;font-size:11px;line-height:15px;text-align:left !important;word-break:keep-all;}
+.cocoSharePopup .copyBox .chkList .dotInfo li {margin-top:4px;font-size:11px;line-height:15px;word-break:keep-all;padding-left:6px;}
+.cocoSharePopup .copyBox .chkList .dotInfo li:before {width:2px;height:2px;background:#bfbfbf;}
+.cocoSharePopup .copyBox .btn_wrap {margin-top:24px;}
+.cocoSharePopup .copyBox .btn_wrap .btn {width:100%;}
+.cocoSharePopup.noProfile .shareBox .linkShare .conBox .box .btn_wrap .btn {background:linear-gradient(90deg, #FF65AF 0%, #FF6E6E 100%);color:#fff;}
+.cocoSharePopup.noLogin .shareBox .linkShare .conBox .box .btn_txt {display:inline-block;margin-top:6px;margin-left:31px;color:#FF65AF;font-size:11px;line-height:15px;}
+.cocoSharePopup.noLogin .shareBox .linkShare .conBox .box .btn_txt:before {background:#FF65AF;color:#FF65AF;}
+.cocoSharePopup.noLogin .shareBox .linkShare .conBox .box .btn_txt:after {background:#FF65AF;color:#FF65AF;}
+
+/* 공유하기 버튼 */
+.btnCocoShare1 {display:flex;justify-content:center;align-items:center;width:48px;height:48px;border-radius:50%;background-color:#fff;position:relative;}
+.btnCocoShare1::after {content:'';display:block;width:32px;height:32px;background:url('/static/front/resources/web/images/socialSelling/icon_cocoShare.png') no-repeat center / 32px auto;}
+.btnCocoShare1 .abs_txt {position:absolute;right:0;bottom:41px;font-size:12px;font-weight:500;color:#fff;background-color:#FF65AF;padding:0 12px;border-radius:20px;height:28px;line-height:28px;white-space:nowrap;}
+.btnCocoShare1 .abs_txt::after {content:'';position:absolute;top:100%;right:12px;width:7px;height:4px;background:url('/static/front/resources/mobile/images/socialSelling/arr_pink1.png') no-repeat left top / 7px auto;}
+.searchResultTtl .btnCocoShare1 {margin:16px auto 0;width:48px;height:48px;border:1px solid #e8e8e8;}
+.searchResultTtl .btnCocoShare1::after {width:32px;height:32px;background:url('/static/front/resources/web/images/socialSelling/icon_cocoShare.png') no-repeat center / 32px auto;}
+.searchResultTtl .btnCocoShare1 .abs_txt {bottom:50%;transform:translateY(50%);left:58px;right:initial;animation:leftRightCenter 1s ease-in-out infinite alternate;}
+.searchResultTtl .btnCocoShare1 .abs_txt::after {top:50%;transform:translateY(-50%);right:98%;width:7px;height:8px;background:url('/static/front/resources/web/images/socialSelling/arr_pink2.png') no-repeat left top / 7px auto;}
+.eventDetailTit .btnShare.btnSpin span {padding-top:30px;background:url('/static/front/resources/web/images/socialSelling/icon_cocoShare.png') no-repeat center top / 32px auto;}
+.eventDetailTit .btnShare.btnSpin .abs_txt {position:absolute;left:50%;transform:translateX(-50%);bottom:70px;font-size:12px;font-weight:500;color:#fff;background-color:#FF65AF;padding:8px;border-radius:8px;line-height:16px;white-space:nowrap;text-align:center;z-index:5;animation:updownCenter 1s ease-in-out infinite alternate;}
+.eventDetailTit .btnShare.btnSpin .abs_txt::after {content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);width:7px;height:4px;background:url('/static/front/resources/mobile/images/socialSelling/arr_pink1.png') no-repeat left top / 7px auto;}
+.prdCoCoShareBtn {position:absolute;top:20px;right:15px;width: 26px;height: 24px;background: url('https://www.banila.com/static/front/resources/web/images/common/share_btn_grey.png') no-repeat left top;background-size: 25px 24px;}
+.prdCoCoShareBtn:hover {width: 26px;height: 24px;background: url('https://www.banila.com/static/front/resources/web/images/common/share_btn_pink.png') no-repeat left top;background-size: 25px 24px;}
+.prdCoCoShareBtn .abs_txt {position:absolute;right:-15px;bottom:30px;font-size:12px;font-weight:500;color:#fff;background-color:#FF65AF;padding:8px;border-radius:8px;line-height:16px;white-space:nowrap;text-align:center;z-index:5;animation:updown 1s ease-in-out infinite alternate;}
+.prdCoCoShareBtn .abs_txt::after {content:'';position:absolute;top:100%;left:42px;width:7px;height:4px;background:url('/static/front/resources/mobile/images/socialSelling/arr_pink1.png') no-repeat left top / 7px auto;}
+.bottomFixedBtnBox {position:fixed;right:24px;bottom:30px;z-index:99999;display:none;}
+.bottomFixedBtnBox .btnTop {display:block;position:static;}
+.bottomFixedBtnBox .btnCocoShare2 {display:flex;justify-content:center;align-items:center;width:55px;height:55px;background:#ff65af;margin-top:14px;border-radius:50%;position:relative;}
+.bottomFixedBtnBox .btnCocoShare2::after {content:'';display:block;width:32px;height:32px;background:url('/static/front/resources/web/images/socialSelling/icon_cocoShare_w.png') no-repeat center / 32px auto;}
+.bottomFixedBtnBox .btnCocoShare2 .abs_txt {position:absolute;top:50%;right:70px;transform:translateY(-50%);font-size:12px;color:#FF65AF;line-height:28px;letter-spacing:-0.01em;white-space:nowrap;padding-right:6px;animation:leftRightCenter2 1s ease-in-out infinite alternate;}
+.bottomFixedBtnBox .btnCocoShare2 .abs_txt::after {content:'';position:absolute;top:50%;right:-10px;transform:translateY(-50%);width:132px;height:28px;background:url('/static/front/resources/web/images/socialSelling/cocoShare_prdBg.png') no-repeat center / 132px auto;z-index:-1;}
+
+/* 베스트아이콘 */
+.BestIco.typeCoCo {padding:0 10px;line-height:18px;text-align:center;font-size:14px;border-radius:20px;}
+
+/* 마이페이지 - 리워드 */
+.myPageLnb .myCoCoBtnWrap {margin-bottom:40px;}
+.myPageLnb .myCoCoBtnWrap .btn {display:block;}
+.myPageLnb .new::after {content:'';position:absolute;top:4px;right:-6px;width:4px;height:4px;border-radius:50%;background-color:#FF66AA;}
+.myPageLnb .myStateRenew {padding:20px 20px 16px 20px;overflow:hidden;margin-bottom:25px;border:1px solid #e8e8e8;border-radius:0 0 6px 6px;}
+.myPageLnb .myStateRenew li + li {margin-top:8px;}
+.myPageLnb .myStateRenew li a {display:flex;justify-content:space-between;align-items:center;}
+.myPageLnb .myStateRenew li a em {font-size:13px;line-height:22px;position:relative;}
+.myPageLnb .myStateRenew li a span {font-size:18px;line-height:26px;letter-spacing:-0.01em;text-align:right;font-weight:600;}
+.myPageLnb .myPageMenu .dep1 > li > p span {position:relative;}
+.mySearchBox {display:flex;padding:30px 0 30px 40px;align-items:center;justify-content:space-between;}
+.mySearchBox .dateTab {flex:1 1 auto;width:1%;}
+.mySearchBox .inp_wrap {flex:0 0 415px;}
+.mySearchBox .dateTab ul {display:flex;}
+.mySearchBox .dateTab ul::before {display:none;}
+.mySearchBox .dateTab ul li {display:block;width:auto;}
+.mySearchBox .dateTab ul li + li {padding-left:20px;}
+.mySearchBox .dateTab ul li a {border:none;border-radius:0;line-height:26px;}
+.mySearchBox .dateTab ul li a.current span,
+.mySearchBox .dateTab ul li a:hover span{border-bottom:2px solid #222;font-weight:600;}
+.mySearchBox .dateTab ul li a span {display:inline-block;font-size:16px;font-weight:400;line-height:26px;padding-bottom:10px;letter-spacing:-0.01em;color:#222;}
+.mySearchBox .inp_wrap {display:flex;align-items:center;}
+.mySearchBox .inp_wrap input {width:150px;height:40px;line-height:40px;font-size:14px;}
+.mySearchBox .inp_wrap input::placeholder {font-size:13px;}
+.mySearchBox .inp_wrap .icon {font-size:14px;padding:0 10px;}
+.mySearchBox .inp_wrap .btn {margin-left:5px;}
+.myRewardListCon .listWrap {border-top:1px solid #e8e8e8;}
+.myRewardListCon .listWrap .item {display:flex;justify-content:space-between;align-items:center;padding:24px 40px;}
+.myRewardListCon .listWrap .item + .item {border-top:1px solid #e8e8e8;}
+.myRewardListCon .listWrap .item:last-child {border-bottom:1px solid #f3f3f3;}
+.myRewardListCon .listWrap .item .left {display:flex;align-items:center;}
+.myRewardListCon .listWrap .item .left .stateTag {padding:0 9px;height:28px;line-height:28px;border-radius:15px;border:1px solid #888;color:#888;font-size:13px;}
+.myRewardListCon .listWrap .item .left .infoBox {margin-left:10px;}
+.myRewardListCon .listWrap .item .left .infoBox .date {font-size:14px;line-height:24px;color:#bfbfbf;letter-spacing:-0.01em;}
+.myRewardListCon .listWrap .item .left .infoBox .tit {font-size:14px;font-weight:600;line-height:24px;padding-top:2px;}
+.myRewardListCon .listWrap .item .left .infoBox .desc {font-size:13px;line-height:22px;color:#bfbfbf;}
+.myRewardListCon .listWrap .item .right {text-align:right;}
+.myRewardListCon .listWrap .item .right .count {font-size:13px;color:#222;}
+.myRewardListCon .listWrap .item .right .count .num {font-size:16px;}
+.myRewardListCon .listWrap .item.plus .left .stateTag {border:1px solid #FF65AF;color:#FF65AF;}
+.myRewardListCon .listWrap .item.plus .right .count {color:#FF65AF;}
+.myRewardListCon .btnWrap {margin-top:40px;text-align:center;}
+/* 230405 추가 */
+.myRewardListCon .noList {text-align:center;padding:300px 0;}
+.myRewardListCon .noList .desc {font-size:12px;line-height:18px;color:#888;}
+.myRewardListCon .noList .desc::before {content:'';display:block;width:48px;height:48px;background:url(/static/front/resources/web/images/socialSelling/icon_noList.png) no-repeat center;margin-left:auto;margin-right:auto;margin-bottom:15px;}
+.myCon .myGrayBox .myState2 {background:#fff;padding:20px 0;border-top:1px solid #e8e8e8;}
+.myCon .myGrayBox .myState2 .boxIn {display:flex;align-items:center;}
+.myCon .myGrayBox .myState2 .boxIn .leftBox {flex:0 0 438px;display:flex;align-items:center;justify-content:space-between;padding:0 44px 0 30px;}
+.myCon .myGrayBox .myState2 .boxIn .leftBox .title {font-size:15px;line-height:24px;letter-spacing:-0.01em;font-weight:600;}
+.myCon .myGrayBox .myState2 .boxIn .leftBox .rewardNum {padding-top:7px;font-size:32px;line-height:26px;letter-spacing:-0.01em;font-weight:600;color:#FF65AF;}
+.myCon .myGrayBox .myState2 .boxIn .leftBox .rewardNum .unit {font-size:16px;margin-left:4px;}
+.myCon .myGrayBox .myState2 .boxIn .leftBox .btnWrap {padding-top:10px;}
+.myCon .myGrayBox .myState2 .boxIn .rewarState .desc {font-size:13px;line-height:22px;color:#888;}
+.myCon .myGrayBox .myState2 .boxIn .rewarState .rewardNum {font-size:18px;line-height:26px;font-weight:600;color:#222;padding-top:2px;}
+.myCon .myGrayBox .myState2 .boxIn .rewarState .rewardNum .unit {font-size:12px;line-height:26px;}
+.myCon .myGrayBox .myState2 .boxIn .rightBox {flex:1 1 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px 0 55px;border-left:1px solid #e8e8e8;}
+.myCon .myGrayBox .infoArea {padding:12px 30px;}
+.myCon .myGrayBox .infoArea .dotInfo2 li {font-size:12px;line-height:18px;color:#888;position:relative;padding-left:13px;}
+.myCon .myGrayBox .infoArea .dotInfo2 li + li {margin-top:4px;}
+.myCon .myGrayBox .infoArea .dotInfo2 li::before {content:'';position:absolute;left:0;top:7px; width:3px;height:3px;border-radius:50%;background-color:#888;}
+.myRewardPayList .myRewardListCon .listWrap .item .right .count {color:#888;font-weight:600;}
+.myRewardPayList .myRewardListCon .listWrap .item.success .left .stateTag {border:1px solid #FF65AF;color:#FF65AF;}
+.myRewardPayList .myRewardListCon .listWrap .item.success .right .count {color:#222;}
+.myRewardPayList .myRewardListCon .listWrap .item.fail .left .stateTag {color:#bfbfbf;border:1px solid #bfbfbf;}
+.myRewardPayList .myRewardListCon .listWrap .item.fail .left .infoBox .tit {color:#888;}
+.myRewardPayList .myRewardListCon .listWrap .item.fail .right .count {color:#888;}
+.myRewardPayList.myCon .myGrayBox .myState2 {padding:30px 0;}
+.myRewardPayList.myCon .myGrayBox .myState2 .boxIn .leftBox .text1 {font-size:15px;line-height:24px;color:#888;font-weight:600;}
+.myRewardPayList.myCon .myGrayBox .myState2 .boxIn .leftBox .text2 {margin-top:6px;font-size:24px;line-height:32px;letter-spacing:-0.01em;font-weight:600;}
+.ui-datepicker td span, .ui-datepicker td a {text-align:center !important;}
+
+/* 마이페이지 - 메인 */
+.myCoCoInfo .tit {font-size:18px;line-height:26px;letter-spacing:-0.01em;font-weight:600;}
+.myCoCoInfo .titDesc {margin-top:10px;font-size:13px;line-height:22px;color:#666;}
+.myCoCoInfo .cocoBefore {margin-top:40px;border-bottom:1px solid #e8e8e8;position:relative;}
+.myCoCoInfo .cocoBefore .box {padding:0 0 60px 0;}
+.myCoCoInfo .cocoProfileIntro {margin-top:17px;}
+.myCoCoInfo .cocoProfileIntro .flexBox {display:flex;margin:0 -5px;}
+.myCoCoInfo .cocoProfileIntro .flexBox .item {flex:0 0 33.3333%;padding:0 5px;box-sizing:border-box;}
+.myCoCoInfo .cocoProfileIntro .flexBox .item .itemIn {background-color:#f8f8f8;padding:18px 0;border-radius:4px;text-align:center;}
+.myCoCoInfo .cocoProfileIntro .flexBox .item .icon {width:34px;margin:0 auto;}
+.myCoCoInfo .cocoProfileIntro .flexBox .item .icon img {width:100%;}
+.myCoCoInfo .cocoProfileIntro .flexBox .item .txt1 {font-size:13px;line-height:22px;}
+.myCoCoInfo .cocoProfileIntro .flexBox .item .txt2 {font-size:13px;line-height:22px;}
+.myCoCoInfo .btnProfile1 {position:absolute;right:0;top:34px;}
+.myCoCoInfo .btnProfile1 .btn_txt {font-size:12px;}
+.myCoCoInfo .btnProfile1 .absTag {top:-28px;;left:50%;transform:translateX(-50%);}
+
+.myCoCoInfo .cocoAfter {margin-top:40px;border-bottom:1px solid #e8e8e8;}
+.myCoCoInfo .cocoAfter .box1 {padding:0 0 60px 0;border-bottom:1px solid #e8e8e8;}
+.myCoCoInfo .cocoAfter .box2 {padding:60px 0;}
+.myCoCoInfo .cocoAfter .box1 .tit {position:relative;}
+.myCoCoInfo .cocoAfter .box1 .tit .btnCoCoProfile {position:absolute;top:50%;right:0;transform:translateY(-50%);font-size:12px;font-weight:400;line-height:18px;}
+.myCoCoInfo .cocoAfter .box1 .flexBox {display:flex;align-items:center;margin-top:20px;}
+.myCoCoInfo .cocoAfter .box1 .rewardDesc {flex:1 1 auto;font-size:16px;line-height:26px;letter-spacing:-0.025em;}
+.myCoCoInfo .cocoAfter .box1 .rewardDesc p {display:flex;align-items:center;}
+.myCoCoInfo .cocoAfter .box1 .rewardDesc .newIcon {width:26px;height:11px;background:url('/static/front/resources/web/images/socialSelling/icon_myNew.png') no-repeat top / 26px;margin-left:3px;}
+.myCoCoInfo .cocoAfter .box1 .graphBox {flex:0 0 380px;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph {position:relative;width:100%;height:40px;background:linear-gradient(90deg, #FF65AF 0%, #FF6E6E 100%);border-radius:30px;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph::after {content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:100%;border-left:1px dashed rgba(255,255,255,.3);}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .range {font-size:12px;line-height:18px;letter-spacing:-0.01em;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .range.low {position:absolute;top:100%;left:12px;color:#FF65AF;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .range.high {position:absolute;top:100%;right:12px;color:#FF5B5D;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem {position:absolute;bottom:0;width:40px;height:100%;background-color:rgba(255,255,255,.5);border-radius:50%;z-index:5;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem.top1 {right:0;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem.top10 {right:10%;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem.top30 {right:30%;transform:translateX(50%);}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem.top50 {right:50%;transform:translateX(50%);}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem.top99 {left:20%;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem.top100 {left:0;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem .rankIcon {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:33px;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem .rankIcon img {width:100%;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem .rankText {position:absolute;bottom:calc( 100% + 7px );left:50%;transform:translateX(-50%);padding:0 7px;font-size:11px;line-height:22px;font-weight:600;background-color:#222;color:#fff;border-radius:15px;white-space:nowrap;}
+.myCoCoInfo .cocoAfter .box1 .graphBox .graph .rankBox .rankItem .rankText::after {content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border-bottom:5px solid transparent;border-top:5px solid #222;border-left:5px solid transparent;border-right:5px solid transparent;}
+.myCoCoInfo .cocoAfter .box1 .myRewardValue {flex:0 0 308px;padding:16px 30px;margin-left:14px;border:1px solid #e8e8e8;border-radius:4px;box-sizing:border-box;}
+.myCoCoInfo .cocoAfter .box1 .myRewardValue .rewardV {display:flex;justify-content:space-between;align-items:center;}
+.myCoCoInfo .cocoAfter .box1 .myRewardValue .rewardV .tit {font-size:13px;line-height:21px;letter-spacing:-0.01em;}
+.myCoCoInfo .cocoAfter .box1 .myRewardValue .rewardV .conText {font-size:20px;line-height:28px;letter-spacing:-0.02em;}
+.myCoCoInfo .cocoAfter .box1 .myRewardValue .rewardV .conText .unit {font-size:14px;line-height:21px;margin-left:4px;}
+.myCoCoInfo .cocoAfter .box1 .myRewardValue .rewardV.curr .conText a::after {content:'';display:inline-block;width:15px;height:16px;background:url('/static/front/resources/web/images/socialSelling/icon_arrR_pink.png') no-repeat center / 15px auto;vertical-align:middle;}
+
+.myCoCoInfo .cocoAfter .box2 .tit {font-weight:400;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd {margin-top:17px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd ul {display:flex;margin:0 -6px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd ul .item {flex:0 0 33.333%;padding:0 6px;box-sizing:border-box;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtBox{position:relative;z-index:1;padding:14px 10px 14px 58px;font-size:0;border:1px solid #ebebeb;border-radius:4px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .bestMark{position:absolute;top:-1px;left:10px;width:38px;padding:5px 0 10px;text-align:center;line-height:15px;font-size:10px;font-weight:600;color:#bfbfbf;background:url('/static/front/resources/web/images/socialSelling/coco_best_tag.png') no-repeat left top / 38px auto;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtImg{display:inline-block;width:60px;height:60px;vertical-align:top;overflow:hidden;background-color:#f3f3f3;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtImg img{width:100%;display:block;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtTxt{display:inline-block;margin-left:10px;vertical-align:middle;width:calc(100% - 70px);}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtHead{line-height:17px;font-size:13px;color:#ff65af;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtBrand{font-size:11px;line-height:15px;color:#888;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtName{margin-top:4px;font-size:12px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtName a{overflow:hidden;display:block;display:-webkit-box;font-size:12px;line-height:22px;word-break:keep-all;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:44px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtName span{font-size:11px;color:#888;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtPrice{margin-top:3px;font-size:14px;font-weight:600;line-height:18px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtPrice .sale{display:inline-block;padding-right:15px;margin-right:5px;color:#ff5b5d;background:url('/static/front/resources/mobile/images/shopping/ico_down.png') no-repeat right center / 11px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtPrice em{vertical-align:top;font-size:11px;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtPrice .cost{position:relative;display:inline-block;margin-left:4px;vertical-align:top;font-size:12px;font-weight:400;color:#888;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .pdtPrice .cost:after{content:'';position:absolute;left:0;top:50%;width:100%;height:1px;background:#888;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .item.on .pdtBox {border:1px solid #ff65af;}
+.myCoCoInfo .cocoAfter .box2 .cocoBestPrd .item.on .bestMark {color:#fff;background:url('/static/front/resources/web/images/socialSelling/coco_best_tag_on.png') no-repeat left top / 38px auto;}
+
+/* 기존 리뷰 페이지, 리뷰베스트 수정 */
+.reviewList .infoBox {position:relative;}
+.reviewInfoRenew {display:flex;justify-content:space-between;}
+.reviewInfoRenew .infoItem.flex {display:flex;}
+.reviewInfoRenew .userInfo {float:initial;font-size:initial;display:flex;align-items:center;}
+.reviewInfoRenew .userInfo .profileImg {width:48px;border-radius:50%;border:1px solid #E8E8E8;overflow:hidden;margin-right:8px;}
+.reviewInfoRenew .userInfo .profileImg img {width:100%;}
+.reviewInfoRenew .userAcnt {position:static !important;display:inline-block;}
+.reviewInfoRenew .userAcnt .userRank {margin:0 0 0 8px !important;}
+.reviewInfoRenew .userInfo .dftPoint {margin-left:10px;}
+.reviewInfoRenew .userInfo .btnWrap .btn_txt {color:#FF65AF;font-size:13px;line-height:21px;letter-spacing:-0.01em;}
+.reviewInfoRenew .userInfo .btnWrap .btn_txt::before,
+.reviewInfoRenew .userInfo .btnWrap .btn_txt::after {background:#FF65AF;color:#FF65AF;}
+.reviewInfoRenew .gradeStar {float:initial;margin-top:6px;}
+.product_best .reviewInfoRenew .userInfo .dftPoint {margin-left:10px;}
+.product_best .reviewList .infoBox .cocoBlockBtn {position:absolute;right:30px;bottom:104px;}
+#reViewDetailPop .skinProfile {margin-top:16px;}
+#reViewDetailPop .lyBody {position:relative;}
+#reViewDetailPop .reviewCmt {margin:0 20px 10px;}
+#reViewDetailPop .cocoBlockBtn {padding:0 0 20px 0;text-align:right;}
+#reViewDetailPop .btnCocoShare1 {position:relative;right:-12px;bottom:0;border:1px solid #E8E8E8;margin-left:auto;margin-top:20px;}
+#reViewDetailPop .btnCocoShare1 .abs_txt {bottom:45px;}
+.reviewListBox > ul > li {position:relative;}
+.reviewListBox .reviewInfo {width:19%;}
+.reviewListBox .reviewBox {width:76%;}
+.reviewListBox .reviewMore {position:relative;bottom:0;}
+.reviewListBox .reviewCtt {margin-bottom:4px;}
+.reviewListBox .flexBox {display:flex;justify-content:space-between;align-items:center;margin-top:25px;}
+.reviewListBox .cocoBlockBtn {position:absolute;right:0;bottom:-28px;}
+.reviewListBox .reviewInfoRenew .userInfo {margin-top:16px;}
+.reviewListBox .dftPoint {display:block;margin-top:10px;}
+
+/* 마이페이지 - 리워드 메뉴 클릭시 노출 팝업 */
+.mypageRewardPopup.lyPopArea .lyPop {max-width:360px;overflow:hidden;border:none;}
+.mypageRewardPopup .conWrap {position:relative;}
+.mypageRewardPopup .conWrap img {max-width:100%;}
+.mypageRewardPopup .conWrap .absBox {position:absolute;top:0;left:0;width:100%;height:52px;text-align:center;background:linear-gradient(90deg, #FF65AF 0%, #FF6E6E 100%);}
+.mypageRewardPopup .conWrap .absBox .desc {font-size:13px;line-height:52px;letter-spacing:-0.04em;color:#fff;display:flex;align-items:center;justify-content:center;}
+.mypageRewardPopup .conWrap .absBox .desc::before {content:'';display:block;width:26px;height:26px;background:url('/static/front/resources/web/images/socialSelling/icon_myRewardChk.png') no-repeat center center;margin-right:6px;}
+.mypageRewardPopup .conWrap .absBox .desc em {padding-right:3px;}
+.mypageRewardPopup .conWrap .textBox .desc em {color:#f23992;}
+.mypageRewardPopup .conWrap .textBox {position:absolute;top:50px;left:20px;}
+.mypageRewardPopup .conWrap .textBox .desc {padding-left:16px;margin-top:42px;font-size:21px;line-height:33px;letter-spacing:-0.04em;}
+.mypageRewardPopup .btn_wrap {display:flex;justify-content:space-between;padding:15px 20px;margin-top:0;background:#222;}
+.mypageRewardPopup .btn_wrap button {font-size:13px;line-height:22px;letter-spacing:-0.01em;color:#fff;}
+.mypageRewardPopup .btn_wrap button.close {color:#bfbfbf;}
+
+/* 지급 계좌 관리 팝업 */
+.inpBorder input {display:block;width:100%;padding:0 16px;height:50px;line-height:50px;border-radius:6px;border:1px solid #e8e8e8;box-sizing:border-box;}
+.inpBorder input::placeholder {font-size:14px;color:#bfbfbf;}
+.inpBorder input:read-only {background:#f8f8f8;font-size:14px;color:#bfbfbf;}
+.accountManagePopup.before .desc {font-size:14px;line-height:21px;font-weight:600;}
+.accountManagePopup.after .desc {font-size:13px;line-height:21px;text-align:center;background-color:#f8f8f8;border-radius:4px;padding:14px;letter-spacing:-0.01em;}
+.accountManagePopup .inpNameBox {margin-top:16px;}
+.accountManagePopup .inpBankBox {margin-top:12px;}
+.accountManagePopup .inp_select {height:45px;}
+.accountManagePopup .inp_select .title {height:45px;line-height:45px;font-size:13px;background:transparent url('/static/front/resources/web/images/socialSelling/inp_select2.png') no-repeat right 7px / 26px auto;}
+.accountManagePopup .inp_select.open .title {background-position:right -22px;}
+.accountManagePopup .inp_select .selList li label {line-height:32px;}
+.accountManagePopup .inpAccountBox {margin-top:12px;}
+.accountManagePopup .starInfo {padding:8px 0 0 2px;}
+.accountManagePopup .starInfo li {font-size:11px;line-height:15px;color:#bfbfbf;}
+.accountManagePopup .btn_wrap {margin-top:32px;}
+.accountManagePopup .linkBox {display:flex;justify-content:center;align-items:center;margin-top:24px;}
+.accountManagePopup .linkBox a {font-size:13px;line-height:21px;color:#888;}
+.accountManagePopup .linkBox a:nth-child(2)::before {content:'';display:inline-block;width:1px;height:10px;background-color:#e8e8e8;margin:0 10px;}
+.accountManagePopup .bottomInfoBox {position:absolute;bottom:0;left:0;width:100%;padding:26px 46px 40px 46px;background-color:#f8f8f8;box-sizing:border-box;}
+.accountManagePopup .bottomInfoBox .titInfo {font-size:13px;line-height:21px;font-weight:600;}
+.accountManagePopup .bottomInfoBox .dotInfo li {font-size:12px;line-height:18px;color:#979797;padding-left:7px;}
+.accountManagePopup .bottomInfoBox .dotInfo li + li {margin-top:10px;}
+.accountManagePopup .bottomInfoBox .dotInfo li:before {width:2px;height:2px;}
+.accountManagePopup .accountInfo {margin-top:24px;padding:20px 24px;border-radius:4px;border:1px solid #e8e8e8;}
+.accountManagePopup .accountInfo .item {display:flex;font-size:13px;line-height:21px;}
+.accountManagePopup .accountInfo .item + .item {margin-top:16px;}
+.accountManagePopup .accountInfo .item .text1 {flex:0 0 50px;color:#888;}
+.accountManagePopup .accountInfo .item .text2 {flex:1 1 auto;padding-left:24px;}
+
+/* 출금신청 팝업 */
+.withdrawPopup .boxWrap {border-top:9px solid #f3f3f3;margin-left:-40px;margin-right:-40px;padding:24px 40px 0 40px;}
+.withdrawPopup .boxWrap .boxItem {display:none;}
+.withdrawPopup .boxWrap .boxItem.on {display:block;}
+.withdrawPopup .conWrap .box {padding-bottom:24px;}
+.withdrawPopup .conWrap .boxCon {margin-top:13px;}
+.withdrawPopup .subTit {font-size:14px;line-height:21px;font-weight:600;}
+.withdrawPopup .inp_select {height:45px;}
+.withdrawPopup .inp_select .title {height:45px;line-height:45px;font-size:13px;background:transparent url('/static/front/resources/web/images/socialSelling/inp_select2.png') no-repeat right 7px / 26px auto;}
+.withdrawPopup .inp_select.open .title {background-position:right -22px;}
+.withdrawPopup .inp_select .selList li label {line-height:32px;}
+.withdrawPopup .starInfo {padding:8px 0 0 8px;}
+.withdrawPopup .starInfo li {color:#bfbfbf;font-size:11px;line-height:15px;margin-top:4px;}
+.withdrawPopup .starInfo li:first-child {margin-top:0;}
+.withdrawPopup .withdrawInfoBox {padding:18px 16px 24px 16px;margin-top:16px;background-color:#FFF4F9;border-radius:4px;}
+.withdrawPopup .withdrawInfoBox .boxItem {display:none;}
+.withdrawPopup .withdrawInfoBox .boxItem.on {display:block;}
+.withdrawPopup .withdrawInfoBox .titInfo {color:#FF65AF;height:16px;background:url('/static/front/resources/web/images/socialSelling/icon_withdraw.png') no-repeat left center / 16px;font-size:13px;line-height:15px;padding-left:21px;font-weight:600;}
+.withdrawPopup .withdrawInfoBox .dotInfo {margin-top:7px;}
+.withdrawPopup .withdrawInfoBox .dotInfo li {color:#979797;word-break:keep-all;font-size:11px;line-height:15px;margin-top:5px;padding-left:8px;}
+.withdrawPopup .withdrawInfoBox .dotInfo li:before {width:2px;height:2px;top:6px;}
+.withdrawPopup .withdrawInfoBox .dotInfo li .ptC {color:#666;}
+.withdrawPopup .currentP {display:flex;align-items:center;justify-content:right;font-size:12px;line-height:18px;color:#888;letter-spacing:-0.01em;}
+.withdrawPopup .currentP .point {font-weight:600;padding-left:4px;}
+.withdrawPopup .rewardBox {display:flex;align-items:flex-end;}
+.withdrawPopup .inpPoint .inp_text {height:56px;line-height:56px;padding-top:0;}
+.withdrawPopup .inpPoint input {text-align:right;height:56px;line-height:56px;font-size:24px;font-weight:600;color:#222;border-radius:0;border:none;border-bottom:1px solid #e8e8e8;padding-right:0;}
+.withdrawPopup .inpPoint input[type="number"]::-webkit-outer-spin-button,
+.withdrawPopup .inpPoint input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none;margin:0;}
+.withdrawPopup .inpPoint input::placeholder {text-align:right;font-size:24px;font-weight:600;color:#bfbfbf;}
+.withdrawPopup .rewardBox .button {flex:0 0 80px;margin-left:8px;display:block;width:80px;height:45px;line-height:45px;border-radius:4px;border:1px solid #222;color:#222;font-weight:600;font-size:14px;}
+.withdrawPopup .rewardBox .button.disabled {border:1px solid #E8E8E8;color:#bfbfbf;}
+.withdrawPopup .boxWrap .boxItem .item.count {margin-top:24px;display:flex;justify-content:space-between;align-items:center;}
+.withdrawPopup .boxWrap .boxItem .item.count .rewardCount {color:#FF65AF;text-align:right;}
+.withdrawPopup .boxWrap .boxItem .item.count .rewardCount .noCount {font-size:11px;line-height:15px;letter-spacing:-0.01em;}
+.withdrawPopup .boxWrap .boxItem .item.count .rewardCount .count {font-size:20px;line-height:28px;letter-spacing:-0.01em;font-weight:600;}
+.withdrawPopup .boxWrap .boxItem .item.count .rewardCount .count .unit {font-size:18px;line-height:25px;}
+.withdrawPopup .boxWrap .boxItem .item.count.pdb24 {padding-bottom:24px;}
+.withdrawPopup .boxWrap .boxItem .item.accountBox {border-top:9px solid #f3f3f3;margin-left:-40px;margin-right:-40px;padding:24px 40px 0 40px;}
+.withdrawPopup .counting {font-size:11px;margin-left:6px;font-weight:400;line-height:15px;}
+.withdrawPopup .cashAccount {display:flex;padding:16px 24px;font-size:13px;line-height:21px;color:#888;border-radius:4px;border:1px solid #e8e8e8;}
+.withdrawPopup .cashAccount .name {padding-left:16px;}
+.withdrawPopup .noCashAccount .noBox {border-radius:4px;background-color:#f8f8f8f8;text-align:center;padding:24px 0;}
+.withdrawPopup .noCashAccount .noBox .desc {padding-top:58px;font-size:12px;line-height:18px;color:#888;background:url('/static/front/resources/mobile/images/socialSelling/icon_noCashAccount.png') no-repeat center top / 48px;}
+.withdrawPopup .noCashAccount .btnWrap {text-align:center;}
+.withdrawPopup.lyPopArea.fullType .lyPop > .btn_wrap.fixed {padding:0 12px 30px 12px;}
+.rewardConfirmPopup .desc {font-size:13px;line-height:21px;font-weight:600;text-align:center;}
+.rewardConfirmPopup .infoWrap {margin-top:8px;text-align:center;}
+.rewardConfirmPopup .infoWrap .item {font-size:12px;line-height:18px;color:#888;}
+.rewardConfirmPopup .infoWrap .item + .item {margin-top:4px;}
+.rewardConfirmPopup .accountBox {padding:8px;border-radius:4px;background-color:#f8f8f8;text-align:center;margin-top:8px;}
+.rewardConfirmPopup .accountBox .account {font-size:12px;line-height:18px;color:#888;}
+.rewardConfirmPopup .btn_wrap {margin-top:24px !important;}
+
+/* 회원가입 완료페이지 추가 */
+.join_complete .joinReward {width:100%;height:232px;padding:34px 0;background:linear-gradient(180deg, #FFCFDA 0%, #FFE9EE 56.25%);margin-top:73px;}
+.join_complete .joinReward .inner {width:723px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.join_complete .joinReward .inner .left {text-align:center;}
+.join_complete .joinReward .inner .left .text1 {font-size:20px;line-height:21px;letter-spacing:-0.02em;color:#72465B;}
+.join_complete .joinReward .inner .left .logo {width:252px;margin-top:16px;margin-left:auto;margin-right:auto;}
+.join_complete .joinReward .inner .left .logo img {width:100%;}
+.join_complete .joinReward .inner .left .text2 {font-size:40px;line-height:56px;letter-spacing:-0.02em;color:#FF65AF;font-weight:600;margin-top:5px;}
+.join_complete .joinReward .inner .left .btn_wrap .btn {padding:0 44px 0 24px;font-weight:600;font-size:13px;}
+.join_complete .joinReward .inner .left .btn_wrap span {position:relative;}
+.join_complete .joinReward .inner .left .btn_wrap span::after {content:'';position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:16px;height:16px;background:url('/static/front/resources/web/images/socialSelling/join_right_arr.png') no-repeat center / 16px;}
+.join_complete .joinReward .inner .right {flex:0 0 393px;width:393px;height:232px;background:url('/static/front/resources/web/images/socialSelling/join_bg.png') no-repeat center;}
+.join_complete .joinGift {margin-top:0;}
+.join_complete .joinLoginBtn {margin-top:30px;}
+.join_complete .joinLoginBtn .btn {width:280px;height:48px;line-height:48px;margin:0 auto;font-weight:600;font-size:16px;}
+
+/* 이용정책 스타일 */
+#rewardProAgree_terms .termList1 li {position:relative;padding-left:6px;}
+#rewardProAgree_terms .termList1 li::before {content:'';position:absolute;left:0;top:9px;width:2px;height:2px;background:#666;border-radius:50%;}
+#rewardProAgree_terms .termLink {color:#3f57e8;}
+#rewardProAgree_terms .termTable th {padding:8px;background-color:#f3f3f3;font-weight:600;color:#666;border:1px solid #e8e8e8;text-align:center;}
+#rewardProAgree_terms .termTable td {padding:8px;border-bottom:1px solid #e8e8e8;border-right:1px solid #e8e8e8;border-left:1px solid #e8e8e8;}
+
+
+

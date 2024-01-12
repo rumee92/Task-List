@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	
+	<!-- CDJ 개선 페이지 시작 : S -->
+	<main class="main cdj_renew">
+
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">배송지 관리</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+
+
+		<section class="section section01 address_book">
+			<div class="w1200">
+				<div class="inner_wrap">
+					<p class="top_text"><span class="num">3개</span>의 배송지가 등록되어 있습니다.</p>
+
+					<!-- 배송지 정보가 없는 경우 : S -->
+					<div class="no_address_wrap">
+						<p class="text">등록된 배송지가 없습니다.</p>
+					</div>
+					<!-- 배송지 정보가 없는 경우 : E -->
+
+					<!-- 배송지 정보가 있는 경우 : S -->
+					<div class="delivery_info1">
+						<div class="delivery_address_list">
+							<div class="list_item">
+								<div class="text_box">
+									<p class="top"><span class="list_name">서울 내집</span> <span class="customer_name">(박루리)</span></p>
+									<p class="address">서울 금천구 가산동 371-50 (가산동) 에이스 하이엔드 타워 13차 505호</p>
+									<p class="phone_number">연락처 : 010-7979-3876</p>
+									<div class="del_edt_wrap">
+										<button type="button" class="del_edt_btn">삭제</button>
+										<button type="button" class="del_edt_btn mdfy">수정</button>
+									</div>
+									<span class="basic_tag">기본 배송지</span> <!-- 기본배송지 일 때 -->
+								</div>
+							</div>
+							<div class="list_item">
+								<div class="text_box">
+									<p class="top"><span class="list_name">회사</span> <span class="customer_name">(홍길동)</span></p>
+									<p class="address">서울 금천구 가산동 371-50 (가산동) 에이스 하이엔드 타워 13차 505호</p>
+									<p class="phone_number">연락처 : 010-7979-3876</p>
+									<div class="del_edt_wrap">
+										<button type="button" class="del_edt_btn">삭제</button>
+										<button type="button" class="del_edt_btn mdfy">수정</button>
+									</div>
+									<button class="basic_add_btn">기본 배송지 설정</button> <!-- 기본배송지 아닐 때 -->
+								</div>
+							</div>
+							<div class="list_item">
+								<div class="text_box">
+									<p class="top"><span class="list_name">본가</span> <span class="customer_name">(김철수)</span></p>
+									<p class="address">서울 금천구 가산동 371-50 (가산동) 에이스 하이엔드 타워 13차 505호</p>
+									<p class="phone_number">연락처 : 010-7979-3876</p>
+									<div class="del_edt_wrap">
+										<button type="button" class="del_edt_btn">삭제</button>
+										<button type="button" class="del_edt_btn mdfy">수정</button>
+									</div>
+									<button class="basic_add_btn">기본 배송지 설정</button> <!-- 기본배송지 아닐 때 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 배송지 정보가 있는 경우 : E -->					
+
+					<div class="add_btn_wrap">
+						<!-- 배송지 정보가 없는 경우는 no_address 클래스 추가해주세요 -->
+						<button type="" class="add_address_btn" title="배송지 추가" onclick=""><span>배송지 추가</span></button> 
+					</div>
+				</div>
+			</div>
+		</section>
+	
+	</main>
+	<!-- CDJ 개선 페이지 시작 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

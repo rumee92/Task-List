@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	
+	<!-- CDJ 개선 이벤트 상세 페이지 : S -->
+	<main class="main cdj_renew event_view">
+
+		<div class="wrap">
+			<div class="page_tit_box">
+				<h2 class="page_tit">이벤트</h2>
+			</div>
+			<div class="content_wrap">
+
+				<!-- 이벤트 상세 : S -->
+				<div class="detail_con_box">
+					<!-- 이벤트 컨텐츠 영역 : S --> <!-- @render() { } = 해당 페이지 html 내용 들어갈곳 -->
+					<img src="/kr/ko/static_cdj/images/event/detail_sample.jpg" alt="">
+					<!-- 이벤트 컨텐츠 영역 : E -->
+					
+					<!-- 당첨자 등록 있을 경우 생기는 영역 : S -->
+					<div class="func">
+						<a href="" class="btn">당첨자 확인하기</a>
+					</div>
+					<!-- 당첨자 등록 있을 경우 생기는 영역 : E -->
+				</div>
+				<!-- // 이벤트 상세 : E -->
+
+
+				<!-- 이벤트 더보기 영역 : S -->
+				<aside class="more_event">
+					<div class="sticky">
+						<div class="tit_box">
+							<h3>이벤트 더 보기</h3>
+							<a href="#" class="go_list_btn">전체보기</a> <!-- 리스트페이지로 이동 -->
+						</div>
+						<div class="more_list_wrap">
+							<div class="swiper-container evt_more_slide">
+								<div class="swiper-wrapper">
+									<!-- each -->
+									<div class="swiper-slide">
+										<a href="#" class="detail_btn">
+											<div class="evnt-thumb">
+												<img src="/kr/ko/static_cdj/images/event/more_sample01.jpg" alt="이벤트 제목">
+											</div>
+											<div class="other-info">
+												<h3>제목입니다.<br> 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. </h3>
+												<span class="date">22.03.21 ~ 22.03.31</span> <!-- 이벤트 기간 (pattern yyyy -> yy로 변경) -->
+												<span class="count">D-5</span><!-- d_day / 당일일 때 day클래스 추가 -->
+											</div>
+										</a>
+									</div>
+									<!-- // each -->
+									<!-- each -->
+									<div class="swiper-slide">
+										<a href="#" class="detail_btn">
+											<div class="evnt-thumb">
+												<img src="/kr/ko/static_cdj/images/event/more_sample02.jpg" alt="이벤트 제목">
+											</div>
+											<div class="other-info">
+												<h3>제목222</h3>
+												<span class="date">22.03.21 ~ 22.03.31</span> <!-- 이벤트 기간 (pattern yyyy -> yy로 변경) -->
+												<span class="count day">D-DAY</span><!-- d_day / 당일일 때 day클래스 추가 -->
+											</div>
+										</a>
+									</div>
+									<!-- // each -->
+									<!-- each -->
+									<div class="swiper-slide">
+										<a href="#" class="detail_btn">
+											<div class="evnt-thumb">
+												<img src="/kr/ko/static_cdj/images/event/more_sample01.jpg" alt="이벤트 제목">
+											</div>
+											<div class="other-info">
+												<h3>제목입니다.<br> 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. </h3>
+												<span class="date">22.03.21 ~ 22.03.31</span> <!-- 이벤트 기간 (pattern yyyy -> yy로 변경) -->
+												<span class="count">D-5</span><!-- d_day / 당일일 때 day클래스 추가 -->
+											</div>
+										</a>
+									</div>
+									<!-- // each -->
+									<!-- each -->
+									<div class="swiper-slide">
+										<a href="#" class="detail_btn">
+											<div class="evnt-thumb">
+												<img src="/kr/ko/static_cdj/images/event/more_sample02.jpg" alt="이벤트 제목">
+											</div>
+											<div class="other-info">
+												<h3>제목222</h3>
+												<span class="date">22.03.21 ~ 22.03.31</span> <!-- 이벤트 기간 (pattern yyyy -> yy로 변경) -->
+												<span class="count day">D-DAY</span><!-- d_day / 당일일 때 day클래스 추가 -->
+											</div>
+										</a>
+									</div>
+									<!-- // each -->
+									<!-- each -->
+									<div class="swiper-slide">
+										<a href="#" class="detail_btn">
+											<div class="evnt-thumb">
+												<img src="/kr/ko/static_cdj/images/event/more_sample01.jpg" alt="이벤트 제목">
+											</div>
+											<div class="other-info">
+												<h3>제목입니다.<br> 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다. </h3>
+												<span class="date">22.03.21 ~ 22.03.31</span> <!-- 이벤트 기간 (pattern yyyy -> yy로 변경) -->
+												<span class="count">D-5</span><!-- d_day / 당일일 때 day클래스 추가 -->
+											</div>
+										</a>
+									</div>
+									<!-- // each -->
+									<!-- each -->
+									<div class="swiper-slide">
+										<a href="#" class="detail_btn">
+											<div class="evnt-thumb">
+												<img src="/kr/ko/static_cdj/images/event/more_sample02.jpg" alt="이벤트 제목">
+											</div>
+											<div class="other-info">
+												<h3>제목222</h3>
+												<span class="date">22.03.21 ~ 22.03.31</span> <!-- 이벤트 기간 (pattern yyyy -> yy로 변경) -->
+												<span class="count day">D-DAY</span><!-- d_day / 당일일 때 day클래스 추가 -->
+											</div>
+										</a>
+									</div>
+									<!-- // each -->
+								</div>
+							</div>
+							<!-- navigation buttons -->
+							<div class="nav_btn_wrap">
+								<div class="swiper-button-prev nav_btn"></div>
+								<div class="swiper-button-next nav_btn"></div>
+							</div>
+							<!-- // navigation buttons -->
+							<script type="text/javascript">
+								$(window).load(function(){
+									//////////////////////////////////////////
+									//////// 이벤트 더보기 영역 관련 js ////////
+									//////////////////////////////////////////
+									var ww = window.innerWidth;
+									var $sticky = $('.sticky');
+									var $stickyrStopper = $('#new_footer');
+									
+									//모바일용 default slide 생성
+									var evtMoreSlide = new Swiper(".evt_more_slide", {
+										slidesPerView: "auto",
+										centeredSlides: false,
+										spaceBetween: 12,
+										grabCursor: true,
+									});
+									
+									responsiveEvent();
+
+									//이벤트 더보기 반응형 처리
+									function responsiveEvent() {
+										if(ww >= 1024) {
+											//pc용 슬라이드
+											evtMoreSlide.destroy();
+											evtMoreSlide = new Swiper(".evt_more_slide", {
+												direction: "vertical",
+												slidesPerView: "auto",
+												centeredSlides: false,
+												spaceBetween: 30,
+												grabCursor: false,
+												allowTouchMove: false,
+												loop: false,
+												navigation: {
+													nextEl: ".swiper-button-next",
+													prevEl: ".swiper-button-prev",
+												}
+											});
+											//pc용 이벤트 더보기 scroll event
+											if (!!$sticky.offset()) {
+												var generalSidebarHeight = $sticky.innerHeight();
+												var stickyTop = $sticky.offset().top;
+												var stickOffset = 100;
+												var stickyStopperPosition = $stickyrStopper.offset().top;
+												var stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
+												var diff = stopPoint - (stickOffset*2) - 90;
+
+												$(window).scroll(function(){
+												var windowTop = $(window).scrollTop();
+
+												if (stopPoint < windowTop) {
+													$sticky.css({ position: 'absolute', top: diff });
+												} else if (stickyTop < windowTop+stickOffset) {
+													$sticky.css({ position: 'fixed', top: stickOffset });
+												} else {
+													$sticky.css({position: 'relative', top: 'initial'});
+												}
+												});
+											}
+										} else if(ww < 1024){
+											//모바일용 슬라이드
+											evtMoreSlide.destroy();
+											evtMoreSlide = new Swiper(".evt_more_slide", {
+												slidesPerView: "auto",
+												centeredSlides: false,
+												spaceBetween: 12,
+												grabCursor: true,
+											});
+											//mo용 이벤트 더보기 scroll event 해제
+											$sticky.css({ position: 'relative', top: "0" });
+											$(window).scroll(function(){
+												$sticky.css({ position: 'relative', top: "0" });
+											});
+
+										}
+									}
+
+									window.addEventListener('resize', function() {
+										ww = window.innerWidth;
+										responsiveEvent();
+									});
+									
+								});
+							</script>
+						</div>
+					</div>
+				</aside>
+				<!-- 이벤트 더보기 영역 : E -->
+
+
+				<!-- 이벤트 응원하기 영역 : S -->
+				<!--
+					***** 이벤트 응원하기 영역은 디자인 변경된 점 없으므로 기존 소스 그대로 사용가능합니다. *****
+				 -->
+				<section class="life-customer">
+					<h1 class="life-h">이벤트 응원하기</h1>
+					<form id="comment-form" name="commentForm" action="#" class="dropzone" method="post" enctype="" data-event-type="">
+						<div class="comment-form">
+							<h2 class="blind">댓글 작성하기</h2>
+							<div class="row">
+								<textarea name="text" id="comment-textarea"	maxlength="150"	cols="30" rows="4" class="textarea"	placeholder="댓글을 입력해주세요."></textarea>
+							</div>
+							<div class="uploader-wrap">
+								<div id="counter-comment" class="counter">0/150자</div><br>
+							</div>
+							<div class="func">
+								<button type="reset" class="btn" data-track-name="이벤트 참여 댓글 리셋">취소</button>
+								<button type="button" class="btn-gim x-add-comment" data-track-name="이벤트 참여 댓글 등록">등록</button>
+							</div>
+						</div>
+					</form>
+
+					<!-- 댓글 리스트 -->
+					<div class="comment-wrap">
+						<h2 class="blind">댓글 목록</h2>
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+								
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+								
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+						<!-- each -->
+						<div class="comment-box">
+							<div class="comment">
+								<div class="comment-info">
+									<span class="user">soo*****</span>
+									<span class="date">2022.03.24</span>
+								</div>
+								<p>화이이이팅!♡</p>
+								
+								<!-- 내 댓글일 때 삭제 -->
+								<div class="comment-act">
+									
+								</div>
+							</div>
+						</div>
+						<!-- // each -->
+
+						<!-- pagination -->
+						<div id="pagination" class="pagination">
+							<a href="#" data-link="" class="page is-current">1</a>
+							<a href="#" data-link="" class="page ">2</a>
+							<a href="#" data-link="" class="page ">3</a>
+							<!-- 맨 마지막페이지일 경우 버튼 숨김 -->
+							<!-- 페이지 5이하일때 -->
+							<a href="#" data-link="#" class="page-next"><i class="icon-next" style=""></i><span class="blind">다음</span></a>
+					   		<a href="#" data-link="#" class="page-first"><i class="icon-next2" style=""></i><span class="blind">마지막</span></a>
+			  			</div>
+						<!-- // pagination -->
+					</div>
+				</section>
+				<!-- 이벤트 응원하기 영역 : E -->
+
+
+				<!-- sns share 영역 : S -->
+				<div class="open_share_btn">
+					<button type="button" class="share_btn"></button>
+				</div>
+				<div class="sns_share_wrap">
+					<div class="share_box">
+						<div class="each">
+							<a href="javascript:sendLink();" class="share_btn share_kakao" title="카카오톡 공유하기" data-track-name="카카오톡 공유">
+							</a>
+							<p class="txt">카카오톡</p>
+						</div>
+						<div class="each">
+							<a href="#" class="share_btn share_fb" data-href="" title="페이스북 공유하기" data-track-name="페이스북 공유">
+							</a>
+							<p class="txt">페이스북</p>
+						</div>
+						<div class="each">
+							<a href="javascript:copyUrl();" class="share_btn share_url" id="share-btn" title="URL 공유하기" data-track-name="URL 공유">
+							</a>
+							<p class="txt">URL 복사</p>
+						</div>
+
+						<button type="button" class="close_btn"></button>
+					</div>
+				</div>
+				<script type="text/javascript">
+				$(document).ready(function(){
+					//////////////////////////////////////////
+					////////// sns share 영역 관련 js /////////
+					//////////////////////////////////////////
+					var $modalOpen = $(".open_share_btn .share_btn");
+					var $modalClose = $(".sns_share_wrap .close_btn");
+					//sns share 모달 open
+					$modalOpen.click(function(){
+						$(this).parent(".open_share_btn").next(".sns_share_wrap").show();
+					});
+					//sns share 모달 close
+					$modalClose.click(function(){
+						$(this).parents(".sns_share_wrap").hide();
+					});
+				});
+				</script>
+				<!-- sns share 영역 : E -->
+				
+			</div>
+		</div>
+
+	</main>
+	<!-- CDJ 개선 이벤트 상세 페이지 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

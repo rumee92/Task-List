@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/web/css/main.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/header.html'; ?>
+	<!-- //header -->
+	
+	<!-- container -->
+	<div id="container" class="pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('rewardProBannerPopup');" class="btn btnSizeL btnColorW btnTypeB"><span>리워드 프로그램 소개 팝업 </span></button><br>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+
+		<!-- 리워드 프로그램 소개 팝업 -->
+		<div id="rewardProBannerPopup" class="lyPopArea rewardProBannerPopup">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="conWrap">
+						<img src="/static/front/resources/web/images/socialSelling/rewardProPop_bg.jpg" alt="NEW 리워드 프로그램을 소개합니다!">
+						<div class="textBox">
+							<div class="roundText">NEW <em class="notoB">리워드 프로그램을 소개합니다!</em></div>
+							<div class="desc">
+								바닐라닷컴을 애정하는<br>
+								바닐라 COCO가 되어<br>
+								<em class="fcPink notoB">리워드 프로그램을 시작해 보세요!</em>
+							</div>
+						</div>
+					</div>
+					<div class="btn_wrap">
+						<button type="button" onclick=""><span>나중에 보기</span></button>
+						<button type="button" onclick="" class="notoB"><span>프로그램 알아보기</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // 리워드 프로그램 소개 팝업 -->
+		
+	</div>
+	<!-- //container -->
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/web/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+	
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

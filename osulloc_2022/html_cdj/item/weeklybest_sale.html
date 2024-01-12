@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	
+	<!-- CDJ 개선 베스트 페이지 : S -->
+	<main class="main cdj_renew weeklyBestWrap">
+		<!-- 상단 타이틀 : S -->
+		<div class="topVisualBox">
+			<p class="tit">베스트</p>
+			<p class="t1">오설록의 베스트 상품을 만나보세요</p>
+		</div>
+		<!-- 상단 타이틀 : E -->
+
+		<!-- 버튼 영역 : S -->
+		<div class="tab_btn_wrap">
+			<div class="content_wrap">
+				<ul class="tab_btn">
+					<li><a href="#" class="on">위클리 베스트</a></li> <!-- 활성화된 탭에 on 클래스 추가 -->
+					<li><a href="/kr/ko/html_cdj/item/weeklybest_selected.html">부담없는 선물(가변)</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 버튼 영역 : E -->
+
+		<div class="content_wrap">
+
+			<div class="list_content">
+				<!-- 리스트 제목영역 : S -->
+				<div class="list_tit_wrap">
+					<h4 class="list_tit">2022년 3월 4째주</h4>
+					<!-- 정렬방식 선택 : S -->
+					<div class="sort_wrap">
+						<button type="button" role="combobox" class="sort_btn">판매순</button>
+						<ul class="option_box">
+							<li><a href="#">판매순</a></li>
+							<li><a href="#">리뷰순</a></li>
+						</ul>
+					</div>
+					<script type="text/javascript">
+						$(function(){
+							//정렬방식 선택 sort_btn click event
+							var $sortBtn = $(".cdj_renew.weeklyBestWrap .sort_wrap .sort_btn");
+							
+							$sortBtn.click(function(){
+								$(this).parent(".sort_wrap").toggleClass("open");
+							});
+
+							// 외부영역 클릭 시 option_box 닫기
+							$(document).mouseup(function (e){
+							var sortWrap = $(".cdj_renew.weeklyBestWrap .sort_wrap");
+							if(sortWrap.has(e.target).length === 0){
+								sortWrap.removeClass("open");
+							}
+							});
+
+						});
+					</script>
+					<!-- 정렬방식 선택 : E -->
+				</div>
+				<!-- 리스트 제목영역 : E -->
+
+				<!-- 상품 리스트 영역 : S -->
+				<div class="goods_list_wrap clearfix">
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">1</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn on">위시리스트</a> <!-- 위시리스트에 담기 후 on 클래스 추가 -->
+								<a href="#"class="busket_btn">장바구니 담기</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이 오설록 프로폴리스 스프레이 오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div>
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<!-- <div class="price_box">
+								<div class="sales_price">8,500원</div>
+							</div> -->
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type03">추천</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/OJ/LT/304_20201211151757252XF.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/AV/ZB/20201211152417049VW.png" alt="상품명"></span>
+									<span class="rank_num">2</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+								<a href="#"class="busket_btn">장바구니 담기</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								그린티 랑드샤 10입
+							</a>
+							<!-- 할인일 경우 -->
+							<!-- <div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div> -->
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<div class="price_box">
+								<div class="last_price">12,500원</div>
+							</div>
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type02">신상품</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/DF/DY/304_20200110161302294EE.png?quality=80&shrink=304:340" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/YM/MM/20200110161241352JE.png" alt="상품명"></span>
+									<span class="rank_num">3</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->		
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->				
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								그린티 웨하스
+							</a>
+							<!-- 할인일 경우 -->
+							<!-- <div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div> -->
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<div class="price_box">
+								<div class="last_price">8,500원</div>
+							</div>
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type01">일시품절</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">4</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<!-- <div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div> -->
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<div class="price_box">
+								<div class="last_price">8,500원</div>
+							</div>
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type01">일시품절</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">5</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+								<a href="#"class="busket_btn">장바구니 담기</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div>
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<!-- <div class="price_box">
+								<div class="sales_price">8,500원</div>
+							</div> -->
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type03">추천</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">6</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+								<a href="#"class="busket_btn">장바구니 담기</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<!-- <div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div> -->
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<div class="price_box">
+								<div class="last_price">8,500원</div>
+							</div>
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type03">추천</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">7</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+								<a href="#"class="busket_btn">장바구니 담기</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div>
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<!-- <div class="price_box">
+								<div class="sales_price">8,500원</div>
+							</div> -->
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type03">추천</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">8</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+								<a href="#"class="busket_btn">장바구니 담기</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<!-- <div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div> -->
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<div class="price_box">
+								<div class="last_price">8,500원</div>
+							</div>
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type02">신상품</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">9</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+								<a href="#"class="busket_btn">장바구니 담기</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div>
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<!-- <div class="price_box">
+								<div class="last_price">8,500원</div>
+							</div> -->
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type03">추천</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+
+					<!-- loop -->
+					<div class="goods_list">
+						<div class="img_wrap">
+							<!-- 썸네일 이미지 -->
+							<a href="#">
+								<div class="img_box">
+									<span class="dfImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/QT/IG/200_20190919205017968RP.png" alt="상품명"></span>
+									<span class="hoverImg goodsImg"><img src="https://www.osulloc.com/upload/kr/ko/adminImage/CK/DU/20191204174538762WI.png" alt="상품명"></span>
+									<span class="rank_num">10</span>
+								</div>
+							</a>
+							<!-- // 썸네일 이미지 -->
+							<!-- 장바구니 / 위시리스트 -->
+							<div class="fnc_btn_wrap">
+								<a href="#"class="wish_btn">위시리스트</a>
+							</div>
+							<!-- // 장바구니 / 위시리스트 -->
+						</div>
+						<div class="info_wrap">
+							<a href="#" class="goods_name">
+								오설록 프로폴리스 스프레이
+							</a>
+							<!-- 할인일 경우 -->
+							<!-- <div class="price_box">
+								<del class="sales_price">8,500원</del>
+								<div class="last_price">
+									5,950원 <span class="rate">30%</span>
+								</div>
+							</div> -->
+							<!-- // 할인일 경우 -->
+							<!-- 할인 아닐 경우 -->
+							<div class="price_box">
+								<div class="last_price">8,500원</div>
+							</div>
+							<!-- // 할인 아닐 경우 -->
+							<!-- 딱지 영역 -->
+							<div class="label_box">
+								<!--
+								일시품절: type01 클래스 추가,
+								신상품: type02 클래스 추가,
+								추천: type03 클래스 추가,
+								-->
+								<span class="label type01">일시품절</span>
+							</div>
+							<!-- // 딱지 영역 -->
+						</div>
+					</div>
+					<!-- // loop -->
+				</div>
+				<!-- 상품 리스트 영역 : E -->
+			</div>			
+			
+		</div>	
+		
+
+	</main>
+	<!-- CDJ 개선 베스트 페이지 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

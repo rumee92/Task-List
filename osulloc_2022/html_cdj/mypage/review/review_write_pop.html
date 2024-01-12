@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+	<div style="height: 800px;"></div>
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+
+
+	<!-- 후기 작성 팝업 : S -->
+	<section class="layer_popup_wrap cdj_renew type03">
+		<div class="layer_box_new review_write_pop">
+			<div class="top_wrap">
+				<div class="top_box">
+					<h3 class="layer_tit">
+						후기 작성
+					</h3>
+					<button class="btn_close"></button>
+				</div>
+			</div>
+			
+			<div class="con_box">
+				<section class="section my_section box01">
+					<div class="w1200">
+						<div class="sec_inner">
+							<div class="flex_box">
+								<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></div>
+								<div class="text_box">
+									<p class="prd_name">에브리데이 텀블러 키트</p>
+									<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+									<p class="prd_gifts">사은품 : 페이퍼참(동백)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section my_section box02">
+					<div class="w1200">
+						<div class="sec_inner">
+							<div class="grade_box">
+								<p class="text">상품이 마음에 드셨나요?</p>
+								<div class="star_grade">
+									<input type="radio" id="5stars" name="rating" value="5">
+									<label for="5stars" class="star"></label>
+									<input type="radio" id="4stars" name="rating" value="4">
+									<label for="4stars" class="star"></label>
+									<input type="radio" id="3stars" name="rating" value="3">
+									<label for="3stars" class="star"></label>
+									<input type="radio" id="2stars" name="rating" value="2">
+									<label for="2stars" class="star"></label>
+									<input type="radio" id="1star" name="rating" value="1" >
+									<label for="1star" class="star"></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section my_section box03">
+					<div class="w1200">
+						<div class="sec_inner">
+							<div class="text_input">
+								<p class="pop_sub_tit">상품 후기</p>
+								<div class="text_area">
+									<textarea name="" id="" cols="" rows="" maxlength="60" placeholder="상품 후기를 입력해주세요." class="review_text_area"></textarea>
+									<div class="text_cnt"><span>0</span>/60</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section my_section box04">
+					<div class="w1200">
+						<div class="sec_inner">
+							<div class="my_img_uploader">
+								<p class="pop_sub_tit">상품 이미지</p>
+								<div class="upload_box">
+									<div class="list_box">
+										<div class="img_list"></div>
+									</div>
+									<div class="btn_box">
+										<input type="file" class="img_upload" id="img_upload" name="img_upload" accept="image/*" value="" multiple>
+										<label for="img_upload">이미지 등록 <span class="count"><em class="current">0</em>/4</span></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section box05">
+					<div class="w1200">
+						<div class="sec_inner">
+							<div class="option_list_box">
+								<div class="option_list">
+									<div class="item">
+										<p class="pop_sub_tit">구매하신 제품은 선물용인가요?</p>
+										<div class="option_chk">
+											<div class="chk_inner">
+												<div class="input_radio">
+													<input type="radio" id="option01_1" name="option01">
+													<label for="option01_1">예</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option01_2" name="option01">
+													<label for="option01_2">아니오</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<p class="pop_sub_tit">연령대</p>
+										<div class="option_chk">
+											<div class="chk_inner">
+												<div class="input_radio">
+													<input type="radio" id="option02_1" name="option02">
+													<label for="option02_1">20대 미만</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option02_2" name="option02">
+													<label for="option02_2">20대 이상</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option02_3" name="option02">
+													<label for="option02_3">30대 이상</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option02_4" name="option02">
+													<label for="option02_4">40대 이상</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option02_5" name="option02">
+													<label for="option02_5">50대 이상</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<p class="pop_sub_tit">성별</p>
+										<div class="option_chk">
+											<div class="chk_inner">
+												<div class="input_radio">
+													<input type="radio" id="option03_1" name="option03">
+													<label for="option03_1">남자</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option03_2" name="option03">
+													<label for="option03_2">여자</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<p class="pop_sub_tit">포장</p>
+										<div class="option_chk">
+											<div class="chk_inner">
+												<div class="input_radio">
+													<input type="radio" id="option04_1" name="option04">
+													<label for="option04_1">별로에요</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option04_2" name="option04">
+													<label for="option04_2">적당해요</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option04_3" name="option04">
+													<label for="option04_3">꼼꼼해요</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<p class="pop_sub_tit">유통기한</p>
+										<div class="option_chk">
+											<div class="chk_inner">
+												<div class="input_radio">
+													<input type="radio" id="option05_1" name="option05">
+													<label for="option05_1">임박상품이에요</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option05_2" name="option05">
+													<label for="option05_2">꽤 남았어요</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option05_3" name="option05">
+													<label for="option05_3">아주 넉넉해요</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<p class="pop_sub_tit">맛</p>
+										<div class="option_chk">
+											<div class="chk_inner">
+												<div class="input_radio">
+													<input type="radio" id="option06_1" name="option06">
+													<label for="option06_1">맛이 없어요</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option06_2" name="option06">
+													<label for="option06_2">평범해요</label>
+												</div>
+												<div class="input_radio">
+													<input type="radio" id="option06_3" name="option06">
+													<label for="option06_3">너무 맛있어요</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section pcBlock">
+					<div class="pop_bottom_btn">
+						<button type="button" class="bot_btn cancle_btn" title="취소" onclick="">취소</button>
+						<button type="button" class="bot_btn save_btn" title="등록" onclick="">등록</button>
+						<!-- 수정 버튼은 후기 등록 후 수정일때 노출 됨 -->
+						<button type="button" class="bot_btn modify_btn" title="수정" onclick="">수정</button>
+					</div>
+				</section>
+				
+				<section class="section box06">
+					<div class="my_rev_policy">
+						<div class="inner_box">
+							<p class="pop_sub_tit">오설록몰 구매후기 운영정책</p>
+							<ul class="list">
+								<li class="item">주문별 구매확정 1건당 (주문번호 기준) 1회의 후기 작성이 가능합니다.</li>
+								<li class="item">후기작성 시 회원등급에 따라 찻잎포인트가 차등 지급됩니다.</li>
+								<li class="item">후기 작성으로 적립된 찻잎포인트는 적립일로부터 2년간 사용할 수 있으며 유효기간이 경과하거나 후기를 삭제 (운영 정책에 위반하여 임의 삭제된 경우 포함)할 경우 자동 회수됩니다.</li>
+								<li class="item red">상품과 관련이 없는 후기, 타인의 후기를 도용한 내용, 반복적인 도배성 문장 등은 오설록 공식몰 후기 운영정책에 따라 게시가 제한될 수 있습니다.</li>
+								<li class="item red">욕설, 비속어, 또는 폭력적이거나 차별적 내용, 근거 없는 비방, 허위사실이 포함된 후기, 특정인 (특정업체)에 대한 모욕, 명예훼손 및 사생활 침해가 인정될 수 있는 후기, 기타 사회통념상 공서양속에 반하는 후기의 경우 통보없이 삭제될 수 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="pop_fixed_btn moBlock">
+				<div class="btn_inner">
+					<button type="button" class="fixed_btn cancle_btn" title="취소" onclick="">취소</button>
+					<button type="button" class="fixed_btn save_btn" title="등록" onclick="">등록</button>
+					<!-- 수정 버튼은 후기 등록 후 수정일때 노출 됨 -->
+					<button type="button" class="fixed_btn modify_btn" title="수정" onclick="">수정</button>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- 후기 작성 팝업 : E -->
+
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>메뉴 | 디지털웍스 퍼블리싱 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../resources/front/css/fonts.css">
+<!-- <link rel="stylesheet" type="text/css" href="./css/common.css"> -->
+<link rel="stylesheet" type="text/css" href="../resources/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/guide.css">
+<script type="text/javascript" src="../resources/front/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./js/guide.js"></script>
+</head>
+
+<body style="min-width:auto;">
+<div id="left_category">
+	<div class="menu_list">
+		<ul class="menu">
+			<li>
+				<span><b>+</b>  Publishing List</span>
+				<ul class="depth2">
+					<li class="active"><a href="./publishing_list.html" target="_contents">List</a></li>
+					<li><a href="./publishing_adm_list.html" target="_contents">Admin</a></li>
+				</ul>
+			</li>
+			<li>
+				<span><b>-</b> Style Guide</span>
+				<ul class="depth2">
+					<li><a href="./style_guide.html" target="_contents">Style</a></li>
+					<!-- <li><a href="./style_mobile.html" target="_contents">Mobile Web</a></li> -->
+				</ul>
+			</li>
+			<li>
+				<span><b>-</b> Publishing Guide</span>
+				<ul class="depth2">
+					<li><a href="./guide_define.html" target="_contents">사이트 사용환경</a></li>
+					<li><a href="./guide_layout.html" target="_contents">기본구조 및 레이아웃</a></li>
+					<li><a href="./guide_css.html" target="_contents">CSS 작성 가이드</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<script>
+$(function(){
+	$('#left_category .menu .depth2 a').click(function(){
+		$('#left_category .menu li, #left_category .depth2 li').removeClass('active');
+		$('#left_category .menu li b').html('+');
+		$(this).parent().addClass('active');
+		$(this).closest('.menu > li').addClass('active');
+		$(this).closest('.menu > li').find('b').html('-');
+	});
+});
+</script>
+</body>
+</html>

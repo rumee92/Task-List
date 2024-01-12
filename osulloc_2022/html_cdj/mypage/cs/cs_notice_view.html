@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 공지사항 뷰 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">공지사항</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		<!-- 탭 영역 : S -->
+		<div class="my_tab">
+			<div class="my_tab_inner">
+				<ul class="my_tab_list tab3">
+					<!-- 활성된 페이지 .item에 on 클래스 추가 -->
+					<li class="item on">
+						<a href="#" class="link_text">공지사항</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link_text">이벤트 발표</a>
+					</li>
+					<li class="item">
+						<a href="#" class="link_text">전자 공고</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 탭 영역 : E -->
+		
+		<!-- 컨텐츠 : S -->
+		<div class="my_cs_notice">
+			<section class="section">
+				<div class="w1200">
+					<div class="notice_list_view">
+						<div class="view_header">
+							<p class="view_type moBlock">
+								<span>[공지사항]</span>
+								<span>[이벤트 발표]</span>
+								<span>[전자공고]</span>
+							</p>
+							<p class="subject">[내용정정] 오설록 개인정보 처리방침 변경 고지(제목부분)제목부분</p>
+							<p class="date">2022.03.11</p>
+						</div>
+						<div class="view_con">
+							<!-- .text_box 텍스트 영역 -->
+							<div class="text_box">
+								<p>안녕하세요. 오설록 입니다.</p><br>
+								<p>
+									보다 나은 서비스 제공을 위해 이용약관 및 개인정보 처리방침 내용을
+									일부 개정하게 되어 이를 알려드리고자 합니다.<br>
+									아래 내용을 참조하시어 서비스 이용에 불편이 없도록 유의하시기 바랍니다.
+								</p><br>
+								<p>
+									1. 개정내용<br>
+									상세 개정내용은 첨부파일을 참고해주시기 바랍니다.
+								</p>
+							</div>
+							
+							<!-- 첨부파일이 있을 경우 : S -->
+							<div class="file_box">
+								<p class="tit">첨부파일</p>
+								<ul class="file_list">
+									<li class="item">
+										<a href="" download="">
+											<div class="item_inner">
+												<p class="file_name">오설록_직영몰_개인정보처리방침_변경공지(22.03.21 시행).pdf</p>
+												<p class="file_down"><span class="down_btn"></span></p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- 첨부파일이 있을 경우 : E -->
+						</div>
+						
+						<div class="btn_box">
+							<button type="button" class="button" title="목록보기" onclick="">목록보기</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 공지사항 뷰 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

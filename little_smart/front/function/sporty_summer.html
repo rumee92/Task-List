@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <?php require("../include/head.html"); ?>
+
+    <link rel="stylesheet" type="text/css" href="../../resources/front/css/function.css">
+</head>
+
+<body>
+    <?php require("../include/skip_navi.html"); ?>
+    <?php require("../include/header.html"); ?>
+
+    <!-- container : str-->
+    <main id="container" class="container">
+        <div class="contents">
+            <!-- page_top : str -->
+            <div class="page_top">
+	            <!-- 210624 수정 -->
+                <div class="page_visual" style="background-image:url('../../resources/front/images/function/page_visual_new.jpg');">
+                    <div class="txt_box con_inner_mid">
+                        <p class="tit">FUNCTION</p>
+                        <p class="txt">작은 아이를 위한 큰 생각<br>작지만 결코 작지 않은 아이를 위해<br>더 크게 생각합니다.</p>
+                    </div>
+                </div>
+                <div class="page_navi">
+                    <div class="page_navi_inner">
+                        <div class="page_navi_item"><a href="#none">클래식</a></div>
+                        <div class="page_navi_item on"><a href="#none">스포티</a></div>
+                    </div>
+                </div>
+                <div class="page_navi_blank"></div>
+            </div>
+            <!-- page_top : end -->
+            
+            <!-- fn_con Web : str -->
+            <div class="function_wrap con_inner_mid web">
+                <!-- fn_tit : str -->
+                <div class="lb_tab">
+                    <div class="lb_tab_item on">SUMMER</div>
+                    <div class="lb_tab_item">WINTER</div>
+                </div>
+                <!-- fn_tit : end -->
+                <div class="fn_ani_area sp_summer">
+                    <a href="#fn01" class="number num1 on" onclick="go_fnList(this,'fn01');"><em>1</em></a>
+                    <a href="#fn02" class="number num2" onclick="go_fnList(this,'fn02');"><em>2</em></a>
+                    <a href="#fn03" class="number num3" onclick="go_fnList(this,'fn03');"><em>3</em></a>
+                    <a href="#fn04" class="number num4" onclick="go_fnList(this,'fn04');"><em>4</em></a>
+                    <a href="#fn05" class="number num5" onclick="go_fnList(this,'fn05');"><em>5</em></a>
+                    <a href="#fn06" class="number num6" onclick="go_fnList(this,'fn06');"><em>6</em></a>
+                    <a href="#fn07" class="number num7" onclick="go_fnList(this,'fn07');"><em>7</em></a>
+                    <a href="#fn08" class="number num8" onclick="go_fnList(this,'fn08');"><em>8</em></a>
+                    <a href="#fn09" class="number num9" onclick="go_fnList(this,'fn09');"><em>9</em></a>
+                </div>
+                
+                <div class="function_con sp_summer">
+                    <h4 class="fn_sec_tit">하복</h4>
+                    <div class="con_grid function_list">
+                        <ul class="con_grid_box clear">
+                            <li class="con_grid_item function_item on" id="fn01">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img01_ss.png" alt="자외선 차단&항균"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>1</em>자외선 차단&항균</p>
+                                        <p class="txt">항균기능, 흡한속건 기능이 동시에 발휘되는 복합 기능성 소재로 자외선을 완벽히 차단해 피부 보호</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item function_item" id="fn02">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img02_ss.png" alt="깔끔한 클린밴드"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>2</em>깔끔한 클린밴드</p>
+                                        <p class="txt">목 부분의 오염을 방지하고 깔끔하게 연출</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item function_item" id="fn03">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img03_ss.png" alt="시원한 메쉬원단"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>3</em>시원한 메쉬원단</p>
+                                        <p class="txt">메쉬소재로 더운 여름에도 시원하고 쾌적하게</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h4 class="fn_sec_tit">동/하복 공통</h4>
+                    <div class="con_grid function_list">
+                        <ul class="con_grid_box clear">
+                            <li class="con_grid_item function_item" id="fn04">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img04_ss.png" alt="우리 아이 반딧불"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>4</em>우리 아이 반딧불</p>
+                                        <p class="txt">빛이 닿으면 반사되어 빛나는 재귀반사 기술로 어두운 곳에서도 아이들을 안전하게 보호</p>
+                                    </div>
+                                </div>
+                            </li>
+	                        <!-- 210825 수정 str -->
+                            <li class="con_grid_item function_item" id="fn05">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img05_ss.png" alt="미아방지 스마트 패치"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>5</em>미아방지 스마트 패치</p>
+                                        <p class="txt">NFC기능이 포함된 스마트 패치를 통해 위급상황 발생 시 아이 정보 확인 가능</p>
+                                    </div>
+                                </div>
+                            </li>
+	                        <!-- 210825 수정 end -->
+                            <li class="con_grid_item function_item" id="fn06">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img06_ss.png" alt="이름표 라벨"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>6</em>이름표 라벨</p>
+                                        <p class="txt">아이의 이름을 기재해 분실 걱정을 줄임</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item function_item" id="fn07">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img07_ss.png" alt="케어 라벨"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>7</em>케어 라벨</p>
+                                        <p class="txt">소재 및 관리요령을 표시하여 제품 관리 용이</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item function_item" id="fn08">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img08_ss.png" alt="실리콘 라벨"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>8</em>실리콘 라벨</p>
+                                        <p class="txt">피부에 닿았을 때 자극이 없고 환경호르몬 다이옥신 없음</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item function_item" id="fn09">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img09_ss.png" alt="로고 테이프"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em>9</em>로고 테이프</p>
+                                        <p class="txt">목 부분에 덧대어 트렌디한 디자인은 물론 오염방지</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fn_noti_txt">*일부 품목 제외</p>
+            </div>
+            <!-- fn_con web : end -->
+            
+            <!-- fn_con mobile : str -->
+            <div class="function_wrap con_inner_mid mobile">
+                <!-- fn_tit : str -->
+                <div class="lb_tab mo">
+                    <div class="lb_tab_item on">SUMMER</div>
+                    <div class="lb_tab_item">WINTER</div>
+                </div>
+                <!-- fn_tit : end -->
+
+                <div class="fn_ani_area sp_summer mo">
+                    <!-- <a href="#fn01" class="number num1 on" onclick="go_slide(this,1);"><em>1</em></a>
+                    <a href="#fn02" class="number num2" onclick="go_slide(this,2);"><em>2</em></a>
+                    <a href="#fn03" class="number num3" onclick="go_slide(this,3);"><em>3</em></a>
+                    <a href="#fn04" class="number num4" onclick="go_slide(this,4);"><em>4</em></a>
+                    <a href="#fn05" class="number num5" onclick="go_slide(this,5);"><em>5</em></a>
+                    <a href="#fn06" class="number num6" onclick="go_slide(this,6);"><em>6</em></a>
+                    <a href="#fn07" class="number num7" onclick="go_slide(this,7);"><em>7</em></a>
+                    <a href="#fn08" class="number num8" onclick="go_slide(this,8);"><em>8</em></a>
+                    <a href="#fn09" class="number num9" onclick="go_slide(this,9);"><em>9</em></a> -->
+                </div>
+                
+                <div class="function_con sp_summer">
+                    <div class="con_grid2 function_list">
+                        <ul class="con_grid_box2 clear">
+                            <li class="con_grid_item2 function_item_mo" id="fn01">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img01_ss.png" alt="자외선 차단&항균"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum1.png" alt=""></em>자외선 차단&항균</p>
+                                        <p class="txt">항균기능, 흡한속건 기능이 동시에 발휘되는 복합 기능성 소재로 자외선을 완벽히 차단해 피부 보호</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn02">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img02_ss.png" alt="깔끔한 클린밴드"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum2.png" alt=""></em>깔끔한 클린밴드</p>
+                                        <p class="txt">목 부분의 오염을 방지하고 깔끔하게 연출</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn03">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img03_ss.png" alt="시원한 메쉬원단"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum3.png" alt=""></em>시원한 메쉬원단</p>
+                                        <p class="txt">메쉬소재로 더운 여름에도 시원하고 쾌적하게</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn04">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img04_ss.png" alt="우리 아이 반딧불"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum4.png" alt=""></em>우리 아이 반딧불</p>
+                                        <p class="txt">빛이 닿으면 반사되어 빛나는 재귀반사 기술로 어두운 곳에서도 아이들을 안전하게 보호</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn05">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img05_ss.png" alt="미아방지 스마트 패치"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum5.png" alt=""></em>미아방지 스마트 패치</p>
+                                        <p class="txt">NFC 기능이 포함된 스마트패치를 통해 아이 정보를 빠르게 확인</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn06">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img06_ss.png" alt="이름표 라벨"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum6.png" alt=""></em>이름표 라벨</p>
+                                        <p class="txt">아이의 이름을 기재해 분실 걱정을 줄임</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn07">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img07_ss.png" alt="케어 라벨"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum7.png" alt=""></em>케어 라벨</p>
+                                        <p class="txt">소재 및 관리요령을 표시하여 제품 관리 용이</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn08">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img08_ss.png" alt="실리콘 라벨"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum8.png" alt=""></em>실리콘 라벨</p>
+                                        <p class="txt">피부에 닿았을 때 자극이 없고 환경호르몬 다이옥신 없음</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="con_grid_item2 function_item_mo" id="fn09">
+                                <div class="function_box">
+                                    <div class="img_box"><img src="../../resources/front/images/function/function_img09_ss.png" alt="로고 테이프"></div>
+                                    <div class="txt_box">
+                                        <p class="tit"><em><img src="../../resources/front/images/function/ico_sp_sum9.png" alt=""></em>로고 테이프</p>
+                                        <p class="txt">목 부분에 덧대어 트렌디한 디자인은 물론 오염방지</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="slide_control">
+                            <button type="button" class="btn_grid_prev"><img src="../../resources/front/images/common/btn_grid_prev.png" alt="이전"></button>
+                            <span class="slick_paging"></span>
+                            <button type="button" class="btn_grid_next"><img src="../../resources/front/images/common/btn_grid_next.png" alt="다음"></button>
+                        </div>
+                    </div>
+                </div>
+                <p class="fn_noti_txt">*일부 품목 제외</p>
+            </div>
+            <!-- fn_con mobile : end -->
+        </div>
+    </main>
+    <!-- container : end -->
+    
+    <?php require("../include/footer.html"); ?>
+
+    <script type="text/javascript">
+        //pc 포커싱
+        function go_fnList(ele, id) {
+            var scrollPos = $('#'+id).offset().top-200;
+
+            $(ele).siblings('.number').removeClass('on');
+            $(ele).addClass('on');
+            $('html, body').animate({'scrollTop' : scrollPos},400);
+            $('.function_item').removeClass('on');
+            $('#'+id).addClass('on');
+        }
+
+        //mo 슬라이드
+        var $conGrid_m = $('.con_grid2 .con_grid_box2');
+
+       if ( WINDOW_WIDTH <= 1024 ) {
+           conGridInit_m();
+       }
+
+       $(window).on('resize', function(){
+           if ( $(this).outerWidth() <= 1024 ) {
+               conGridInit_m();
+           } else {
+               if ( $conGrid_m.hasClass('slick-initialized') ) {
+                   $conGrid_m.slick('unslick');
+               }
+           }
+       });
+
+       function conGridInit_m() {
+            // var currentNum;
+
+           if ( !$conGrid_m.hasClass('slick-initialized') ) {
+               $conGrid_m.on('init reInit afterChange', function (event, slick, currentSlide) {
+                   var i = (currentSlide ? currentSlide : 0) + 1;
+                   $(this).siblings('.slide_control').find('.slick_paging').html('<em>' + i + '</em>' + '<span>/</span>' + slick.slideCount);
+               });
+
+               // $conGrid_m.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+               //      currentNum = currentSlide;
+               //  });
+
+               $conGrid_m.slick({
+                    fade: true,
+                   centerMode: true,
+                   centerPadding: 0,
+                   dots: false,
+                   arrow: false,
+                   prevArrow: null,
+                   nextArrow: null,
+               });
+
+               $conGrid_m.siblings('.slide_control').find('.btn_grid_prev').on('click', function(){
+                   $conGrid_m.slick('slickPrev');
+
+                   // var ani_idx = $('.fn_ani_area.mo').find('.number');
+
+                   // ani_idx.removeClass('on');
+                   // ani_idx.eq(currentNum-1).addClass('on');
+               });
+               $conGrid_m.siblings('.slide_control').find('.btn_grid_next').on('click', function(){
+                   $conGrid_m.slick('slickNext');
+
+                   // var ani_idx = $('.fn_ani_area.mo').find('.number');
+
+                   // ani_idx.removeClass('on');
+                   // ani_idx.eq(currentNum+1).addClass('on');
+               });
+           }
+       }
+
+       function go_slide (ele, num) {
+            $(ele).closest('.fn_ani_area').find('.number').removeClass('on');
+            $(ele).addClass('on')
+            $conGrid_m.slick('slickGoTo',num-1);
+       }
+    </script>
+</body>
+
+</html>

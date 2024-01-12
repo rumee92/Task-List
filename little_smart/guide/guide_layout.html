@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>기본구조 및 레이아웃 | 디지털웍스 퍼블리싱 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../resources/front/css/fonts.css">
+<!-- <link rel="stylesheet" type="text/css" href="./css/common.css"> -->
+<link rel="stylesheet" type="text/css" href="../resources/front/css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/guide.css">
+<script type="text/javascript" src="../resources/front/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="./js/ui.js"></script>
+<script type="text/javascript" src="./js/guide.js"></script>
+<style>
+	.listType1 {padding-left:10px;}
+</style>
+</head>
+<body>
+<div class="pagever">last update : <strong>2018.06.04.</strong></div>
+<div class="uiwrap">
+	<div class="conP">
+		<h2>HTML 기본구조</h2>
+		<h3>DOPTYPE 및 HEAD</h3>
+		<p class="">head 안의 태그 작성은 다음과 같은 순서로 한다.</p>
+		<ul class="listType1">
+			<li><em>ⅰ.</em> 기본 메타 데이터</li>
+			<li><em>ⅱ.</em> 오픈그레프 메타 데이터</li>
+			<li><em>ⅲ.</em> css</li>
+			<li><em>ⅳ.</em> js</li>
+			<li><em>ⅴ.</em> 태깅 및 추가적인 소스</li>
+		</ul>
+		<xmp>
+			<!DOCTYPE html>
+			<html lang="ko">
+
+			<head>
+				<title>ibank</title>
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+				<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+				<meta name="format-detection" content="telephone=no, address=no, email=no">
+
+				<meta name="title" content="ibank">
+				<meta name="keywords" content="ibank">
+				<meta name="description" content="ibank">
+
+				<meta property="og:title" content="ibank">
+				<meta property="og:type" content="website">
+				<meta property="og:url" content="http://www.ibank.co.kr/">
+				<meta property="og:site_name" content="ibank">
+				<meta property="og:description" content="ibank">
+
+				<link rel="shortcut icon" type="image/x-icon" href="/resources/front/images/common/favicon.ico">
+				<link rel="stylesheet" type="text/css" href="/resources/front/css/slick.css">
+				<link rel="stylesheet" type="text/css" href="/resources/front/css/common.css">
+
+				<!-- tagging -->
+				태깅이 있는 경우
+			</head>
+		</xmp>
+
+		<h3>BODY</h3>
+		<xmp>
+			<body>
+				<div id="wrap">
+					<!-- skipNavi -->
+					<div class="skipNavi">
+						<ul>
+							<li><a href="#유틸메뉴">유틸메뉴 바로가기</a></li>
+							<li><a href="#본문">본문 바로가기</a></li>
+							<li><a href="#하단메뉴">하단메뉴 바로가기</a></li>
+						</ul>
+					</div>
+					<!-- //skipNavi -->
+
+					<!-- header -->
+					<div id="header"></div>
+					<!-- //header -->
+
+					<!-- container -->
+					<div id="container">
+						<!-- contents -->
+						<div class="contents">내용</div>
+						<!-- //contents -->
+					</div>
+					<!-- //container -->
+
+					<!-- footer -->
+					<div id="footer"></div>
+					<!-- //footer -->
+				</div>
+
+				제이쿼리의 경우에는 개발쪽에서의 사용도 있어 유동적으로 head에 넣을수있다.
+				<script type="text/javascript" src="/resources/front/js/jquery-1.11.3.min.js"></script>
+				<script type="text/javascript" src="/resources/front/js/jquery.easing.1.3.js"></script>
+				<script type="text/javascript" src="/resources/front/js/slick.js"></script>
+				<script type="text/javascript" src="/resources/front/js/ui.js"></script>
+				<!--[if lte IE 9]>
+				<script type="text/javascript" src="/resources/front/js/ui_ie9.js"></script>
+				<![endif]-->
+				<script type="text/javascript">페이지 제어 스크립트</script>
+			</body>
+			</html>
+		</xmp>
+	</div>
+
+	<div class="conP">
+		<h2>페이지 레이아웃</h2>
+	</div>
+</div>
+</body>
+</html>

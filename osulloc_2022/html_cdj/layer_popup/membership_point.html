@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+
+
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+	<div style="height: 800px;"></div>
+	<!-- 콘텐츠 영역 높이값 임의 지정 - 개발 시 지워주세요 -->
+
+
+	<!-- 멤버십/제휴 포인트 할인 : S -->
+	<section class="layer_popup_wrap cdj_renew type03">
+		<div class="layer_box_new membership_layer">
+			<div class="top_box">
+				<h3 class="layer_tit">
+					멤버십/제휴 포인트 할인
+				</h3>
+				<button class="btn_close"></button>
+			</div>
+			<div class="con_box">
+				<div class="each">
+					<p class="tit">LG U+ 멤버십 할인</p>
+					<div class="input_group1">
+						<input type="text" class="left" value="" disabled>
+						<button type="button" class="right" title="멤버십 인증" onclick="">멤버십 인증</button>
+					</div>
+				</div>
+				<div class="each">
+					<div class="grid">
+						<p class="tit">L.POINT</p>
+						<div class="point_view">사용 가능 포인트 <span class="num">0P</span></div>
+					</div>
+					<div class="input_group1">
+						<input type="text" class="left" value="" disabled>
+						<button type="button" class="right" title="조회 및 적립" onclick="">조회 및 적립</button>
+					</div>
+					<!-- 조회 및 적립 완료후 나오는 영역 : S -->
+					<!-- <div class="after_box">
+						구매 확정 시 L.POINT 자동 적립
+					</div> -->
+					<!-- 조회 및 적립 완료후 나오는 영역 : E -->
+				</div>
+			</div>
+
+			<!-- 확인버튼 추가 작업 22.03.25 -->
+			<div class="confirm_btn">
+				<button type="button" class="fixed_btn layer_close" title="확인" onclick="">확인</button>
+			</div>
+			<!-- // 확인버튼 추가 작업 22.03.25 -->
+
+		</div>
+	</section>
+	<!-- 멤버십/제휴 포인트 할인 : E -->
+
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+	
+	
+	<!-- 티뮤지엄 - 맵 페이지 시작 : S -->
+	<main class="main cdj_renew teaMuseum">
+	
+		<!-- 페이지 상단 : S -->
+		<div class="top_wrap">
+			<div class="top_con_wrap">
+				<h4 class="page_tit">제주 티뮤지엄</h4>
+				<div class="btn_wrap">
+					<a href="/kr/ko/html_cdj/museum/teastone.html" class="go_btn"><span>체험 프로그램 예약</span></a> <!-- 현재 페이지에 on 클래스 추가 -->
+					<a href="/kr/ko/html_cdj/museum/map.html" class="go_btn on"><span>티뮤지엄 맵</span></a>
+				</div>
+				<p class="noti_txt">
+					운영시간  09:00~18:00(연중무휴)<br>
+					* 티뮤지엄 증축 공사 중(~23년3월) <br class="m_only">경내 일부 구간 통행이 제한될 수 있습니다.
+				</p>
+			</div>
+		</div>
+		<!-- 페이지 상단 : E -->
+
+		<div class="con_wrap map">
+
+			<div class="w1200">
+				<div class="page_con_tit">맵 안내</div>
+			</div>
+
+			<div class="tab_con_wrap">
+				<!-- 탭영역 : S -->
+				<div class="my_tab">
+					<div class="my_tab_inner">
+						<ul class="my_tab_list tab2">
+							<!-- 활성화된 li에 on클래스 추가 -->
+							<li class="item on">
+								<button type="button" class="link_text tab_btn">티뮤지엄 맵</button>
+							</li>
+							<li class="item">
+								<button type="button" class="link_text tab_btn">제주 오설록 맵</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 탭영역 : E -->
+
+				<!-- 맵영역 : S -->
+				<div class="map_wrap">					
+					<div class="w1200">
+						<!-- 티뮤지엄 맵 영역 : S -->
+						<div class="each_map museum_map on" id="musueum_map">
+							<div class="map_img_wrap">
+								<div class="map_img mo"><img src="/kr/ko/static_cdj/images/museum/map/map_museum_mo.jpg" alt="제주 티뮤지엄 맵 이미지"></div>
+								<div class="map_img pc">
+									<img src="/kr/ko/static_cdj/images/museum/map/map_museum_pc.jpg" alt="제주 티뮤지엄 맵 이미지">
+									<div class="hover_noti_txt">
+										<span>마우스를 올려 궁금한 장소를 확인해보세요.</span>
+									</div>
+									<div class="map_pin_wrap">
+										<ul class="pin_list">
+											<li class="pin_box"><button type="button" class="pin_btn"><span>1</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>2</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>3</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>4</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>5</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>6</span></button></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="spot_list_wrap">
+								<ul class="list_box">
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">1</span>티 테라스 : 신축영업동</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">2</span>다점(카페메뉴)</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">3</span>상품매대</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">4</span>전망대</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">5</span>로스터리존</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">6</span>티스톤</button></li>
+								</ul>
+							</div>
+						</div>
+						<!-- 티뮤지엄 맵 영역 : E -->
+
+						<!-- 오설록 맵 영역 : S -->
+						<div class="each_map osulloc_map" id="osulloc_map">
+							<div class="map_img_wrap">
+								<div class="map_img mo"><img src="/kr/ko/static_cdj/images/museum/map/map_osulloc_mo.jpg" alt="제주 오설록 맵 이미지"></div>
+								<div class="map_img pc">
+									<img src="/kr/ko/static_cdj/images/museum/map/map_osulloc_pc.jpg" alt="제주 오설록 맵 이미지">
+									<div class="hover_noti_txt">
+										<span>마우스를 올려 궁금한 장소를 확인해보세요.</span>
+									</div>
+									<div class="map_pin_wrap">
+										<ul class="pin_list">
+											<li class="pin_box"><button type="button" class="pin_btn"><span>1</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>2</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>3</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>4</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>5</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>6</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>7</span></button></li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>8</span></button></li>
+											<li class="pin_box">
+												<button type="button" class="pin_btn"><span>9</span></button>
+												<button type="button" class="pin_btn"><span>9</span></button>
+											</li>
+											<li class="pin_box"><button type="button" class="pin_btn"><span>10</span></button></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="spot_list_wrap">
+								<ul class="list_box">
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">1</span>오설록 유기농 차밭</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">2</span>제주 오설록 티뮤지엄</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">3</span>오설록 티스톤</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">4</span>곶자왈</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">5</span>이니스프리 제주하우스</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">6</span>오설록 농장</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">7</span>만수길 & 동백숲</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">8</span>추사 유배길 안내도</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">9</span>올레길 14-1</button></li>
+									<li class="spot_box"><button type="button" class="spot_btn"><span class="num">10</span>신축 영업동</button></li>
+								</ul>
+							</div>
+						</div>
+						<!-- 오설록 맵 영역 : E -->
+
+						
+					</div>
+				</div>
+				<!-- 맵영역 : E -->
+
+				<!-- 가격정보 및 이용안내 영역 : S -->
+				<div class="info_wrap">
+					<div class="w1200">
+						<div class="each_info">
+							<div class="info_tit">주소</div>
+							<div class="dsc">
+								<p class="text">제주특별자치도 서귀포시 신화역사로 15</p>
+							</div>
+						</div>
+						<div class="each_info">
+							<div class="info_tit">연락처</div>
+							<div class="dsc">
+								<p class="text">064-794-5312</p>
+							</div>
+						</div>
+						<div class="each_info">
+							<div class="info_tit">관람시간</div>
+							<div class="dsc">
+								<p class="text">연중무휴 (09:00 ~ 18:00 / 하절기 19:00)</p>
+								<ul class="dot_list02">
+									<li>폭우, 폭설 등 기상 상태에 따라 지연 개관 및 조기 폐관할 수 있습니다.</li>
+									<li>박물관 내부 및 야외에 외부음식물 반입이 금지되어 있습니다.</li>
+									<li>반려동물은 뮤지엄 내부로 데려오실 수 없습니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="each_info">
+							<div class="info_tit">관람료</div>
+							<div class="dsc">
+								<p class="text">무료</p>
+							</div>
+						</div>
+						<div class="each_info">
+							<div class="info_tit">오시는길</div>							
+							<div class="dsc">
+								<div class="inner_box">
+									<div class="info_sub_tit">자가용이용시</div>
+									<ul class="dot_list01">
+										<li>제주시/공항 > 1135번 평화로 > 동광 육거리 > 구억 방면(신화역사로) > 오설록 티뮤지엄 (50분 소요)</li>
+										<li>중문관광단지 > 1116번 극도 > 동광 육거리 > 구억 방면(신화역사로) > 오설록 티뮤지엄 (30분 소요)</li>
+										<li>한림 > 1132번 중산간 도로 > 생각하는 정원 > 유리의 성 > 오설록 티뮤지엄 (30분 소요)</li>
+									</ul>
+								</div>
+								<div class="inner_box">
+									<div class="info_sub_tit">대중교통이용시</div>
+									<ul class="dot_list03">
+										<li>
+											공항 & 제주시터미널 출발
+											<p class="inner_txt">버스 150-1번, 255번 > 도청(신제주로터리) > 한라병원 > 동광환승센터 > 오설록 하차</p>
+										</li>
+										<li>
+											운진항(모슬포) 출발
+											<p class="inner_txt">버스 150-1번, 255번 > 인성리 > 구억리 > NLCS제주 > 오설록 하차</p>
+										</li>
+										<li>
+											서귀포 터미널 출발
+											<p class="inner_txt">버스 181번, 282번 > 중문우체국 > 창천삼거리 > 동광환승센터에서 하차 후,<br> 버스 771-1번, 771-2번, 784-1번, 820-1번, 820-2번 중 환승 > NLCS제주 > 오설록 하차</p>
+										</li>
+										<li>
+											한림2리 출발
+											<p class="inner_txt">버스 784-1번 > 한림리 > 협재해변 > 저지리사무소 > 오설록 하차<br>버스 784-2번 > 한림리 > 협재해변 > 조수리 > 오설록 하차</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 가격정보 및 이용안내 영역 : E -->
+
+
+				<!-- 팝업 영역 : S -->
+				<section class="layer_popup_wrap cdj_renew type01" style="display: none;">
+					<div class="layer_box_new">
+						<div class="top_box">
+							<h4 class="layer_tit"></h4>
+							<p class="lyr_sub_tit"></p>
+							<button class="btn_close"></button>
+						</div>
+						<div class="content_box">
+							<div class="img_box"><img src="" alt=""></div>
+							<div class="text_box">
+								<p>
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- 팝업 영역 : E -->
+
+
+			</div>
+		</div>
+	
+	</main>
+	<!-- 티뮤지엄 - 맵 페이지 시작 : E -->
+
+	<script>
+		
+		$(document).ready(function(){
+			// 맵 팝업 내용
+			// ["이미지여부","국문타이틀","영문타이틀","설명"]
+			var spotConArr = [
+				[
+					["","티 테라스","티 테라스","티테라스"],
+					["","다점(카페메뉴)","다점(카페메뉴)","다점(카페메뉴)"],
+					["","상품매대","상품매대","상품매대"],
+					["","전망대","전망대","전망대"],
+					["","로스터리존","로스터리존","로스터리존"],
+					["","티스톤","티스톤","티스톤"]
+				],
+				[
+					["hasImg","서광차밭","SeogwangTea Garden","오설록 유기농 차밭인 서광차밭은 제주 서귀포시 서광리에 조성된 광활한 유기농 차밭입니다. 애초에 이 지역은 돌밭이어서 작물재배가 불가능한 곳이었지만, 오설록이 1983년부터 20여 년간 개간하여 척박한 땅을 웅비의 땅으로 변모시켜 현재는 우리나라에서 가장 광활한 유기농 차밭이 되었습니다. 차밭 주변에는 우리나라 최대 규모의 차문화 박물관인 오설록 티뮤지엄, 추사 김정희 선생의 추사유배지, 제주의 특별한 숲 ‘곶자왈’ 등이 인접하고 있어 이지역 전체가 제주의 대표적인 랜드마크가 되었습니다."],
+					["hasImg","티뮤지엄","Jeju OSULLOC Tea Museum","'제주 오설록 티뮤지엄은 사라져가는 우리의 차 문화를 계승, 발전시키고 보다 많은 이들에게 우리 차 문화의 가치와 우수성을 널리 전파하려는 '아름다운 집념'이 집약된 한국 차 문화의 발상지이자 국내 최대 규모의 차 종합 전시관입니다. 2002년 개관 이래 매년 150만명 이상 찾는 관광명소인 이곳은, 우리나라 차 문화의 전통과 역사를 볼 수 있는 공간, 제주의 자연 속에서 편히 쉴 수 있는 휴식공간, 그리고 차를 활용한 맛있고 다양한 메뉴를 즐기는 카페공간 등 특별한 경험들이 기다리고 있습니다."],
+					["hasImg","티스톤","OSULLOC Tea Stone","문화의 즐기는것. 제주 오설록 티스톤은 생활 속 멋진 차문화를 경험하는 차문화 체험공간입니다. 티 스톤이 서있는 땅 위(상층)에는 추사 김정희 선생의 세한도와 추사체를 주제로한 미디어 아트를 비롯해 멋스러운 티타임 공간이 마련되어 있습니다. 그리고 티스톤이 뿌리 내린 땅 아래(하층)에는 제주의 자연과 시간으로 빚어내는 오설록의 시그니처 발효차 ‘삼다연’의 숙성고 체험공간이 위치해 있습니다."],
+					["","곶자왈","Gotjawal Forest","제주 오설록 티뮤지엄과 이니스프리 제주하우스를 둘러싸고 있는 곶자왈은 숲이라는 의미로 '곶'과 암석과 가시덤불이 뒤엉킨 모습을 뜻하는 '자왈'의 제주도 방언을 말하는 것으로 지나는 이들에게 목가적인 느낌을 선사하는 하늘 아래 정원 같은 곳입니다."],
+					["hasImg","이니스프리 제주하우스","Innisfree Jeju House","청정섬 제주 자연의 혜택을 담은 화장품을 만드는 이니스프리는 보다 많은 분들이 제주의 아름다움을 다양하게 체험하고 즐기실 수 있도록 이니스프리 제주하우스를 만들었습니다. 이니스프리 제주하우스는 청정섬 제주 원료로 만든 화장품, 천연 비누 만들기 체험공간, 제주의 신선한 식재료로 만든 오가닉 카페등 제주 자연 속에서 오감을 만족시키는 다양한 체험과 제주 자연의 편안한 휴식을 즐길 수 있는 공간입니다. 이니스프리 제주하우스에서 자연과 하나된 건강한 아름다움을 만나보세요."],
+					["hasImg","오설록 농장","OSULLOC Farm","오설록 농장은 차(TEA) 나무의 품종개발에서부터 차에 대한 연구, 재배, 가공에 이르는 모든 단계에서 최고 수준의 인적, 물적 자원을 갖춘 차원료 전문기업입니다. 세계적인 차 재배지인 제주땅에 총 3개(서광,도순,한남차밭), 전남 강진에 1개(강진차밭) 등 총 4개의 유기농 차밭을 과학적으로 관리하며 세계 최고 품질의 차를 생산하는 오설록 농장은 국내에서 아모레퍼시픽 오설록에 양질의 차원료를 공급하는 것은 물론, 일본과 미국은 물론 유럽의 국가에도 차원료를 수출할 만큼 신뢰와 그 기술력을 인정받고 있습니다."],
+					["","만수길 & 동백숲","Mansu-Gil & Camellia Forest","오설록 만수길이란, 세계 10대 건강식품인 녹차와 수백 년을 산다는 동백나무 100여 그루가 이루는 길입니다. 방문하신 모든 분들이 이길을 걸음으로 써 무병장수를 누리시길 바라는 오설록의 마을을 담은 길이기도 합니다. 만수길을 거닐다보면 드넒은 서광차밭과 저 멀리 한라산이 이루는 멋진 배경으로 사진을 촬영할 수 있는 '만수길포토존'이 마련되어 있습니다."],
+					["","추사 유배길 안내도","Chusa's Exile Road Guide Map","스토리가 결합된 '추사유배길'에는 추사 김정희의 유배생활을 느낄 수 있는 이야기가 곁들여져 있습니다. 추사 유배길은 3코스로 나뉘는데 제1코스는 '집념의 길'로 제주 추사관에서 시작해 정난주 마리아묘, 다정항교를 거쳐 다시 제주 추사관으로 돌아오는 약 8km의 순환코스로 약 3시간이 소요됩니다. 제 2코스 '인연의 길'은 추사의 한시, 편지, 차 등을 통해 추사의 인연들을 떠올리는 길로 제주옹기를 만들었던 도요지와 제주 옹기 박물관이 있어 제주 옹기문화를 함께 만날 수 있습니다. 추사 유배지에서 시작해 오설록의 녹차밭까지 이어지는 8km의 코스로 3시간 가량 걸립니다. 마지막 제3코스 '사색의길'은 산방산의 웅장함과 안덕계곡의 경관을 따라 걸으면 제주의 바다와 오름, 계곡의 경치를 느낄 수 있는 길입니다. 대정향교에서 시작해 산방산을 거쳐 안덕계곡까지 약 10km에 이르는 코스로 4시간정도 소요됩니다."],
+					["","올레길 14-1","Jeju Olle Trail Course 14-1","저지에서 무릉까지 이어지는 제주 올레 14-1코스(18.8km)는 제주만의 독특한 숲 '곶자왈'을 비롯해 광활한 푸르름과 시원함을 선사하는 오설록 서광차밭등 자연의 무한한 생명력을 느낄 수 있는 인기 올레길 코스입니다."],
+					["","신축 영업동","신축 영업동","신축 영업동"]
+				]
+			];
+			
+
+			//맵 마우스 오버 이벤트
+			var $mapPin = $(".map_pin_wrap .pin_box"),
+				$mapSpot = $(".spot_list_wrap .spot_box"),
+				$mapEach = $(".map_wrap .each_map");
+
+			eachHover($mapSpot, $mapPin);
+			eachHover($mapPin, $mapSpot);
+			clickEvnt($mapSpot);
+			clickEvnt($mapPin);
+
+			function eachHover($trigger, $target) {
+				$trigger.each(function(i, el){
+					var $this = $(el);
+					$this.on("mouseenter mouseleave focus blur" , function() {
+						$this.toggleClass("on");
+						$target.eq(i).toggleClass("on");
+					});
+				});
+			}
+
+			//맵 스팟 클릭 이벤트
+			function clickEvnt($eachBtn){
+				$eachBtn.on('click', function() {
+
+					var eachBtnIndex = $(this).index(); // 클릭한 버튼 li 인덱스
+					var $eachMap = $(this).parents('.each_map'); // 클릭한 버튼의 부모 ( 여기서는 each_map )
+					var eachMapIndex = $eachMap.index(); // eachMap 의 인덱스
+					var $layerPopupWrap = $(".cdj_renew.teaMuseum .layer_popup_wrap");
+					var $tit = $layerPopupWrap.find('.layer_tit'); 
+					var $subTit = $layerPopupWrap.find('.lyr_sub_tit');
+					var $textBox = $layerPopupWrap.find('.text_box > p');
+					var $img = $layerPopupWrap.find('.img_box img');
+					var imgSrc = ''; 
+					var dataArray = spotConArr[eachMapIndex]; 					
+
+					
+					if ( $eachMap.hasClass('museum_map') ) {
+						imgSrc = '/kr/ko/static_cdj/images/museum/map/museum_spot_' + (eachBtnIndex+1) + '.jpg';
+					} else if ( $eachMap.hasClass('osulloc_map') ) {
+						imgSrc = '/kr/ko/static_cdj/images/museum/map/osulloc_spot_' + (eachBtnIndex+1) + '.jpg';
+					}
+					
+					$tit.html(dataArray[eachBtnIndex][1]);
+					$subTit.html(dataArray[eachBtnIndex][2]);
+					$textBox.html(dataArray[eachBtnIndex][3]);
+					
+					$img.attr('src', imgSrc);
+					$img.attr('alt', dataArray[eachBtnIndex][1]);
+					if(dataArray[eachBtnIndex][0] == false){
+						$img.attr('src', "/kr/ko/static_cdj/images/museum/map/spot_default.jpg");
+						$img.attr('alt', "OSSULOC");
+					} 
+					
+					$layerPopupWrap.show();
+
+				});
+			}
+			
+
+			// 스크롤 시 탭메뉴 고정
+			$(window).scroll(function(){ 
+				var currScroll = $(document).scrollTop();
+				var headerH = $("#cdj_header").outerHeight();
+				var topBannerH = $(".cdj_renew.teaMuseum .top_wrap").outerHeight();
+				var fixedH = headerH + topBannerH;
+				var $tabMenu = $(".cdj_renew.teaMuseum .my_tab");
+				if(currScroll >= fixedH){ 
+					$tabMenu.addClass("fixed");
+				}else{ 
+					$tabMenu.removeClass("fixed");
+				} 
+			});
+
+			//티스톤 탭버튼 클릭 이벤트
+			var $tabBtn = $(".cdj_renew.teaMuseum .my_tab_list .tab_btn");
+			var $echMap = $(".cdj_renew.teaMuseum .map_wrap .each_map");
+			$tabBtn.each(function(i,v) {
+				$(this).on({
+					click: function(){
+						var currScroll = $(document).scrollTop();
+						var headerH = $("#cdj_header").outerHeight();
+						var topBannerH = $(".cdj_renew.teaMuseum .top_wrap").outerHeight();
+						var fixedH = headerH + topBannerH;
+
+						$tabBtn.parent("li").removeClass("on");
+						$(this).parent("li").addClass("on");
+
+						$echMap.removeClass("on");
+						$echMap.eq(i).addClass("on");
+
+						if(currScroll > fixedH){
+							$( 'html, body' ).animate( { scrollTop : fixedH}, 500 );
+						}
+					}
+				});
+			});
+			
+			
+		});
+
+	</script>
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

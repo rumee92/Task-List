@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 1:1상담 신청 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">1:1상담</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		<!-- 컨텐츠 : S -->
+		<form action="">
+			<div class="my_cs_qna">
+				<section class="section">
+					<div class="qna_form_info">
+						<div class="inner_box">
+							<p class="top_text">문의사항을 남겨주시면 빠른 시간내에<br class="moBlock"> 답변을 드리도록 하겠습니다.</p>
+							<ul class="dot_list">
+								<li class="item">이메일, 핸드폰번호를 변경하려면 <a class="link_text" href="#">회원정보수정</a> 페이지에서 변경해주세요.</li>
+								<li class="item">문의하시기 전 <a class="link_text" href="#">FAQ</a>를 참고해주세요.</li>
+								<li class="item">한번 등록한 상담내용은 수정이 불가능합니다.</li>
+								<li class="item">수정을 원하시는 경우 삭제 후 재등록하셔야 합니다.</li>
+								<li class="item">알림 받기를 설정하시면 1:1 상담 답변완료시 고객님의 메일과 카카오톡 알림톡으로도 확인하실 수 있습니다.</li>
+								<li class="item">고객상담센터 답변가능시간 <br class="moBlock">오전 9시~오후 6시(토/일/공휴일 제외)</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section">
+					<div class="qna_form_wrap">
+						<div class="inner_box">
+							<div class="item">
+								<div class="category">
+									<p class="text">문의 유형<span class="req">*</span></p>
+								</div>
+								<div class="form_box">
+									<div class="inp_selectbox">
+										<select name="" id="" class="inp_select">
+											<option value="" selected="">문의 유형 선택</option>
+											<option value="">주문/결제</option>
+											<option value="">배송</option>
+											<option value="">환불/반품/교환</option>
+											<option value="">이벤트/쿠폰</option>
+											<option value="">회원/포인트</option>
+											<option value="">사이트 이용/기타</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							
+							
+							<!-- 문의상품은 문의 유형 중 주문/결제 , 배송 , 환불/반품/교환 일때만 노출 됨 -->
+							<div class="item">
+								<div class="category">
+									<p class="text">문의 상품</p>
+								</div>
+								<!-- 상품 선택 후 노출 되는 영역(qna_prd_wrap) : S -->
+								<div class="qna_prd_wrap">
+									<div class="prd_box">
+										<div class="box_top">
+											<p class="order_num">주문번호 <span class="num">23423452</span></p>
+											<p class="date">2022.04.05</p>
+										</div>
+										<div class="box_con">
+											<ul class="prd_list">
+												<li class="item">
+													<div class="img_box">
+														<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img01.png" alt=""></a>
+													</div>
+													<div class="text_box">
+														<div class="left">
+															<p class="prd_name">
+																<a href="#">베스트 티 컬렉션</a>
+															</p>
+															<p class="prd_packing">유료포장 선택안함</p>
+														</div>
+														<div class="right">
+															<p class="prd_price">
+																<span class="price">25,000원</span>/<span class="count">1개</span>
+															</p>
+														</div>
+													</div>
+													<button type="button" class="del_btn" onclick=""></button>
+												</li>
+												<li class="item">
+													<div class="img_box">
+														<a href="#"><img src="/kr/ko/static_cdj/images/mypage/review_img02.png" alt=""></a>
+													</div>
+													<div class="text_box">
+														<div class="left">
+															<p class="prd_name">
+																<a href="#">달빛걷기 10입(피라미드)</a>
+															</p>
+															<p class="prd_packing">쇼핑백 부가 서비스(100원)</p>
+														</div>
+														<div class="right">
+															<p class="prd_price">
+																<span class="price">125,000원</span>/<span class="count">5개</span>
+															</p>
+														</div>
+													</div>
+													<button type="button" class="del_btn" onclick=""></button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 상품 선택 후 노출 되는 영역(qna_prd_wrap) : E -->
+								<div class="form_box">
+									<div class="prd_add_btn">
+										<button type="button" class="button">상품 선택</button>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="item">
+								<div class="category">
+									<p class="text">제목<span class="req">*</span></p>
+								</div>
+								<div class="form_box">
+									<input type="text" class="inp_text" title="제목을 입력해주세요" placeholder="제목을 입력해주세요" value="">
+								</div>
+							</div>
+							<div class="item">
+								<div class="category">
+									<p class="text">문의 내용<span class="req">*</span></p>
+								</div>
+								<div class="form_box">
+									<div class="text_area">
+										<textarea name="" id="" cols="" rows="" maxlength="2000" placeholder="내용을 입력해주세요." class="qna_text_area"></textarea>
+										<div class="text_cnt"><span>0</span>/2000</div>
+									</div>
+								</div>
+								<div class="my_img_uploader">
+									<div class="upload_box">
+										<div class="list_box">
+											<div class="img_list"></div>
+										</div>
+										<div class="btn_box">
+											<input type="file" class="img_upload" id="img_upload" name="img_upload" accept="image/*" value="" multiple>
+											<label for="img_upload">이미지 등록 <span class="count"><em class="current">0</em>/4</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="qna_chk_box">
+									<div class="inp_check">
+										<input type="checkbox" id="qna_chk1" name="qna_chk1">
+										<label for="qna_chk1">답변 완료 시 이메일로 받으시겠습니까?</label>
+										<p class="desc">sun*******@naver.com</p>
+									</div>
+									<div class="inp_check">
+										<input type="checkbox" id="qna_chk2" name="qna_chk2">
+										<label for="qna_chk2">답변 완료 시 SMS로 받으시겠습니까?</label>
+										<p class="desc">010-66**-21**</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section">
+					<div class="w1200">
+						<div class="qna_form_btn">
+							<div class="btn_box"><button type="button" class="button cancle_btn" onclick="">취소</button></div>
+							<!-- 등록버튼 - 필수값 모두 등록시 활성화됨 save_btn에 클래스 on 추가 -->
+							<div class="btn_box"><button type="button" class="button save_btn" onclick="">등록</button></div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</form>
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 1:1상담 신청 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0 myRewardPayList">
+		<div class="inner_p mgt20">
+			<div class="tabType tabType1 length2">
+				<ul>
+					<li><a href="#"><span>리워드 내역</span></a></li>
+					<li><a href="#" class="current"><span>리워드 정산 내역</span></a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="currentRewardPay">
+			<div class="infoWrap">
+				<div class="box1">
+					<p class="name fc88"><em class="fc22 notoB">COCO 허니제이</em>님은,</p>
+					<p class="desc notoB mgt10">지금까지 총 <em class="fcPink">15,800원</em>을<br>정산 받으셨네요.</p>
+				</div>
+				<div class="box2">
+					<div class="item">
+						<p class="tit notoB fc88">멤버십 포인트 정산</p>
+						<p class="count notoB">10,000<span class="unit">원</span></p>
+					</div>
+					<div class="item mgt5">
+						<p class="tit notoB fc88">현금 정산</p>
+						<p class="count notoB">2,300<span class="unit">원</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="mgt10 inner_p pdb20">
+				<ul class="dotInfo">
+					<li>출금신청 이후, 정산 방식 변경은 불가합니다.</li>
+					<li>현금 정산 시, 등록 계좌로 익월 영업일 7일이내 지급됩니다.</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 리워드 정산 내역 리스트 -->
+		<div class="listWrap bdTCon">
+			<div class="dateFilter inner_p mgt15">
+				<div class="tabType tabType1 length4 no_link">
+					<ul>
+						<li><a href="#" class="current"><span>1개월</span></a></li>
+						<li><a href="#"><span>3개월</span></a></li>
+						<li><a href="#"><span>6개월</span></a></li>
+						<li><a href="#"><span>12개월</span></a></li>
+					</ul>
+				</div>
+				<div class="inp_wrap inp_date mgt15">
+					<div class="inp_text">
+						<label for="cartNumberSearch_date1">시작 일자</label>
+						<input type="date" name="cartNumberSearch_date1" id="cartNumberSearch_date1">
+					</div>
+					<span class="hyphen">~</span>
+					<div class="inp_text">
+						<label for="cartNumberSearch_date2">종료 일자</label>
+						<input type="date" name="cartNumberSearch_date2" id="cartNumberSearch_date2">
+					</div>
+					<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span class="fs13">검색</span></a>
+				</div>
+			</div>
+			<div class="listBox mgt15">
+				<div class="tabType tabType2 inner_p">
+					<ul>
+						<li><a href="javascript:void(0);" class="current">전체</a></li>
+						<li><a href="javascript:void(0);">정산요청</a></li>
+						<li><a href="javascript:void(0);">정산예정</a></li>
+						<li><a href="javascript:void(0);">정산완료</a></li>
+						<li><a href="javascript:void(0);">정산실패</a></li>
+					</ul>
+				</div>
+				<div class="listCon mgt15 inner_p">
+					<ul>
+						<!-- 정산요청 -->
+						<li class="item">
+							<div class="left">
+								<p class="stateTag">정산요청</p>
+								<div class="infoBox">
+									<p class="tit">현금</p>
+									<p class="desc">요청일시 2022-11-28 03:50</p>
+									<p class="desc">계좌번호 [국민] 1202939408123</p>
+								</div>
+							</div>
+							<div class="right">
+								<p class="count"><em class="num notoB">500</em> 원</p>
+							</div>
+						</li>
+						
+						<!-- 정산예정 -->
+						<li class="item">
+							<div class="left">
+								<p class="stateTag">정산예정</p>
+								<div class="infoBox">
+									<p class="tit">현금</p>
+									<p class="desc">요청일시 2022-11-28 03:50</p>
+									<p class="desc">계좌번호 [국민] 1202939408123</p>
+								</div>
+							</div>
+							<div class="right">
+								<p class="count"><em class="num notoB">2,000</em> 원</p>
+							</div>
+						</li>
+						
+						<!-- 정산완료 : item에 success 클래스 추가 -->
+						<li class="item success">
+							<div class="left">
+								<p class="stateTag">정산완료</p>
+								<div class="infoBox">
+									<p class="tit">현금</p>
+									<p class="desc">요청일시 2022-11-28 03:50</p>
+									<p class="desc">완료일시 2022-12-20 09:00</p>
+								</div>
+							</div>
+							<div class="right">
+								<p class="count"><em class="num notoB">1,500</em> 원</p>
+							</div>
+						</li>
+						
+						<!-- 정산실패 : item에 fail 클래스 추가 -->
+						<li class="item fail">
+							<div class="left">
+								<p class="stateTag">정산실패</p>
+								<div class="infoBox">
+									<p class="tit">현금</p>
+									<p class="desc">요청일시 2022-11-28 03:50</p>
+									<p class="desc">완료일시 2022-12-20 09:00</p>
+									<p class="desc">계좌번호 [국민] 1202939408123</p>
+									<p class="desc">실패사유 : 계좌 불일치</p>
+								</div>
+							</div>
+							<div class="right">
+								<p class="count"><em class="num notoB">1,000</em> 원</p>
+							</div>
+						</li>
+					</ul>
+					<div class="btn_wrap mgt20">
+						<a href="#" class="btnMore"><span>더 보기 1<em>/99</em></span></a>
+					</div>
+				</div>
+				
+				<!-- 230405 추가 : 내역 없을때 노출 -->
+				<div class="noList mgt15">
+					<div class="desc">리워드 정산 내역이 없습니다.</div>
+				</div>
+				<!-- //내역 없을때 노출 -->
+			</div>
+		</div>
+		<!-- //리워드 정산 내역 리스트 -->
+		
+		<div class="rewardInfo mgt30">
+			<p class="titInfo">유의사항</p>
+			<ul class="dotInfo mgt15">
+				<li>본 리워드 프로그램은 내부 사정에 따라 조기 종료 및 변경될 수 있습니다.</li>
+				<li class="mgt10">본 리워드 프로그램은 회사의 자체적인 점검 등을 통해 부당한 리워드로 의심되는 정황이 있는 경우, 확인 시까지 정산을 보류 및 거절 또는 회수할 수 있습니다.</li>
+			</ul>
+		</div>
+		
+		<!-- 리워드 하단 배너 모음 -->
+		<div class="rewardBannerWrap mgt30 inner_p">
+			<div class="item">
+				<a href="#" class="itemLink">
+					<p class="tit notoB">리워드 FAQ</p>
+					<p class="desc mgt5 fc88">
+						자주 질문하는 사항들을 모아두었어요.<br>
+						원하시는 질문과 답변을 찾아보세요.
+					</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="itemLink">
+					<p class="tit notoB">리워드 프로그램 소개</p>
+					<p class="desc mgt5 fc88">
+						바닐라닷컴 리워드 프로그램을 알기 쉽게 소개해 드려요.<br>
+						링크 공유만으로 수익을 쌓을 수 있는 방법을 알아보세요.
+					</p>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#" class="itemLink">
+					<p class="tit notoB">리워드 프로그램 이용 정책</p>
+					<p class="desc mgt5 fc88">
+						바닐라닷컴 리워드 프로그램의 모든 것을 알려드려요.<br>
+						프로그램 내 자세한 이용정책을 알아보세요.
+					</p>
+				</a>
+			</div>
+		</div>
+		<!-- // 리워드 하단 배너 모음 -->
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head include -->
+<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/head.html'; ?>
+
+<body>
+
+	<!-- header include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/header.html'; ?>
+	
+
+	<!-- CDJ 개선 마이페이지 반품신청 : S -->
+	<main class="main cdj_renew">
+		<!-- 타이틀 : S -->
+		<section class="section page_tit_box mypageT">
+			<div class="w1200">
+				<h2 class="page_tit">반품신청</h2>
+			</div>
+		</section>
+		<!-- 타이틀 : E -->
+		
+		
+		<!-- 컨텐츠 : S -->
+		<section class="section">
+			<div class="cre_order_num">
+				<div class="inner_box">
+					<div class="con_box">
+						<div class="left">주문 번호<span class="num">204039597832</span></div>
+						<p class="right">2022.04.04</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section my_section02">
+			<div class="my_order_prd_list">
+				<div class="inner_box">
+					<h3 class="my_order_tit">
+						<div class="left">
+							<p class="text">주문상품</p>
+						</div>
+						<div class="right">
+							<!-- 상태에 따라 다르게 노출 됨 -->
+							<ul class="state_list">
+								<li class="item pt">배송완료</li>
+							</ul>
+							<p class="text">총 5건</p>
+						</div>
+					</h3>
+					
+					<div class="order_prd_list return">
+						<div class="order_list_box">
+							<p class="order_prd_title">일반상품<span class="count">(3개)</span></p>
+							<ul class="list_type_2">
+								<li class="list_item">
+									<div class="thumb_con">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selPrd1" name="selPrd">
+												<label for="selPrd1"></label>
+											</div>
+										</div>
+										<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/prd_sample01.png" alt=""></div>
+										<div class="text_box">
+											<p class="prd_name">베스트 티 컬렉션 3종</p>
+											<p class="packing_state">유료포장 선택안함</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+											<div class="prd_price_amount">
+												<span class="price">25,000원</span> / <span class="amount">1개</span>
+											</div>
+										</div>
+									</div>
+									<div class="count_price">
+										<div class="count_box">
+											<div class="counter">
+												<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+												<input type="text" class="count_result" name="" id="" value="10">
+												<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+											</div>
+										</div>
+										<div class="desc_box">
+											<p class="text">반품 가능 수량 : <span class="num">10</span></p>
+										</div>
+									</div>
+								</li>
+								<li class="list_item">
+									<div class="thumb_con">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selPrd2" name="selPrd">
+												<label for="selPrd2"></label>
+											</div>
+										</div>
+										<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/prd_sample02.png" alt=""></div>
+										<div class="text_box">
+											<p class="prd_name">달빛걷기 10입(피라미드)</p>
+											<p class="packing_state">쇼핑백 부가 서비스</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+											<div class="prd_price_amount">
+												<span class="price">75,000원</span> / <span class="amount">3개</span>
+											</div>
+										</div>
+									</div>
+									<div class="count_price">
+										<div class="count_box">
+											<div class="counter">
+												<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+												<input type="text" class="count_result" name="" id="" value="3">
+												<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+											</div>
+										</div>
+										<div class="desc_box">
+											<p class="text">반품 가능 수량 : <span class="num">3</span></p>
+										</div>
+									</div>
+								</li>
+								<li class="list_item">
+									<div class="thumb_con">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selPrd3" name="selPrd">
+												<label for="selPrd3"></label>
+											</div>
+										</div>
+										<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/prd_sample03.png" alt=""></div>
+										<div class="text_box">
+											<p class="prd_name">삼다연제주영귤 3입(피라미드)</p>
+											<p class="packing_state">유료포장 선택</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+											<div class="prd_price_amount">
+												<span class="price">4,500원</span> / <span class="amount">1개</span>
+											</div>
+										</div>
+									</div>
+									<div class="count_price">
+										<div class="count_box">
+											<div class="counter">
+												<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+												<input type="text" class="count_result" name="" id="" value="1">
+												<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+											</div>
+										</div>
+										<div class="desc_box">
+											<p class="text">반품 가능 수량 : <span class="num">1</span></p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="order_list_box">
+							<p class="order_prd_title">베이커리<span class="count">(1개)</span></p>
+							<ul class="list_type_2">
+								<li class="list_item">
+									<div class="thumb_con">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selPrd4" name="selPrd">
+												<label for="selPrd4"></label>
+											</div>
+										</div>
+										<div class="img_box"><img src="/kr/ko/static_cdj/images/mypage/prd_sample04.png" alt=""></div>
+										<div class="text_box">
+											<p class="prd_name">달빛보틀 + 찬물녹차 20입 (아이스티)</p>
+											<p class="packing_state">무료포장</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+											<div class="prd_price_amount">
+												<span class="price">3,660,000원</span> / <span class="amount">99개</span>
+											</div>
+										</div>
+									</div>
+									<div class="count_price">
+										<div class="count_box">
+											<div class="counter">
+												<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+												<input type="text" class="count_result" name="" id="" value="24">
+												<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+											</div>
+										</div>
+										<div class="desc_box">
+											<p class="text">반품 가능 수량 : <span class="num">3</span></p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="order_list_box">
+							<p class="order_prd_title">입점몰<span class="count">(1개)</span></p>
+							<ul class="list_type_2">
+								<li class="list_item">
+									<div class="thumb_con">
+										<div class="chk_box">
+											<div class="inp_check">
+												<input type="checkbox" id="selPrd5" name="selPrd">
+												<label for="selPrd5"></label>
+											</div>
+										</div>
+										<div class="img_box"><img src="/kr/ko/static_cdj/images/shop/order_list_prd_thumb03.jpg" alt=""></div>
+										<div class="text_box">
+											<p class="prd_name">달빛보틀 + 찬물녹차 20입 (아이스티)</p>
+											<p class="packing_state">무료포장</p>
+											<p class="prd_gifts">사은품 : 페이퍼참(동백) / 페이퍼참(사각)</p>
+											<div class="prd_price_amount">
+												<span class="price">3,660,000원</span> / <span class="amount">99개</span>
+											</div>
+										</div>
+									</div>
+									<div class="count_price">
+										<div class="count_box">
+											<div class="counter">
+												<button type="button" class="c_btn c_btn1" title="수량 감소" onclick=""></button>
+												<input type="text" class="count_result" name="" id="" value="3">
+												<button type="button" class="c_btn c_btn2" title="수량 증가" onclick=""></button>
+											</div>
+										</div>
+										<div class="desc_box">
+											<p class="text">반품 가능 수량 : <span class="num">99</span></p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="my_order_gifts_box">
+						<div class="w1200">
+							<h3 class="tit">사은품</h3>
+							<div class="img_box">
+								<div class="item">
+									<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img1.jpg" alt=""></div>
+									<p class="prd_name">그린티 시트 마스크<br>2입 (증정용)</p>
+								</div>
+								<div class="item">
+									<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img2.jpg" alt=""></div>
+									<p class="prd_name">제주섬 녹차<br>아몬드볼 3입</p>
+								</div>
+								<div class="item">
+									<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img3.jpg" alt=""></div>
+									<p class="prd_name">오설록<br>삼다연제주영귤 1입</p>
+								</div>
+								<div class="item">
+									<div class="img"><img src="/kr/ko/static_cdj/images/shop/gifts_img4.jpg" alt=""></div>
+									<p class="prd_name">루이보스<br>카라멜베리 1입</p>
+								</div>
+							</div>
+							<div class="my_dot_box">
+								<p class="tit">반품시 사은품 관련 유의사항 문구 영역</p>
+								<ul class="list">
+									<li class="item">선택하신 사은품은 배송기간 중 품절이나 소진 시 동일 수준 또는 더 좋은 사은품으로 변경될 수 있습니다.</li>
+									<li class="item">누적 뷰티포인트 50만점 제한 정책으로 인하여 예상 적립 포인트와 실제 적립 포인트는 다를 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section my_section02">
+			<div class="w1200">
+				<div class="cre_reason">
+					<h3 class="my_sub_tit fz15">반품사유</h3>
+					<div class="con_box">
+						<p class="left pcBlock">반품 사유 선택</p>
+						<div class="right">
+							<div class="form_box">
+								<div class="inp_selectbox">
+									<select name="" id="" class="inp_select">
+										<option value="" selected="">고객변심</option>
+										<option value="">제품불량 (파손, 유통기한 경과 등)</option>
+										<option value="">오배송 (주문제품과 다름)</option>
+										<option value="">일시품절 (배송지연 포함)</option>
+										<option value="1">직접입력</option>
+									</select>
+								</div>
+								<div class="text_area">
+									<textarea name="" id="" cols="" rows="" maxlength="60" placeholder="사유를 입력해 주세요." class="cre_cancle_text_area"></textarea>
+									<div class="text_cnt"><span>0</span>/60</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section my_section02 my_order_info_wrap">
+			<div class="inner_box">
+				<div class="my_order_info_box">
+					<h3 class="my_order_tit">
+						<div class="left"><p class="text">회수지 정보</p></div>
+						<div class="right">
+							<button class="button" type="button" onclick="">회수지 변경</button>
+						</div>
+					</h3>
+					<div class="con_box">
+						<table class="my_table_type01">
+							<caption>회수지 정보</caption>
+							<colgroup class="mo">
+								<col style="width:100px;">
+								<col>
+							</colgroup>
+							<colgroup class="pc">
+								<col style="width:140px;">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">
+										<p class="left">보내는 분</p>
+									</th>
+									<td>
+										<p class="td_text">오설록/010-5555-6666</p>
+										<p class="td_text">[08506] 서울특별시 금천구 가산동 371-50 (가산동) 705호</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="section my_section02 my_order_price_wrap">
+			<div class="inner_box">
+				<div class="my_order_price_box">
+					<h3 class="my_order_tit">
+						<div class="left">
+							<p class="text">
+								<span>환불 금액</span>
+							</p>
+						</div>
+					</h3>
+				</div>
+				<div class="con_box pay_price_info">
+					<div class="price_info">
+						<ul class="list">
+							<li class="item">
+								<div class="top_item">
+									<p class="item_name">주문 결제 금액</p>
+									<p class="item_val">68,000원</p>
+								</div>
+								<div class="sub_item">
+									<p class="item_name">총 상품 금액</p>
+									<p class="item_val">76,000원</p>
+								</div>
+								<div class="sub_item">
+									<p class="item_name">총 할인 혜택</p>
+									<p class="item_val prd_sale">-10,000원</p>
+								</div>
+								<div class="sub_item">
+									<p class="item_name">포인트 결제</p>
+									<p class="item_val prd_sale">-300원</p>
+								</div>
+								<div class="sub_item">
+									<p class="item_name">배송비</p>
+									<p class="item_val">2,500원</p>
+								</div>
+							</li>
+							<li class="item">
+								<div class="top_item">
+									<p class="item_name">차감 금액</p>
+									<p class="item_val">8,000원</p>
+								</div>
+								<div class="sub_item">
+									<p class="item_name">배송비</p>
+									<p class="item_val">2,500원</p>
+								</div>
+								<div class="sub_item">
+									<p class="item_name">반품 배송비</p>
+									<p class="item_val">5,500원</p>
+								</div>
+							</li>
+						</ul>
+						
+						<div class="expected_price">
+							<p class="item_name">최종 환불 금액</p>
+							<p class="item_val">60,000<span class="unit">원</span></p>
+						</div>
+						<div class="expected_point return_info">
+							<!-- 일반결제 : S -->
+							<div class="item">
+								<p class="item_name">신용카드(신한카드) / 일시불</p>
+								<p class="item_val">58,000원</p>
+							</div>
+							<!-- 일반결제 : E -->
+							
+							<!-- 무통장 : S -->
+							<div class="item">
+								<p class="item_name">
+									<span class="text01">무통장입금</span>
+									<span class="text02">기업 234267405017 (주)오설록</span>
+									<span class="text02">2022.04.31까지</span>
+								</p>
+								<p class="item_val">58,000원</p>
+							</div>
+							<!-- 무통장 : E -->
+							
+							<div class="item">
+								<p class="item_name">뷰티포인트</p>
+								<p class="item_val">2,000원</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- 무통장입금 후 취소신청 할 경우 노출 : S -->
+		<section class="section my_section02">
+			<div class="w1200">
+				<div class="cre_account">
+					<h3 class="my_sub_tit fz15">환불계좌</h3>
+					<div class="con_box">
+						<div class="box01">
+							<div class="item">
+								<div class="category">
+									<p class="text">예금주</p>
+								</div>
+								<div class="form_box">
+									<input type="text" class="inp_text" title="제목을 입력해주세요" value="">
+								</div>
+							</div>
+							<div class="item">
+								<div class="category">
+									<p class="text">은행</p>
+								</div>
+								<div class="form_box">
+									<div class="inp_selectbox">
+										<select name="" id="" class="inp_select">
+											<option value="" selected="">은행을 선택해 주세요.</option>
+											<option value="">신한은행</option>
+											<option value="">국민은행</option>
+											<option value="">하나은행</option>
+											<option value="">우리은행</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box02">
+							<div class="item">
+								<div class="category">
+									<p class="text">계좌번호</p>
+								</div>
+								<div class="form_box">
+									<input type="number" class="inp_text" title="제목을 입력해주세요" placeholder="‘-’ 없이 숫자만 입력해 주세요." value="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 무통장입금 후 취소신청 할 경우 노출 : E -->
+		
+		<section class="section">
+			<div class="my_order_bottom_box">
+				<div class="inner_box">
+					<div class="my_dot_box">
+						<ul class="list">
+							<li class="item">반품을 원하는 상품을 선택 후, 반품 신청 버튼을 클릭해주세요.</li>
+							<li class="item">반품시 배송 받은 본품에 포함된 판촉물 및 사은품도 회수합니다.</li>
+							<li class="item red">반품신청 시 배송비가 발생할 경우, 회수지로 방문한 택배사 직원에게 결제 부탁드립니다.</li>
+							<li class="item">반품승인완료 후 사용한 쿠폰은 복원됩니다. 쿠폰은 <a class="link_text" href="#">마이페이지</a> > <a class="link_text" href="#">쿠폰</a>에서 확인하실 수 있습니다.</li>
+							<li class="item">무통장입금 결제의 경우, 취소접수완료 후 영업일기준 3일 후에 환불처리 됩니다.</li>
+							<li class="item">카드사별로 실제 취소일은 상이할 수 있습니다.</li>
+							<li class="item">반품 진행현황은 <a class="link_text" href="#">마이페이지</a> > <a class="link_text" href="#">취소/반품/교환</a> 조회 페이지에서 확인하실 수 있습니다.</li>
+						</ul>
+					</div>
+					<div class="btn_box w50">
+						<div class="box"><button class="button" type="button" onclick="">취소</button></div>
+						<!-- 반품신청 버튼 활성화 - box에 클래스 on 추가 -->
+						<div class="box"><button class="button gray" type="button" onclick="">반품 신청</button></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 컨텐츠 : E -->
+		
+	</main>
+	<!-- CDJ 개선 마이페이지 반품신청 : E -->
+	
+	
+	
+	
+	<!-- footer include -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/kr/ko/html_cdj/layout/footer.html'; ?>
+</body>
+</html>

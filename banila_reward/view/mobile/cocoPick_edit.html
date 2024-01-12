@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"/>
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="icon" type="image/png" sizes="32x32" href="">
+	<link rel="icon" type="image/png" sizes="16x16" href="">
+	<link rel="manifest" href="">
+	<link rel="mask-icon" href="" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="#ffffff">
+	
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/contents.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/static/front/resources/mobile/css/socialSelling.css">
+
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/header.html'; ?>
+	<!-- //header -->
+	
+	
+	
+	<!-- container -->
+	<div class="container pdt0 pdb0">
+		<!-- 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		<p>#확인용버튼 : 개발시 삭제해 주세요</p>
+		<button type="button" onclick="showLayer('cocoPickEditPop');" class="btn btnSizeL btnColorW btnTypeB"><span>COCO PICK 편집 레이어 팝업</span></button>
+		<!-- // 팝업 확인용 버튼 : 개발시 삭제해 주세요 -->
+		
+		<!-- COCO PICK 편집 레이어 팝업 -->
+		<div id="cocoPickEditPop" class="lyPopArea fullType cocoPickEditPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO PICK 편집</div>
+					
+					<!-- 상단 유의사항 -->
+					<div class="introWrap">
+						<ul>
+							<li class="item">
+								<p class="desc">등록된 COCO PICK의 코멘트 수정, 노출 순서 조정, 삭제가 가능합니다.</p>
+							</li>
+						</ul>
+					</div>
+					<!-- //상단 유의사항 -->
+					
+					<div class="conWrap">
+						<!-- 리스트 -->
+						<div class="cocoPdtList1">
+							<ul>
+								<!-- listItem 반복 -->
+								<li class="listItem">
+									<button type="button" class="deleteBtn" onclick="showLayer('cocoPickDeletePop');"><span class="hide">삭제</span></button>
+									<div class="item">
+										<div class="left">
+											<div class="btnBox">
+												<button type="button" class="btnUp"><span class="hide">UP</span></button>
+												<button type="button" class="btnDown"><span class="hide">DOWN</span></button>
+											</div>
+										</div>
+										<div class="right">
+											<div class="imgBox">
+												<img src="/static/front/resources/mobile/images/socialSelling/prd_img1.jpg" alt="">
+												<div class="countTag">
+													<input type="hidden" name="index" value="01">
+													<span>01</span>
+												</div>
+											</div>
+											<div class="textBox">
+												<p class="brand">비바이바닐라</p>
+												<p class="prdName">글로우 베일 틴트-VGRD02 딥 헤이지</p>
+												<div class="commentText">
+													<p class="text">쓸수록 좋은, 이 제품을 추천해요 ✨</p>
+													<button type="button" class="commentEditBtn" onclick="showLayer('cocoCommentEditPop');">수정</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="listItem">
+									<button type="button" class="deleteBtn" onclick="showLayer('cocoPickDeletePop');"><span class="hide">삭제</span></button>
+									<div class="item">
+										<div class="left">
+											<div class="btnBox">
+												<button type="button" class="btnUp"><span class="hide">UP</span></button>
+												<button type="button" class="btnDown"><span class="hide">DOWN</span></button>
+											</div>
+										</div>
+										<div class="right">
+											<div class="imgBox">
+												<img src="/static/front/resources/mobile/images/socialSelling/prd_img2.jpg" alt="">
+												<div class="countTag">
+													<input type="hidden" name="index" value="02">
+													<span>02</span>
+												</div>
+											</div>
+											<div class="textBox">
+												<p class="brand">비바이바닐라</p>
+												<p class="prdName">미스 플라워 앤 미스터 허니 프로폴리스 리쥬비네이팅 크림 70ml</p>
+												<div class="commentText">
+													<p class="text">아직도 안 써보셨다면, 이 제품을 추천추천추천추천추천추천추천추천</p>
+													<button type="button" class="commentEditBtn" onclick="showLayer('cocoCommentEditPop');">수정</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="listItem">
+									<button type="button" class="deleteBtn" onclick="showLayer('cocoPickDeletePop');"><span class="hide">삭제</span></button>
+									<div class="item">
+										<div class="left">
+											<div class="btnBox">
+												<button type="button" class="btnUp"><span class="hide">UP</span></button>
+												<button type="button" class="btnDown"><span class="hide">DOWN</span></button>
+											</div>
+										</div>
+										<div class="right">
+											<div class="imgBox">
+												<img src="/static/front/resources/mobile/images/socialSelling/prd_img3.jpg" alt="">
+												<div class="countTag">
+													<input type="hidden" name="index" value="03">
+													<span>03</span>
+												</div>
+											</div>
+											<div class="textBox">
+												<p class="brand">비바이바닐라</p>
+												<p class="prdName">미스 플라워 앤 미스터 허니 프로폴리스 리쥬비네이팅 크림 70ml</p>
+												<div class="commentText">
+													<p class="text">아직도 안 써보셨다면, 이 제품을 추천추천추천추천추천추천추천추천</p>
+													<button type="button" class="commentEditBtn" onclick="showLayer('cocoCommentEditPop');">수정</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="listItem">
+									<button type="button" class="deleteBtn" onclick="showLayer('cocoPickDeletePop');"><span class="hide">삭제</span></button>
+									<div class="item">
+										<div class="left">
+											<div class="btnBox">
+												<button type="button" class="btnUp"><span class="hide">UP</span></button>
+												<button type="button" class="btnDown"><span class="hide">DOWN</span></button>
+											</div>
+										</div>
+										<div class="right">
+											<div class="imgBox">
+												<img src="/static/front/resources/mobile/images/socialSelling/prd_img4.jpg" alt="">
+												<div class="countTag">
+													<input type="hidden" name="index" value="04">
+													<span>04</span>
+												</div>
+											</div>
+											<div class="textBox">
+												<p class="brand">비바이바닐라</p>
+												<p class="prdName">글로우 베일 틴트-VGRD02 딥 헤이지</p>
+												<div class="commentText">
+													<p class="text">쓸수록 좋은, 이 제품을 추천해요 ✨</p>
+													<button type="button" class="commentEditBtn" onclick="showLayer('cocoCommentEditPop');">수정</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //리스트 -->
+					</div>
+				</div>
+				<!-- 버튼영역 -->
+				<div class="btn_wrap fixed">
+					<button type="button" onclick="showLayer('cocoPickEditSave');" class="btn btnSizeL btnColorB btnTypeB"><span>저장하기</span></button>
+				</div>
+				<!-- //버튼영역 -->
+			</div>
+		</div>
+		<!-- // COCO PICK 편집 레이어 팝업 -->
+		
+		
+		<!-- 코멘트 수정 팝업 -->
+		<div id="cocoCommentEditPop" class="lyPopArea fullType cocoCommentEditPop">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">코멘트 수정</div>
+					<div class="lyBody basic bdTCon">
+						<div class="inner_p">
+							<div class="desc mgt20">이 제품을 PICK한 이유를 이야기해 주세요.</div>
+							<div class="inp_wrap mgt8">
+								<div class="inp_select2 pdtSelect">
+									<div class="selectBox">
+										<button class="title" type="button">아직도 안 써보셨다면, 이 제품을 추천해요⭐</button>
+										<ul class="selList">
+											<li>
+												<input type="radio" value="1" class="option" id="comment_opt1_1" name="comment">
+												<label for="comment_opt1_1">
+													아직도 안 써보셨다면, 이 제품을 추천해요⭐
+												</label>
+											</li>
+											<li>
+												<input type="radio" value="2" class="option" id="comment_opt1_2" name="comment">
+												<label for="comment_opt1_2">
+													누구에게나 자신 있게, 이 제품을 추천해요❣
+												</label>
+											</li>
+											<li>
+												<input type="radio" value="3" class="option" id="comment_opt1_3" name="comment">
+												<label for="comment_opt1_3">
+													쓸수록 좋은, 이 제품을 추천해요✨
+												</label>
+											</li>
+											<li>
+												<input type="radio" value="4" class="option" id="comment_opt1_4" name="comment">
+												<label for="comment_opt1_4">
+													저와 비슷한 피부라면, 이 제품을 추천해요💜
+												</label>
+											</li>
+											<li>
+												<input type="radio" value="5" class="option" id="comment_opt1_5" name="comment">
+												<label for="comment_opt1_5">
+													저와 비슷한 톤이라면, 이 제품을 추천해요💛
+												</label>
+											</li>
+											<li>
+												<input type="radio" value="6" class="option" id="comment_opt1_6" name="comment">
+												<label for="comment_opt1_6">
+													직접 입력하기
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="inp_wrap mgt16 selfInput">
+								<div class="inp_textArea">
+									<textarea placeholder="상품을 추천하는 이유를 입력해주세요"></textarea>
+									<span class="charCnt">(<em>0</em>/400)</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<a href="#" class="btn btnSizeL btnColorB btnTypeB"><span>완료</span></a>
+				</div>
+			</div>
+		</div>
+		<!-- //코멘트 수정 팝업 -->
+		
+		<!-- COCO PICK 삭제 확인 얼럿 -->
+		<div id="cocoPickDeletePop" class="lyPopArea">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO PICK 삭제</div>
+					<div class="lyBody basic">
+						<p>선택하신 COCO PICK 상품을<br>삭제하시겠습니까?</p>
+						<div class="btn_wrap colType">
+							<a href="#" onclick="layerPopClose();" class="btn btnSizeM btnColorW btnTypeB"><span>취소</span></a>
+							<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span>삭제</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //COCO PICK 삭제 확인 얼럿 -->
+		
+		<!-- COCO PICK 편집 확인 얼럿 -->
+		<div id="cocoPickEditSave" class="lyPopArea">
+			<div class="lyPop">
+				<div class="lyWrap">
+					<button type="button" class="lyClose" onclick="layerPopClose();"><span class="hide">CLOSED</span></button>
+					<div class="lyTit">COCO PICK 편집</div>
+					<div class="lyBody basic">
+						<p>변경 내용을 저장하시겠습니까?</p>
+						<div class="btn_wrap colType">
+							<a href="#" onclick="layerPopClose();" class="btn btnSizeM btnColorW btnTypeB"><span>취소</span></a>
+							<a href="#" class="btn btnSizeM btnColorB btnTypeB"><span>확인</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //COCO PICK 편집 확인 얼럿 -->
+	
+	</div>
+	<!-- //container -->
+	
+	
+	
+	
+	
+	
+	<!-- footer -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/footer.html'; ?>
+	<!-- //footer -->
+	<!-- javascript -->
+	<?php require $_SERVER['DOCUMENT_ROOT'].'/view/mobile/include/javascript_collection.html'; ?>
+	<!-- //javascript -->
+</div>
+</body>
+</html>
